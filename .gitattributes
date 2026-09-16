@@ -27,3 +27,4 @@ UnityProject/Assets/MayaProject/assets/FromHoudini/FlowerPatch.ma filter=lfs dif
 UnityProject/Assets/MayaProject/sceneAssembly/ForestWorld_extras.ma filter=lfs diff=lfs merge=lfs -text
 UnityProject/Assets/MayaProject/sceneAssembly/ForestWorld_leaves.ma filter=lfs diff=lfs merge=lfs -text
 UnityProject/Assets/MayaProject/scenes/TheBigDog_AnimFinal.ma filter=lfs diff=lfs merge=lfs -text
+UnityProject/Assets/MayaProject/sceneAssembly/ForestRuins_backgroundForest.ma filter=lfs diff=lfs merge=lfs -text
