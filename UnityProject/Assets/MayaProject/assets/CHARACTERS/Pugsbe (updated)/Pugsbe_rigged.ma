@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Pugsbe_rigged.ma
-//Last modified: Sat, Nov 14, 2026 05:27:52 PM
+//Last modified: Mon, Nov 16, 2026 12:38:39 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -14,19 +14,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202607282326-107b4e8809";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26300)";
-fileInfo "UUID" "F184E269-4881-70AB-67B6-1D8D6CBD6ED0";
+fileInfo "UUID" "2F9D5A99-4D50-A68C-84FA-2CB83ECA2EDC";
 createNode transform -s -n "persp";
 	rename -uid "0AF399CE-41C0-BCB0-B57E-639605F66D98";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 111.41864864966132 48.417675732165193 44.03456438659407 ;
-	setAttr ".r" -type "double3" -24.000000000007269 1145.5999999998505 0 ;
+	setAttr ".t" -type "double3" -52.350363562357117 29.108740029736712 44.292997909183086 ;
+	setAttr ".r" -type "double3" -26.400000000000098 1024.3999999997909 2.8148145486367608e-15 ;
 	setAttr ".rpt" -type "double3" -1.2209979135565051e-14 -1.6669633914358152e-15 -1.0746588747025394e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "76429F2E-4210-1F57-EA97-0CA6B2AEAD5C";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 124.69579932649495;
+	setAttr ".coi" 80.343944581304655;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2772,9 +2772,9 @@ createNode aimConstraint -n "L_head_R_eye_jnt_aimConstraint1" -p "L_head_R_eye_j
 createNode joint -n "L_Head_collar_tag_jnt" -p "L_Neck_jnt";
 	rename -uid "2DB29B9D-4573-9747-8B47-269C002F12B4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	addAttr -ci true -k true -sn "blendParent3" -ln "blendParent3" -dv 1 -smn 0 -smx 
-		1 -at "double";
 	setAttr ".uoc" 1;
+	setAttr ".r" -type "double3" 3.0801411278754379e-14 0 2.5342840236820568e-14 ;
+	setAttr -av ".ry";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "none";
@@ -2784,7 +2784,6 @@ createNode joint -n "L_Head_collar_tag_jnt" -p "L_Neck_jnt";
 		 -0.71612361208738551 0.2885659384131769 0.63552865505706158 0 0.36916566107952054 -0.61615527153813188 0.69575095834320799 0
 		 9.6468400955200231 -3.5646045207977317 9.733546257019027 1;
 	setAttr ".radi" 1.0105506698968802;
-	setAttr -k on ".blendParent3";
 createNode parentConstraint -n "L_Head_collar_tag_jnt_parentConstraint2" -p "L_Head_collar_tag_jnt";
 	rename -uid "305B20A3-4F33-DDF9-9806-A8820EE3208A";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_Head_collar_tag_ctrlW0" -dv 1 -min 
@@ -3707,7 +3706,7 @@ createNode aimConstraint -n "R_head_R_eye_jnt_aimConstraint1" -p "R_head_R_eye_j
 	setAttr -s 2 ".tg";
 	setAttr ".a" -type "double3" -1 0 0 ;
 	setAttr ".wut" 0;
-	setAttr ".o" -type "double3" -173.92362189462006 313.60884045886422 188.09760907305139 ;
+	setAttr ".o" -type "double3" -173.92362189462006 313.60884045886422 188.09760907305142 ;
 	setAttr ".rsrr" -type "double3" -215.18588707914952 557.10251657632068 169.34605313055638 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -3741,7 +3740,7 @@ createNode aimConstraint -n "R_head_L_eye_jnt_aimConstraint1" -p "R_head_L_eye_j
 	setAttr ".a" -type "double3" -1 0 0 ;
 	setAttr ".wut" 0;
 	setAttr ".o" -type "double3" 0 -79.507641512136274 -3.7908598278755665 ;
-	setAttr ".rsrr" -type "double3" -27.577101585163689 -25.519797311910459 -26.637865965794187 ;
+	setAttr ".rsrr" -type "double3" -27.577101585163692 -25.519797311910459 -26.637865965794187 ;
 	setAttr -k on ".w0";
 createNode joint -n "R_Head_collar_tag_jnt" -p "R_Neck_jnt";
 	rename -uid "C5D7DCC0-49B0-9E46-F741-0EBE36DC04D6";
@@ -4122,7 +4121,7 @@ createNode parentConstraint -n "Tail_8_jnt_parentConstraint1" -p "Tail_8_jnt";
 		3.5527136788005009e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -1.7890620083232281e-14 -3.4986101496098681e-14 
 		-9.1465795175525042e-14 ;
-	setAttr ".lr" -type "double3" -2.007725142673835e-14 7.5140604349575608e-14 1.5095210695227236e-13 ;
+	setAttr ".lr" -type "double3" 5.8342599620564789e-14 1.2708557648713383e-13 4.3538726292823089 ;
 	setAttr ".rst" -type "double3" 2.3157249393230881 0 0 ;
 	setAttr ".rsrr" -type "double3" 1.8486974086006716e-14 3.3395824155366915e-14 8.2893206385642912e-14 ;
 	setAttr -k on ".w0";
@@ -4162,7 +4161,7 @@ createNode parentConstraint -n "Tail_7_jnt_parentConstraint1" -p "Tail_7_jnt";
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" -3.3395824155366928e-14 1.0734372049939369e-14 
 		-6.5909541348296713e-14 ;
-	setAttr ".lr" -type "double3" 3.9756933518293974e-14 3.6775163504421899e-14 5.2901569662779913e-14 ;
+	setAttr ".lr" -type "double3" 6.6685954230361193e-14 6.4168374717224549e-15 4.3538726292821988 ;
 	setAttr ".rst" -type "double3" 3.2909275393756037 5.3290705182007514e-15 -1.7763568394002505e-15 ;
 	setAttr ".rsrr" -type "double3" 3.4190962825732795e-14 -1.2523434058262624e-14 8.9018258955805071e-14 ;
 	setAttr -k on ".w0";
@@ -4202,7 +4201,7 @@ createNode parentConstraint -n "Tail_6_jnt_parentConstraint1" -p "Tail_6_jnt";
 		3.5527136788005009e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 1.8685758753598161e-14 1.9083328088781101e-14 
 		-6.4406232299636215e-14 ;
-	setAttr ".lr" -type "double3" 2.1468744099878709e-14 -3.737151750719634e-14 8.2520485133908892e-14 ;
+	setAttr ".lr" -type "double3" -3.4083916239888114e-14 -8.0264945057610224e-14 4.3538726292823107 ;
 	setAttr ".rst" -type "double3" 3.3676643276881091 -8.8817841970012523e-16 1.7763568394002505e-15 ;
 	setAttr ".rsrr" -type "double3" -1.987846675914699e-14 -1.7691835415640801e-14 6.5002586302410625e-14 ;
 	setAttr -k on ".w0";
@@ -4241,7 +4240,7 @@ createNode parentConstraint -n "Tail_5_jnt_parentConstraint1" -p "Tail_5_jnt";
 	setAttr ".tg[0].tot" -type "double3" 0 1.1546319456101628e-14 0 ;
 	setAttr ".tg[0].tor" -type "double3" 1.4312496066585827e-14 -1.311978806103701e-14 
 		3.1283737062207567e-14 ;
-	setAttr ".lr" -type "double3" -1.7567594998396134e-14 -1.8288189418415227e-14 -4.4341404914622231e-14 ;
+	setAttr ".lr" -type "double3" -3.7147297311439829e-14 4.7165574601521527e-14 4.3538726292821623 ;
 	setAttr ".rst" -type "double3" 2.9281353177271452 0 0 ;
 	setAttr ".rsrr" -type "double3" -1.4213103732790092e-14 1.4312496066585827e-14 -1.3599666672644543e-14 ;
 	setAttr -k on ".w0";
@@ -4280,7 +4279,7 @@ createNode parentConstraint -n "Tail_4_jnt_parentConstraint1" -p "Tail_4_jnt";
 	setAttr ".tg[0].tot" -type "double3" 7.1054273576010019e-15 8.8817841970012523e-16 
 		-1.7763568394002505e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -5.1544998007730642 15.394896535147353 -36.838259349641184 ;
-	setAttr ".lr" -type "double3" -4.0552072188659847e-14 -2.4251729446159324e-14 -8.9950062085140031e-15 ;
+	setAttr ".lr" -type "double3" -1.1685646265994851 -0.33461522561689422 4.1842457554608163 ;
 	setAttr ".rst" -type "double3" 3.0392799936393642 0 0 ;
 	setAttr ".rsrr" -type "double3" 1.987846675914698e-15 2.1866313435061688e-15 -1.2573130225160468e-14 ;
 	setAttr -k on ".w0";
@@ -4320,7 +4319,7 @@ createNode parentConstraint -n "Tail_3_jnt_parentConstraint1" -p "Tail_3_jnt";
 		-3.5527136788005009e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -2.2263882770244621e-14 -1.3517357396219944e-14 
 		-7.0494012744624963e-14 ;
-	setAttr ".lr" -type "double3" 4.7708320221952988e-15 4.3335057534940421e-14 6.0977196783683374e-14 ;
+	setAttr ".lr" -type "double3" 3.5882067261958714e-14 2.2905259833350523e-14 4.3538726292822458 ;
 	setAttr ".rst" -type "double3" 3.1142819715406702 -4.4408920985006262e-16 -1.7763568394002505e-15 ;
 	setAttr ".rsrr" -type "double3" 2.266145210542757e-14 1.3914926731402878e-14 6.2766258792006629e-14 ;
 	setAttr -k on ".w0";
@@ -4360,7 +4359,7 @@ createNode parentConstraint -n "Tail_2_jnt_parentConstraint1" -p "Tail_2_jnt";
 		1.7763568394002505e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 1.0734372049939369e-14 3.1805546814635174e-14 
 		-1.6151254241806924e-14 ;
-	setAttr ".lr" -type "double3" -1.0620962029683194e-30 -8.7465253740246703e-15 1.3914926731402885e-14 ;
+	setAttr ".lr" -type "double3" 3.2495812019459037e-14 -2.431093873158141e-14 4.3538726292822707 ;
 	setAttr ".rst" -type "double3" 2.8716398632960018 -1.7763568394002505e-15 3.5527136788005009e-15 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270375e-15 -3.5781240166464561e-14 
 		1.4710065401768767e-14 ;
@@ -4401,7 +4400,7 @@ createNode parentConstraint -n "Tail_1_jnt_parentConstraint1" -p "Tail_1_jnt";
 		-5.3290705182007514e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 2.9420130803537528e-14 1.5902773407317588e-15 
 		-2.8624992133171654e-14 ;
-	setAttr ".lr" -type "double3" -6.3611093629270335e-14 1.7493050748049356e-14 2.5444437451708125e-14 ;
+	setAttr ".lr" -type "double3" -5.3667961523342903e-14 1.1588635566764262e-14 4.3538726292822121 ;
 	setAttr ".rst" -type "double3" 5.5161680627639971 -1.4849232954361469e-15 0 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635168e-14 3.1805546814635247e-15 2.8624992133171654e-14 ;
 	setAttr -k on ".w0";
@@ -4545,7 +4544,7 @@ createNode parentConstraint -n "L_Hip_FK_jnt_parentConstraint1" -p "L_Hip_FK_jnt
 	setAttr ".tg[0].tot" -type "double3" 0 1.7763568394002505e-15 8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -3.6576378836830435e-14 1.5902773407317581e-14 
 		-3.1805546814635161e-14 ;
-	setAttr ".lr" -type "double3" 1.5902773407317596e-14 2.3854160110976374e-14 3.657637883683046e-14 ;
+	setAttr ".lr" -type "double3" 1.9083328088781101e-14 -1.6896696745274937e-14 9.5416640443905471e-15 ;
 	setAttr ".rst" -type "double3" 0.14017714592762509 -6.8484704601066717 -0.55563943921267267 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635168e-14 -1.6300342742500536e-14 3.0215269473903408e-14 ;
 	setAttr -k on ".w0";
@@ -4691,7 +4690,7 @@ createNode parentConstraint -n "R_Hip_FK_jnt_parentConstraint1" -p "R_Hip_FK_jnt
 		-0.0088711097251987781 ;
 	setAttr ".tg[0].tor" -type "double3" 1.590277340731758e-15 -1.9083328088781101e-14 
 		-9.5416640443905503e-15 ;
-	setAttr ".lr" -type "double3" 1.6300342742500527e-14 4.1347210859025709e-14 2.3854160110976374e-14 ;
+	setAttr ".lr" -type "double3" 3.5781240166464568e-15 5.9635400277440935e-15 3.1805546814635168e-15 ;
 	setAttr ".rst" -type "double3" 0.32776447622031313 6.8576210687845016 -0.30913923873088223 ;
 	setAttr ".rsrr" -type "double3" -3.9756933518293748e-16 2.4251729446159311e-14 9.5416640443905487e-15 ;
 	setAttr -k on ".w0";
@@ -4764,7 +4763,7 @@ createNode orientConstraint -n "L_Ankle_IK_jnt_orientConstraint1" -p "L_Ankle_IK
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -2.2774071024226257 -179.84415477212775 86.087366306168263 ;
+	setAttr ".lr" -type "double3" -2.2774071024226257 -179.84415477212778 86.087366306168263 ;
 	setAttr ".o" -type "double3" 179.91136816119695 2.2827304089518941 -93.915731362236343 ;
 	setAttr ".rsrr" -type "double3" 180 -180 -180 ;
 	setAttr -k on ".w0";
@@ -4843,7 +4842,7 @@ createNode orientConstraint -n "R_Ankle_IK_jnt_orientConstraint1" -p "R_Ankle_IK
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -177.73242189775638 0.29977260295706382 86.087327188146247 ;
+	setAttr ".lr" -type "double3" -177.7324218977557 0.29977260295726871 86.087327188146233 ;
 	setAttr ".o" -type "double3" 179.91137175817545 2.2827304088497726 86.084268637780738 ;
 	setAttr ".rsrr" -type "double3" -3.975693351829396e-15 5.963540027744092e-16 -6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -5399,10 +5398,10 @@ createNode transform -n "Transform_ctrl" -p "Transform_ctrl_grp";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
-	setAttr -k on ".LArmIKFKSwitch";
-	setAttr -k on ".RArmIKFKSwitch";
-	setAttr -k on ".LLegIKFKSwitch";
-	setAttr -k on ".RLegIKFKSwitch";
+	setAttr -k on ".LArmIKFKSwitch" 1;
+	setAttr -k on ".RArmIKFKSwitch" 1;
+	setAttr -k on ".LLegIKFKSwitch" 1;
+	setAttr -k on ".RLegIKFKSwitch" 1;
 	setAttr -k on ".MasterScale";
 createNode nurbsCurve -n "Transform_ctrlShape" -p "Transform_ctrl";
 	rename -uid "006ADCE9-40B2-1A93-4976-4689A7BD8FC6";
@@ -5886,6 +5885,7 @@ createNode transform -n "L_Head_L_Ear_1_ctrl_grp" -p "L_Head_ctrl";
 createNode transform -n "L_Head_L_Ear_1_ctrl" -p "L_Head_L_Ear_1_ctrl_grp";
 	rename -uid "CE8BE783-4D08-6DAE-66A6-B0BB098B9D93";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" -1.556391500123766e-07 4.1921498628028075e-07 2.8058510714856766e-07 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6241,6 +6241,7 @@ createNode transform -n "L_Head_eye_target_ctrl_grp" -p "L_Head_ctrl";
 createNode transform -n "L_Head_eye_target_ctrl" -p "L_Head_eye_target_ctrl_grp";
 	rename -uid "6369922A-4FF9-C573-93D1-35B960424526";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" -0.68406768330076462 -1.6267838007228239 -2.8334518542842044 ;
 	setAttr ".rp" -type "double3" 18.098688819618282 13.89365695398917 6.2543277775230965 ;
 	setAttr ".sp" -type "double3" 18.098688819618282 13.89365695398917 6.2543277775230965 ;
 createNode nurbsCurve -n "L_Head_eye_target_ctrlShape" -p "L_Head_eye_target_ctrl";
@@ -6277,6 +6278,7 @@ createNode transform -n "L_Head_R_Ear_1_ctrl_grp" -p "L_Head_ctrl";
 createNode transform -n "L_Head_R_Ear_1_ctrl" -p "L_Head_R_Ear_1_ctrl_grp";
 	rename -uid "539286A3-4512-78FB-233E-D59AA7E321A9";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" 1.0693532992434029e-07 -8.4371642117275769e-08 -4.7776339950900137e-07 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6317,6 +6319,7 @@ createNode transform -n "L_Head_R_Ear_2_ctrl_grp" -p "L_Head_R_Ear_1_ctrl";
 createNode transform -n "L_Head_R_Ear_2_ctrl" -p "L_Head_R_Ear_2_ctrl_grp";
 	rename -uid "55EC3807-41F7-2EDF-1C99-67BC593E70E3";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" 1.4155398808668451e-07 4.293193107685056e-07 4.2950747869419104e-07 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6355,6 +6358,7 @@ createNode transform -n "L_Head_R_Ear_3_ctrl_grp" -p "L_Head_R_Ear_2_ctrl";
 createNode transform -n "L_Head_R_Ear_3_ctrl" -p "L_Head_R_Ear_3_ctrl_grp";
 	rename -uid "81D17F3D-4E6B-28C9-A53B-F981B535DA6A";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" 2.4786337604609798e-07 -9.7012907929183712e-08 1.2598185061829525e-07 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6620,6 +6624,7 @@ createNode transform -n "Mid_Head_R_Ear_1_ctrl_grp" -p "Mid_Head_ctrl";
 createNode transform -n "Mid_Head_R_Ear_1_ctrl" -p "Mid_Head_R_Ear_1_ctrl_grp";
 	rename -uid "33CBB055-47D8-9568-3BB3-6B9B39E18A12";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0.49494926062439537 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6657,6 +6662,7 @@ createNode transform -n "Mid_Head_R_Ear_2_ctrl_grp" -p "Mid_Head_R_Ear_1_ctrl";
 createNode transform -n "Mid_Head_R_Ear_2_ctrl" -p "Mid_Head_R_Ear_2_ctrl_grp";
 	rename -uid "4FF2088A-41F5-8133-7883-3CA58D70366E";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0.89851325904031831 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6771,6 +6777,7 @@ createNode transform -n "Mid_Head_Mouth_Upper_1_ctrl_grp" -p "Mid_Head_Mouth_ctr
 createNode transform -n "Mid_Head_Mouth_Upper_1_ctrl" -p "Mid_Head_Mouth_Upper_1_ctrl_grp";
 	rename -uid "CC9F102E-4B3B-9F59-90AA-FEB743D95E55";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" 0.057199999999999987 0 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6808,6 +6815,7 @@ createNode transform -n "Mid_Head_Mouth_Upper_2_ctrl_grp" -p "Mid_Head_Mouth_ctr
 createNode transform -n "Mid_Head_Mouth_Upper_2_ctrl" -p "Mid_Head_Mouth_Upper_2_ctrl_grp";
 	rename -uid "F0DC0983-48A4-BA94-9978-14BD2814AF8E";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" 0.057199066239320646 1.8799524823451006e-16 9.1683496220595412e-19 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6845,6 +6853,7 @@ createNode transform -n "Mid_Head_Mouth_Upper_3_ctrl_grp" -p "Mid_Head_Mouth_ctr
 createNode transform -n "Mid_Head_Mouth_Upper_3_ctrl" -p "Mid_Head_Mouth_Upper_3_ctrl_grp";
 	rename -uid "0967165A-449B-44EC-DBE0-6ABB48F597F3";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" 0.057199066239320646 1.844390398962567e-16 9.1683496220595412e-19 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6882,6 +6891,7 @@ createNode transform -n "Mid_Head_Mouth_Lower_1_ctrl_grp" -p "Mid_Head_Mouth_ctr
 createNode transform -n "Mid_Head_Mouth_Lower_1_ctrl" -p "Mid_Head_Mouth_Lower_1_ctrl_grp";
 	rename -uid "1C9484D2-4551-1B8C-4B94-9382C198258C";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" -0.041999999999999996 0 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6919,6 +6929,7 @@ createNode transform -n "Mid_Head_Mouth_Lower_2_ctrl_grp" -p "Mid_Head_Mouth_ctr
 createNode transform -n "Mid_Head_Mouth_Lower_2_ctrl" -p "Mid_Head_Mouth_Lower_2_ctrl_grp";
 	rename -uid "43ED6674-40B4-2F86-D5D5-6EB9DC6FC2F8";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" -0.041993018540985666 -1.4651723978240003e-16 -5.0411091085040214e-17 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -6956,6 +6967,7 @@ createNode transform -n "Mid_Head_Mouth_Lower_3_ctrl_grp" -p "Mid_Head_Mouth_ctr
 createNode transform -n "Mid_Head_Mouth_Lower_3_ctrl" -p "Mid_Head_Mouth_Lower_3_ctrl_grp";
 	rename -uid "40359DDA-46DF-0FD7-A652-33A4E50830AC";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" -0.041993018540985666 -1.4390642928316807e-16 -5.0411091085040214e-17 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7135,6 +7147,7 @@ createNode transform -n "R_Head_Nose_ctrl_grp" -p "R_Head_ctrl";
 createNode transform -n "R_Head_Nose_ctrl" -p "R_Head_Nose_ctrl_grp";
 	rename -uid "1CD633F6-4254-902F-F318-8B8EF0DA0AA0";
 	setAttr -l on -k off ".v";
+	setAttr ".t" -type "double3" -0.048564177328143485 -0.00094296902712320547 0.057545255384907887 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7413,6 +7426,7 @@ createNode transform -n "R_Head_L_Ear_1_ctrl_grp" -p "R_Head_ctrl";
 createNode transform -n "R_Head_L_Ear_1_ctrl" -p "R_Head_L_Ear_1_ctrl_grp";
 	rename -uid "14D8ABED-41F7-206D-D320-7AABEA85C61B";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 2.5895780527899128 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7453,6 +7467,7 @@ createNode transform -n "R_Head_L_Ear_2_ctrl_grp" -p "R_Head_L_Ear_1_ctrl";
 createNode transform -n "R_Head_L_Ear_2_ctrl" -p "R_Head_L_Ear_2_ctrl_grp";
 	rename -uid "5D83BC17-4987-31F1-652D-E4B6B1E5586C";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 2.5895780527899128 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7493,6 +7508,7 @@ createNode transform -n "R_Head_L_Ear_3_ctrl_grp" -p "R_Head_L_Ear_2_ctrl";
 createNode transform -n "R_Head_L_Ear_3_ctrl" -p "R_Head_L_Ear_3_ctrl_grp";
 	rename -uid "3DA9996E-4F04-1F2F-16C9-28B330ED587F";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 2.5895780527899128 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7533,6 +7549,7 @@ createNode transform -n "R_Head_R_Ear_1_ctrl_grp" -p "R_Head_ctrl";
 createNode transform -n "R_Head_R_Ear_1_ctrl" -p "R_Head_R_Ear_1_ctrl_grp";
 	rename -uid "4012455D-4062-A617-F15C-CDA541273E07";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0.49201983003008337 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7573,6 +7590,7 @@ createNode transform -n "R_Head_R_Ear_2_ctrl_grp" -p "R_Head_R_Ear_1_ctrl";
 createNode transform -n "R_Head_R_Ear_2_ctrl" -p "R_Head_R_Ear_2_ctrl_grp";
 	rename -uid "6FA12123-4415-3BBF-93FB-C398D22EBFC0";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0.49201983003008337 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7611,6 +7629,7 @@ createNode transform -n "R_Head_R_Ear_3_ctrl_grp" -p "R_Head_R_Ear_2_ctrl";
 createNode transform -n "R_Head_R_Ear_3_ctrl" -p "R_Head_R_Ear_3_ctrl_grp";
 	rename -uid "695947E2-48E3-37E5-2900-849707C3CBA3";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0.49201983003008337 0 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -7968,7 +7987,7 @@ createNode transform -n "Spine_4_ctrl" -p "Spine_4_ctrl_grp";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" -5.3290705182007514e-15 -6.9388939039072284e-17 5.5511151231257827e-17 ;
-	setAttr ".rpt" -type "double3" 1.5801870007708393e-29 -3.944304526105059e-31 -3.944304526105059e-30 ;
+	setAttr ".rpt" -type "double3" 1.5801870007708393e-29 -3.9443045261050599e-31 -3.944304526105059e-30 ;
 	setAttr ".sp" -type "double3" -5.3290705182007514e-15 -6.9388939039072284e-17 5.5511151231257827e-17 ;
 createNode nurbsCurve -n "Spine_4_ctrlShape" -p "Spine_4_ctrl";
 	rename -uid "657C6D16-4737-E46D-F3D7-A0B4F69B97E2";
@@ -8511,6 +8530,7 @@ createNode transform -n "Tail_1_ctrl_grp" -p "Pelvis_ctrl";
 createNode transform -n "Tail_1_ctrl" -p "Tail_1_ctrl_grp";
 	rename -uid "CFE4EDC9-48CB-A07F-4324-B6B169343CC5";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8549,6 +8569,7 @@ createNode transform -n "Tail_2_ctrl_grp" -p "Tail_1_ctrl";
 createNode transform -n "Tail_2_ctrl" -p "Tail_2_ctrl_grp";
 	rename -uid "DA4E5791-4F7F-374E-7B43-6BAFF57B141D";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8587,6 +8608,7 @@ createNode transform -n "Tail_3_ctrl_grp" -p "Tail_2_ctrl";
 createNode transform -n "Tail_3_ctrl" -p "Tail_3_ctrl_grp";
 	rename -uid "984A7964-4881-878D-CAB8-57A0CAFEF97B";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8625,6 +8647,7 @@ createNode transform -n "Tail_4_ctrl_grp" -p "Tail_3_ctrl";
 createNode transform -n "Tail_4_ctrl" -p "Tail_4_ctrl_grp";
 	rename -uid "8234F3DE-4CD1-7FCB-DAD2-278A137FE677";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8663,6 +8686,7 @@ createNode transform -n "Tail_5_ctrl_grp" -p "Tail_4_ctrl";
 createNode transform -n "Tail_5_ctrl" -p "Tail_5_ctrl_grp";
 	rename -uid "53A59224-46E4-3DE7-3B9B-F9B400BAADE6";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8701,6 +8725,7 @@ createNode transform -n "Tail_6_ctrl_grp" -p "Tail_5_ctrl";
 createNode transform -n "Tail_6_ctrl" -p "Tail_6_ctrl_grp";
 	rename -uid "91A81943-4706-2FD3-06E3-759BCD4B38AA";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8739,6 +8764,7 @@ createNode transform -n "Tail_7_ctrl_grp" -p "Tail_6_ctrl";
 createNode transform -n "Tail_7_ctrl" -p "Tail_7_ctrl_grp";
 	rename -uid "BB1CC28B-4D34-C1EC-B770-ABA9BD51A4C6";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -8777,6 +8803,7 @@ createNode transform -n "Tail_8_ctrl_grp" -p "Tail_7_ctrl";
 createNode transform -n "Tail_8_ctrl" -p "Tail_8_ctrl_grp";
 	rename -uid "CCDD8FA6-479C-1D6B-FB46-10ADF6D58F63";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" 0 0 4.3538726292822139 ;
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
@@ -47376,7 +47403,7 @@ createNode mesh -n "Mid_head_R_eyeShape24Orig" -p "Mid_head_R_eye";
 createNode transform -n "Mid_head_L_eye" -p "Mid_eyes";
 	rename -uid "F3CA4209-4992-74DC-C8E1-948013AA21B9";
 	setAttr ".t" -type "double3" 0 0 -0.36781377014461469 ;
-	setAttr ".r" -type "double3" -8.3771648255771364e-12 -2.441085788291445e-14 -8.696829206948351e-17 ;
+	setAttr ".r" -type "double3" -8.3771648255771364e-12 -2.4410857882914453e-14 -8.6968292069483522e-17 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 1 ;
 	setAttr ".rp" -type "double3" 2.5315511226654053 10.19101619720459 13.943368434906006 ;
 	setAttr ".sp" -type "double3" 2.5315511226654053 10.19101619720459 13.943368434906006 ;
@@ -51212,23 +51239,23 @@ createNode mesh -n "R_head_R_eyeShape26Orig" -p "R_head_R_eye";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7519A2D5-49F6-4C35-45A8-298A0DCA76E4";
+	rename -uid "D0BB5292-444D-12AD-5427-4E810D7A7AAC";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "BCAF4ECD-48C6-0946-8B04-15B1BCA47946";
+	rename -uid "18BE10C8-4A05-F7B8-6EDE-28BEE8112FF3";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C066ACAE-43A0-4F12-ADEB-548DE0B17B0F";
+	rename -uid "E0324BAE-4D66-B9A9-347D-5BAAFED060A8";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "992577E4-4104-39DD-57DB-F5A50D720F97";
-	setAttr ".cdl" 1;
+	rename -uid "05D0C4B8-442F-CA38-0969-168D750460FE";
+	setAttr ".cdl" 2;
 	setAttr -s 7 ".dli[1:6]"  1 2 0 0 0 3;
 	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "DAFE1534-41FD-6D24-2599-87816E4E3A97";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7AD2A393-47EE-9563-6131-F38A061BC2AE";
+	rename -uid "F43F8901-4C25-DC01-9C6A-C38FC97C806C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "62B76C40-4F6D-9D39-652F-7EBC67ED6B2B";
 	setAttr ".g" yes;
@@ -51248,7 +51275,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n"
 		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
 		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
-		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1092\n            -height 661\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
+		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1092\n            -height 657\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
 		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
 		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
@@ -51275,8 +51302,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1092\\n    -height 661\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1092\\n    -height 661\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1092\\n    -height 657\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1092\\n    -height 657\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 14 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -51385,7 +51412,7 @@ createNode place2dTexture -n "place2dTexture4";
 createNode bump2d -n "bump2d1";
 	rename -uid "AE705DA3-4D7F-4E9B-0328-DD9417EB54AA";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00085000042 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file5";
 	rename -uid "ABF911FE-41AE-6B88-BB6C-5E9AF1AB0314";
@@ -51415,7 +51442,7 @@ createNode place2dTexture -n "place2dTexture8";
 createNode bump2d -n "bump2d2";
 	rename -uid "6E1032BE-4E51-F624-037C-B3AC714E4C8D";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00085000042 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file9";
 	rename -uid "89B60CEB-41A9-29DB-11CF-5396F4E83166";
@@ -51445,7 +51472,7 @@ createNode place2dTexture -n "place2dTexture12";
 createNode bump2d -n "bump2d3";
 	rename -uid "E034D90A-4098-366D-C7D8-B29E4A658F64";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00085000042 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file13";
 	rename -uid "40420AFB-4A05-D83D-E743-BDA6B122E23B";
@@ -51475,7 +51502,7 @@ createNode place2dTexture -n "place2dTexture16";
 createNode bump2d -n "bump2d4";
 	rename -uid "8FB1E493-4984-9F96-E5E5-6E8142235184";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00086000044 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file17";
 	rename -uid "B009E356-4563-9791-C0C3-99BC35E93076";
@@ -51505,7 +51532,7 @@ createNode place2dTexture -n "place2dTexture20";
 createNode bump2d -n "bump2d5";
 	rename -uid "2848B51E-490F-D357-405A-E5AE2E9CA91E";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00018000003 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file21";
 	rename -uid "AD41EAA5-4998-ACF6-4514-BB888199D605";
@@ -51535,7 +51562,7 @@ createNode place2dTexture -n "place2dTexture24";
 createNode bump2d -n "bump2d6";
 	rename -uid "52E90E67-47DD-D17B-1C0E-8381387F824A";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00086000044 0 ;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode standardSurface -n "Eye_MAT";
 	rename -uid "08D4CAF5-4A41-4DE8-BF44-2EB406EF06B6";
@@ -51654,9 +51681,9 @@ createNode skinCluster -n "skinCluster1";
 		8 2 1.98e-07 3 0.021921142000000001 4 1.3453e-05 52 0.52314481200000007 
 		53 0.35519384500000001 54 0.099721658000000005 58 4.8910000000000003e-06 
 		59 1.0000000000000001e-09
-		8 2 1.12e-07 3 0.045318065999999997 4 2.917e-05 52 0.62524841299999978 
-		53 0.25730598300000002 54 0.072093605000000005 58 4.6500000000000004e-06 
-		59 1.0000000000000001e-09
+		8 2 1.1200000000000001e-07 3 0.045318065999999997 4 2.9169999999999997e-05 
+		52 0.62524841299999978 53 0.25730598300000002 54 0.072093605000000005 
+		58 4.6500000000000004e-06 59 1.0000000000000001e-09
 		8 1 1.7999999999999999e-08 2 3.6959999999999998e-06 3 0.024997319 
 		4 1.8509999999999999e-06 52 0.40960414000000001 53 0.46915294299999999 
 		54 0.096237135000000001 58 2.898e-06
@@ -51669,8 +51696,8 @@ createNode skinCluster -n "skinCluster1";
 		58 0.0021621629999999999 59 1.0068000000000001e-05 90 0.022900622999999998 
 		91 5.7130000000000002e-06
 		10 1 0.037753684000000003 2 0.035476263000000001 3 0.085026879999999999 
-		4 6.75e-07 52 0.786670698 53 0.044910690000000003 54 4.142e-05 58 
-		0.0066928509999999997 59 6.9455999999999994e-05 90 0.0033573829999999998
+		4 6.75e-07 52 0.786670698 53 0.044910690000000003 54 4.1420000000000007e-05 
+		58 0.0066928509999999997 59 6.9455999999999994e-05 90 0.0033573829999999998
 		10 1 0.062685495999999993 2 0.052997237000000003 3 0.15352026499999999 
 		4 4.296e-06 52 0.66185697499999996 53 0.016490046000000001 54 1.0279999999999999e-06 
 		58 0.045366221999999998 59 0.0022072210000000001 90 0.0048712139999999996
@@ -51688,7 +51715,7 @@ createNode skinCluster -n "skinCluster1";
 		11 1 0.115251583 2 0.12766377100000001 3 0.119946249 4 
 		8.9000000000000003e-08 52 0.5699093110000002 53 0.043989992999999998 54 
 		0.000116366 58 0.00011846299999999999 59 8.3999999999999998e-08 90 0.022997337 
-		91 6.754e-06
+		91 6.7539999999999992e-06
 		10 1 0.035101412999999998 2 0.051679924000000002 3 0.094361611999999997 
 		4 8.3999999999999998e-08 52 0.72881812400000001 53 0.084533142000000006 
 		54 0.00067782300000000003 58 0.00051831399999999997 59 8.6099999999999999e-07 
@@ -51733,7 +51760,7 @@ createNode skinCluster -n "skinCluster1";
 		3.0207000000000001e-05
 		7 1 8.6577999999999997e-05 2 0.00038309100000000001 3 0.0063840879999999996 
 		52 0.224626085 53 0.61348152699999992 54 0.15503630600000001 90 2.3250000000000002e-06
-		7 1 2.3343e-05 2 7.3421000000000001e-05 3 0.0010477710000000001 
+		7 1 2.3342999999999997e-05 2 7.3421000000000001e-05 3 0.0010477710000000001 
 		52 0.161263236 53 0.40239118299999999 54 0.43519974100000003 90 1.305e-06
 		7 1 2.6908000000000001e-05 2 6.5942e-05 3 0.00085695699999999999 
 		52 0.19829686399999999 53 0.35736907800000001 54 0.44338197700000004 
@@ -51764,8 +51791,9 @@ createNode skinCluster -n "skinCluster1";
 		7 1 3.4790000000000001e-06 2 4.7899000000000003e-05 3 0.0027469690000000001 
 		52 0.086644746999999994 53 0.54294119099999993 54 0.36761568300000003 
 		90 3.2000000000000002e-08
-		7 1 2.6611e-05 2 0.000215269 3 0.00691897 52 0.18925884800000001 
-		53 0.66158794099999996 54 0.14199198099999999 90 3.8000000000000001e-07
+		7 1 2.6610999999999996e-05 2 0.000215269 3 0.00691897 52 
+		0.18925884800000001 53 0.66158794099999996 54 0.14199198099999999 90 
+		3.8000000000000001e-07
 		7 1 4.6000000000000002e-08 2 3.7749999999999999e-06 3 0.0016995070000000001 
 		4 1.0000000000000001e-09 52 0.079657465999999996 53 0.55487469700000014 
 		54 0.36376450799999999
@@ -51806,7 +51834,7 @@ createNode skinCluster -n "skinCluster1";
 		7 1 2.3470000000000001e-06 2 5.9608999999999998e-05 3 0.011066902999999999 
 		52 0.0072021530000000002 53 0.114712368 54 0.86695660699999999 90 
 		1.3000000000000001e-08
-		7 1 1.15e-05 2 0.00013019600000000001 3 0.011853023000000001 
+		7 1 1.1499999999999998e-05 2 0.00013019600000000001 3 0.011853023000000001 
 		52 0.012486333000000001 53 0.10752427000000001 54 0.86799443099999996 
 		90 2.4699999999999998e-07
 		7 1 1.7176999999999998e-05 2 0.00015127000000000001 3 0.012796025000000001 
@@ -51967,7 +51995,7 @@ createNode skinCluster -n "skinCluster1";
 		8 1 2.11e-07 3 0.46476436999999998 4 0.0018274719999999999 
 		52 0.48916661 53 0.024741747000000001 54 3.1936000000000001e-05 58 
 		0.018839080000000001 59 0.00062857400000000002
-		8 1 1.37e-07 3 0.34879837400000002 4 0.00072239299999999999 
+		8 1 1.3700000000000002e-07 3 0.34879837400000002 4 0.00072239299999999999 
 		52 0.59143618499999995 53 0.056114333000000002 54 0.00052682599999999999 
 		58 0.002382211 59 1.9541000000000001e-05
 		8 1 1.97e-07 3 0.23392618300000001 4 0.000200924 52 0.653074237 
@@ -51976,8 +52004,8 @@ createNode skinCluster -n "skinCluster1";
 		8 1 2.0000000000000001e-09 2 4.2800000000000002e-07 3 0.13060089 
 		4 4.7070000000000002e-05 52 0.66823545799999995 53 0.172496231 54 
 		0.028616385000000001 58 3.5360000000000001e-06
-		6 2 9.6999999999999995e-08 3 0.005627539 4 8.585e-06 52 
-		0.59342087700000001 53 0.251004222 54 0.14993867999999999
+		6 2 9.6999999999999995e-08 3 0.005627539 4 8.5850000000000017e-06 
+		52 0.59342087700000001 53 0.251004222 54 0.14993867999999999
 		2 2 2.4999999999999999e-08 3 0.0015597510000000001;
 	setAttr ".wl[121:195].w"
 		4 4 2.1560000000000002e-06 52 0.26540435299999998 53 0.287447693 
@@ -52053,8 +52081,8 @@ createNode skinCluster -n "skinCluster1";
 		7 1 0.000223062 2 0.00032957800000000002 3 0.0021769519999999998 
 		52 0.52851467200000002 53 0.31201969200000002 54 0.15670287599999999 
 		90 3.3167999999999998e-05
-		8 1 1.11e-07 2 2.114e-06 3 0.00077839300000000005 4 1e-08 
-		52 0.27571210200000001 53 0.33310795599999998 54 0.39039931299999991 
+		8 1 1.1100000000000001e-07 2 2.114e-06 3 0.00077839300000000005 
+		4 1e-08 52 0.27571210200000001 53 0.33310795599999998 54 0.39039931299999991 
 		90 1.0000000000000001e-09
 		7 1 1.2800000000000001e-07 2 4.0899999999999998e-06 3 0.0035640630000000001 
 		4 4.0000000000000002e-09 52 0.090031960999999994 53 0.23990713599999999 
@@ -52166,8 +52194,8 @@ createNode skinCluster -n "skinCluster1";
 		0.95161706599999996
 		5 2 1.86e-07 3 0.0091055589999999992 52 0.000315106 53 0.029916908999999998 
 		54 0.96066224
-		6 1 8.0000000000000005e-09 2 1.384e-06 3 0.008673076 52 
-		0.00030216800000000001 53 0.028197755000000001 54 0.96282560900000003
+		6 1 8.0000000000000005e-09 2 1.3839999999999998e-06 3 0.008673076 
+		52 0.00030216800000000001 53 0.028197755000000001 54 0.96282560900000003
 		6 1 6.5e-08 2 2.227e-06 3 0.0077103670000000001 52 0.00087082999999999995 
 		53 0.020439219000000002 54 0.97097729200000005
 		5 2 1.5099999999999999e-07 3 0.00773218 52 0.00093203999999999997 
@@ -52180,8 +52208,9 @@ createNode skinCluster -n "skinCluster1";
 		52 0.0015163609999999999 53 0.025597518 54 0.96386093400000006
 		6 1 2.9000000000000002e-08 2 1.48e-06 3 0.0085283259999999993 
 		52 0.0010805319999999999 53 0.023471814000000001 54 0.96691781899999996
-		8 1 1.3957e-05 2 0.000235694 3 0.35990579399999995 4 1.393e-06 
-		52 0.138932798 53 0.000219681 58 0.30652220099999999 59 0.194168482
+		8 1 1.3956999999999999e-05 2 0.000235694 3 0.35990579399999995 
+		4 1.393e-06 52 0.138932798 53 0.000219681 58 0.30652220099999999 
+		59 0.194168482
 		9 1 1.6220000000000001e-05 2 0.00027192200000000002 3 0.33076935899999999 
 		4 1.9750000000000001e-06 52 0.41751550900000006 53 0.002997614 54 
 		2.3000000000000001e-08 58 0.200530027 59 0.047897350999999998
@@ -52285,9 +52314,9 @@ createNode skinCluster -n "skinCluster1";
 		9 1 1.1370000000000001e-06 2 5.2380000000000003e-05 3 0.67610615699999999 
 		4 0.028632682 5 2.4930000000000001e-06 52 0.021792860000000001 53 
 		4.0380999999999998e-05 58 0.21163415699999999 59 0.061737752999999999
-		9 1 3.0600000000000001e-07 2 2.0866e-05 3 0.447073901 4 
-		0.0083241310000000002 5 2.9999999999999997e-08 52 0.030263346 53 3.6334999999999997e-05 
-		58 0.30224915099999999 59 0.21203193400000001
+		9 1 3.0600000000000001e-07 2 2.0865999999999996e-05 3 0.447073901 
+		4 0.0083241310000000002 5 2.9999999999999997e-08 52 0.030263346 53 
+		3.6334999999999997e-05 58 0.30224915099999999 59 0.21203193400000001
 		8 1 9.6560000000000004e-06 2 0.000243751 3 0.46797529999999998 
 		4 0.013725322 5 6.8999999999999996e-07 52 5.5999999999999999e-08 58 
 		0.31086248700000002 59 0.20718273800000001
@@ -52391,7 +52420,7 @@ createNode skinCluster -n "skinCluster1";
 		102 0.034318234000000003 103 1.5699999999999999e-07
 		8 4 0.00038219000000000003 91 2.4999999999999999e-08 92 0.024178934999999999 
 		93 0.00018321400000000001 94 1.66e-06 101 0.94416030100000004 102 0.031093569000000001 
-		103 1.06e-07
+		103 1.0600000000000001e-07
 		7 4 5.2868000000000003e-05 92 0.00039799099999999999 93 1.1340000000000001e-06 
 		94 2.0000000000000001e-09 101 0.96357397899999986 102 0.035973844999999997 
 		103 1.8099999999999999e-07
@@ -52436,12 +52465,12 @@ createNode skinCluster -n "skinCluster1";
 		90 0.00150274 91 0.0083466470000000004 92 0.270309191 93 1.0429e-05 
 		94 2.7e-08 101 0.71768884399999988 102 0.0014527609999999999
 		9 1 3.6337000000000001e-05 4 3.6569999999999999e-06 90 8.4771999999999994e-05 
-		91 0.00072389199999999996 92 0.119115941 93 2.627e-06 94 5.0000000000000001e-09 
-		101 0.87772937400000006 102 0.0023033950000000002
-		8 1 2.7999999999999999e-08 4 9.47e-07 90 9.5999999999999999e-08 
+		91 0.00072389199999999996 92 0.119115941 93 2.6269999999999996e-06 94 
+		5.0000000000000001e-09 101 0.87772937400000006 102 0.0023033950000000002
+		8 1 2.7999999999999999e-08 4 9.470000000000001e-07 90 9.5999999999999999e-08 
 		91 1.9640000000000002e-06 92 0.014241657 93 7.9000000000000006e-08 101 
 		0.98192556600000003 102 0.0038296630000000001
-		11 1 0.0024815480000000001 2 1.2200000000000001e-07 4 1.11e-06 
+		11 1 0.0024815480000000001 2 1.2200000000000001e-07 4 1.1100000000000002e-06 
 		52 2.72e-07 90 0.0045886970000000001 91 0.017972783999999999 92 0.28093604100000003 
 		93 1.3149999999999999e-06 94 1.0000000000000001e-09 101 0.69009906600000004 
 		102 0.003919044
@@ -52456,9 +52485,9 @@ createNode skinCluster -n "skinCluster1";
 		93 1.0000000000000001e-09 101 0.58134735300000018 102 0.048315453000000001 
 		103 1.7377999999999999e-05
 		10 1 0.00075454799999999996 2 2.0000000000000001e-09 4 3.8999999999999998e-08 
-		52 1.12e-07 90 0.0017249520000000001 91 0.0067547859999999996 92 
-		0.18678824499999999 101 0.71911615799999984 102 0.084800217999999997 103 
-		6.0940000000000003e-05
+		52 1.1200000000000001e-07 90 0.0017249520000000001 91 0.0067547859999999996 
+		92 0.18678824499999999 101 0.71911615799999984 102 0.084800217999999997 
+		103 6.0940000000000003e-05
 		11 1 0.00055287900000000004 2 1.0000000000000001e-09 4 5.9999999999999995e-08 
 		52 6.5999999999999995e-08 90 0.001365514 91 0.0051358080000000004 92 
 		0.176129596 93 5.0000000000000001e-09 101 0.77767413800000007 102 0.039141127999999997 
@@ -52481,7 +52510,7 @@ createNode skinCluster -n "skinCluster1";
 		52 1.6999999999999999e-07 90 0.0014888600000000001 91 0.0083826939999999996 
 		92 0.19532012700000001 101 0.62687572199999997 102 0.16540107700000001 
 		103 0.001616007
-		8 1 1.699e-06 4 5.6300000000000005e-07 90 4.2679999999999996e-06 
+		8 1 1.6990000000000002e-06 4 5.6300000000000005e-07 90 4.2679999999999996e-06 
 		91 5.0729999999999997e-05 92 0.038467005999999998 101 0.67595235700000011 
 		102 0.280587845 103 0.0049355320000000003
 		10 1 0.0050738600000000003 2 9.2800000000000005e-07 4 3.0100000000000001e-07 
@@ -52528,7 +52557,7 @@ createNode skinCluster -n "skinCluster1";
 		9 1 2.5129999999999999e-06 4 3e-09 52 1.0000000000000001e-09 
 		90 2.4569999999999999e-06 91 9.5194999999999999e-05 92 0.048544353999999998 
 		101 0.054163664 102 0.26839582200000001 103 0.62879599099999994
-		5 4 1.3518e-05 92 7.4840999999999997e-05 101 0.087061550000000001 
+		5 4 1.3517999999999998e-05 92 7.4840999999999997e-05 101 0.087061550000000001 
 		102 0.5048322919999999 103 0.40801779900000001
 		6 4 5.7571000000000002e-05 92 0.0018506729999999999 93 1.2e-08 
 		101 0.097715464000000002 102 0.48996568400000001 103 0.41041059600000002
@@ -52541,8 +52570,8 @@ createNode skinCluster -n "skinCluster1";
 		91 1.8810000000000001e-06 92 0.012935222999999999 101 0.016464514 102 
 		0.111568643 103 0.85902968899999999
 		8 1 1.0000000000000001e-09 4 2.7999999999999999e-08 90 2.0000000000000001e-09 
-		91 2.22e-07 92 0.0061767189999999998 101 0.041353173999999999 102 0.32112401000000002 
-		103 0.63134584400000004
+		91 2.2200000000000003e-07 92 0.0061767189999999998 101 0.041353173999999999 
+		102 0.32112401000000002 103 0.63134584400000004
 		6 4 6.9999999999999998e-09 91 6e-09 92 0.0019125699999999999 
 		101 0.013883995 102 0.142008361 103 0.84219506099999997
 		5 4 4.9910000000000002e-06 92 3.0682000000000002e-05 101 0.035936259999999998 
@@ -52606,12 +52635,12 @@ createNode skinCluster -n "skinCluster1";
 		8 1 2.9999999999999997e-08 4 2.7369999999999998e-06 90 1.4999999999999999e-07 
 		91 1.756e-06 92 0.012571501000000001 101 0.82977043000000006 102 0.15714062300000001 
 		103 0.000512773
-		9 1 2e-08 4 2.4080000000000001e-06 90 1.14e-07 91 1.2810000000000001e-06 
-		92 0.011364018 93 1.0000000000000001e-09 101 0.91548980800000002 102 
-		0.073128749000000007 103 1.3601000000000001e-05
+		9 1 2e-08 4 2.4080000000000001e-06 90 1.1399999999999999e-07 
+		91 1.2810000000000001e-06 92 0.011364018 93 1.0000000000000001e-09 101 
+		0.91548980800000002 102 0.073128749000000007 103 1.3601000000000001e-05
 		9 1 1e-08 4 1.6130000000000001e-06 90 4.9999999999999998e-08 
 		91 7.4000000000000001e-07 92 0.0094744600000000005 93 2.0000000000000001e-09 
-		101 0.95993119699999996 102 0.030591811 103 1.17e-07
+		101 0.95993119699999996 102 0.030591811 103 1.1699999999999999e-07
 		8 1 3e-09 4 8.7899999999999997e-07 90 1.4e-08 91 3.2000000000000001e-07 
 		92 0.0072204979999999997 93 5.0000000000000001e-09 101 0.98189527600000004 
 		102 0.010883004999999999
@@ -52740,8 +52769,8 @@ createNode skinCluster -n "skinCluster1";
 		93 3.4369999999999998e-05 94 3.8200000000000001e-07 101 0.38201352900000002 
 		102 0.090925420000000007 103 0.00046626799999999999
 		8 4 0.00076484600000000002 91 2.0000000000000001e-09 92 0.291745221 
-		93 2.1229999999999998e-05 94 2.03e-07 101 0.51898982400000004 102 0.18408896699999999 
-		103 0.0043897069999999996
+		93 2.1229999999999998e-05 94 2.0299999999999998e-07 101 0.51898982400000004 
+		102 0.18408896699999999 103 0.0043897069999999996
 		7 4 0.001222157 92 0.50362265900000003 93 0.00014522499999999999 
 		94 2.2409999999999998e-06 101 0.432579255 102 0.062393413000000002 103 
 		3.5049999999999998e-05
@@ -52754,7 +52783,7 @@ createNode skinCluster -n "skinCluster1";
 		94 5.0039999999999999e-06 101 0.66229454799999998 102 0.069965880999999994 
 		103 1.8406999999999998e-05
 		8 4 0.001158053 91 3e-09 92 0.49988832699999997 93 0.00040805700000000003 
-		94 1.0512e-05 101 0.48086551 102 0.017669529 103 8.9999999999999995e-09
+		94 1.0511999999999999e-05 101 0.48086551 102 0.017669529 103 8.9999999999999995e-09
 		8 4 0.001047056 91 3e-09 92 0.252519469 93 0.000663147 94 
 		1.2788e-05 101 0.7099519179999999 102 0.035805325999999998 103 2.9299999999999999e-07
 		9 1 7.5669999999999997e-06 4 4.6282000000000002e-05 90 2.7650000000000001e-05 
@@ -52784,7 +52813,7 @@ createNode skinCluster -n "skinCluster1";
 		9 4 0.00065654400000000001 90 1.0000000000000001e-09 91 7.7000000000000001e-08 
 		92 0.25166117900000001 93 0.0013840320000000001 94 2.7166999999999999e-05 
 		101 0.73125483799999991 102 0.015016161 103 1.0000000000000001e-09
-		8 4 0.00067646700000000004 90 1.0000000000000001e-09 91 1.06e-07 
+		8 4 0.00067646700000000004 90 1.0000000000000001e-09 91 1.0600000000000001e-07 
 		92 0.51282921000000004 93 0.002595595 94 6.5445999999999996e-05 101 
 		0.47703838399999998 102 0.0067947909999999997
 		11 1 0.061987268999999998 2 0.00025741700000000002 4 6e-09 52 
@@ -52812,9 +52841,9 @@ createNode skinCluster -n "skinCluster1";
 		0.227709774 91 0.37355208100000009 92 0.138202344 93 3e-09 101 0.022707809999999998 
 		102 0.00056015100000000005 103 3e-09
 		12 1 0.220593444 2 0.0085748830000000002 3 1.99e-07 4 1.3549999999999999e-06 
-		52 0.00072135000000000005 53 2.28e-07 90 0.23498016799999999 91 0.37229197700000016 
-		92 0.13814716399999999 93 3.5000000000000002e-08 101 0.024403395000000001 
-		102 0.00028580199999999999
+		52 0.00072135000000000005 53 2.2799999999999998e-07 90 0.23498016799999999 
+		91 0.37229197700000016 92 0.13814716399999999 93 3.5000000000000002e-08 
+		101 0.024403395000000001 102 0.00028580199999999999
 		13 1 0.206130111 2 0.0072010829999999996 3 1.54e-07 4 4.0239999999999999e-06 
 		52 0.00040269200000000001 53 8.0999999999999997e-08 58 1.2550000000000001e-06 
 		90 0.20415665999999999 91 0.41385117599999993 92 0.137773586 93 3.6800000000000001e-07 
@@ -52834,7 +52863,7 @@ createNode skinCluster -n "skinCluster1";
 		10 1 0.00061384999999999999 4 9.0999999999999993e-06 52 1.0000000000000001e-09 
 		90 0.002566895 91 0.017164644 92 0.75637026500000004 93 0.00052796099999999997 
 		94 4.2050000000000004e-06 101 0.22271966300000001 102 2.3416000000000001e-05
-		9 1 2.2983e-05 4 2.5508999999999999e-05 90 0.00012806100000000001 
+		9 1 2.2982999999999997e-05 4 2.5508999999999999e-05 90 0.00012806100000000001 
 		91 0.001378364 92 0.77075654500000002 93 0.00078021899999999996 94 
 		8.5129999999999996e-06 101 0.22685338099999999 102 4.6424999999999997e-05
 		9 1 6.44e-07 4 7.7594000000000003e-05 90 4.9409999999999998e-06 
@@ -52990,7 +53019,7 @@ createNode skinCluster -n "skinCluster1";
 		101 0.0061310590000000003 102 0.020329191999999999 103 0.97225287299999996
 		5 4 4.3999999999999997e-08 92 0.00018160799999999999 101 0.001358513 
 		102 0.0042408799999999998 103 0.99421895500000002
-		9 1 3.7899999999999999e-07 4 1.4667e-05 90 6.9299999999999997e-07 
+		9 1 3.7899999999999999e-07 4 1.4666999999999999e-05 90 6.9299999999999997e-07 
 		91 0.00038448699999999998 92 0.28384291400000006 93 5.0000000000000001e-09 
 		101 0.26409924699999998 102 0.281801364 103 0.16985624399999999
 		5 4 3.34e-07 92 6.8978000000000003e-05 101 0.0016579559999999999 
@@ -53059,8 +53088,8 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[515:581].w"
 		2 102 0.231754449 103 0.0030710149999999999
 		9 1 3.9224000000000003e-05 4 8.0000000000000002e-08 52 5.0000000000000001e-09 
-		90 5.3519e-05 91 0.00069136700000000002 92 0.090683712999999999 101 
-		0.45163558300000001 102 0.42994832799999999 103 0.026948181000000002
+		90 5.3518999999999994e-05 91 0.00069136700000000002 92 0.090683712999999999 
+		101 0.45163558300000001 102 0.42994832799999999 103 0.026948181000000002
 		9 1 1.3305999999999999e-05 4 4.1000000000000003e-08 52 2.0000000000000001e-09 
 		90 1.5009e-05 91 0.00031183399999999998 92 0.070611208999999994 101 
 		0.233824588 102 0.57067406700000001 103 0.124549944
@@ -53078,7 +53107,7 @@ createNode skinCluster -n "skinCluster1";
 		0.98966743300000004
 		5 4 1.5099999999999999e-07 92 5.6550000000000001e-06 101 0.00051440500000000001 
 		102 0.0043085199999999997 103 0.99517126900000008
-		5 4 9.0999999999999994e-08 92 2.627e-06 101 0.00041864300000000001 
+		5 4 9.0999999999999994e-08 92 2.6269999999999996e-06 101 0.00041864300000000001 
 		102 0.0044270120000000001 103 0.99515162700000004
 		5 4 2.4e-08 92 1.9191999999999999e-05 101 0.00017083300000000001 
 		102 0.0012054259999999999 103 0.99860452499999997
@@ -53108,7 +53137,7 @@ createNode skinCluster -n "skinCluster1";
 		103 0.99682531399999996
 		5 4 5.0000000000000001e-09 92 7.1200000000000002e-07 101 0.00036204899999999998 
 		102 0.0045562739999999999 103 0.99508096000000001
-		5 4 1.0000000000000001e-09 92 2.587e-06 101 0.00030968499999999997 
+		5 4 1.0000000000000001e-09 92 2.5870000000000004e-06 101 0.00030968499999999997 
 		102 0.003778989 103 0.99590873800000002
 		4 92 8.5490000000000006e-06 101 0.00034730200000000002 102 0.0042090529999999999 
 		103 0.99543509600000002
@@ -53177,8 +53206,9 @@ createNode skinCluster -n "skinCluster1";
 		92 0.00032788899999999999 93 6.4600000000000004e-07 94 6e-09 104 0.92116159000000009 
 		105 0.078407284999999993 106 1.6498999999999999e-05
 		10 4 0.00041950499999999998 90 2.0000000000000001e-09 91 2.4499999999999998e-07 
-		92 0.0073042920000000004 93 7.8869999999999992e-06 94 1.11e-07 101 
-		1.0999999999999999e-08 104 0.83055588299999994 105 0.161143904 106 0.00056815999999999995
+		92 0.0073042920000000004 93 7.8869999999999992e-06 94 1.1100000000000001e-07 
+		101 1.0999999999999999e-08 104 0.83055588299999994 105 0.161143904 106 
+		0.00056815999999999995
 		10 4 0.00068797800000000001 90 8.9999999999999995e-09 91 9.1399999999999995e-07 
 		92 0.031788325999999999 93 3.6576999999999999e-05 94 6.9699999999999995e-07 
 		101 3.77e-07 104 0.82565095200000005 105 0.141424564 106 0.00040960600000000002
@@ -53218,7 +53248,7 @@ createNode skinCluster -n "skinCluster1";
 		90 0.0014293159999999999 91 0.012040159999999999 92 0.156481706 93 
 		2.5830000000000001e-06 94 3.2000000000000002e-08 104 0.82740409699999995 105 
 		0.0020488009999999998
-		8 1 4.1339999999999997e-06 4 2.446e-06 90 1.4134000000000001e-05 
+		8 1 4.1339999999999997e-06 4 2.4460000000000004e-06 90 1.4134000000000001e-05 
 		91 0.00028097799999999998 92 0.023905101000000002 93 8.3999999999999998e-08 
 		104 0.97249140499999998 105 0.0033017179999999999
 		11 1 0.0098505399999999996 2 8.4300000000000002e-07 4 1.268e-06 
@@ -53242,9 +53272,9 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".wl[581:645].w"
 		1 106 8.9758000000000004e-05
 		11 1 0.0030033899999999999 2 2.1999999999999998e-08 4 6.5999999999999995e-08 
-		55 1.17e-07 90 0.0081685769999999998 91 0.026196296000000001 92 0.182141677 
-		93 4.0000000000000002e-09 104 0.74293109599999996 105 0.037558009000000003 
-		106 7.4600000000000004e-07
+		55 1.1699999999999999e-07 90 0.0081685769999999998 91 0.026196296000000001 
+		92 0.182141677 93 4.0000000000000002e-09 104 0.74293109599999996 105 
+		0.037558009000000003 106 7.4600000000000004e-07
 		11 1 0.014561063000000001 2 4.9960000000000001e-06 4 8.9000000000000003e-08 
 		55 1.621e-06 90 0.032795904000000001 91 0.074244642999999999 92 0.27748707099999997 
 		93 1.3000000000000001e-08 104 0.5757433030000001 105 0.025161026 106 
@@ -53276,9 +53306,9 @@ createNode skinCluster -n "skinCluster1";
 		9 1 2.2152000000000001e-05 4 4.0999999999999999e-07 90 7.7553999999999996e-05 
 		91 0.00071111299999999998 92 0.02861315 93 2.0000000000000001e-09 104 
 		0.94747206400000006 105 0.023103523000000001 106 3.2000000000000002e-08
-		11 1 0.022643353000000001 2 1.398e-05 4 3e-09 55 6.3720000000000001e-06 
-		56 3e-09 90 0.034353381000000002 91 0.124702117 92 0.31970952000000002 
-		104 0.33076564399999997 105 0.157152398 106 0.010653229
+		11 1 0.022643353000000001 2 1.3979999999999998e-05 4 3e-09 55 
+		6.3720000000000001e-06 56 3e-09 90 0.034353381000000002 91 0.124702117 
+		92 0.31970952000000002 104 0.33076564399999997 105 0.157152398 106 0.010653229
 		10 1 0.0053097470000000001 2 9.2999999999999999e-08 4 1.2e-08 
 		55 1.815e-06 90 0.0094367519999999996 91 0.048509291000000003 92 
 		0.24224182799999999 104 0.41141241000000006 105 0.26591250300000002 106 
@@ -53381,8 +53411,9 @@ createNode skinCluster -n "skinCluster1";
 		7 4 1.0000000000000001e-09 90 1.0000000000000001e-09 91 2.5199999999999998e-07 
 		92 0.00057370299999999995 104 0.0038553699999999999 105 0.044734753000000002 
 		106 0.95083591999999995
-		7 1 2.4e-08 90 5.1e-08 91 4.8149999999999996e-06 92 0.0025852940000000001 
-		104 0.004770921 105 0.042743851999999999 106 0.94989504300000005
+		7 1 2.4e-08 90 5.0999999999999993e-08 91 4.8149999999999996e-06 
+		92 0.0025852940000000001 104 0.004770921 105 0.042743851999999999 106 
+		0.94989504300000005
 		7 1 4.9999999999999998e-08 90 8.7999999999999994e-08 91 8.2360000000000004e-06 
 		92 0.0029140360000000001 104 0.0044068290000000001 105 0.033751921999999997 
 		106 0.95891883899999997
@@ -53446,9 +53477,9 @@ createNode skinCluster -n "skinCluster1";
 		8 1 5.8999999999999999e-08 4 1.0839000000000001e-05 90 5.3000000000000001e-07 
 		91 7.272e-06 92 0.0028552959999999998 104 0.65585007900000003 105 0.33198120399999997 
 		106 0.0092947210000000006
-		9 1 6.5e-08 4 1.2733e-05 90 6.5899999999999996e-07 91 7.7190000000000001e-06 
-		92 0.0029307579999999999 93 3e-09 104 0.82302356200000004 105 0.17305609399999999 
-		106 0.00096840700000000001
+		9 1 6.5e-08 4 1.2733000000000002e-05 90 6.5899999999999996e-07 
+		91 7.7190000000000001e-06 92 0.0029307579999999999 93 3e-09 104 0.82302356200000004 
+		105 0.17305609399999999 106 0.00096840700000000001
 		9 1 5.4e-08 4 1.094e-05 90 5.1699999999999998e-07 91 6.8059999999999997e-06 
 		92 0.0027001270000000001 93 1e-08 104 0.91955871599999994 105 0.077701576999999994 
 		106 2.1253000000000001e-05
@@ -53578,7 +53609,7 @@ createNode skinCluster -n "skinCluster1";
 		1.4198e-05 101 7.4000000000000001e-08 104 0.70075891899999998 105 0.00078326299999999997
 		10 1 0.00071255099999999996 4 2.5275000000000001e-05 90 0.0027717570000000001 
 		91 0.025793666 92 0.5003916719999999 93 0.000345951 94 1.6934000000000001e-05 
-		101 1.17e-07 104 0.46971588399999997 105 0.00022619299999999999
+		101 1.1699999999999999e-07 104 0.46971588399999997 105 0.00022619299999999999
 		10 1 4.2703000000000001e-05 4 6.4243000000000001e-05 90 0.00022451700000000001 
 		91 0.0044793120000000001 92 0.34732588599999997 93 0.00050757700000000005 
 		94 3.0540999999999998e-05 101 4.1699999999999999e-07 104 0.646684378 105 
@@ -53669,8 +53700,9 @@ createNode skinCluster -n "skinCluster1";
 		0.021179938999999998 95 2.5110000000000002e-06 101 0.00023828799999999999 
 		104 0.147009417 105 0.00031169800000000001
 		10 1 1.0000000000000001e-09 4 0.00059108499999999998 90 2.6000000000000001e-08 
-		91 1.263e-06 92 0.79982279899999997 93 0.045183292999999999 94 0.0030869349999999999 
-		101 9.6545000000000005e-05 104 0.15013805999999999 105 0.001079993
+		91 1.2629999999999998e-06 92 0.79982279899999997 93 0.045183292999999999 
+		94 0.0030869349999999999 101 9.6545000000000005e-05 104 0.15013805999999999 
+		105 0.001079993
 		8 4 0.00121915 91 2.6000000000000001e-08 92 0.79957779499999992 
 		93 0.0025993380000000001 94 0.00012895699999999999 101 2.0951e-05 104 
 		0.19209362999999999 105 0.0043601530000000003
@@ -53680,7 +53712,7 @@ createNode skinCluster -n "skinCluster1";
 		9 4 0.0013076959999999999 91 3e-09 92 0.80747194899999986 93 
 		0.000172614 94 3.8419999999999998e-06 101 8.3909999999999998e-06 104 0.17624125800000001 
 		105 0.014793667999999999 106 5.7899999999999998e-07
-		9 4 0.00087842699999999998 91 1.17e-07 92 0.81604625600000003 
+		9 4 0.00087842699999999998 91 1.1699999999999999e-07 92 0.81604625600000003 
 		93 5.0249e-05 94 7.4099999999999998e-07 101 5.0696999999999999e-05 104 
 		0.161575051 105 0.021387493 106 1.0969e-05
 		10 4 0.00044009099999999998 90 1.0000000000000001e-09 91 4.3449999999999999e-06 
@@ -53706,10 +53738,10 @@ createNode skinCluster -n "skinCluster1";
 		10 1 1.9062000000000001e-05 4 0.00012689900000000001 90 8.5223999999999996e-05 
 		91 0.001751074 92 0.170736901 93 0.00038941300000000002 94 1.9066999999999999e-05 
 		101 3.1100000000000002e-07 104 0.82412325099999995 105 0.0027487980000000002
-		11 1 2.001e-06 4 0.00030381599999999999 90 1.1567e-05 91 
-		0.00037182099999999999 92 0.127097719 93 0.00067288799999999996 94 3.2317000000000002e-05 
-		101 1.5510000000000001e-06 104 0.86245123400000001 105 0.0090550849999999992 
-		106 1.0000000000000001e-09
+		11 1 2.001e-06 4 0.00030381599999999999 90 1.1567000000000001e-05 
+		91 0.00037182099999999999 92 0.127097719 93 0.00067288799999999996 94 
+		3.2317000000000002e-05 101 1.5510000000000001e-06 104 0.86245123400000001 105 
+		0.0090550849999999992 106 1.0000000000000001e-09
 		11 1 1.8799999999999999e-07 4 0.00057394399999999995 90 1.576e-06 
 		91 7.8492999999999995e-05 92 0.114583571 93 0.00061104300000000002 94 
 		2.5564000000000001e-05 101 5.6869999999999999e-06 104 0.86053163300000002 105 
@@ -53809,7 +53841,7 @@ createNode skinCluster -n "skinCluster1";
 		9 1 4.9000000000000002e-08 4 7.2640000000000002e-06 90 1.7700000000000001e-07 
 		91 0.000132306 92 0.029124074999999999 101 4.3700000000000001e-07 104 
 		0.065449601999999996 105 0.185892166 106 0.71939392400000002
-		10 1 1.0139999999999999e-06 4 1.3439e-05 90 2.4719999999999998e-06 
+		10 1 1.0139999999999999e-06 4 1.3439000000000001e-05 90 2.4719999999999998e-06 
 		91 0.0013412000000000001 92 0.105474005 93 2.0000000000000001e-09 101 
 		1.4843e-05 104 0.150400649 105 0.29165289 106 0.45109948599999994
 		9 1 4.5750000000000001e-05 4 8.1500000000000003e-07 90 6.3312999999999995e-05 
@@ -53818,10 +53850,11 @@ createNode skinCluster -n "skinCluster1";
 		9 1 0.00022334500000000001 4 2.2700000000000001e-07 90 0.00026827399999999999 
 		91 0.016433409999999999 92 0.142926938 101 1.9500000000000001e-07 104 
 		0.12859342300000001 105 0.28925330700000002 106 0.42230088099999991
-		10 1 0.00081471099999999997 4 5.1e-08 55 6e-09 90 0.00092273300000000002 
-		91 0.025777304000000001 92 0.16846456200000001 101 2.1999999999999998e-08 
-		104 0.13460860299999999 105 0.32838974999999998 106 0.34102225799999997
-		9 1 7.5549999999999997e-06 4 3.5020000000000001e-06 90 1.3175e-05 
+		10 1 0.00081471099999999997 4 5.0999999999999993e-08 55 6e-09 
+		90 0.00092273300000000002 91 0.025777304000000001 92 0.16846456200000001 
+		101 2.1999999999999998e-08 104 0.13460860299999999 105 0.32838974999999998 
+		106 0.34102225799999997
+		9 1 7.5549999999999997e-06 4 3.5020000000000001e-06 90 1.3174999999999998e-05 
 		91 0.0035675419999999999 92 0.10645193999999999 101 5.1390000000000003e-06 
 		104 0.139169293 105 0.26595032000000002 106 0.48483153400000001
 		9 1 4.2599999999999998e-07 4 2.3439999999999999e-06 90 9.7600000000000006e-07 
@@ -53830,7 +53863,7 @@ createNode skinCluster -n "skinCluster1";
 		9 1 1.4e-08 4 8.9899999999999999e-07 90 4.9999999999999998e-08 
 		91 2.8526000000000001e-05 92 0.0081439049999999999 101 4.0000000000000002e-09 
 		104 0.022938672 105 0.071280019 106 0.89760791100000004
-		7 4 2.8200000000000001e-07 90 2.0000000000000001e-09 91 1.854e-06 
+		7 4 2.8200000000000001e-07 90 2.0000000000000001e-09 91 1.8540000000000002e-06 
 		92 0.00206054 104 0.008204266 105 0.026816573 106 0.96291648299999999
 		6 4 7.7000000000000001e-08 91 6.1000000000000004e-08 92 0.000406427 
 		104 0.0023005310000000002 105 0.0074186460000000001 106 0.98987425799999995
@@ -53848,7 +53881,7 @@ createNode skinCluster -n "skinCluster1";
 		10 1 4.0000000000000002e-09 4 1.8544000000000001e-05 90 2.9000000000000002e-08 
 		91 4.0680999999999999e-05 92 0.028151807000000001 93 3e-09 101 6.4899999999999995e-07 
 		104 0.070997590999999999 105 0.223803209 106 0.676987483
-		10 1 1.03e-07 4 4.6202999999999998e-05 90 3.9799999999999999e-07 
+		10 1 1.0300000000000001e-07 4 4.6202999999999998e-05 90 3.9799999999999999e-07 
 		91 0.00041360499999999999 92 0.11270224700000001 93 2.0999999999999999e-08 
 		101 2.3404000000000002e-05 104 0.173449768 105 0.33250438900000001 106 
 		0.38085986199999999
@@ -53884,7 +53917,7 @@ createNode skinCluster -n "skinCluster1";
 		9 1 5.1500000000000005e-07 4 3.0249000000000001e-05 90 2.3719999999999999e-06 
 		91 7.1390999999999995e-05 92 0.014767947999999999 93 5.1229999999999999e-06 
 		94 7.1999999999999996e-08 104 0.98074629300000005 105 0.0043760370000000002
-		9 1 8.3860000000000007e-06 4 1.0736e-05 90 2.8796999999999999e-05 
+		9 1 8.3860000000000007e-06 4 1.0736000000000002e-05 90 2.8796999999999999e-05 
 		91 0.00055964700000000003 92 0.038933654999999998 93 2.289e-06 94 
 		2.7999999999999999e-08 104 0.95832023499999996 105 0.0021362270000000001
 		9 1 6.1661000000000005e-05 4 3.9040000000000002e-06 90 0.00016927199999999999 
@@ -54064,7 +54097,7 @@ createNode skinCluster -n "skinCluster1";
 		90 0.27736019499999998 91 0.31583781999999999 104 1.48e-06 105 4.4999999999999999e-08
 		10 1 0.21547084399999999 2 0.012081371 3 5.1719999999999998e-06 
 		55 0.0010008 56 6.224e-06 90 0.189790509 91 0.44177672500000004 92 
-		0.139857496 104 1.0352e-05 105 5.0699999999999997e-07
+		0.139857496 104 1.0351999999999998e-05 105 5.0699999999999997e-07
 		12 1 0.34786521599999998 2 0.068391624999999998 3 0.000480688 
 		4 2.0000000000000001e-09 55 0.017318722000000002 56 0.000217242 57 
 		5.0000000000000001e-09 90 0.237395836 91 0.326438167 104 0.0017328300000000001 
@@ -54095,17 +54128,17 @@ createNode skinCluster -n "skinCluster1";
 		91 0.24653944899999999 93 1e-08 104 0.001144015 105 1.7071999999999998e-05
 		13 1 0.35665055000000018 2 0.047986340000000002 3 0.00010411100000000001 
 		4 1.5911999999999999e-05 55 0.0037421830000000001 56 9.3900000000000003e-07 
-		74 4.0604e-05 75 8.9999999999999995e-09 90 0.30828927299999997 91 
-		0.28252117100000002 93 8.3999999999999998e-08 104 0.00064502400000000001 105 
-		3.8e-06
+		74 4.0603999999999993e-05 75 8.9999999999999995e-09 90 0.30828927299999997 
+		91 0.28252117100000002 93 8.3999999999999998e-08 104 0.00064502400000000001 
+		105 3.7999999999999996e-06
 		12 1 0.40772284799999992 2 0.17812367200000001 3 0.0059349829999999996 
 		4 1.4045e-05 52 0.038705154999999998 53 2.1165000000000001e-05 58 
 		0.00024057500000000001 59 2.1799999999999999e-07 90 0.327058301 91 0.041613583000000003 
 		92 0.00056545300000000005 93 2.0000000000000001e-09
 		11 1 0.40190135700000018 2 0.18153080899999999 3 0.005866642 
 		4 2.9059999999999998e-06 52 0.052256078999999997 53 6.1910999999999997e-05 
-		58 2.2379e-05 59 8.0000000000000005e-09 90 0.31658478400000001 91 
-		0.041203840999999998 92 0.00056928399999999998
+		58 2.2378999999999997e-05 59 8.0000000000000005e-09 90 0.31658478400000001 
+		91 0.041203840999999998 92 0.00056928399999999998
 		12 1 0.41874681700000016 2 0.17443971999999999 3 0.0063893400000000003 
 		4 5.2595e-05 52 0.024527679 53 7.7810000000000005e-06 58 0.00066209199999999998 
 		59 9.5000000000000001e-07 90 0.323424514 91 0.050869866999999999 92 
@@ -54140,13 +54173,13 @@ createNode skinCluster -n "skinCluster1";
 		74 0.000645905 75 9.0999999999999997e-07 90 0.32643614300000001 91 
 		0.048177388000000002 92 0.00073035299999999999 93 1.3000000000000001e-08
 		12 1 0.40550380400000002 2 0.178310725 3 0.006244604 4 
-		1.3337e-05 55 0.036328026999999999 56 1.9513000000000001e-05 74 0.00022271699999999999 
-		75 1.8900000000000001e-07 90 0.33381079299999999 91 0.039091182000000002 
-		92 0.00045510700000000001 93 2.0000000000000001e-09
+		1.3337000000000001e-05 55 0.036328026999999999 56 1.9513000000000001e-05 
+		74 0.00022271699999999999 75 1.8900000000000001e-07 90 0.33381079299999999 
+		91 0.039091182000000002 92 0.00045510700000000001 93 2.0000000000000001e-09
 		11 1 0.39963973500000022 2 0.178560948 3 0.0061047419999999998 
-		4 2.514e-06 55 0.047457326000000001 56 6.0398e-05 74 1.7968000000000001e-05 
-		75 5.0000000000000001e-09 90 0.33394460199999998 91 0.033865135999999997 
-		92 0.000346626
+		4 2.514e-06 55 0.047457326000000001 56 6.0397999999999993e-05 74 
+		1.7968000000000001e-05 75 5.0000000000000001e-09 90 0.33394460199999998 91 
+		0.033865135999999997 92 0.000346626
 		10 1 0.39317892300000001 2 0.181588582 3 0.0068728310000000003 
 		4 3.6300000000000001e-07 55 0.056084037000000003 56 0.00026777499999999999 
 		57 1.0000000000000001e-09 90 0.32067379699999998 91 0.040771689999999999 
@@ -54195,9 +54228,9 @@ createNode skinCluster -n "skinCluster1";
 		8 1 0.114316347 2 0.0009861710000000001 52 1.2587e-05 53 
 		3.2000000000000002e-08 90 0.222373652 91 0.61398036200000017 92 0.048330831999999997 
 		101 1.7e-08
-		9 1 0.110894125 2 0.00096888300000000003 55 2.9822e-05 56 
-		8.9999999999999999e-08 90 0.197011292 91 0.6304884260000001 92 0.060606385999999998 
-		104 9.47e-07 105 2.9000000000000002e-08
+		9 1 0.110894125 2 0.00096888300000000003 55 2.9822000000000003e-05 
+		56 8.9999999999999999e-08 90 0.197011292 91 0.6304884260000001 92 
+		0.060606385999999998 104 9.470000000000001e-07 105 2.9000000000000002e-08
 		10 1 0.103576636 2 0.00092411100000000003 55 6.3625000000000002e-05 
 		56 2.0599999999999999e-07 90 0.143073383 91 0.66226929700000003 92 
 		0.090035880999999998 101 1.0000000000000001e-09 104 5.3340000000000001e-05 
@@ -54211,7 +54244,7 @@ createNode skinCluster -n "skinCluster1";
 		101 2.8229e-05 102 6.0999999999999998e-07
 		9 1 0.047117153000000002 2 2.9575999999999999e-05 52 5.7000000000000005e-07 
 		53 1.0000000000000001e-09 90 0.111030252 91 0.71146542699999993 92 
-		0.130355097 101 1.906e-06 102 1.7999999999999999e-08
+		0.130355097 101 1.9059999999999998e-06 102 1.7999999999999999e-08
 		11 1 0.044924881 2 2.7291e-05 4 1.0000000000000001e-09 55 
 		1.3209999999999999e-06 56 2.0000000000000001e-09 90 0.095562764999999994 
 		91 0.71064044299999984 92 0.14881645900000001 101 8.4999999999999994e-08 
@@ -54224,13 +54257,13 @@ createNode skinCluster -n "skinCluster1";
 		55 3.18e-06 56 6.9999999999999998e-09 90 0.051906646000000001 91 
 		0.6861545659999998 92 0.219062743 101 6.4199999999999995e-07 104 0.0023696300000000002 
 		105 0.000283823 106 1.3650000000000001e-06
-		11 1 0.042241124999999997 2 2.7152e-05 4 2.0000000000000001e-09 
+		11 1 0.042241124999999997 2 2.7151999999999997e-05 4 2.0000000000000001e-09 
 		52 3.5209999999999998e-06 53 8.0000000000000005e-09 90 0.065918484999999999 
 		91 0.74063272099999999 92 0.15069465100000001 101 0.000463428 102 1.8898000000000001e-05 
 		103 8.9999999999999995e-09
-		9 1 0.015593301 2 2.28e-07 4 3e-09 52 1.7e-08 90 0.044417869999999998 
-		91 0.67505155800000005 92 0.26487203599999998 101 6.4107000000000001e-05 
-		102 8.8000000000000004e-07
+		9 1 0.015593301 2 2.2799999999999998e-07 4 3e-09 52 1.7e-08 
+		90 0.044417869999999998 91 0.67505155800000005 92 0.26487203599999998 
+		101 6.4107000000000001e-05 102 8.8000000000000004e-07
 		10 1 0.01514238 2 2.3300000000000001e-07 4 4.0000000000000002e-09 
 		52 4.4999999999999999e-08 90 0.038189191999999997 91 0.68829132200000009 
 		92 0.25769026699999997 101 0.00066754300000000004 102 1.9011000000000001e-05 
@@ -54247,7 +54280,7 @@ createNode skinCluster -n "skinCluster1";
 		90 0.026463649999999998 91 0.67275589499999988 92 0.27880782999999998 
 		101 0.0068696429999999999 102 0.00034963600000000001 103 1.4980000000000001e-06
 		7 1 0.004046371 4 1.7e-08 90 0.014264053 91 0.54336309299999996 
-		92 0.43751925800000002 101 0.00079207599999999996 102 1.5132e-05
+		92 0.43751925800000002 101 0.00079207599999999996 102 1.5132000000000002e-05
 		8 1 0.0039056310000000001 4 2.4e-08 90 0.012024543 91 0.55752929000000007 
 		92 0.42115012800000001 101 0.0052012669999999999 102 0.000189025 103 
 		9.2000000000000003e-08
@@ -54256,7 +54289,7 @@ createNode skinCluster -n "skinCluster1";
 		101 5.7305000000000001e-05 104 0.002059403 105 0.00013767799999999999 106 
 		5.8000000000000003e-08
 		10 1 0.0045128169999999997 4 4.4999999999999999e-08 55 2.0000000000000001e-09 
-		90 0.010342567 91 0.51966391300000003 92 0.45618790799999998 101 4.6541e-05 
+		90 0.010342567 91 0.51966391300000003 92 0.45618790799999998 101 4.6540999999999994e-05 
 		104 0.0083913170000000006 105 0.00085093099999999997 106 3.9589999999999997e-06
 		9 1 0.0043521319999999999 4 4.9999999999999998e-08 52 3e-09 
 		90 0.0098336399999999994 91 0.54862283599999995 92 0.41405557900000001 
@@ -54321,12 +54354,12 @@ createNode skinCluster -n "skinCluster1";
 		9 1 1.92e-07 4 4.5324000000000002e-05 90 8.9999999999999996e-07 
 		91 0.0012755380000000001 92 0.90145038599999994 93 9.0999999999999994e-08 
 		101 0.083340241999999995 102 0.013800613 103 8.6713999999999997e-05
-		9 1 7.6190000000000002e-06 4 1.0417999999999999e-05 90 2.7861e-05 
+		9 1 7.6190000000000002e-06 4 1.0417999999999999e-05 90 2.7860999999999996e-05 
 		91 0.019735042000000001 92 0.87922324100000004 93 6.9999999999999998e-09 
 		101 0.090613209 102 0.010272913999999999 103 0.000109689
-		8 1 9.9052e-05 4 1.916e-06 90 0.00034400700000000002 91 
-		0.124326379 92 0.80890330700000013 101 0.062562561000000003 102 0.0037372289999999999 
-		103 2.5548999999999999e-05
+		8 1 9.9052000000000013e-05 4 1.916e-06 90 0.00034400700000000002 
+		91 0.124326379 92 0.80890330700000013 101 0.062562561000000003 102 
+		0.0037372289999999999 103 2.5548999999999999e-05
 		8 1 0.058198579 2 1.4295e-05 4 6.1410000000000002e-06 90 
 		0.246017769 91 0.38791208600000021 92 0.30783293699999997 93 1.8082999999999999e-05 
 		94 1.1000000000000001e-07
@@ -54341,9 +54374,9 @@ createNode skinCluster -n "skinCluster1";
 		92 0.31964458699999998 93 3.4156000000000003e-05 94 4.7399999999999998e-07 
 		104 1.4479e-05
 		11 1 0.064805238000000001 2 3.1467000000000002e-05 4 2.3300000000000001e-06 
-		52 2.05e-07 90 0.21453586099999999 91 0.36087473099999995 92 0.35551933800000002 
-		93 2.9110000000000001e-05 94 7.6000000000000006e-08 101 0.0042014640000000002 
-		102 1.8e-07
+		52 2.0499999999999997e-07 90 0.21453586099999999 91 0.36087473099999995 
+		92 0.35551933800000002 93 2.9110000000000001e-05 94 7.6000000000000006e-08 
+		101 0.0042014640000000002 102 1.8e-07
 		11 1 0.014362501 2 1.02e-07 4 6.8199999999999999e-07 52 
 		4.0000000000000002e-09 90 0.064780470000000007 91 0.20099439099999999 92 
 		0.70188187499999999 93 0.00016904100000000001 94 7.5899999999999995e-07 101 
@@ -54379,7 +54412,7 @@ createNode skinCluster -n "skinCluster1";
 		91 0.0081527349999999995 92 0.95751870000000006 93 0.00043722100000000001 
 		94 3.9389999999999999e-06 101 0.032796045000000003 102 6.4300000000000003e-07
 		8 1 6.4683000000000004e-05 4 1.7e-08 90 0.001041543 91 0.01010018 
-		92 0.98863214300000002 93 0.00014756400000000001 94 1.64e-06 101 1.223e-05
+		92 0.98863214300000002 93 0.00014756400000000001 94 1.64e-06 101 1.2230000000000001e-05
 		9 1 0.00013464600000000001 4 2.0000000000000001e-09 90 0.0016324880000000001 
 		91 0.012808434 92 0.9852021849999999 93 0.00021801399999999999 94 
 		4.2230000000000001e-06 101 1.0000000000000001e-09 104 6.9999999999999998e-09
@@ -54389,9 +54422,9 @@ createNode skinCluster -n "skinCluster1";
 		8 1 0.000277478 4 2.3200000000000001e-07 90 0.002624347 91 
 		0.017543977999999998 92 0.97889739600000003 93 0.00035646300000000001 94 
 		1.3266e-05 104 0.00028684000000000001
-		9 1 2.48e-06 4 1.4314000000000001e-05 90 3.0222e-05 91 0.00039838699999999999 
-		92 0.97552537300000008 93 0.0021718639999999999 94 6.6279999999999999e-06 
-		101 0.021849288000000001 102 1.4440000000000001e-06
+		9 1 2.48e-06 4 1.4314000000000001e-05 90 3.0222000000000003e-05 
+		91 0.00039838699999999999 92 0.97552537300000008 93 0.0021718639999999999 
+		94 6.6279999999999999e-06 101 0.021849288000000001 102 1.4440000000000001e-06
 		8 1 2.6400000000000001e-06 4 7.0000000000000005e-08 90 6.8868000000000005e-05 
 		91 0.001044707 92 0.99836361299999998 93 0.00050752800000000004 94 
 		6.9999999999999997e-07 101 1.1874e-05
@@ -54437,9 +54470,9 @@ createNode skinCluster -n "skinCluster1";
 		7 1 2.7999999999999999e-08 2 8.8199999999999998e-07 3 0.00084213400000000002 
 		4 4.4999999999999999e-08 52 0.29182069500000002 53 0.32013238799999999 
 		54 0.38720382800000008
-		7 1 3.4e-08 2 1.751e-06 3 0.003760429 4 1.7999999999999999e-08 
+		7 1 3.4e-08 2 1.7509999999999998e-06 3 0.003760429 4 1.7999999999999999e-08 
 		52 0.098508312000000001 53 0.23463658800000001 54 0.663092868
-		7 1 1.9000000000000001e-08 2 1.747e-06 3 0.010839563999999999 
+		7 1 1.9000000000000001e-08 2 1.7470000000000002e-06 3 0.010839563999999999 
 		4 5.0000000000000001e-09 52 0.024375299999999999 53 0.103803797 54 
 		0.86097956800000008
 		6 1 2.0000000000000001e-09 2 3.4999999999999998e-07 3 0.01063208 
@@ -54470,10 +54503,11 @@ createNode skinCluster -n "skinCluster1";
 		7 1 1.3000000000000001e-08 2 1.9410000000000001e-06 3 0.0022722799999999998 
 		4 8.9999999999999995e-09 52 0.086136871000000004 53 0.51879516799999992 
 		54 0.39279371800000001
-		7 1 1.36e-07 2 1.2009e-05 3 0.0085801950000000005 4 3.5999999999999998e-08 
-		52 0.1838611 53 0.62667510300000007 54 0.180871421
+		7 1 1.36e-07 2 1.2009000000000001e-05 3 0.0085801950000000005 
+		4 3.5999999999999998e-08 52 0.1838611 53 0.62667510300000007 54 
+		0.180871421
 		4 1 8.0800000000000004e-07 2 4.6480000000000002e-05 3 0.024693050000000001 
-		4 1.11e-07;
+		4 1.1100000000000001e-07;
 	setAttr ".wl[986:1046].w"
 		4 52 0.369256588 53 0.53073506599999998 54 0.075267244999999997 
 		58 6.5199999999999996e-07
@@ -54481,8 +54515,8 @@ createNode skinCluster -n "skinCluster1";
 		4 2.5499999999999999e-07 52 0.63619573799999996 53 0.32132854799999999 
 		54 0.023025526000000001 58 2.9507999999999999e-05 59 6.9999999999999998e-09
 		9 1 5.8400000000000004e-07 2 2.1311999999999999e-05 3 0.011020085000000001 
-		4 4.39e-07 52 0.80256366499999998 53 0.18102836899999999 54 0.0048425539999999998 
-		58 0.00052223500000000002 59 7.5700000000000002e-07
+		4 4.3899999999999995e-07 52 0.80256366499999998 53 0.18102836899999999 
+		54 0.0048425539999999998 58 0.00052223500000000002 59 7.5700000000000002e-07
 		9 1 1.466e-06 2 4.8180000000000003e-05 3 0.030145321999999999 
 		4 6.1699999999999998e-07 52 0.86853250800000004 53 0.095930805999999993 
 		54 0.00060796000000000005 58 0.0047017700000000001 59 3.1371000000000002e-05
@@ -54492,8 +54526,8 @@ createNode skinCluster -n "skinCluster1";
 		7 1 4.3700000000000001e-07 2 8.8270000000000004e-06 3 0.0031646729999999998 
 		52 0.075188210000000005 53 0.24591139400000001 54 0.67572645399999998 
 		90 5.0000000000000001e-09
-		6 1 2.8999999999999998e-07 2 1.0372e-05 3 0.011393459 52 
-		0.015986904 53 0.096701956000000006 54 0.87590701900000001
+		6 1 2.8999999999999998e-07 2 1.0371999999999998e-05 3 0.011393459 
+		52 0.015986904 53 0.096701956000000006 54 0.87590701900000001
 		6 1 3.5999999999999998e-08 2 2.368e-06 3 0.011085355 52 
 		0.003224279 53 0.037287528 54 0.94840043399999996
 		6 1 3e-09 2 4.8999999999999997e-07 3 0.0085118729999999997 
@@ -54527,7 +54561,7 @@ createNode skinCluster -n "skinCluster1";
 		58 2.6300000000000001e-07 90 7.9000000000000006e-08
 		10 1 2.3822e-05 2 0.00029487399999999998 3 0.019418041 4 
 		6e-09 52 0.6178103989999999 53 0.34369211199999999 54 0.018746373 58 
-		1.4283e-05 59 1.0000000000000001e-09 90 8.9000000000000003e-08
+		1.4282999999999999e-05 59 1.0000000000000001e-09 90 8.9000000000000003e-08
 		10 1 1.5551000000000001e-05 2 0.00016231899999999999 3 0.010545797000000001 
 		4 1.2e-08 52 0.79940669000000009 53 0.18609287899999999 54 0.0034610560000000001 
 		58 0.000315447 59 1.99e-07 90 4.9999999999999998e-08
@@ -54554,8 +54588,8 @@ createNode skinCluster -n "skinCluster1";
 		9 1 9.7199999999999997e-07 2 5.2181000000000001e-05 3 0.14469122400000001 
 		4 3.3060000000000002e-06 52 0.78227942199999989 53 0.041551037999999998 
 		54 4.0466999999999997e-05 58 0.03042858 59 0.00095281000000000001
-		9 1 3.7899999999999999e-07 2 2.6123e-05 3 0.222158256 4 
-		1.4459e-05 52 0.67735632899999998 53 0.035002492000000003 54 3.5404999999999997e-05 
+		9 1 3.7899999999999999e-07 2 2.6122999999999997e-05 3 0.222158256 
+		4 1.4459e-05 52 0.67735632899999998 53 0.035002492000000003 54 3.5404999999999997e-05 
 		58 0.061211948000000002 59 0.0041946090000000002
 		9 1 8.3000000000000002e-08 2 8.5860000000000005e-06 3 0.309704378 
 		4 6.0943999999999998e-05 52 0.57416483899999993 53 0.026981541000000001 
@@ -54662,14 +54696,14 @@ createNode skinCluster -n "skinCluster1";
 		4 0.086514482000000004 5 8.6891000000000005e-05 52 0.000511306 53 
 		1.0550000000000001e-06 58 0.075160535000000001 59 0.006749382
 		9 1 1.5016e-05 2 0.00030106099999999998 3 0.76170872200000006 
-		4 0.14580857999999999 5 0.00086094199999999996 52 2.8263e-05 53 
-		2.9000000000000002e-08 58 0.082906811999999996 59 0.0083705749999999999
+		4 0.14580857999999999 5 0.00086094199999999996 52 2.8262999999999997e-05 
+		53 2.9000000000000002e-08 58 0.082906811999999996 59 0.0083705749999999999
 		9 1 6.567e-06 2 0.000182506 3 0.67451378799999984 4 0.043857416000000003 
 		5 2.5052e-05 52 6.3049999999999998e-06 53 6e-09 58 0.21669746500000001 
 		59 0.064710895000000004
 		9 1 1.8339999999999999e-06 2 7.7361999999999996e-05 3 0.47400783699999999 
-		4 0.012199316999999999 5 4.7899999999999999e-07 52 2.4199e-05 53 
-		1.9000000000000001e-08 58 0.30729050200000002 59 0.20639845100000001
+		4 0.012199316999999999 5 4.7899999999999999e-07 52 2.4199000000000003e-05 
+		53 1.9000000000000001e-08 58 0.30729050200000002 59 0.20639845100000001
 		9 1 3.4499999999999998e-07 2 2.2826000000000001e-05 3 0.240030365 
 		4 0.002426765 5 3e-09 52 2.3186000000000001e-05 53 1.4e-08 58 
 		0.30083737199999999 59 0.45665912399999997
@@ -54718,7 +54752,7 @@ createNode skinCluster -n "skinCluster1";
 		90 2.2399999999999999e-07
 		8 1 1.3021e-05 2 0.00022380999999999999 3 0.13302981899999999 
 		4 4.9999999999999998e-08 52 0.63266831899999998 53 0.208220347 54 
-		0.025844428999999999 90 2.05e-07
+		0.025844428999999999 90 2.0499999999999997e-07
 		8 1 5.5936000000000001e-05 2 0.00083550400000000004 3 0.54330953000000015 
 		4 2.4e-08 52 0.38297538199999998 53 0.069510813000000005 54 0.003311788 
 		90 1.023e-06
@@ -54865,7 +54899,7 @@ createNode skinCluster -n "skinCluster1";
 		61 1.3650000000000001e-06
 		5 3 3e-09 58 1.6000000000000001e-08 59 0.99263041500000004 60 
 		0.0073695649999999998 61 1.0000000000000001e-09
-		4 3 8.0000000000000005e-09 58 1.37e-07 59 0.99957231199999996 
+		4 3 8.0000000000000005e-09 58 1.3700000000000002e-07 59 0.99957231199999996 
 		60 0.00042754300000000001
 		4 58 2.0000000000000001e-09 59 0.95818095599999997 60 0.041817793999999998 
 		61 1.248e-06
@@ -54900,7 +54934,7 @@ createNode skinCluster -n "skinCluster1";
 		4 3 5.0000000000000001e-09 59 0.67057497200000005 60 0.32801514199999998 
 		61 0.001409881
 		5 3 3.4e-08 58 1.0000000000000001e-09 59 0.90943822200000002 
-		60 0.090537184000000007 61 2.4559e-05
+		60 0.090537184000000007 61 2.4559000000000003e-05
 		6 3 2.4999999999999999e-08 58 1.3000000000000001e-08 59 0.9874285559999999 
 		60 0.01257134 61 6.1999999999999999e-08 66 4.0000000000000002e-09
 		5 3 6.9999999999999998e-09 59 0.99261280200000002 60 0.0073871850000000001 
@@ -54969,7 +55003,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 5.0000000000000001e-09 58 5.0000000000000001e-09 59 0.99994629899999998 
 		60 4.8794000000000001e-05 66 4.8969999999999999e-06
 		4 3 3e-09 59 0.99975008799999998 60 0.00024968100000000002 66 
-		2.28e-07
+		2.2799999999999998e-07
 		3 59 0.999987984 60 6.9530000000000002e-06 66 5.0629999999999996e-06
 		3 59 0.99998725999999993 60 1.2498e-05 66 2.4200000000000002e-07
 		3 59 0.99977375800000001 60 0.000226235 66 6.9999999999999998e-09
@@ -55024,8 +55058,8 @@ createNode skinCluster -n "skinCluster1";
 		6.5999999999999995e-08
 		4 3 6.9999999999999998e-09 58 5.2111000000000003e-05 59 0.99994643399999994 
 		66 1.4479999999999999e-06
-		6 3 3e-09 58 2.768e-06 59 0.99980042999999985 66 0.000195138 
-		69 1e-08 72 1.6509999999999999e-06
+		6 3 3e-09 58 2.7679999999999996e-06 59 0.99980042999999985 66 
+		0.000195138 69 1e-08 72 1.6509999999999999e-06
 		5 3 1.7999999999999999e-08 58 2.3224e-05 59 0.99995351599999993 
 		66 1.5116000000000001e-05 72 8.1259999999999998e-06
 		5 3 1.7999999999999999e-08 58 0.000102106 59 0.99989549600000005 
@@ -55107,7 +55141,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 1.7999999999999999e-08 58 0.00090765500000000005 59 0.99909178099999985 
 		66 5.4000000000000002e-07 71 6e-09
 		5 3 5.0000000000000001e-09 58 0.00017208600000000001 59 0.99981692299999991 
-		66 1.0849000000000001e-05 71 1.37e-07
+		66 1.0849000000000001e-05 71 1.3700000000000002e-07
 		6 3 1.7849000000000001e-05 52 2.0000000000000001e-09 58 0.0036813200000000001 
 		59 0.99629861200000003 66 1.8670000000000001e-06 71 3.4999999999999998e-07
 		6 3 1.4999999999999999e-08 58 0.00073455799999999996 59 0.99922952399999998 
@@ -55162,8 +55196,8 @@ createNode skinCluster -n "skinCluster1";
 		7 3 2.0000000000000001e-09 58 2.0000000000000001e-09 59 0.88414994199999997 
 		66 0.115724538 67 1.0000000000000001e-09 68 0.00012468700000000001 71 
 		8.2799999999999995e-07
-		5 58 4.15e-07 59 0.98632813499999994 66 0.013670932 68 5.0999999999999999e-07 
-		71 8.0000000000000005e-09
+		5 58 4.1500000000000005e-07 59 0.98632813499999994 66 0.013670932 
+		68 5.0999999999999999e-07 71 8.0000000000000005e-09
 		5 58 2.6000000000000001e-08 59 0.96835701299999999 66 0.031447509999999998 
 		68 0.00018383399999999999 71 1.1617000000000001e-05
 		5 58 5.6699999999999999e-06 59 0.99736680300000002 66 0.0026268160000000001 
@@ -55183,7 +55217,7 @@ createNode skinCluster -n "skinCluster1";
 		5.9800000000000003e-07 72 1.5599999999999999e-07
 		5 3 1e-08 59 0.9731554 66 0.026595539000000001 69 0.00017620400000000001 
 		72 7.2847000000000002e-05
-		5 58 1.12e-07 59 0.99747465099999988 66 0.0025240699999999998 
+		5 58 1.1200000000000001e-07 59 0.99747465099999988 66 0.0025240699999999998 
 		69 1.8300000000000001e-07 72 9.8400000000000002e-07
 		6 3 8.0000000000000005e-09 58 4.0000000000000002e-09 59 0.99441114400000008 
 		66 0.0052732040000000001 69 7.2291000000000003e-05 72 0.00024334899999999999
@@ -55196,8 +55230,8 @@ createNode skinCluster -n "skinCluster1";
 		66 3.433e-06 69 4.8e-08 70 9.5789999999999993e-06 71 1.3000000000000001e-08 
 		72 0.0033937139999999999
 		8 3 2.4999999999999999e-08 58 1.6331999999999999e-05 59 0.98814767299999984 
-		66 1.37e-07 69 1.4499999999999999e-07 70 0.000118028 71 7.4900000000000005e-07 
-		72 0.011716911
+		66 1.3700000000000002e-07 69 1.4499999999999999e-07 70 0.000118028 71 
+		7.4900000000000005e-07 72 0.011716911
 		8 3 2e-08 58 5.1743999999999998e-05 59 0.98949224299999994 66 
 		2.0000000000000001e-09 69 4.0000000000000002e-09 70 0.00062513499999999997 
 		71 1.7399999999999999e-05 72 0.0098134520000000003
@@ -55291,7 +55325,8 @@ createNode skinCluster -n "skinCluster1";
 		6 3 1.2e-08 59 0.99372723399999996 66 0.0037157409999999998 69 
 		0.00064603100000000004 70 1.0000000000000001e-09 72 0.001910981
 		7 3 1.7999999999999999e-08 58 5.0000000000000001e-09 59 0.99632545799999994 
-		66 0.00043404700000000001 69 0.000157238 70 1.03e-07 72 0.0030831309999999998
+		66 0.00043404700000000001 69 0.000157238 70 1.0300000000000001e-07 72 
+		0.0030831309999999998
 		8 3 1.7999999999999999e-08 58 4.6000000000000002e-08 59 0.99502841799999997 
 		66 3.4116000000000003e-05 69 1.9769999999999999e-05 70 3.332e-06 71 
 		2.0000000000000001e-09 72 0.0049142980000000001
@@ -55312,7 +55347,7 @@ createNode skinCluster -n "skinCluster1";
 		8 3 1.7999999999999999e-08 58 4.6808000000000003e-05 59 0.94342613599999992 
 		66 2.0000000000000001e-09 68 2.4241000000000001e-05 70 0.005015322 71 
 		0.051362118999999998 72 0.00012535399999999999
-		7 58 3.3142999999999998e-05 59 0.95145943599999994 66 1.09e-07 
+		7 58 3.3142999999999998e-05 59 0.95145943599999994 66 1.0900000000000001e-07 
 		68 0.000203048 70 0.00084366900000000002 71 0.047453614999999998 72 
 		6.9800000000000001e-06
 		8 3 2e-08 58 1.1333e-05 59 0.98639264500000001 66 2.9009999999999998e-06 
@@ -55346,7 +55381,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 6e-09 59 0.91596835999999993 66 0.084010773999999996 69 
 		2.0302999999999999e-05 72 5.5700000000000002e-07
 		6 3 2e-08 58 1.0000000000000001e-09 59 0.97601171000000009 66 
-		0.0239697 69 1.3806e-05 72 4.763e-06
+		0.0239697 69 1.3806000000000001e-05 72 4.763e-06
 		6 3 3.1e-08 58 2.9999999999999997e-08 59 0.99474948799999996 
 		66 0.0052250480000000004 69 5.0560000000000004e-06 72 2.0347e-05
 		5 58 4.8800000000000003e-07 59 0.99931017900000008 66 0.00064912499999999996 
@@ -55391,7 +55426,7 @@ createNode skinCluster -n "skinCluster1";
 		3 3 3e-09 59 0.31856869300000001 66 0.68143130399999996
 		3 3 8.9999999999999995e-09 59 0.28968563899999999 66 0.71031435199999993
 		6 3 2.3000000000000001e-08 59 0.94751245500000003 66 0.040050215 
-		67 1.11e-07 69 0.01104167 72 0.001395526
+		67 1.1100000000000001e-07 69 0.01104167 72 0.001395526
 		6 3 3.1e-08 59 0.85924093999999995 66 0.11507505899999999 67 
 		2.1040000000000001e-06 69 0.023646377 72 0.0020354890000000001
 		5 59 0.75190498699999997 66 0.21891860299999999 67 2.4360999999999999e-05 
@@ -55408,7 +55443,7 @@ createNode skinCluster -n "skinCluster1";
 		7 3 3.2000000000000002e-08 58 5.5720000000000002e-06 59 0.88978512200000004 
 		68 1.2075999999999999e-05 70 0.042865733000000003 71 0.063291201000000005 
 		72 0.004040264
-		7 58 1.739e-06 59 0.91938137799999997 68 2.9700000000000003e-07 
+		7 58 1.7390000000000002e-06 59 0.91938137799999997 68 2.9700000000000003e-07 
 		69 1.0000000000000001e-09 70 0.043714268000000001 71 0.012004845 72 
 		0.024897472
 		7 3 1.0999999999999999e-08 58 4.5999999999999999e-07 59 0.85775836400000005 
@@ -55424,7 +55459,8 @@ createNode skinCluster -n "skinCluster1";
 		6 3 6e-09 59 0.98478353299999988 66 0.0002119 69 0.00098280900000000007 
 		70 3.9099999999999999e-07 72 0.014021361
 		7 58 2.4600000000000001e-07 59 0.98112155200000006 66 2.1279000000000001e-05 
-		68 0.001931166 70 1.2858e-05 71 0.016912877999999999 72 2.0999999999999999e-08
+		68 0.001931166 70 1.2858000000000001e-05 71 0.016912877999999999 72 
+		2.0999999999999999e-08
 		7 3 1.0000000000000001e-09 58 3.5999999999999998e-08 59 0.98416659500000003 
 		66 0.00027812799999999999 68 0.0056650900000000002 70 6.1799999999999995e-07 
 		71 0.0098895319999999995
@@ -55464,7 +55500,7 @@ createNode skinCluster -n "skinCluster1";
 		2 59 4.6999999999999999e-06 66 0.99999530000000003
 		3 3 1.6000000000000001e-08 59 2.8799999999999998e-07 66 0.99999969600000005
 		3 3 1.6000000000000001e-08 59 8.3294999999999994e-05 66 0.99991668899999997
-		3 3 4.0000000000000002e-09 59 4.403e-06 66 0.99999559299999996
+		3 3 4.0000000000000002e-09 59 4.4029999999999992e-06 66 0.99999559299999996
 		2 59 3.2800000000000003e-07 66 0.99999967199999995
 		3 3 1.4999999999999999e-08 59 7.6068000000000004e-05 66 0.99992391700000005
 		3 3 2.0000000000000001e-09 59 7.3030000000000002e-06 66 0.99999269499999999
@@ -55548,7 +55584,7 @@ createNode skinCluster -n "skinCluster1";
 		7 59 0.037426874999999998 66 1.0000000000000001e-09 67 1.319e-06 
 		69 0.12794788900000001 70 0.003875622 71 2.4250000000000001e-06 72 
 		0.83074586900000003
-		7 59 0.013840140000000001 66 2.9000000000000002e-08 67 4.39e-07 
+		7 59 0.013840140000000001 66 2.9000000000000002e-08 67 4.3899999999999995e-07 
 		69 0.079717078999999996 70 0.0024322979999999998 71 8.8700000000000004e-07 
 		72 0.904009128
 		7 59 0.062283231000000001 67 1.0000000000000001e-09 68 8.9999999999999995e-09 
@@ -55637,9 +55673,9 @@ createNode skinCluster -n "skinCluster1";
 		68 0.026646257 70 0.048814585000000001 71 0.7862152830000001 72 0.00025937099999999999
 		8 3 1.9000000000000001e-08 59 0.117990309 66 1.7e-08 67 2.7e-08 
 		68 0.11761940999999999 70 0.0075473229999999999 71 0.75682865300000002 
-		72 1.4242e-05
+		72 1.4241999999999998e-05
 		6 59 0.13126959699999999 66 9.6550000000000002e-05 67 0.000108923 
-		68 0.7041892689999999 70 1.0256e-05 71 0.16432540500000001
+		68 0.7041892689999999 70 1.0256000000000001e-05 71 0.16432540500000001
 		7 59 0.21364001399999999 66 0.010057307999999999 67 0.0095250079999999997 
 		68 0.75741151200000012 69 1.3000000000000001e-08 70 2.0999999999999999e-08 
 		71 0.009366124
@@ -55680,7 +55716,7 @@ createNode skinCluster -n "skinCluster1";
 		0.055753443 72 2.0000000000000001e-09
 		8 3 5.0000000000000001e-09 58 1.4100000000000001e-07 59 0.93745185700000011 
 		66 1.9000000000000001e-07 68 0.0026304280000000002 70 7.5606999999999996e-05 
-		71 0.059841666000000002 72 1.06e-07
+		71 0.059841666000000002 72 1.0600000000000001e-07
 		7 58 1.6999999999999999e-07 59 0.80937159899999989 66 4.9999999999999998e-08 
 		68 0.011113769000000001 70 0.00051982500000000002 71 0.17899310099999999 
 		72 1.486e-06
@@ -55731,13 +55767,15 @@ createNode skinCluster -n "skinCluster1";
 		7 3 6e-09 59 0.14487433999999999 66 0.0011642029999999999 67 
 		0.00036186900000000001 69 0.53841230800000006 70 9.3900000000000003e-07 72 
 		0.31518633499999998
-		8 3 3e-09 59 0.041239231000000001 66 5.1e-08 67 1.4596999999999999e-05 
-		69 0.23378410999999999 70 0.00076497999999999996 71 1.6e-07 72 0.72419686799999994
+		8 3 3e-09 59 0.041239231000000001 66 5.0999999999999993e-08 67 
+		1.4596999999999999e-05 69 0.23378410999999999 70 0.00076497999999999996 71 
+		1.6e-07 72 0.72419686799999994
 		8 3 1.7999999999999999e-08 59 0.01431089 66 6.5000000000000002e-07 
 		67 6.9870000000000002e-06 69 0.18519820200000001 70 0.00036763099999999999 
 		71 4.1999999999999999e-08 72 0.80011557999999994
-		7 59 0.12739378500000001 66 7.452e-06 67 1.451e-06 69 0.094857544000000002 
-		70 0.000210881 71 3.8999999999999998e-08 72 0.77752884799999999
+		7 59 0.12739378500000001 66 7.452e-06 67 1.4510000000000002e-06 
+		69 0.094857544000000002 70 0.000210881 71 3.8999999999999998e-08 72 
+		0.77752884799999999
 		6 59 0.046453610999999999 67 6.7000000000000004e-08 69 0.051797528000000002 
 		70 0.019897796999999998 71 3.3497000000000001e-05 72 0.88181750000000003
 		6 59 0.017849706 67 1.3000000000000001e-08 69 0.024283149 70 
@@ -55748,7 +55786,8 @@ createNode skinCluster -n "skinCluster1";
 		7 3 2.0000000000000001e-09 59 0.80883148199999988 66 0.0048754840000000002 
 		67 2.2680000000000001e-06 69 0.113658623 70 3e-09 72 0.072632137999999999
 		7 3 8.9999999999999995e-09 59 0.78607737700000002 66 0.000595576 
-		67 1.14e-07 69 0.059073470000000003 70 2.03e-07 72 0.15425325100000001
+		67 1.1399999999999999e-07 69 0.059073470000000003 70 2.0299999999999998e-07 
+		72 0.15425325100000001
 		7 3 1.0000000000000001e-09 59 0.78140423000000003 66 5.1841000000000001e-05 
 		67 2.0000000000000001e-09 69 0.018051976000000001 70 4.7770000000000002e-06 
 		72 0.20048717299999999
@@ -55760,7 +55799,7 @@ createNode skinCluster -n "skinCluster1";
 		7 3 6.9999999999999998e-09 59 0.23725922899999999 68 0.00025647700000000002 
 		69 9.3610000000000007e-06 70 0.55617527300000003 71 0.081383018000000001 
 		72 0.124916635
-		7 3 2.0000000000000001e-09 59 0.22704540100000001 68 1.471e-06 
+		7 3 2.0000000000000001e-09 59 0.22704540100000001 68 1.4710000000000002e-06 
 		69 0.0010561500000000001 70 0.27539164700000002 71 0.0050937409999999997 
 		72 0.4914115879999999
 		7 3 1.7e-08 59 0.221761288 68 0.019072390000000002 69 5.0000000000000001e-09 
@@ -55806,11 +55845,12 @@ createNode skinCluster -n "skinCluster1";
 		71 5.0541999999999998e-05 72 2.0000000000000001e-09
 		8 3 4.0000000000000002e-09 59 0.66387993199999984 66 1.8159e-05 
 		67 0.30605600199999999 68 0.024930507000000001 69 0.0051123799999999997 
-		71 1.12e-07 72 2.9040000000000001e-06
+		71 1.1200000000000001e-07 72 2.9040000000000001e-06
 		6 59 0.66025277900000012 66 1.8031999999999999e-05 67 0.13401803500000001 
 		68 1.8391000000000001e-05 69 0.198160119 72 0.0075326439999999998
 		8 3 3e-09 59 0.54772041599999999 66 2.7705999999999999e-05 67 
-		0.019750929 68 2.4e-08 69 0.321888338 70 1.03e-07 72 0.110612481
+		0.019750929 68 2.4e-08 69 0.321888338 70 1.0300000000000001e-07 72 
+		0.110612481
 		8 3 1.4999999999999999e-08 59 0.4913351299999999 66 2.6906e-05 
 		67 0.039390123999999999 68 0.465209188 69 2.7700000000000001e-07 70 
 		6.8999999999999996e-08 71 0.0040382910000000003
@@ -55862,7 +55902,7 @@ createNode skinCluster -n "skinCluster1";
 		6 59 0.7383534530000001 67 4.5299999999999999e-07 68 0.097335116999999999 
 		70 0.001479384 71 0.16282970499999999 72 1.888e-06
 		7 3 5.0000000000000001e-09 59 0.733193765 67 7.1930000000000004e-06 
-		68 0.158240995 70 0.00029257099999999999 71 0.108265362 72 1.09e-07
+		68 0.158240995 70 0.00029257099999999999 71 0.108265362 72 1.0900000000000001e-07
 		7 3 1.7e-08 59 0.72263825300000006 67 7.3518999999999999e-05 
 		68 0.21912688599999999 70 4.2666000000000001e-05 71 0.058118656999999997 
 		72 2.0000000000000001e-09
@@ -56004,7 +56044,7 @@ createNode skinCluster -n "skinCluster1";
 		4 3 1.9000000000000001e-08 59 0.99822804200000004 63 0.001771573 
 		64 3.6600000000000002e-07
 		3 3 1.7e-08 59 0.99991005100000008 63 8.9932000000000006e-05
-		2 59 0.99999834799999998 63 1.652e-06
+		2 59 0.99999834799999998 63 1.6519999999999998e-06
 		2 3 2e-08 59 0.99999998000000001
 		2 3 8.9999999999999995e-09 59 0.99999999100000003
 		2 3 3e-09 59 0.99999999699999997
@@ -56063,7 +56103,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 1.7999999999999999e-08 58 1.1680000000000001e-06 59 0.99958810200000003 
 		63 0.000410059 64 6.5300000000000004e-07
 		5 3 4.0000000000000002e-09 58 1.0377000000000001e-05 59 0.99997616700000003 
-		63 1.3451e-05 64 1.0000000000000001e-09
+		63 1.3450999999999999e-05 64 1.0000000000000001e-09
 		3 58 8.3225000000000004e-05 59 0.99991656600000001 63 2.0900000000000001e-07
 		4 3 1.1540000000000001e-06 58 0.00057492600000000002 59 0.99942391699999999 
 		63 3e-09
@@ -56079,12 +56119,12 @@ createNode skinCluster -n "skinCluster1";
 		7 2 2.0000000000000001e-09 3 0.001011323 4 2.1299999999999999e-07 
 		52 1.4600000000000001e-07 58 0.016019307 59 0.98296891499999994 60 
 		9.3999999999999995e-08
-		5 3 5.8828e-05 4 3e-09 58 0.0034497489999999998 59 0.99648559199999998 
-		60 5.8279999999999999e-06
-		4 3 1.592e-06 58 0.00062334999999999995 59 0.99906702600000008 
+		5 3 5.8827999999999993e-05 4 3e-09 58 0.0034497489999999998 
+		59 0.99648559199999998 60 5.8279999999999999e-06
+		4 3 1.5920000000000002e-06 58 0.00062334999999999995 59 0.99906702600000008 
 		60 0.00030803200000000002
 		5 3 1.4999999999999999e-08 58 9.4217999999999998e-05 59 0.99383580599999999 
-		60 0.0060698499999999999 61 1.11e-07
+		60 0.0060698499999999999 61 1.1100000000000001e-07
 		1 59 1
 		1 59 1
 		2 59 0.99998072500000001 60 1.9275000000000001e-05
@@ -56137,8 +56177,8 @@ createNode skinCluster -n "skinCluster1";
 		63 6e-09
 		4 2 6.9999999999999998e-09 3 6.7957e-05 58 0.004791348 59 
 		0.995140688
-		5 1 4.0000000000000002e-09 2 2.22e-07 3 0.001195565 58 
-		0.021217526 59 0.97758668299999996
+		5 1 4.0000000000000002e-09 2 2.2200000000000003e-07 3 0.001195565 
+		58 0.021217526 59 0.97758668299999996
 		5 3 2.0000000000000001e-09 58 7.7899999999999997e-07 59 0.99419526599999997 
 		63 0.0056129049999999996 64 0.000191048
 		4 58 5.7939999999999999e-06 59 0.99963922699999996 63 0.00035420100000000001 
@@ -56157,7 +56197,7 @@ createNode skinCluster -n "skinCluster1";
 		63 0.0060952020000000001 64 7.9392000000000002e-05
 		4 58 2.9175000000000001e-05 59 0.99946416299999996 63 0.00050620000000000005 
 		64 4.6199999999999998e-07
-		4 58 0.00014648100000000001 59 0.99982875299999996 63 2.4763e-05 
+		4 58 0.00014648100000000001 59 0.99982875299999996 63 2.4763000000000003e-05 
 		64 3e-09
 		3 58 0.000589165 59 0.99940983700000008 63 9.9800000000000002e-07
 		5 2 2.0000000000000001e-09 3 3.1990000000000002e-06 58 0.0022112059999999998 
@@ -56221,12 +56261,12 @@ createNode skinCluster -n "skinCluster1";
 		2 3 2e-08 59 0.99999998000000001
 		2 3 1.2e-08 59 0.99999998800000001
 		2 3 1.6000000000000001e-08 59 0.99999998400000001
-		4 3 3e-09 58 3e-09 59 0.99999676999999998 63 3.224e-06
+		4 3 3e-09 58 3e-09 59 0.99999676999999998 63 3.2240000000000004e-06
 		3 58 3.7e-08 59 0.99996370700000003 63 3.6256e-05
 		5 3 4.0000000000000002e-09 58 3.0170000000000001e-06 59 0.99990308999999999 
 		63 9.3881000000000005e-05 64 8.0000000000000005e-09
-		5 3 2.0000000000000001e-09 58 2.3448e-05 59 0.99973081699999999 
-		63 0.00024561599999999999 64 1.17e-07
+		5 3 2.0000000000000001e-09 58 2.3448000000000003e-05 59 0.99973081699999999 
+		63 0.00024561599999999999 64 1.1699999999999999e-07
 		5 3 4.0000000000000002e-09 58 0.00015016500000000001 59 0.99980999399999992 
 		63 3.9835000000000001e-05 64 2.0000000000000001e-09
 		3 58 0.00077446600000000002 59 0.99922256799999998 63 2.9660000000000001e-06
@@ -56280,8 +56320,8 @@ createNode skinCluster -n "skinCluster1";
 		4 0.00018713599999999999 52 2.0000000000000001e-09 58 0.20819522700000001 
 		59 0.70321988099999999
 		7 1 6.657e-06 2 0.00015056999999999999 3 0.023112290000000001 
-		4 2.018e-05 52 1.4999999999999999e-08 58 0.11197338499999999 59 
-		0.86473690299999995
+		4 2.0179999999999997e-05 52 1.4999999999999999e-08 58 0.11197338499999999 
+		59 0.86473690299999995
 		6 1 2.2187e-05 2 0.00038876999999999998 3 0.086306129999999995 
 		4 0.00030259800000000001 58 0.20892327899999999 59 0.70405703600000002
 		7 1 1.686e-06 2 5.3977000000000002e-05 3 0.021235357 4 
@@ -56294,10 +56334,10 @@ createNode skinCluster -n "skinCluster1";
 		8 1 2.2800000000000002e-06 2 3.0839000000000001e-05 3 0.002245314 
 		4 1.3000000000000001e-08 52 1.4600000000000001e-07 58 0.031519143999999999 
 		59 0.96620225999999998 90 4.0000000000000002e-09
-		7 1 2.3939999999999999e-06 2 4.2826e-05 3 0.0029785089999999998 
+		7 1 2.3939999999999999e-06 2 4.2826000000000006e-05 3 0.0029785089999999998 
 		4 6.2999999999999995e-08 52 1.4999999999999999e-08 58 0.037827048000000002 
 		59 0.95914914500000004
-		6 1 1.5e-06 2 3.6480999999999999e-05 3 0.003249451 4 2.05e-07 
+		6 1 1.5e-06 2 3.6480999999999999e-05 3 0.003249451 4 2.0499999999999997e-07 
 		58 0.040781715000000003 59 0.95593064799999994
 		7 1 6.7100000000000001e-07 2 2.162e-05 3 0.0032761639999999998 
 		4 5.0500000000000004e-07 52 2.0000000000000001e-09 58 0.041560488 59 
@@ -56456,7 +56496,8 @@ createNode skinCluster -n "skinCluster1";
 		4 3 5.0000000000000001e-09 59 0.99984591600000006 63 1.6999999999999999e-07 
 		66 0.00015390900000000001
 		3 59 0.99984221900000003 63 2.418e-06 66 0.000155363
-		4 59 0.99984292899999994 63 1.4873e-05 64 1e-08 66 0.00014218799999999999
+		4 59 0.99984292899999994 63 1.4873000000000001e-05 64 1e-08 66 
+		0.00014218799999999999
 		4 59 0.99987028699999991 63 1.4375e-05 64 3e-09 66 0.00011533500000000001
 		4 3 1.4e-08 59 0.99990632499999998 63 9.1980000000000007e-06 
 		66 8.4462999999999994e-05
@@ -56525,7 +56566,7 @@ createNode skinCluster -n "skinCluster1";
 		2 59 0.991244613 66 0.0087553869999999999
 		3 59 0.99234101799999996 63 6.9999999999999998e-09 66 0.0076589750000000002
 		3 59 0.99170636300000004 63 5.9999999999999995e-08 66 0.0082935769999999999
-		3 59 0.99161921599999991 63 2.34e-07 66 0.0083805500000000005
+		3 59 0.99161921599999991 63 2.3399999999999998e-07 66 0.0083805500000000005
 		3 59 0.992616159 63 2.2399999999999999e-07 66 0.0073836170000000003
 		4 3 3e-09 59 0.99405657699999994 63 1.3199999999999999e-07 66 
 		0.0059432879999999997
@@ -56680,7 +56721,7 @@ createNode skinCluster -n "skinCluster1";
 		2 59 3.9286999999999998e-05 66 0.999960713
 		3 3 1.3000000000000001e-08 59 1.6840000000000001e-06 66 0.99999830300000003
 		2 59 8.9000000000000003e-08 66 0.99999991099999996
-		2 59 3.0193e-05 66 0.99996980700000004
+		2 59 3.0192999999999997e-05 66 0.99996980700000004
 		2 59 0.00059082399999999999 66 0.99940917600000001
 		2 59 0.0073679740000000002 66 0.992632026
 		2 59 0.059066786000000003 66 0.94093321399999996
@@ -56729,7 +56770,7 @@ createNode skinCluster -n "skinCluster1";
 		68 0.30400329999999998 71 0.0067554060000000003
 		6 59 0.60627170799999996 66 0.002029126 67 0.000143981 68 
 		0.35829029200000001 70 3.8999999999999998e-08 71 0.033264854000000003
-		6 59 0.56419463900000011 66 0.00020356000000000001 67 1.3701e-05 
+		6 59 0.56419463900000011 66 0.00020356000000000001 67 1.3701000000000001e-05 
 		68 0.32644447100000001 70 1.167e-06 71 0.109142462
 		8 3 2.4999999999999999e-08 59 0.55234436600000014 66 1.4905999999999999e-05 
 		67 8.4499999999999996e-07 68 0.21562039699999999 70 1.995e-05 71 
@@ -56768,7 +56809,7 @@ createNode skinCluster -n "skinCluster1";
 		67 1.2899999999999999e-06 69 0.12442712 70 1.4759999999999999e-06 72 
 		0.31597297400000002
 		7 3 8.0000000000000005e-09 59 0.59150082000000015 66 0.0031447720000000001 
-		67 2.1753e-05 69 0.253255958 70 5.1e-08 72 0.15207663799999999
+		67 2.1753e-05 69 0.253255958 70 5.0999999999999993e-08 72 0.15207663799999999
 		6 3 2.0000000000000001e-09 59 0.65570282499999988 66 0.021046608000000001 
 		67 0.00020483400000000001 69 0.27749876299999998 72 0.045546968
 		5 59 0.72985929799999993 66 0.084258123000000004 67 0.00081635099999999999 
@@ -56803,7 +56844,7 @@ createNode skinCluster -n "skinCluster1";
 		2 59 4.9678000000000001e-05 66 0.999950322
 		3 3 4.0000000000000002e-09 59 3.6449999999999998e-06 66 0.99999635099999995
 		2 59 2.0269999999999998e-06 66 0.99999797300000004
-		3 3 4.0000000000000002e-09 59 1.2425e-05 66 0.99998757100000002
+		3 3 4.0000000000000002e-09 59 1.2424999999999999e-05 66 0.99998757100000002
 		3 3 3e-09 59 0.00016582599999999999 66 0.99983417100000005
 		3 3 2.9000000000000002e-08 59 0.001792171 66 0.99820779999999998
 		5 3 3e-09 59 0.013905305999999999 66 0.98609456000000006 67 
@@ -56949,8 +56990,9 @@ createNode skinCluster -n "skinCluster1";
 		8 3 1.0000000000000001e-09 59 0.27068858499999998 66 0.00037553499999999997 
 		67 0.54821486799999986 68 0.17892709400000001 69 0.001792816 71 1.0950000000000001e-06 
 		72 6e-09
-		7 59 0.63819686299999989 66 2.9955e-05 67 0.2744856 68 0.086459322000000005 
-		69 0.00082491599999999997 71 3.2179999999999999e-06 72 1.2599999999999999e-07
+		7 59 0.63819686299999989 66 2.9954999999999997e-05 67 0.2744856 
+		68 0.086459322000000005 69 0.00082491599999999997 71 3.2179999999999999e-06 
+		72 1.2599999999999999e-07
 		7 59 0.89832626799999993 66 1.4109999999999999e-06 67 0.078158628999999993 
 		68 0.023369821999999998 69 0.00014330199999999999 71 5.5599999999999995e-07 
 		72 1.2e-08
@@ -56968,7 +57010,7 @@ createNode skinCluster -n "skinCluster1";
 		2 3 1.0000000000000001e-09 59 1.7770000000000001e-06;
 	setAttr ".wl[2340:2424].w"
 		1 66 0.99999822199999999
-		3 3 6e-09 59 1.37e-07 66 0.99999985700000005
+		3 3 6e-09 59 1.3700000000000002e-07 66 0.99999985700000005
 		2 59 2.2019999999999998e-06 66 0.99999779799999999
 		2 59 4.6819e-05 66 0.99995318099999997
 		3 3 2.9999999999999997e-08 59 0.00071136500000000004 66 0.99928860500000005
@@ -57000,21 +57042,21 @@ createNode skinCluster -n "skinCluster1";
 		72 8.9227000000000005e-05
 		6 3 3.2000000000000002e-08 59 0.99874633199999996 67 0.00077509599999999997 
 		68 3.2000000000000002e-08 69 0.00046801900000000002 72 1.0489000000000001e-05
-		7 3 3e-09 59 0.99858590599999997 67 0.001360394 68 1.0738e-05 
+		7 3 3e-09 59 0.99858590599999997 67 0.001360394 68 1.0738000000000001e-05 
 		69 4.1888999999999998e-05 70 2.1999999999999998e-08 72 1.048e-06
 		7 3 1.4e-08 59 0.9889133309999999 66 8.0000000000000005e-09 67 
 		0.010496994000000001 68 0.00013866200000000001 69 0.00045027000000000001 
 		72 7.2099999999999996e-07
 		7 3 3e-09 59 0.92858136899999999 66 3.4700000000000002e-07 67 
 		0.066531687000000006 68 0.001174853 69 0.0037035010000000001 72 8.2400000000000007e-06
-		8 3 1.7999999999999999e-08 59 0.68302113900000005 66 1.0451e-05 
+		8 3 1.7999999999999999e-08 59 0.68302113900000005 66 1.0450999999999999e-05 
 		67 0.29246220299999998 68 0.0060788969999999998 69 0.018395028000000001 
 		71 2.0000000000000001e-09 72 3.2261999999999997e-05
 		7 3 1.7e-08 59 0.25928161100000002 66 0.000187806 67 0.68272424099999995 
 		68 0.016265992 69 0.041534917999999997 72 5.4149999999999998e-06
 		7 3 8.9999999999999995e-09 59 0.108097683 66 0.0015147800000000001 
 		67 0.81840977500000012 68 0.023263163999999999 69 0.048713461 72 
-		1.128e-06
+		1.1279999999999998e-06
 		6 59 0.21056417799999999 66 0.076911242000000005 67 0.65805811399999992 
 		68 0.015519178 69 0.038947076999999997 72 2.11e-07
 		7 3 1.0000000000000001e-09 59 0.457936807 66 0.29659242200000002 
@@ -57081,7 +57123,7 @@ createNode skinCluster -n "skinCluster1";
 		8 3 2.3000000000000001e-08 59 0.99993931699999994 67 3.9026999999999998e-05 
 		68 7.5900000000000002e-06 69 1.1899999999999999e-07 70 1.2823000000000001e-05 
 		71 5.6000000000000004e-07 72 5.4099999999999999e-07
-		8 3 1.7999999999999999e-08 59 0.99980449500000002 67 4.1176e-05 
+		8 3 1.7999999999999999e-08 59 0.99980449500000002 67 4.1176000000000007e-05 
 		68 0.00013202900000000001 69 2.0000000000000001e-09 70 1.1997999999999999e-05 
 		71 1.0265000000000001e-05 72 1.7e-08
 		6 3 3e-09 59 0.99878755199999991 67 5.5539999999999997e-06 68 
@@ -57092,8 +57134,8 @@ createNode skinCluster -n "skinCluster1";
 		68 0.00060597799999999996 69 2.4e-08 70 7.8599999999999997e-07 71 
 		1.266e-06 72 5.0000000000000001e-09
 		8 3 3.5000000000000002e-08 59 0.99965600200000004 67 0.00030745000000000002 
-		68 3.4204e-05 69 1.015e-06 70 9.3200000000000003e-07 71 4.0000000000000001e-08 
-		72 3.22e-07
+		68 3.4204e-05 69 1.0149999999999998e-06 70 9.3200000000000003e-07 71 
+		4.0000000000000001e-08 72 3.22e-07
 		7 3 4.0000000000000002e-09 59 0.99944624199999998 67 0.000104224 
 		68 2.7999999999999999e-08 69 0.00028409900000000001 70 5.8000000000000003e-08 
 		72 0.00016534500000000001
@@ -57117,10 +57159,10 @@ createNode skinCluster -n "skinCluster1";
 		2e-08 70 0.012539959 71 0.00037184000000000002 72 0.0061973890000000002
 		6 59 0.92236459600000009 68 4.2500000000000001e-07 69 7.7300000000000005e-07 
 		70 0.049128077999999999 71 0.0021216490000000002 72 0.026384478999999999
-		6 59 0.74899670299999999 68 5.2769999999999996e-06 69 1.239e-05 
+		6 59 0.74899670299999999 68 5.2769999999999996e-06 69 1.2390000000000002e-05 
 		70 0.153765025 71 0.0083502330000000003 72 0.088870372000000003
-		6 59 0.233168451 68 2.3227e-05 69 0.000115052 70 0.46734806700000003 
-		71 0.023374613999999998 72 0.27597058899999999
+		6 59 0.233168451 68 2.3227000000000003e-05 69 0.000115052 70 
+		0.46734806700000003 71 0.023374613999999998 72 0.27597058899999999
 		7 3 2.0000000000000001e-09 59 0.080972097000000007 68 9.611e-06 
 		69 0.00015108100000000001 70 0.57698038399999996 71 0.021993764999999998 
 		72 0.31989306000000001
@@ -57150,7 +57192,7 @@ createNode skinCluster -n "skinCluster1";
 		59 0.98425339999999995 70 3.22e-07 71 2.1999999999999998e-08 72 3.6729999999999998e-06
 		8 2 3.4e-08 3 0.0098968649999999995 4 2.1999999999999998e-08 
 		52 1.2e-08 58 0.057281778999999998 59 0.93282114399999994 70 6.9999999999999998e-09 
-		72 1.37e-07
+		72 1.3700000000000002e-07
 		1 3 2.4999999999999999e-08;
 	setAttr ".wl[2424:2533].w"
 		6 59 0.099269080999999995 66 0.019042940000000001 67 0.42662783300000001 
@@ -57214,7 +57256,7 @@ createNode skinCluster -n "skinCluster1";
 		68 0.58083756099999995 70 0.00015771599999999999 71 0.381775368 72 
 		2.0999999999999999e-08
 		7 3 2e-08 59 0.041377410000000003 66 3.0947e-05 67 0.00012834500000000001 
-		68 0.79908657900000002 70 1.38e-05 71 0.159362899
+		68 0.79908657900000002 70 1.3799999999999998e-05 71 0.159362899
 		7 3 1.6000000000000001e-08 59 0.054358568000000003 66 0.00037928000000000001 
 		67 0.0015157980000000001 68 0.90045652499999995 70 7.7400000000000002e-07 
 		71 0.043289039000000001
@@ -57253,7 +57295,7 @@ createNode skinCluster -n "skinCluster1";
 		4 3 2.0999999999999999e-08 63 8.7115999999999997e-05 64 8.653e-06 
 		65 0.99990420999999996
 		4 3 6e-09 63 0.000106057 64 9.0450000000000006e-06 65 0.99988489199999997
-		3 63 0.000123089 64 1.0936e-05 65 0.99986597499999996
+		3 63 0.000123089 64 1.0935999999999998e-05 65 0.99986597499999996
 		4 3 3e-09 63 0.000132414 64 1.1677e-05 65 0.99985590599999996
 		4 3 1.4999999999999999e-08 63 0.000133182 64 1.0487e-05 65 
 		0.99985631600000002
@@ -57390,7 +57432,7 @@ createNode skinCluster -n "skinCluster1";
 		64 0.031776048000000001 65 0.96284259500000002
 		5 3 1.4e-08 59 6.9999999999999998e-09 63 0.0069942329999999999 
 		64 0.044641493999999997 65 0.94836425199999996
-		5 3 2.0000000000000001e-09 59 1.03e-07 63 0.021041830000000001 
+		5 3 2.0000000000000001e-09 59 1.0300000000000001e-07 63 0.021041830000000001 
 		64 0.186059274 65 0.79289879100000005
 		5 3 8.0000000000000005e-09 59 1.43e-07 63 0.022940513999999999 
 		64 0.189486926 65 0.78757240900000003
@@ -57404,8 +57446,8 @@ createNode skinCluster -n "skinCluster1";
 		0.189180297 65 0.78557460899999998
 		5 3 2.9000000000000002e-08 59 1.68e-07 63 0.025652441000000002 
 		64 0.18939752900000001 65 0.78494983299999999
-		4 59 1.17e-07 63 0.025794052000000001 64 0.18830401199999999 65 
-		0.785901819
+		4 59 1.1699999999999999e-07 63 0.025794052000000001 64 0.18830401199999999 
+		65 0.785901819
 		5 3 1.4e-08 59 7.9000000000000006e-08 63 0.025482292 64 0.18519454699999999 
 		65 0.78932306800000007
 		4 59 4.1999999999999999e-08 63 0.025347941999999998 64 0.18579698 
@@ -57449,9 +57491,9 @@ createNode skinCluster -n "skinCluster1";
 		0.44275780599999998 65 0.51031025100000005
 		5 3 2e-08 59 4.4999999999999999e-08 63 0.042004404000000002 64 
 		0.447501178 65 0.51049435300000001
-		5 3 2.9999999999999997e-08 59 5.1e-08 63 0.035740609999999999 
+		5 3 2.9999999999999997e-08 59 5.0999999999999993e-08 63 0.035740609999999999 
 		64 0.45421045100000002 65 0.51004885799999999
-		5 3 8.9999999999999995e-09 59 1.17e-07 63 0.036220403999999998 
+		5 3 8.9999999999999995e-09 59 1.1699999999999999e-07 63 0.036220403999999998 
 		64 0.45460447900000001 65 0.50917499099999997
 		5 3 2.0000000000000001e-09 59 2.3099999999999999e-07 63 0.041109987000000001 
 		64 0.45100082000000002 65 0.50788895999999994
@@ -57624,13 +57666,13 @@ createNode skinCluster -n "skinCluster1";
 		5 3 1.9000000000000001e-08 59 0.001755029 63 0.50616723699999999 
 		64 0.49205946099999998 65 1.8253999999999998e-05
 		5 3 3e-09 59 0.014370677 63 0.48062700699999999 64 0.50495168999999995 
-		65 5.0623e-05
+		65 5.0622999999999993e-05
 		5 3 1.4999999999999999e-08 59 0.141815944 63 0.47932564500000008 
 		64 0.37885503399999998 65 3.3620000000000002e-06
 		5 3 1.3000000000000001e-08 59 0.39671939499999997 63 0.34864537499999998 
 		64 0.254633946 65 1.271e-06
 		4 59 0.25550155400000002 63 0.46422058200000005 64 0.28027612499999999 
-		65 1.739e-06
+		65 1.7390000000000002e-06
 		5 3 1.6000000000000001e-08 59 0.055628245 63 0.58645850300000002 
 		64 0.35791062499999998 65 2.6110000000000001e-06
 		4 59 0.011330441 63 0.60750690500000004 64 0.38115991300000002 
@@ -57802,7 +57844,8 @@ createNode skinCluster -n "skinCluster1";
 		4 3 1.4e-08 60 1.5460000000000001e-06 61 0.019342338000000001 
 		62 0.98065610199999997
 		3 60 1.195e-06 61 0.016922455999999999 62 0.98307634899999996
-		4 3 6e-09 60 8.54e-07 61 0.015171240000000001 62 0.98482789999999998
+		4 3 6e-09 60 8.5399999999999989e-07 61 0.015171240000000001 62 
+		0.98482789999999998
 		4 3 1.9000000000000001e-08 60 7.6300000000000004e-07 61 0.015111918 
 		62 0.98488730000000002
 		5 3 1.0999999999999999e-08 59 1.0000000000000001e-09 60 1.2759999999999999e-06 
@@ -58038,7 +58081,7 @@ createNode skinCluster -n "skinCluster1";
 		6 3 1.7999999999999999e-08 58 1e-08 59 0.46701517200000003 60 
 		0.46298361599999999 61 0.070000234999999994 62 9.4900000000000004e-07
 		5 3 2.0999999999999999e-08 59 0.280718144 60 0.6172733279999999 
-		61 0.102007131 62 1.376e-06
+		61 0.102007131 62 1.3759999999999998e-06
 		5 58 2.1999999999999998e-08 59 0.44099061099999998 60 0.48011494600000004 
 		61 0.078893485999999999 62 9.3500000000000005e-07
 		5 58 1.6000000000000001e-08 59 0.39928597100000002 60 0.52765789800000007 
@@ -58062,7 +58105,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 2.0000000000000001e-09 59 2.8843000000000002e-05 60 0.87741354800000004 
 		61 0.122556048 62 1.559e-06
 		5 3 1.4e-08 59 8.7429999999999995e-05 60 0.87901560699999992 
-		61 0.120895525 62 1.424e-06
+		61 0.120895525 62 1.4239999999999998e-06
 		5 3 3e-09 59 0.001934638 60 0.88063409700000006 61 0.117430177 
 		62 1.085e-06
 		4 59 0.018929779000000001 60 0.86325473900000005 61 0.117814644 
@@ -58211,14 +58254,14 @@ createNode skinCluster -n "skinCluster1";
 		60 9.2000000000000003e-08
 		4 3 1e-08 58 3.2660000000000002e-06 59 0.99993433799999998 60 
 		6.2385999999999995e-05
-		4 3 3.2999999999999998e-08 58 1.517e-06 59 0.99820209100000001 
+		4 3 3.2999999999999998e-08 58 1.5169999999999998e-06 59 0.99820209100000001 
 		60 0.001796359
 		5 3 1.9000000000000001e-08 58 1.4600000000000001e-07 59 0.98538539699999994 
 		60 0.014614067 61 3.7099999999999997e-07
 		5 3 5.0000000000000001e-09 58 2.4999999999999999e-08 59 0.95963129499999988 
 		60 0.040332761000000002 61 3.5914000000000002e-05
 		4 3 2.0999999999999999e-08 5 0.96757366500000008 9 0.03242519 
-		10 1.124e-06
+		10 1.1240000000000002e-06
 		4 3 2.6000000000000001e-08 5 0.97407163099999994 9 0.025927816999999999 
 		10 5.2600000000000002e-07
 		4 3 1e-08 5 0.9398624619999999 9 0.060136437000000001 10 
@@ -58258,7 +58301,7 @@ createNode skinCluster -n "skinCluster1";
 		0.00041925699999999997
 		5 3 3e-09 5 0.067824598 9 0.65618562400000002 10 0.27598604500000001 
 		11 3.7299999999999999e-06
-		3 3 1.632e-06 5 0.99966645099999996 9 0.00033191699999999999
+		3 3 1.6319999999999998e-06 5 0.99966645099999996 9 0.00033191699999999999
 		2 3 2.1775000000000001e-05 5 0.999978225
 		2 3 4.7700000000000001e-06 5 0.99999523000000001
 		4 3 2.4609999999999998e-06 5 0.86776039999999999 9 0.12562844200000001 
@@ -58428,7 +58471,7 @@ createNode skinCluster -n "skinCluster1";
 		4.6469999999999997e-06
 		2 3 6.3620000000000002e-06 5 0.99999341599999991;
 	setAttr ".wl[3147:3257].w"
-		1 12 2.22e-07
+		1 12 2.2200000000000003e-07
 		3 3 1.0574000000000001e-05 5 0.99998942099999999 12 5.0000000000000001e-09
 		3 3 2.3020000000000002e-06 5 0.99999299600000002 12 4.702e-06
 		4 3 1.0000000000000001e-09 5 0.99998054500000011 9 1.9284e-05 
@@ -58453,7 +58496,7 @@ createNode skinCluster -n "skinCluster1";
 		3 3 3.2440000000000002e-06 5 0.999996518 12 2.3799999999999999e-07
 		3 3 1.4339999999999999e-06 5 0.99999349199999998 12 5.074e-06
 		3 3 6.6000000000000003e-06 5 0.99999339500000006 12 5.0000000000000001e-09
-		4 3 2.4999999999999999e-08 5 0.9999950700000001 9 1.237e-06 
+		4 3 2.4999999999999999e-08 5 0.9999950700000001 9 1.2370000000000002e-06 
 		12 3.6679999999999999e-06
 		4 3 1.7e-08 5 0.99999411900000001 9 2.1560000000000002e-06 
 		12 3.7079999999999999e-06
@@ -58535,7 +58578,7 @@ createNode skinCluster -n "skinCluster1";
 		1.4600000000000001e-07
 		8 1 2.0000000000000001e-09 3 0.016397495000000002 4 0.091852021000000006 
 		5 0.89174839299999997 15 2.0000000000000001e-09 16 9.2600000000000001e-07 
-		17 1.156e-06 55 5.0000000000000001e-09
+		17 1.1559999999999998e-06 55 5.0000000000000001e-09
 		6 2 2.0699999999999999e-07 3 0.10309288 4 0.48020563199999994 
 		5 0.41669640400000002 55 2.9280000000000002e-06 74 1.9489999999999999e-06
 		7 1 8.0000000000000005e-09 3 0.040299504 4 0.24857211000000001 
@@ -58591,7 +58634,7 @@ createNode skinCluster -n "skinCluster1";
 		4 3 0.00011459900000000001 4 1.7600000000000001e-06 5 0.99987748400000009 
 		12 6.1569999999999997e-06
 		5 3 0.00037883600000000002 4 7.6307e-05 5 0.99953442000000003 
-		12 1.0436e-05 14 1.0000000000000001e-09
+		12 1.0436000000000001e-05 14 1.0000000000000001e-09
 		5 2 1.0000000000000001e-09 3 0.00087918600000000001 4 0.00052817700000000001 
 		5 0.99859211800000003 12 5.1799999999999995e-07
 		6 2 1.4e-08 3 0.002941745 4 0.0068651379999999998 5 0.99019132600000004 
@@ -58645,8 +58688,8 @@ createNode skinCluster -n "skinCluster1";
 		2.0000000000000001e-09 14 1.5239999999999999e-06
 		3 3 3.1e-08 5 0.56453338499999994 12 0.43546658399999999
 		3 3 1.3000000000000001e-08 5 0.43291052499999999 12 0.56708946199999999
-		4 3 5.1e-08 5 0.75235295099999999 12 0.24764660599999999 14 
-		3.9200000000000002e-07
+		4 3 5.0999999999999993e-08 5 0.75235295099999999 12 0.24764660599999999 
+		14 3.9200000000000002e-07
 		5 3 1.2100000000000001e-07 5 0.74012929599999988 12 0.25986479099999998 
 		13 1e-08 15 5.7819999999999999e-06
 		4 3 1.6400000000000001e-07 5 0.87396154299999995 12 0.126038175 
@@ -58699,8 +58742,8 @@ createNode skinCluster -n "skinCluster1";
 		6 3 0.0073927189999999999 4 0.024742084000000001 5 0.96783417399999982 
 		15 6e-09 16 2.3802999999999999e-05 17 7.2139999999999999e-06
 		8 3 0.0074979879999999997 4 0.024260204 5 0.9682104760000001 
-		14 1.0000000000000001e-09 15 4.0000000000000002e-09 16 2.4321e-05 17 
-		5.5990000000000001e-06 18 1.407e-06
+		14 1.0000000000000001e-09 15 4.0000000000000002e-09 16 2.4321000000000003e-05 
+		17 5.5990000000000001e-06 18 1.407e-06
 		7 1 1.0000000000000001e-09 3 0.0063348989999999997 4 0.016476904000000001 
 		5 0.9771508619999999 14 6e-09 16 2.8948000000000001e-05 18 8.3799999999999994e-06
 		8 1 3e-09 3 0.0052000409999999999 4 0.014610648 5 0.98014671300000011 
@@ -58709,8 +58752,8 @@ createNode skinCluster -n "skinCluster1";
 		5 0.98501687000000004 12 1.8e-07 14 5.68e-07 16 8.09e-07 18 
 		3.0582e-05
 		8 1 1.0000000000000001e-09 3 0.0016968650000000001 4 0.042475098000000003 
-		5 0.95581917999999988 12 4.7190000000000001e-06 14 2.22e-07 16 2.1999999999999998e-08 
-		18 3.8929999999999998e-06
+		5 0.95581917999999988 12 4.7190000000000001e-06 14 2.2200000000000003e-07 
+		16 2.1999999999999998e-08 18 3.8929999999999998e-06
 		6 3 0.00055254999999999996 4 0.00019227099999999999 5 0.99917319700000007 
 		12 8.0841999999999996e-05 14 8.3200000000000004e-07 18 3.0800000000000001e-07
 		3 3 3.7e-08 5 0.48968478599999998 12 0.51031517700000006
@@ -58842,7 +58885,7 @@ createNode skinCluster -n "skinCluster1";
 		13 5.0000000000000001e-09 15 0.000126045 17 1.418e-06
 		5 3 1.9933999999999999e-05 5 0.99356465800000004 12 0.0063865550000000004 
 		15 2.8731999999999999e-05 17 1.2100000000000001e-07
-		6 3 8.8106e-05 4 0.030463559000000001 5 0.96771356799999997 
+		6 3 8.8106000000000013e-05 4 0.030463559000000001 5 0.96771356799999997 
 		12 0.0017169189999999999 15 1.7475000000000001e-05 17 3.7300000000000002e-07
 		7 3 4.1709000000000003e-05 4 0.028495472000000001 5 0.96998170400000006 
 		12 0.001400601 13 1.0000000000000001e-09 15 7.8611999999999999e-05 17 
@@ -58900,8 +58943,8 @@ createNode skinCluster -n "skinCluster1";
 		7 3 0.00112806 4 0.001269112 5 0.9972181309999999 12 1.2100000000000001e-07 
 		14 7.3939999999999998e-06 16 1.5017999999999999e-05 18 0.000362164
 		7 3 0.00016579799999999999 4 0.040000371 5 0.95945387299999996 
-		12 9.7499999999999998e-07 14 2.457e-05 16 7.2459999999999997e-06 18 
-		0.00034716700000000001
+		12 9.7499999999999998e-07 14 2.4569999999999997e-05 16 7.2459999999999997e-06 
+		18 0.00034716700000000001
 		7 3 0.00055472400000000004 4 0.040181318000000001 5 0.95920704599999995 
 		12 3.2629999999999999e-06 14 2.9519999999999999e-06 16 6.9800000000000003e-07 
 		18 4.9999e-05
@@ -58927,8 +58970,8 @@ createNode skinCluster -n "skinCluster1";
 		14 5.4193000000000001e-05 18 1.4e-08
 		5 3 4.1000000000000003e-08 5 0.83085885200000009 12 0.16831792400000001 
 		13 4.578e-06 14 0.00081860500000000003
-		5 3 1.09e-07 5 0.73898500999999994 12 0.26088149700000002 13 
-		4.4099999999999999e-07 14 0.000132943
+		5 3 1.0900000000000001e-07 5 0.73898500999999994 12 0.26088149700000002 
+		13 4.4099999999999999e-07 14 0.000132943
 		6 3 4.8e-08 5 0.79927722800000001 12 0.199856266 13 6.2689999999999996e-06 
 		15 0.00086018800000000001 17 1.0000000000000001e-09
 		6 3 5.4799999999999998e-07 5 0.97452877599999999 12 0.024324704999999999 
@@ -58949,7 +58992,7 @@ createNode skinCluster -n "skinCluster1";
 		2.0000000000000001e-09 17 1.4107999999999999e-05
 		6 3 0.00014053899999999999 4 2.717e-06 5 0.98070165100000006 
 		14 6.6104000000000003e-05 16 0.0048005879999999997 18 0.014288400999999999
-		7 3 7.3088000000000002e-05 4 1.84e-06 5 0.98418952100000012 
+		7 3 7.3088000000000002e-05 4 1.8400000000000002e-06 5 0.98418952100000012 
 		12 1.0000000000000001e-09 14 0.00045330899999999999 16 0.00072975700000000004 
 		18 0.014552483999999999
 		6 3 0.00016443499999999999 4 2.965e-06 5 0.98178668299999994 
@@ -58967,8 +59010,8 @@ createNode skinCluster -n "skinCluster1";
 		12 1.1379999999999999e-06 15 2.4893999999999999e-05 16 7.1919999999999999e-06 
 		17 0.00034498999999999999
 		7 3 0.00016059200000000001 4 0.0088441370000000002 5 0.990857031 
-		12 1.8179999999999999e-05 15 5.3497e-05 16 5.1099999999999996e-07 17 
-		6.6051999999999997e-05
+		12 1.8179999999999999e-05 15 5.3497000000000006e-05 16 5.1099999999999996e-07 
+		17 6.6051999999999997e-05
 		7 3 7.2521999999999994e-05 4 0.019954377999999998 5 0.97967615500000016 
 		12 0.00016918900000000001 15 0.000100276 16 7.1e-08 17 2.7409000000000001e-05
 		6 3 1.6867999999999998e-05 5 0.99914362500000009 12 4.6609999999999999e-06 
@@ -58983,7 +59026,7 @@ createNode skinCluster -n "skinCluster1";
 		14 0.002209435 18 1.4134000000000001e-05
 		6 3 8.6000000000000002e-08 5 0.97942997199999993 12 0.018123917 
 		13 4.724e-06 14 0.0024400730000000001 18 1.2279999999999999e-06
-		6 3 1.376e-06 5 0.99736488200000006 12 0.00074064599999999997 
+		6 3 1.3759999999999998e-06 5 0.99736488200000006 12 0.00074064599999999997 
 		13 8.0000000000000002e-08 14 0.0018116650000000001 18 8.1351000000000001e-05
 		6 3 3.4e-08 5 0.946298627 12 0.050127296000000002 13 2.6604000000000001e-05 
 		14 0.003547377 18 6.1999999999999999e-08
@@ -58997,7 +59040,7 @@ createNode skinCluster -n "skinCluster1";
 		13 0.035211793999999998 15 0.056892969000000002 17 2.7360000000000001e-06
 		3 3 1.4e-08 5 0.84290758700000001 12 0.090175979000000003;
 	setAttr ".wl[3473:3593].w"
-		3 13 0.038471782000000003 14 0.028444535 18 1.03e-07
+		3 13 0.038471782000000003 14 0.028444535 18 1.0300000000000001e-07
 		3 3 5.0000000000000001e-09 5 0.018004238999999998 12 0.981995756
 		3 3 4.0000000000000002e-09 5 0.049291196000000002 12 0.95070880000000002
 		3 3 2e-08 5 0.007208903 12 0.99279107700000002
@@ -59140,9 +59183,9 @@ createNode skinCluster -n "skinCluster1";
 		5.6749999999999999e-06 13 1.2668e-05 15 0.053540668 16 1.95e-06 17 
 		0.035776206999999997
 		8 3 7.7999999999999997e-08 4 0.034385963999999998 5 0.766752565 
-		12 9.7699999999999992e-07 13 2.3193e-05 15 0.087750669000000003 16 
-		1.3145e-05 17 0.111073409
-		8 3 7.1e-08 4 0.032254181999999999 5 0.633523748 12 1.03e-07 
+		12 9.7699999999999992e-07 13 2.3193000000000003e-05 15 0.087750669000000003 
+		16 1.3145e-05 17 0.111073409
+		8 3 7.1e-08 4 0.032254181999999999 5 0.633523748 12 1.0300000000000001e-07 
 		13 1.6092000000000001e-05 15 0.099442005 16 0.00012898799999999999 17 
 		0.234634811
 		8 3 1.3e-07 4 0.0084029610000000005 5 0.68620747000000004 12 
@@ -59220,7 +59263,7 @@ createNode skinCluster -n "skinCluster1";
 		6 3 4.0000000000000001e-08 5 0.60423371600000009 12 0.0013352559999999999 
 		13 0.28132870100000001 14 0.11309728099999999 18 5.006e-06
 		6 3 4.0000000000000001e-08 5 0.58904010800000006 12 0.001564143 
-		13 0.25291523300000002 15 0.156451388 17 2.9088e-05
+		13 0.25291523300000002 15 0.156451388 17 2.9087999999999997e-05
 		6 3 3.8000000000000003e-08 5 0.55690870700000006 12 0.001695982 
 		13 0.20281589899999999 15 0.238449519 17 0.00012985500000000001
 		5 5 0.74867707300000008 12 0.014323137999999999 13 0.100824263 
@@ -59313,8 +59356,9 @@ createNode skinCluster -n "skinCluster1";
 		7 3 2.9000000000000002e-08 5 0.372769397 12 7.4999999999999997e-08 
 		13 0.000666101 14 0.37183149900000001 16 1.0336999999999999e-05 18 
 		0.25472256199999999
-		7 3 5.1e-08 5 0.40529711400000001 12 3.022e-06 13 0.0045181459999999998 
-		14 0.49787029299999991 16 5.8800000000000002e-07 18 0.092310786000000006
+		7 3 5.0999999999999993e-08 5 0.40529711400000001 12 3.0219999999999996e-06 
+		13 0.0045181459999999998 14 0.49787029299999991 16 5.8800000000000002e-07 
+		18 0.092310786000000006
 		7 3 2.4e-08 5 0.58382622300000009 12 3.5722999999999997e-05 
 		13 0.0020856820000000002 14 0.35998360099999999 16 2.0800000000000001e-07 
 		18 0.054068538999999999
@@ -59429,16 +59473,17 @@ createNode skinCluster -n "skinCluster1";
 		8 3 4.4099999999999999e-07 4 0.039999980999999997 5 0.93167036999999997 
 		12 1.745e-06 13 5.7999999999999995e-07 14 0.016255985000000001 16 
 		3.8500000000000002e-07 18 0.012070513
-		7 3 1.11e-07 5 0.96390055100000005 12 3.0576e-05 13 5.8819999999999998e-06 
-		14 0.030422705000000001 16 8.0000000000000005e-09 18 0.0056401669999999998
+		7 3 1.1100000000000001e-07 5 0.96390055100000005 12 3.0576e-05 
+		13 5.8819999999999998e-06 14 0.030422705000000001 16 8.0000000000000005e-09 
+		18 0.0056401669999999998
 		6 3 1.4e-08 5 0.96172044899999987 12 0.00034398799999999999 
 		13 3.6887000000000001e-05 14 0.036511638999999999 18 0.001387023
 		7 3 1.0366e-05 5 0.97325134799999991 12 1.0000000000000001e-09 
 		13 3e-09 15 0.0026237190000000001 16 0.00015804299999999999 17 0.023956519999999999
 		6 3 2.7999999999999999e-08 5 0.96757588399999994 12 0.00068636599999999999 
 		13 4.0667000000000002e-05 15 0.030677282 17 0.0010197730000000001
-		7 3 1.72e-07 5 0.97097820899999998 12 5.5299e-05 13 4.6099999999999999e-06 
-		15 0.024616909999999999 16 6e-09 17 0.0043447939999999999
+		7 3 1.72e-07 5 0.97097820899999998 12 5.5298999999999994e-05 
+		13 4.6099999999999999e-06 15 0.024616909999999999 16 6e-09 17 0.0043447939999999999
 		8 3 8.5199999999999995e-07 4 0.039344068000000003 5 0.94176554500000009 
 		12 5.6629999999999998e-06 13 4.4400000000000001e-07 15 0.011347464999999999 
 		16 2.17e-07 17 0.0075357460000000003
@@ -59618,7 +59663,7 @@ createNode skinCluster -n "skinCluster1";
 		3.4798000000000001e-05 15 0.0060902389999999999 16 2.9886000000000002e-05 
 		17 0.013957351
 		7 3 1.4e-08 4 0.002198438 5 0.95677707400000001 13 0.00024997300000000001 
-		15 0.021891403 16 1.1686e-05 17 0.018871412000000001
+		15 0.021891403 16 1.1686000000000001e-05 17 0.018871412000000001
 		5 5 0.98289177000000005 13 0.00012523499999999999 15 0.010094901 
 		16 2.8899999999999999e-06 17 0.0068852039999999998
 		5 5 0.96575278599999992 13 0.00022547499999999999 15 0.019141722 
@@ -59652,8 +59697,8 @@ createNode skinCluster -n "skinCluster1";
 		7 3 4.1999999999999999e-08 5 0.955536512 13 0.026307453000000001 
 		14 0.0021520609999999998 15 0.016002149 17 1.46e-06 18 3.2300000000000002e-07
 		7 3 2.9999999999999997e-08 5 0.98565822599999997 13 0.0086122860000000002 
-		14 0.00048131299999999998 15 0.0052480260000000003 17 1.09e-07 18 
-		1e-08
+		14 0.00048131299999999998 15 0.0052480260000000003 17 1.0900000000000001e-07 
+		18 1e-08
 		5 3 2.1999999999999998e-08 5 0.95739360499999993 13 0.0083583760000000007 
 		14 0.034003625000000003 18 0.00024437200000000002
 		5 3 2.0999999999999999e-08 5 0.955817747 13 0.016857949000000001 
@@ -59756,7 +59801,7 @@ createNode skinCluster -n "skinCluster1";
 		5 0.998924429
 		3 3 0.00025452899999999997 4 3.709e-06 5 0.99974176199999998
 		2 3 6.5006999999999996e-05 5 0.99993499299999999
-		2 3 1.5027e-05 5 0.999984973
+		2 3 1.5026999999999999e-05 5 0.999984973
 		1 5 1
 		3 3 1.9000000000000001e-08 5 0.998995403 6 0.0010045779999999999
 		2 5 0.99994889799999997 6 5.1102e-05
@@ -59840,7 +59885,7 @@ createNode skinCluster -n "skinCluster1";
 		6 1 1.6458999999999999e-05 2 0.00038361299999999999 3 0.107146036 
 		4 0.441294878 5 0.45115888199999998 55 1.3199999999999999e-07
 		2 3 0.00010132 5 0.99989868000000004
-		4 2 1.6000000000000001e-08 3 0.00041029400000000001 4 1.007e-05 
+		4 2 1.6000000000000001e-08 3 0.00041029400000000001 4 1.0069999999999998e-05 
 		5 0.99957962
 		4 2 2.1e-07 3 0.001471904 4 0.00040192 5 0.99812596600000003
 		5 1 1.4e-08 2 2.0360000000000001e-06 3 0.004492869 4 0.0059667629999999999 
@@ -59885,7 +59930,7 @@ createNode skinCluster -n "skinCluster1";
 		3 3 2.4e-08 5 0.99987786899999997 9 0.00012210699999999999
 		3 3 2.9000000000000002e-08 5 0.99957703000000009 9 0.00042294099999999997
 		3 3 4.8e-08 5 0.99984287400000005 9 0.000157078
-		3 3 1.1224e-05 5 0.99987409700000007 9 0.000114679
+		3 3 1.1224000000000001e-05 5 0.99987409700000007 9 0.000114679
 		3 3 9.2500000000000004e-07 5 0.99986490899999991 9 0.00013416599999999999
 		3 2 4.0000000000000002e-09 3 0.00012149799999999999 5 0.99987849799999995
 		4 2 9.5000000000000004e-08 3 0.00064639199999999997 4 4.4768999999999998e-05 
@@ -59961,8 +60006,8 @@ createNode skinCluster -n "skinCluster1";
 		4 0.0055293349999999998 5 0.99001978700000004
 		5 1 3.53e-07 2 3.7314000000000002e-05 3 0.010677358 4 
 		0.036105251999999997 5 0.95317972299999998
-		5 1 2.8200000000000001e-07 2 2.8722e-05 3 0.01041838 4 
-		0.035954881000000001 5 0.953597735
+		5 1 2.8200000000000001e-07 2 2.8721999999999997e-05 3 0.01041838 
+		4 0.035954881000000001 5 0.953597735
 		5 1 2.3000000000000001e-08 2 4.3490000000000002e-06 3 0.004327427 
 		4 0.0054130949999999997 5 0.990255106
 		5 1 2.53e-07 2 2.2490999999999999e-05 3 0.010667717 4 
@@ -60029,7 +60074,7 @@ createNode skinCluster -n "skinCluster1";
 		2 3 1.7628000000000001e-05 5 0.99998237199999995
 		2 3 1.5829e-05 5 0.99998417100000003
 		2 3 1.3912e-05 5 0.999986088
-		2 3 1.2166e-05 5 0.99998783400000002
+		2 3 1.2165999999999998e-05 5 0.99998783400000002
 		3 3 1.0638999999999999e-05 5 0.99996879100000002 6 2.0570000000000001e-05
 		2 3 1.235e-06 5 0.99999876499999996
 		2 3 3.1600000000000002e-07 5 0.99999968400000006
@@ -60040,7 +60085,7 @@ createNode skinCluster -n "skinCluster1";
 		2 3 9.7199999999999997e-07 5 0.99999902799999996
 		2 3 4.2050000000000004e-06 5 0.99999579500000002
 		2 3 3.755e-06 5 0.99999624499999995
-		2 3 8.54e-07 5 0.99999914599999995
+		2 3 8.5399999999999989e-07 5 0.99999914599999995
 		2 3 7.3900000000000004e-07 5 0.99999926100000003
 		2 3 3.19e-06 5 0.99999680999999996
 		2 3 5.6300000000000005e-07 5 0.99999943700000005
@@ -60050,7 +60095,7 @@ createNode skinCluster -n "skinCluster1";
 		2 3 7.0000000000000005e-08 5 0.99999992999999998
 		2 3 1.5300000000000001e-07 5 0.999999847
 		2 3 1.9500000000000001e-07 5 0.99999980499999996
-		2 3 2.03e-07 5 0.99999979699999997
+		2 3 2.0299999999999998e-07 5 0.99999979699999997
 		2 3 1.2800000000000001e-07 5 0.99999987199999996
 		2 3 1.31e-07 5 0.99999986900000004
 		3 3 9.5999999999999999e-08 5 0.99999882100000004 6 1.083e-06
@@ -60099,7 +60144,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 5.2499999999999995e-07 4 0.037948413 5 0.96195377600000009 
 		9 2.17e-07 12 9.7069000000000002e-05
 		5 3 8.3000000000000002e-08 4 0.037622454 5 0.96225536600000006 
-		9 2.3533e-05 12 9.8564e-05
+		9 2.3533e-05 12 9.8564000000000014e-05
 		5 3 1.3000000000000001e-08 4 0.035643892000000003 5 0.96419923699999999 
 		9 2.8441000000000001e-05 12 0.000128417
 		5 3 1.0999999999999999e-08 4 0.037001177000000003 5 0.96285951900000011 
@@ -60260,7 +60305,8 @@ createNode skinCluster -n "skinCluster1";
 		2 5 0.90003879399999998 12 0.099961205999999997
 		2 5 0.89492903400000001 12 0.105070966
 		3 3 1.7999999999999999e-08 5 0.89124278499999998 12 0.108757197
-		4 3 1.12e-07 5 0.8935655079999999 12 0.106434373 14 6.9999999999999998e-09
+		4 3 1.1200000000000001e-07 5 0.8935655079999999 12 0.106434373 
+		14 6.9999999999999998e-09
 		4 3 1.91e-07 5 0.89469940999999997 12 0.10530032 14 7.9000000000000006e-08
 		6 3 3.2000000000000002e-08 5 0.96026329399999999 13 0.005833642 
 		15 0.033105344000000002 16 4.0000000000000002e-09 17 0.000797684
@@ -60382,7 +60428,7 @@ createNode skinCluster -n "skinCluster1";
 		6 3 3.7e-08 5 0.94064879099999998 12 0.054084959000000002 13 
 		5.7388e-05 15 0.0052078999999999997 17 9.2500000000000004e-07
 		6 3 3.5999999999999998e-08 5 0.73899302900000008 12 0.25667037799999998 
-		13 6.3410000000000004e-05 15 0.004272919 17 2.28e-07
+		13 6.3410000000000004e-05 15 0.004272919 17 2.2799999999999998e-07
 		5 5 0.45338873800000001 12 0.54515834600000002 13 1.8593999999999998e-05 
 		15 0.001434315 17 6.9999999999999998e-09
 		3 3 2.9000000000000002e-08 5 0.17940379200000001 12 0.82059617899999993
@@ -60414,7 +60460,7 @@ createNode skinCluster -n "skinCluster1";
 		6 3 4.3000000000000001e-08 5 0.74876700100000004 12 0.014326553000000001 
 		13 0.100902348 14 0.135984256 18 1.9799000000000001e-05
 		6 3 2.7999999999999999e-08 5 0.82501036100000003 12 0.089916618000000004 
-		13 0.030852544999999999 14 0.054218568000000002 18 1.88e-06
+		13 0.030852544999999999 14 0.054218568000000002 18 1.8799999999999998e-06
 		6 3 1.6000000000000001e-08 5 0.64094816200000004 12 0.33894096400000001 
 		13 0.0061612209999999997 14 0.013949566 18 7.1e-08
 		4 3 2.9000000000000002e-08 5 0.27336453599999999 12 0.72663543399999997 
@@ -60457,8 +60503,8 @@ createNode skinCluster -n "skinCluster1";
 		13 0.201821905 15 0.41375604700000002 17 0.00099673100000000005
 		6 5 0.41985949400000006 12 1.7680000000000001e-06 13 0.18239636000000001 
 		15 0.39519921600000002 16 5.0000000000000001e-09 17 0.0025431569999999999
-		6 5 0.63114918300000011 12 5.1e-08 13 0.104561037 15 0.26063172699999998 
-		16 2.7e-08 17 0.0036579749999999999
+		6 5 0.63114918300000011 12 5.0999999999999993e-08 13 0.104561037 
+		15 0.26063172699999998 16 2.7e-08 17 0.0036579749999999999
 		7 3 3e-09 5 0.85221745299999996 12 1.0000000000000001e-09 13 
 		0.036804385000000002 15 0.109627171 16 3e-09 17 0.001350984
 		5 3 2.0999999999999999e-08 5 0.95256538199999996 13 0.0091759110000000001 
@@ -60491,8 +60537,8 @@ createNode skinCluster -n "skinCluster1";
 		13 1.578e-06 15 0.00069090999999999998 16 0.000121354 17 0.0060293430000000004
 		6 3 1.7999999999999999e-08 5 0.99807708500000003 13 4.7620000000000003e-06 
 		15 0.0001192 16 0.00047497300000000001 17 0.0013239619999999999
-		6 3 6e-09 5 0.99887932999999995 13 1.2773e-05 14 2.5038999999999999e-05 
-		16 0.00072767700000000003 18 0.000355175
+		6 3 6e-09 5 0.99887932999999995 13 1.2773000000000001e-05 14 
+		2.5038999999999999e-05 16 0.00072767700000000003 18 0.000355175
 		6 3 2.0999999999999999e-08 5 0.99813270600000015 13 3.5880000000000002e-06 
 		14 0.00014002599999999999 16 0.00026454899999999999 18 0.00145911
 		6 4 0.039999999000000001 5 0.95968087700000004 13 8.8824000000000002e-05 
@@ -60516,7 +60562,7 @@ createNode skinCluster -n "skinCluster1";
 		7 3 6e-09 4 0.0055648269999999996 5 0.99366947400000005 13 
 		0.00034527899999999999 15 0.000376494 16 1.7931000000000002e-05 17 2.5989000000000001e-05
 		6 3 6.9999999999999998e-09 5 0.99919373499999997 13 0.00041167599999999998 
-		14 0.00037523999999999999 16 8.9090000000000006e-06 18 1.0433e-05
+		14 0.00037523999999999999 16 8.9090000000000006e-06 18 1.0432999999999998e-05
 		6 3 1.4999999999999999e-08 5 0.998831939 13 0.000125986 14 
 		0.00089910599999999999 16 2.0219999999999999e-06 18 0.000140932
 		6 3 3.4e-08 5 0.99688081699999986 13 0.00053318300000000001 
@@ -60648,7 +60694,7 @@ createNode skinCluster -n "skinCluster1";
 		10 0.039228473999999999 11 0.96077036999999998
 		5 3 2e-08 5 3.1699999999999999e-07 9 6.4600000000000004e-07 
 		10 0.040928225999999998 11 0.95907079100000003
-		5 3 4.0000000000000002e-09 5 1.17e-07 9 5.2600000000000002e-07 
+		5 3 4.0000000000000002e-09 5 1.1699999999999999e-07 9 5.2600000000000002e-07 
 		10 0.039334908000000002 11 0.96066444500000003
 		5 3 2.0000000000000001e-09 5 5.8000000000000003e-08 9 4.0999999999999999e-07 
 		10 0.036657397000000001 11 0.96334213300000004
@@ -60684,8 +60730,8 @@ createNode skinCluster -n "skinCluster1";
 		0.155228006 11 0.84475489699999995
 		5 3 6.9999999999999998e-09 5 2.9620000000000002e-06 9 1.3128e-05 
 		10 0.155574188 11 0.84440971499999995
-		5 3 3e-09 5 1.217e-06 9 1.1277999999999999e-05 10 0.152956077 
-		11 0.84703142500000006
+		5 3 3e-09 5 1.2170000000000002e-06 9 1.1277999999999999e-05 
+		10 0.152956077 11 0.84703142500000006
 		4 5 6.7599999999999997e-07 9 9.0350000000000007e-06 10 0.14737502299999999 
 		11 0.85261526600000004
 		5 3 8.0000000000000005e-09 5 4.2399999999999999e-07 9 6.939e-06 
@@ -60929,7 +60975,7 @@ createNode skinCluster -n "skinCluster1";
 		4 5 0.088882692999999999 9 0.61917110000000009 10 0.29191574100000001 
 		11 3.0465999999999999e-05
 		5 3 3.1e-08 5 0.052838944999999998 9 0.655247845 10 0.29188301999999999 
-		11 3.0159e-05
+		11 3.0158999999999997e-05
 		5 3 3.4e-08 5 0.026096319 9 0.67615982899999993 10 0.29770858100000003 
 		11 3.5237000000000002e-05
 		5 3 1.6000000000000001e-08 5 0.016801363 9 0.67417229199999995 
@@ -60971,7 +61017,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 2.0000000000000001e-09 5 0.028438893999999999 9 0.66168906399999994 
 		10 0.309870109 11 1.9309999999999998e-06
 		5 3 1.0000000000000001e-09 5 0.029408614 9 0.64702649800000001 
-		10 0.32356285699999998 11 2.03e-06
+		10 0.32356285699999998 11 2.0299999999999996e-06
 		5 3 1.0000000000000001e-09 5 0.027141757999999998 9 0.635250804 
 		10 0.33760528099999998 11 2.1560000000000002e-06
 		3 5 0.41177340499999998 9 0.577089564 10 0.011137031
@@ -61138,8 +61184,8 @@ createNode skinCluster -n "skinCluster1";
 		8 0.943686256
 		5 3 1.9000000000000001e-08 5 4.7800000000000002e-07 6 1.04e-06 
 		7 0.059858921000000002 8 0.94013954200000005
-		5 3 4.0000000000000002e-09 5 1.86e-07 6 8.71e-07 7 0.058767092 
-		8 0.94123184699999995
+		5 3 4.0000000000000002e-09 5 1.86e-07 6 8.7100000000000011e-07 
+		7 0.058767092 8 0.94123184699999995
 		4 5 7.6000000000000006e-08 6 6.5799999999999999e-07 7 0.055754748 
 		8 0.94424451799999998
 		5 3 2.0999999999999999e-08 5 5.2000000000000002e-08 6 4.7999999999999996e-07 
@@ -61166,12 +61212,12 @@ createNode skinCluster -n "skinCluster1";
 		7 0.20698540300000001 8 0.79295047299999999
 		5 3 4.3000000000000001e-08 5 3.1004000000000003e-05 6 1.9446e-05 
 		7 0.20643244199999999 8 0.79351706499999997
-		5 3 1.6000000000000001e-08 5 1.5976000000000001e-05 6 1.505e-05 
+		5 3 1.6000000000000001e-08 5 1.5976000000000001e-05 6 1.5049999999999998e-05 
 		7 0.20168963100000001 8 0.79827932700000004
 		5 3 6e-09 5 8.4770000000000003e-06 6 1.5503e-05 7 0.20183883799999999 
 		8 0.798137176
-		5 3 6e-09 5 4.121e-06 6 1.9453000000000002e-05 7 0.20593557200000001 
-		8 0.79404084799999997
+		5 3 6e-09 5 4.1210000000000009e-06 6 1.9453000000000002e-05 
+		7 0.20593557200000001 8 0.79404084799999997
 		4 5 1.736e-06 6 1.7056999999999999e-05 7 0.205339302 8 
 		0.79464190499999998
 		4 5 9.0299999999999997e-07 6 1.3473e-05 7 0.20141921700000001 
@@ -61426,7 +61472,7 @@ createNode skinCluster -n "skinCluster1";
 		4 5 0.33826199099999998 6 0.6010336690000001 7 0.060704283999999997 
 		8 5.5999999999999999e-08
 		4 5 0.15464778800000001 6 0.77338831200000002 7 0.071963848999999996 
-		8 5.1e-08
+		8 5.0999999999999993e-08
 		5 3 2.1999999999999998e-08 5 0.081484484999999995 6 0.84672737399999998 
 		7 0.071788088 8 3.1e-08
 		5 3 2.4e-08 5 0.049372146999999998 6 0.87817991499999992 7 
@@ -61443,7 +61489,7 @@ createNode skinCluster -n "skinCluster1";
 		4 5 0.033874228999999999 6 0.73087417300000002 7 0.23525152299999999 
 		8 7.4999999999999997e-08
 		4 5 0.035269804000000002 6 0.72189480100000003 7 0.24283529200000001 
-		8 1.03e-07
+		8 1.0300000000000001e-07
 		3 5 0.39237071099999998 6 0.60347253700000003 7 0.0041567519999999997
 		3 5 0.25472587400000002 6 0.73803951599999995 7 0.0072346099999999998
 		4 3 2e-08 5 0.19305673300000001 6 0.78280409299999998 7 
@@ -61497,8 +61543,8 @@ createNode skinCluster -n "skinCluster1";
 		0.0052264640000000001
 		4 3 3.1e-08 5 0.34457515799999999 6 0.64628421400000002 7 
 		0.0091405970000000003
-		4 3 5.1e-08 5 0.34266715599999997 6 0.64813214299999999 7 
-		0.0092006499999999995
+		4 3 5.0999999999999993e-08 5 0.34266715599999997 6 0.64813214299999999 
+		7 0.0092006499999999995
 		4 3 2.1999999999999998e-08 5 0.30060918199999997 6 0.68880174300000008 
 		7 0.010589052999999999
 		3 3 3e-09 7 1.297e-06 8 0.99999870000000002
@@ -61506,13 +61552,13 @@ createNode skinCluster -n "skinCluster1";
 		4 5 0.105190465 6 0.75556503799999997 7 0.13924445099999999 
 		8 4.6000000000000002e-08
 		4 5 0.051153949999999997 6 0.74744812399999994 7 0.20139781700000001 
-		8 1.09e-07
+		8 1.0900000000000001e-07
 		7 1 1.4e-08 3 0.071902250000000001 4 1.7425999999999999e-05 
 		52 1.8e-07 58 0.17622417100000001 59 0.75185589299999989 71 6.5999999999999995e-08
 		9 2 6.8999999999999996e-08 3 0.069064291 4 4.5739999999999997e-06 
 		52 2.8760000000000001e-06 53 1.0000000000000001e-09 58 0.17245988000000001 
 		59 0.75846830200000004 70 1.0000000000000001e-09 71 6e-09
-		8 1 4.0000000000000002e-09 2 4.27e-07 3 0.072908321999999998 
+		8 1 4.0000000000000002e-09 2 4.2699999999999995e-07 3 0.072908321999999998 
 		4 1.3069999999999999e-06 52 1.2145e-05 53 6e-09 58 0.17196214100000001 
 		59 0.75511564799999997
 		6 2 1.6000000000000001e-08 3 0.002137548 52 2.0000000000000001e-09 
@@ -61542,7 +61588,7 @@ createNode skinCluster -n "skinCluster1";
 		9 1 0.00050419799999999997 2 0.001982017 3 0.089435262000000001 
 		4 5.2999999999999998e-08 52 6.8881999999999995e-05 53 2.1999999999999998e-08 
 		58 0.19909269700000001 59 0.70891394299999999 90 2.926e-06
-		2 1 1.7e-08 2 1.015e-06;
+		2 1 1.7e-08 2 1.0149999999999998e-06;
 	setAttr ".wl[4965:5029].w"
 		6 3 0.054380737999999998 4 2.4400000000000001e-07 52 1.3689999999999999e-06 
 		58 0.13942966700000001 59 0.8061869479999999 72 2.0000000000000001e-09
@@ -61583,7 +61629,7 @@ createNode skinCluster -n "skinCluster1";
 		58 0.022910272999999998 59 0.00040060999999999997 90 6.6000000000000003e-07
 		10 1 2.8172999999999999e-05 2 0.00015538600000000001 3 0.0061916139999999998 
 		4 6e-09 52 0.900242447 53 0.089706119000000001 54 0.00024782500000000002 
-		58 0.0034155639999999998 59 1.2692e-05 90 1.74e-07
+		58 0.0034155639999999998 59 1.2692000000000001e-05 90 1.74e-07
 		10 1 4.8096000000000002e-05 2 0.00029169599999999998 3 0.010205726 
 		4 2.0000000000000001e-09 52 0.80377048999999978 53 0.182425212 54 
 		0.002989734 58 0.00026854299999999999 59 1.5900000000000001e-07 90 3.4200000000000002e-07
@@ -61622,7 +61668,7 @@ createNode skinCluster -n "skinCluster1";
 		52 0.00097919900000000004 53 0.022800039000000001 54 0.96778639399999999
 		6 1 8.6999999999999998e-08 2 3.907e-06 3 0.010902129999999999 
 		52 0.0029790989999999998 53 0.036585196 54 0.94952958099999996
-		6 1 9.5900000000000005e-07 2 2.3425e-05 3 0.015677584000000001 
+		6 1 9.5900000000000005e-07 2 2.3424999999999997e-05 3 0.015677584000000001 
 		52 0.014200773999999999 53 0.093936380999999999 54 0.876160877
 		7 1 1.0240000000000001e-06 2 1.4066000000000001e-05 3 0.0030930749999999998 
 		52 0.068656521999999998 53 0.24586738799999999 54 0.682367901 90 
@@ -61657,15 +61703,15 @@ createNode skinCluster -n "skinCluster1";
 		9 1 1.1939999999999999e-06 2 3.9956999999999997e-05 3 0.51630749099999995 
 		4 0.45928750000000002 5 0.022496123 52 0.00064913999999999998 53 
 		5.06e-07 58 0.0012135640000000001 59 4.5249999999999999e-06
-		9 1 6.4300000000000003e-07 2 2.7385e-05 3 0.31224389800000002 
+		9 1 6.4300000000000003e-07 2 2.7385000000000003e-05 3 0.31224389800000002 
 		4 0.59033359600000002 5 0.097115090000000001 52 0.00013006899999999999 
 		53 4.9999999999999998e-08 58 0.00014909600000000001 59 1.73e-07
 		8 1 5.4e-08 2 3.9099999999999998e-06 3 0.264578649 4 0.61906449899999993 
 		5 0.11632205700000001 52 2.6914999999999999e-05 53 6.9999999999999998e-09 
 		58 3.9090000000000002e-06
-		9 1 1.17e-07 2 6.708e-06 3 0.46284826699999998 4 0.50981750399999992 
-		5 0.02705782 52 0.00021769899999999999 53 1.1999999999999999e-07 58 
-		5.1740999999999998e-05 59 2.4e-08
+		9 1 1.1699999999999999e-07 2 6.708e-06 3 0.46284826699999998 
+		4 0.50981750399999992 5 0.02705782 52 0.00021769899999999999 53 
+		1.1999999999999999e-07 58 5.1740999999999998e-05 59 2.4e-08
 		6 1 1.3000000000000001e-08 2 1.353e-06 3 0.134883534 4 
 		0.58320626600000003 5 0.28190671 52 2.1239999999999999e-06
 		9 1 2.29e-07 2 1.3161e-05 3 0.175608825 4 0.58275425299999994 
@@ -61732,7 +61778,7 @@ createNode skinCluster -n "skinCluster1";
 		6 1 0.0078253590000000005 2 0.043675269000000003 3 0.33281450600000001 
 		4 0.53290002499999989 5 0.082766615000000002 90 1.8226000000000001e-05
 		6 1 0.001141745 2 0.012736414 3 0.18251795300000001 4 
-		0.554724683 5 0.248877982 90 1.223e-06
+		0.554724683 5 0.248877982 90 1.2230000000000002e-06
 		6 1 0.0080316659999999998 2 0.045518964000000002 3 0.34574646999999997 
 		4 0.52343256599999999 5 0.077245682999999996 90 2.4651000000000002e-05
 		6 1 0.0012288080000000001 2 0.013902952999999999 3 0.199001015 
@@ -61788,7 +61834,7 @@ createNode skinCluster -n "skinCluster1";
 		3e-09 74 0.003305751 75 2.9513999999999999e-05
 		8 1 3.4863000000000001e-05 2 0.00063484800000000003 3 0.23356893000000001 
 		4 0.56566011400000005 5 0.199698862 55 3.0319999999999999e-06 74 
-		0.00039847999999999999 75 8.71e-07
+		0.00039847999999999999 75 8.7100000000000011e-07
 		9 1 0.00035338999999999998 2 0.0027471000000000001 3 0.60633983699999994 
 		4 0.358003497 5 0.015092308 55 0.000375223 56 8.3999999999999998e-08 
 		74 0.016610692999999999 75 0.000477868
@@ -61825,9 +61871,9 @@ createNode skinCluster -n "skinCluster1";
 		9 1 4.1000000000000003e-08 2 4.6290000000000001e-06 3 0.19482803400000001 
 		4 0.5809193640000001 5 0.224068183 55 3.2784000000000003e-05 56 
 		6e-09 74 0.00014684100000000001 75 1.18e-07
-		9 1 2.1e-07 2 1.3619e-05 3 0.53490126500000001 4 0.44071612900000001 
-		5 0.020487848999999999 55 0.00070781000000000001 56 5.7599999999999997e-07 
-		74 0.00315219 75 2.0352000000000001e-05
+		9 1 2.1e-07 2 1.3619000000000001e-05 3 0.53490126500000001 
+		4 0.44071612900000001 5 0.020487848999999999 55 0.00070781000000000001 
+		56 5.7599999999999997e-07 74 0.00315219 75 2.0352000000000001e-05
 		9 1 1.2e-08 2 1.685e-06 3 0.29689226099999999 4 0.60024642100000014 
 		5 0.102654646 55 8.8849000000000003e-05 56 2.9999999999999997e-08 74 
 		0.000116005 75 9.0999999999999994e-08
@@ -61890,8 +61936,8 @@ createNode skinCluster -n "skinCluster1";
 		4 0.39208242500000001 5 0.52304764300000006
 		5 1 0.00014564600000000001 2 0.0032587879999999999 3 0.095870935000000004 
 		4 0.41497736499999999 5 0.48574726599999996
-		5 1 1.5231e-05 2 0.00065408999999999997 3 0.041642036 4 
-		0.234296007 5 0.72339263599999992
+		5 1 1.5230999999999999e-05 2 0.00065408999999999997 3 0.041642036 
+		4 0.234296007 5 0.72339263599999992
 		5 1 2.2385e-05 2 0.0011096260000000001 3 0.065336188000000003 
 		4 0.33059101600000002 5 0.60294078499999992
 		6 1 0.00014997799999999999 2 0.0039111759999999997 3 0.116584927 
@@ -61971,15 +62017,15 @@ createNode skinCluster -n "skinCluster1";
 		9 1 8.9999999999999999e-08 2 1.1372999999999999e-05 3 0.079307069999999993 
 		4 8.2309999999999996e-06 55 0.76275814199999992 56 0.15152697400000001 
 		57 0.0044352840000000003 74 0.001941749 75 1.1087000000000001e-05
-		8 2 2.28e-07 3 0.120476325 4 9.4081999999999998e-05 55 
-		0.70007274500000005 56 0.16575802000000001 57 0.013415234 74 0.00018300400000000001 
+		8 2 2.2799999999999998e-07 3 0.120476325 4 9.4081999999999998e-05 
+		55 0.70007274500000005 56 0.16575802000000001 57 0.013415234 74 0.00018300400000000001 
 		75 3.6199999999999999e-07
 		9 1 1.0000000000000001e-09 2 5.4199999999999996e-07 3 0.058638419999999997 
 		4 3.8643999999999998e-05 55 0.69832965199999997 56 0.220925012 57 
 		0.021876181000000001 74 0.00019116399999999999 75 3.84e-07
-		8 2 1.237e-06 3 0.029822033000000001 4 1.3232e-05 55 0.68253840899999996 
-		56 0.26262746999999997 57 0.024840715999999999 74 0.00015665000000000001 
-		75 2.53e-07
+		8 2 1.2370000000000002e-06 3 0.029822033000000001 4 1.3232e-05 
+		55 0.68253840899999996 56 0.26262746999999997 57 0.024840715999999999 
+		74 0.00015665000000000001 75 2.53e-07
 		9 1 2.0999999999999999e-08 2 3.2260000000000001e-06 3 0.020032438 
 		4 4.3189999999999996e-06 55 0.66481029800000002 56 0.28915097000000001 
 		57 0.025879023000000001 74 0.00011958100000000001 75 1.24e-07
@@ -61989,7 +62035,7 @@ createNode skinCluster -n "skinCluster1";
 		8 2 1.9500000000000001e-07 3 0.022231085000000001 4 1.3665e-05 
 		55 0.52406803000000002 56 0.35386422499999998 57 0.099817926000000001 
 		74 4.8729999999999998e-06 75 1.0000000000000001e-09
-		7 2 9.3500000000000005e-07 3 0.024327565999999998 4 5.254e-06 
+		7 2 9.3500000000000005e-07 3 0.024327565999999998 4 5.2539999999999992e-06 
 		55 0.44768966999999987 56 0.42576196300000002 57 0.102211048 74 3.5640000000000001e-06
 		8 1 1.7999999999999999e-08 2 3.63e-06 3 0.024994200000000001 
 		4 1.857e-06 55 0.40977570800000002 56 0.46900394000000006 57 0.096217699000000004 
@@ -62089,7 +62135,7 @@ createNode skinCluster -n "skinCluster1";
 		7 1 2.2294e-05 2 0.000606407 3 0.0050327820000000004 55 
 		0.28455008100000001 56 0.54546159800000005 57 0.164318668 90 8.1699999999999997e-06
 		7 1 2.1586e-05 2 6.6574000000000003e-05 3 0.0010565030000000001 
-		55 0.161263236 56 0.40239118299999999 57 0.435199742 90 1.176e-06
+		55 0.161263236 56 0.40239118299999999 57 0.435199742 90 1.1759999999999998e-06
 		7 1 2.5525999999999999e-05 2 6.1985999999999999e-05 3 0.00086249199999999997 
 		55 0.19829686399999999 56 0.35736907800000001 57 0.44338197599999996 
 		90 2.0779999999999998e-06
@@ -62109,7 +62155,7 @@ createNode skinCluster -n "skinCluster1";
 		0.067914590999999996 56 0.24774486200000001 57 0.68042322300000002 90 
 		1.3549999999999999e-06
 		7 1 6.489e-06 2 4.4947999999999997e-05 3 0.0015816649999999999 
-		55 0.10527473599999999 56 0.50144875399999989 57 0.391643291 90 1.17e-07
+		55 0.10527473599999999 56 0.50144875399999989 57 0.391643291 90 1.1699999999999999e-07
 		7 1 9.850000000000001e-07 2 7.5499000000000003e-05 3 0.00134217 
 		55 0.13066677099999999 56 0.45371954199999998 57 0.41419456799999999 
 		90 4.6499999999999999e-07
@@ -62136,8 +62182,8 @@ createNode skinCluster -n "skinCluster1";
 		7 1 4.4999999999999999e-08 2 3.3670000000000001e-06 3 0.001699915 
 		4 1.0000000000000001e-09 55 0.079657465999999996 56 0.55487469800000011 
 		57 0.36376450799999999
-		6 1 1.37e-07 2 5.5879999999999997e-06 3 0.001420791 55 
-		0.075984706999999999 56 0.56870555300000003 57 0.353883224
+		6 1 1.3700000000000002e-07 2 5.5879999999999997e-06 3 0.001420791 
+		55 0.075984706999999999 56 0.56870555300000003 57 0.353883224
 		6 1 2.1919999999999999e-06 2 5.4905999999999999e-05 3 0.0073117679999999997 
 		55 0.16971499400000001 56 0.68783586000000008 57 0.13508028
 		7 1 2.4e-08 2 3.8419999999999998e-06 3 0.0095801889999999994 
@@ -62234,8 +62280,8 @@ createNode skinCluster -n "skinCluster1";
 		55 0.353855898 56 0.55543643700000001 57 0.065445951000000002 74 
 		3.0600000000000001e-07
 		8 1 7.92e-07 2 4.5197000000000001e-05 3 0.024694348000000001 
-		4 1.11e-07 55 0.369256588 56 0.53073506699999995 57 0.075267244999999997 
-		74 6.5199999999999996e-07
+		4 1.1100000000000001e-07 55 0.369256588 56 0.53073506699999995 57 
+		0.075267244999999997 74 6.5199999999999996e-07
 		6 2 4.8e-08 3 0.0050722400000000004 4 5.9800000000000003e-07 
 		55 0.097250845000000002 56 0.22048540999999999 57 0.67719085899999998
 		6 2 4.9000000000000002e-08 3 0.010974223 4 1.4499999999999999e-07 
@@ -62275,9 +62321,9 @@ createNode skinCluster -n "skinCluster1";
 		8 1 0.075307268999999996 2 0.12508951500000001 3 0.22863436400000001 
 		55 0.45612566100000002 56 0.077534039999999999 57 0.0037810729999999998 
 		90 0.033423438 91 0.00010464
-		8 1 1.37e-07 3 0.62428615199999993 4 0.0023154759999999999 
-		55 0.35602287100000002 56 0.0168097 57 1.2451e-05 74 0.00055193500000000003 
-		75 1.2780000000000001e-06
+		8 1 1.3700000000000002e-07 3 0.62428615199999993 4 0.0023154759999999999 
+		55 0.35602287100000002 56 0.0168097 57 1.2451000000000002e-05 74 
+		0.00055193500000000003 75 1.2780000000000001e-06
 		8 1 1.3e-07 3 0.4975436980000002 4 0.0014240920000000001 55 
 		0.46736463099999997 56 0.032041566 57 0.000127646 74 0.0014910749999999999 
 		75 7.1620000000000002e-06
@@ -62318,8 +62364,8 @@ createNode skinCluster -n "skinCluster1";
 		0.0025147720000000002 75 1.0462000000000001e-05 90 0.184875187 91 0.0037102459999999999
 		12 1 0.3535525189999999 2 0.30133121499999999 3 0.062365733 
 		4 0.000126348 55 0.093102874000000002 56 3.8451000000000002e-05 74 
-		0.0057471370000000003 75 4.049e-05 90 0.178883347 91 0.004810277 92 
-		1.6080000000000001e-06 93 1.0000000000000001e-09
+		0.0057471370000000003 75 4.0490000000000007e-05 90 0.178883347 91 0.004810277 
+		92 1.6080000000000001e-06 93 1.0000000000000001e-09
 		11 1 0.36975899200000001 2 0.33774521699999999 3 0.083243482999999993 
 		4 0.00049620100000000004 55 0.053165667 56 1.2308e-05 74 0.0075699570000000004 
 		75 7.9988999999999996e-05 90 0.145708212 91 0.0022199709999999998 93 
@@ -62327,7 +62373,7 @@ createNode skinCluster -n "skinCluster1";
 		10 1 0.26212495899999994 2 0.216288914 3 0.25659917599999998 
 		4 0.00036380199999999998 55 0.161758712 56 6.2187000000000006e-05 74 
 		0.060048773999999999 75 0.0036273809999999998 90 0.039101011999999997 91 
-		2.5083e-05
+		2.5083000000000004e-05
 		9 1 5.2399999999999998e-07 3 0.84097017300000021 4 0.014520573 
 		5 8.9999999999999995e-09 55 0.13963193099999999 56 0.0020072279999999998 
 		57 1.7e-08 74 0.0028537089999999998 75 1.5835999999999999e-05
@@ -62479,9 +62525,9 @@ createNode skinCluster -n "skinCluster1";
 		7 1 2.7e-08 2 8.6600000000000005e-07 3 0.00084214999999999995 
 		4 4.4999999999999999e-08 55 0.29182069500000002 56 0.32013238799999999 
 		57 0.38720382899999994
-		7 1 3.2999999999999998e-08 2 1.751e-06 3 0.003760429 4 
-		1.7999999999999999e-08 55 0.098508312000000001 56 0.23463658800000001 57 
-		0.66309286899999997
+		7 1 3.2999999999999998e-08 2 1.7509999999999998e-06 3 0.003760429 
+		4 1.7999999999999999e-08 55 0.098508312000000001 56 0.23463658800000001 
+		57 0.66309286899999997
 		7 1 1.9000000000000001e-08 2 1.7579999999999999e-06 3 0.010839553 
 		4 5.0000000000000001e-09 55 0.024375299999999999 56 0.103803797 57 
 		0.86097956799999997
@@ -62529,7 +62575,7 @@ createNode skinCluster -n "skinCluster1";
 		0.025427179000000001 57 0.96580018300000003
 		5 2 1.3300000000000001e-07 3 0.007241656 55 0.00022813999999999999 
 		56 0.020430024000000001 57 0.97210004699999997
-		5 2 4.15e-07 3 0.0066843509999999998 55 0.00017413899999999999 
+		5 2 4.1500000000000005e-07 3 0.0066843509999999998 55 0.00017413899999999999 
 		56 0.018074548999999999 57 0.97506654599999998
 		5 2 2.9890000000000001e-06 3 0.0073994309999999997 55 0.000512559 
 		56 0.022437453 57 0.96964756799999996
@@ -62537,7 +62583,7 @@ createNode skinCluster -n "skinCluster1";
 		0.035961067999999999 57 0.95289681599999998
 		5 2 3.8999999999999998e-08 3 0.0089192809999999994 55 0.00034643199999999998 
 		56 0.028294099 57 0.96244014899999997
-		5 2 1.06e-07 3 0.0079469729999999995 55 0.00018733899999999999 
+		5 2 1.0600000000000001e-07 3 0.0079469729999999995 55 0.00018733899999999999 
 		56 0.023742712999999999 57 0.968122869
 		6 1 1.0000000000000001e-09 2 3.0199999999999998e-07 3 0.0073592140000000002 
 		55 0.00013860500000000001 56 0.021072536999999999 57 0.971429341
@@ -62664,9 +62710,9 @@ createNode skinCluster -n "skinCluster1";
 		7 1 3.5699999999999998e-07 3 0.37754891000000002 4 0.00040326099999999997 
 		55 0.093307425999999999 56 0.00035744500000000002 74 0.29911185699999998 
 		75 0.229270744
-		9 1 1.17e-07 2 1.0495e-05 3 0.61802187500000005 4 0.013670444 
-		5 4.6000000000000002e-08 55 0.131398495 56 0.00082424099999999997 74 
-		0.18947291799999999 75 0.046601368999999997
+		9 1 1.1699999999999999e-07 2 1.0495e-05 3 0.61802187500000005 
+		4 0.013670444 5 4.6000000000000002e-08 55 0.131398495 56 0.00082424099999999997 
+		74 0.18947291799999999 75 0.046601368999999997
 		9 1 8.0000000000000005e-09 2 1.327e-06 3 0.53342957599999985 
 		4 0.0032169490000000002 55 0.20034075400000001 56 0.0023993460000000001 
 		57 2.4e-08 74 0.20128198999999999 75 0.059330026000000001
@@ -62692,8 +62738,8 @@ createNode skinCluster -n "skinCluster1";
 		4 0.013826148999999999 5 5.0500000000000004e-07 55 4.0000000000000002e-09 
 		74 0.31081740600000002 75 0.20841077299999999
 		8 1 0.00017599599999999999 2 0.0019038569999999999 3 0.66639840400000006 
-		4 0.049430545999999999 5 2.7158e-05 55 4.1199999999999998e-07 74 
-		0.216677484 75 0.065386142999999994
+		4 0.049430545999999999 5 2.7158000000000003e-05 55 4.1199999999999998e-07 
+		74 0.216677484 75 0.065386142999999994
 		8 1 6e-09 2 5.68e-07 3 0.22481421700000001 4 3.2703999999999997e-05 
 		55 0.0038013080000000002 56 4.7600000000000002e-06 74 0.279335314 75 
 		0.49201112299999988
@@ -62755,8 +62801,8 @@ createNode skinCluster -n "skinCluster1";
 		4 0.013291798000000001 5 6.7800000000000001e-07 74 0.30897270799999998 
 		75 0.21391659599999999
 		9 1 0.0010498090000000001 2 0.0064364460000000002 3 0.448796107 
-		4 0.010062711 5 4.27e-07 55 1.13e-06 74 0.30678252900000003 75 
-		0.22687009599999999 90 7.4499999999999996e-07
+		4 0.010062711 5 4.2699999999999995e-07 55 1.13e-06 74 0.30678252900000003 
+		75 0.22687009599999999 90 7.4499999999999996e-07
 		10 1 0.0037675479999999999 2 0.0146914 3 0.65714749600000011 
 		4 0.046827313000000002 5 5.7255e-05 55 0.00011060700000000001 56 
 		4.0000000000000002e-09 74 0.211031149 75 0.066361111 90 6.117e-06
@@ -62798,13 +62844,13 @@ createNode skinCluster -n "skinCluster1";
 		4 6e-09;
 	setAttr ".wl[5425:5485].w"
 		6 55 0.61781039999999998 56 0.34369211199999999 57 0.018746373 
-		74 1.4283e-05 75 1.0000000000000001e-09 90 7.7999999999999997e-08
+		74 1.4282999999999999e-05 75 1.0000000000000001e-09 90 7.7999999999999997e-08
 		9 1 4.8690000000000003e-06 2 0.000113065 3 0.01940824 4 
 		4.9000000000000002e-08 55 0.62424660399999998 56 0.335172417 57 0.021036450000000002 
 		74 1.8304e-05 75 2.0000000000000001e-09
-		9 1 5.75e-07 2 2.1084e-05 3 0.011020323 4 4.39e-07 55 
-		0.80256366400000001 56 0.18102836899999999 57 0.0048425539999999998 74 
-		0.00052223500000000002 75 7.5700000000000002e-07
+		9 1 5.75e-07 2 2.1084e-05 3 0.011020323 4 4.3899999999999995e-07 
+		55 0.80256366400000001 56 0.18102836899999999 57 0.0048425539999999998 
+		74 0.00052223500000000002 75 7.5700000000000002e-07
 		10 1 1.5228000000000001e-05 2 0.00015995699999999999 3 0.010548488 
 		4 1.2e-08 55 0.79940669100000006 56 0.18609287899999999 57 0.0034610560000000001 
 		74 0.000315447 75 1.99e-07 90 4.3000000000000001e-08
@@ -62853,8 +62899,8 @@ createNode skinCluster -n "skinCluster1";
 		10 1 0.00017982 2 0.00054817600000000005 3 0.015194035 4 
 		4.6000000000000002e-08 55 0.91899190000000008 56 0.036493456000000001 57 
 		7.9699999999999999e-06 74 0.027918102 75 0.000664648 90 1.8470000000000001e-06
-		8 1 1.09e-07 2 2.108e-06 3 0.00077839999999999995 4 1e-08 
-		55 0.27571210200000001 56 0.33310795599999998 57 0.39039931399999989 
+		8 1 1.0900000000000001e-07 2 2.108e-06 3 0.00077839999999999995 
+		4 1e-08 55 0.27571210200000001 56 0.33310795599999998 57 0.39039931399999989 
 		90 1.0000000000000001e-09
 		6 1 9.540000000000001e-07 2 2.3679000000000001e-05 3 0.015677335000000001 
 		55 0.014200773999999999 56 0.093936380999999999 57 0.876160877
@@ -62901,7 +62947,7 @@ createNode skinCluster -n "skinCluster1";
 		0.002989734 74 0.00026854299999999999 75 1.5900000000000001e-07 90 2.9900000000000002e-07
 		10 1 2.7795000000000001e-05 2 0.000153277 3 0.00619412 4 
 		6e-09 55 0.900242447 56 0.089706119000000001 57 0.00024782500000000002 
-		74 0.0034155639999999998 75 1.2692e-05 90 1.55e-07
+		74 0.0034155639999999998 75 1.2692000000000001e-05 90 1.55e-07
 		10 1 0.000127114 2 0.00066897799999999998 3 0.035445756000000002 
 		4 1.4e-08 55 0.90238329699999997 56 0.038054619999999997 57 8.7309999999999999e-06 
 		74 0.022910272999999998 75 0.00040060999999999997 90 6.0699999999999997e-07
@@ -62923,7 +62969,7 @@ createNode skinCluster -n "skinCluster1";
 		4.9130000000000002e-06 74 0.085211545999999999 75 0.010222937
 		9 1 2.0000000000000001e-09 2 6.2099999999999996e-07 3 0.56718886599999996 
 		4 0.0030839700000000001 55 0.331294162 56 0.0085767350000000003 57 
-		1.142e-06 74 0.081117022999999996 75 0.0087374789999999994
+		1.1419999999999998e-06 74 0.081117022999999996 75 0.0087374789999999994
 		9 1 1.7e-08 2 2.588e-06 3 0.68648457499999982 4 0.0095242829999999997 
 		55 0.22953190600000001 56 0.0039927879999999997 57 5.4e-08 74 0.065430559999999999 
 		75 0.0050332290000000002
@@ -63046,7 +63092,7 @@ createNode skinCluster -n "skinCluster1";
 		55 0.227950191 56 0.34608338799999999 57 0.42538179300000001 90 3.5999999999999998e-08
 		7 1 1.2908000000000001e-05 2 6.2675999999999994e-05 3 0.0023618279999999998 
 		55 0.50209156200000005 56 0.36792556500000001 57 0.12754466 90 8.0100000000000004e-07
-		8 1 2.2082e-05 2 0.00038335600000000001 3 0.24045093300000001 
+		8 1 2.2082000000000003e-05 2 0.00038335600000000001 3 0.24045093300000001 
 		4 4.3000000000000001e-08 55 0.57602563799999995 56 0.16495758099999999 
 		57 0.018160037 90 3.3000000000000002e-07
 		8 1 5.1501e-05 2 0.00080117100000000004 3 0.55443423199999986 
@@ -63244,7 +63290,7 @@ createNode skinCluster -n "skinCluster1";
 		6 3 1.0999999999999999e-08 74 2.4499999999999998e-07 75 0.969137264 
 		76 0.030861473 77 1.004e-06 82 3e-09
 		5 3 3.4e-08 74 1.0000000000000001e-09 75 0.90943822200000002 
-		76 0.090537184000000007 77 2.4559e-05
+		76 0.090537184000000007 77 2.4559000000000003e-05
 		4 3 5.0000000000000001e-09 75 0.67057497200000005 76 0.32801514199999998 
 		77 0.001409881
 		6 3 2.4999999999999999e-08 74 1.3000000000000001e-08 75 0.9874285559999999 
@@ -63277,9 +63323,9 @@ createNode skinCluster -n "skinCluster1";
 		77 0.0041509809999999998
 		5 3 2.0000000000000001e-09 74 1.111e-06 75 0.91675749299999987 
 		76 0.083086897000000007 77 0.00015449699999999999
-		4 3 3.2999999999999998e-08 74 1.517e-06 75 0.99820209100000001 
+		4 3 3.2999999999999998e-08 74 1.5169999999999998e-06 75 0.99820209100000001 
 		76 0.001796359
-		4 3 8.0000000000000005e-09 74 1.37e-07 75 0.99957231199999996 
+		4 3 8.0000000000000005e-09 74 1.3700000000000002e-07 75 0.99957231199999996 
 		76 0.00042754300000000001
 		5 3 6.9999999999999998e-09 74 1.8547e-05 75 0.98834546900000009 
 		76 0.011635355 77 6.2200000000000004e-07
@@ -63323,7 +63369,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 5.0000000000000001e-09 74 5.0000000000000001e-09 75 0.99994629899999998 
 		76 4.8794000000000001e-05 82 4.8969999999999999e-06
 		4 3 3e-09 75 0.99975008799999998 76 0.00024968100000000002 82 
-		2.28e-07
+		2.2799999999999998e-07
 		3 75 0.999987984 76 6.9530000000000002e-06 82 5.0629999999999996e-06
 		3 75 0.99998725999999993 76 1.2498e-05 82 2.4200000000000002e-07
 		3 75 0.99977375800000001 76 0.000226235 82 6.9999999999999998e-09
@@ -63379,8 +63425,8 @@ createNode skinCluster -n "skinCluster1";
 		6.5999999999999995e-08
 		4 3 6.9999999999999998e-09 74 5.2111000000000003e-05 75 0.99994643399999994 
 		82 1.4479999999999999e-06
-		6 3 3e-09 74 2.768e-06 75 0.99980042999999985 82 0.000195138 
-		85 1e-08 88 1.6509999999999999e-06
+		6 3 3e-09 74 2.7679999999999996e-06 75 0.99980042999999985 82 
+		0.000195138 85 1e-08 88 1.6509999999999999e-06
 		5 3 1.7999999999999999e-08 74 2.3224e-05 75 0.99995351599999993 
 		82 1.5116000000000001e-05 88 8.1259999999999998e-06
 		5 3 1.7999999999999999e-08 74 0.000102106 75 0.99989549600000005 
@@ -63412,7 +63458,7 @@ createNode skinCluster -n "skinCluster1";
 		75 0.98425339999999995 86 3.22e-07 87 2.1999999999999998e-08 88 3.6729999999999998e-06
 		8 2 2.9999999999999997e-08 3 0.0098968690000000008 4 2.1999999999999998e-08 
 		55 1.2e-08 74 0.057281778999999998 75 0.93282114399999994 86 6.9999999999999998e-09 
-		88 1.37e-07
+		88 1.3700000000000002e-07
 		7 3 4.4713999999999999e-05 55 5.5999999999999999e-08 74 0.0031501250000000001 
 		75 0.99674740700000009 86 6.6930000000000001e-06 87 7.8899999999999998e-07 
 		88 5.0216000000000002e-05
@@ -63468,7 +63514,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 3e-09 74 3.2737000000000002e-05 75 0.99996085800000001 82 
 		6.4010000000000002e-06 87 1.0000000000000001e-09
 		5 3 5.0000000000000001e-09 74 0.00017208600000000001 75 0.99981692299999991 
-		82 1.0849000000000001e-05 87 1.37e-07
+		82 1.0849000000000001e-05 87 1.3700000000000002e-07
 		5 3 1.7999999999999999e-08 74 0.00090765500000000005 75 0.99909178099999985 
 		82 5.4000000000000002e-07 87 6e-09
 		6 3 1.7849000000000001e-05 55 2.0000000000000001e-09 74 0.0036813200000000001 
@@ -63536,8 +63582,8 @@ createNode skinCluster -n "skinCluster1";
 		82 0.051029691000000002 84 2.8000000000000002e-07
 		5 74 1.4700000000000001e-07 75 0.97062851900000002 82 0.029357694 
 		84 1.3106e-05 87 5.3399999999999999e-07
-		5 74 4.15e-07 75 0.98632813499999994 82 0.013670932 84 5.0999999999999999e-07 
-		87 8.0000000000000005e-09
+		5 74 4.1500000000000005e-07 75 0.98632813499999994 82 0.013670932 
+		84 5.0999999999999999e-07 87 8.0000000000000005e-09
 		5 74 5.6699999999999999e-06 75 0.99736680300000002 82 0.0026268160000000001 
 		84 5.4899999999999995e-07 87 1.6199999999999999e-07
 		5 74 1.731e-06 75 0.99362944200000003 82 0.0063502790000000003 
@@ -63551,12 +63597,12 @@ createNode skinCluster -n "skinCluster1";
 		4 75 0.95810844700000009 82 0.041890561 85 9.8299999999999995e-07 
 		88 8.9999999999999995e-09
 		6 3 2e-08 74 1.0000000000000001e-09 75 0.97601171000000009 82 
-		0.0239697 85 1.3806e-05 88 4.763e-06
+		0.0239697 85 1.3806000000000001e-05 88 4.763e-06
 		5 74 6e-09 75 0.98858402400000001 82 0.011415216000000001 85 
 		5.9800000000000003e-07 88 1.5599999999999999e-07
 		6 3 3.1e-08 74 2.9999999999999997e-08 75 0.99474948799999996 
 		82 0.0052250480000000004 85 5.0560000000000004e-06 88 2.0347e-05
-		5 74 1.12e-07 75 0.99747465099999988 82 0.0025240699999999998 
+		5 74 1.1200000000000001e-07 75 0.99747465099999988 82 0.0025240699999999998 
 		85 1.8300000000000001e-07 88 9.8400000000000002e-07
 		5 74 4.8800000000000003e-07 75 0.99931017900000008 82 0.00064912499999999996 
 		85 7.1600000000000001e-07 88 3.9492000000000001e-05
@@ -63737,7 +63783,8 @@ createNode skinCluster -n "skinCluster1";
 		6 3 1.2e-08 75 0.99372723399999996 82 0.0037157409999999998 85 
 		0.00064603100000000004 86 1.0000000000000001e-09 88 0.001910981
 		7 3 1.7999999999999999e-08 74 5.0000000000000001e-09 75 0.99632545799999994 
-		82 0.00043404700000000001 85 0.000157238 86 1.03e-07 88 0.0030831309999999998
+		82 0.00043404700000000001 85 0.000157238 86 1.0300000000000001e-07 88 
+		0.0030831309999999998
 		7 3 4.0000000000000002e-09 74 5.8999999999999999e-08 75 0.99887720300000005 
 		82 0.00067379699999999996 85 1.4479e-05 86 6.9999999999999998e-09 88 
 		0.00043445099999999998
@@ -63756,8 +63803,8 @@ createNode skinCluster -n "skinCluster1";
 		85 3.489e-06 86 0.00081749800000000005 87 6.4710000000000004e-06 88 
 		0.049573974999999999
 		8 3 2.4999999999999999e-08 74 1.6331999999999999e-05 75 0.98814767299999984 
-		82 1.37e-07 85 1.4499999999999999e-07 86 0.000118028 87 7.4900000000000005e-07 
-		88 0.011716911
+		82 1.3700000000000002e-07 85 1.4499999999999999e-07 86 0.000118028 87 
+		7.4900000000000005e-07 88 0.011716911
 		2 3 1.9000000000000001e-08 74 5.344e-06;
 	setAttr ".wl[5921:6025].w"
 		6 75 0.95295476600000006 82 1.0000000000000001e-09 85 1.4999999999999999e-07 
@@ -63785,7 +63832,7 @@ createNode skinCluster -n "skinCluster1";
 		8 3 1.7999999999999999e-08 74 4.6808000000000003e-05 75 0.94342613599999992 
 		82 2.0000000000000001e-09 84 2.4241000000000001e-05 86 0.005015322 87 
 		0.051362118999999998 88 0.00012535399999999999
-		7 74 3.3142999999999998e-05 75 0.95145943599999994 82 1.09e-07 
+		7 74 3.3142999999999998e-05 75 0.95145943599999994 82 1.0900000000000001e-07 
 		84 0.000203048 86 0.00084366900000000002 87 0.047453614999999998 88 
 		6.9800000000000001e-06
 		7 74 0.00024321499999999999 75 0.98737392199999996 82 1.6199999999999999e-07 
@@ -63829,7 +63876,7 @@ createNode skinCluster -n "skinCluster1";
 		6 3 3.1e-08 75 0.85924093999999995 82 0.11507505899999999 83 
 		2.1040000000000001e-06 85 0.023646377 88 0.0020354890000000001
 		6 3 2.3000000000000001e-08 75 0.94751245500000003 82 0.040050215 
-		83 1.11e-07 85 0.01104167 88 0.001395526
+		83 1.1100000000000001e-07 85 0.01104167 88 0.001395526
 		5 75 0.75190498699999997 82 0.21891860299999999 83 2.4360999999999999e-05 
 		85 0.028538094999999999 88 0.000613954
 		7 3 2.0000000000000001e-09 75 0.49731457500000009 82 0.31794552599999998 
@@ -63849,7 +63896,7 @@ createNode skinCluster -n "skinCluster1";
 		7 3 3.2000000000000002e-08 74 5.5720000000000002e-06 75 0.88978512200000004 
 		84 1.2075999999999999e-05 86 0.042865733000000003 87 0.063291201000000005 
 		88 0.004040264
-		7 74 1.739e-06 75 0.91938137799999997 84 2.9700000000000003e-07 
+		7 74 1.7390000000000002e-06 75 0.91938137799999997 84 2.9700000000000003e-07 
 		85 1.0000000000000001e-09 86 0.043714268000000001 87 0.012004845 88 
 		0.024897472
 		7 3 1.0999999999999999e-08 74 4.5999999999999999e-07 75 0.85775836400000005 
@@ -63867,7 +63914,8 @@ createNode skinCluster -n "skinCluster1";
 		6 3 6e-09 75 0.98478353299999988 82 0.0002119 85 0.00098280900000000007 
 		86 3.9099999999999999e-07 88 0.014021361
 		7 74 2.4600000000000001e-07 75 0.98112155200000006 82 2.1279000000000001e-05 
-		84 0.001931166 86 1.2858e-05 87 0.016912877999999999 88 2.0999999999999999e-08
+		84 0.001931166 86 1.2858000000000001e-05 87 0.016912877999999999 88 
+		2.0999999999999999e-08
 		7 3 1.0000000000000001e-09 74 3.5999999999999998e-08 75 0.98416659500000003 
 		82 0.00027812799999999999 84 0.0056650900000000002 86 6.1799999999999995e-07 
 		87 0.0098895319999999995
@@ -63900,7 +63948,7 @@ createNode skinCluster -n "skinCluster1";
 		3 3 1.9000000000000001e-08 75 0.00025266999999999998 82 0.99974731100000003
 		2 75 0.001023059 82 0.99897694100000001
 		2 75 2.0269999999999998e-06 82 0.99999797300000004
-		3 3 4.0000000000000002e-09 75 1.2425e-05 82 0.99998757100000002
+		3 3 4.0000000000000002e-09 75 1.2424999999999999e-05 82 0.99998757100000002
 		3 3 1.6000000000000001e-08 75 8.4959999999999996e-06 82 0.99999148800000004
 		3 3 1.7999999999999999e-08 75 5.9599999999999999e-07 82 0.99999938600000005
 		3 3 3e-09 75 0.00016582599999999999 82 0.99983417100000005
@@ -63914,7 +63962,7 @@ createNode skinCluster -n "skinCluster1";
 		3 3 2.4e-08 75 2.2910000000000002e-06 82 0.99999768499999997
 		3 3 5.0000000000000001e-09 75 1.2800000000000001e-07 82 0.99999986699999999
 		3 3 5.0000000000000001e-09 75 4.9073000000000003e-05 82 0.99995092200000002
-		3 3 4.0000000000000002e-09 75 4.403e-06 82 0.99999559299999996
+		3 3 4.0000000000000002e-09 75 4.4029999999999992e-06 82 0.99999559299999996
 		3 3 1.4999999999999999e-08 75 8.4959999999999996e-06 82 0.99999148900000001
 		3 3 4.0000000000000002e-09 75 7.7700000000000004e-07 82 0.99999921899999999
 		2 75 3.2800000000000003e-07 82 0.99999967199999995
@@ -64002,7 +64050,7 @@ createNode skinCluster -n "skinCluster1";
 		84 0.016265992 85 0.041534917999999997 88 5.4149999999999998e-06
 		7 3 8.9999999999999995e-09 75 0.108097683 82 0.0015147800000000001 
 		83 0.81840977500000012 84 0.023263163999999999 85 0.048713461 88 
-		1.128e-06
+		1.1279999999999998e-06
 		6 75 0.258646143 82 0.000272899 83 0.31129177699999999 84 
 		7.2588000000000004e-05 85 0.42653074400000013 88 0.0031858490000000001
 		7 3 1.4999999999999999e-08 75 0.25724053000000002 82 0.00037282899999999998 
@@ -64031,8 +64079,9 @@ createNode skinCluster -n "skinCluster1";
 		8 3 6e-09 75 0.060052469999999997 82 8.8999999999999995e-07 83 
 		0.00012944000000000001 85 0.37734759400000001 86 0.00011427800000000001 87 
 		6e-09 88 0.56235531599999999
-		8 3 3e-09 75 0.041239231000000001 82 5.1e-08 83 1.4596999999999999e-05 
-		85 0.23378410999999999 86 0.00076497999999999996 87 1.6e-07 88 0.72419686799999994
+		8 3 3e-09 75 0.041239231000000001 82 5.0999999999999993e-08 83 
+		1.4596999999999999e-05 85 0.23378410999999999 86 0.00076497999999999996 87 
+		1.6e-07 88 0.72419686799999994
 		8 3 1.7999999999999999e-08 75 0.01431089 82 6.5000000000000002e-07 
 		83 6.9870000000000002e-06 85 0.18519820200000001 86 0.00036763099999999999 
 		87 4.1999999999999999e-08 88 0.80011557999999994
@@ -64046,7 +64095,7 @@ createNode skinCluster -n "skinCluster1";
 		86 0.019897796999999998 87 3.3497000000000001e-05 88 0.88181750000000003
 		6 75 0.017849706 83 1.3000000000000001e-08 85 0.024283149 86 
 		0.014839008000000001 87 1.5637e-05 88 0.94301248699999995
-		7 75 0.013840140000000001 82 2.9000000000000002e-08 83 4.39e-07 
+		7 75 0.013840140000000001 82 2.9000000000000002e-08 83 4.3899999999999995e-07 
 		85 0.079717078999999996 86 0.0024322979999999998 87 8.8700000000000004e-07 
 		88 0.904009128
 		7 75 0.062283231000000001 83 1.0000000000000001e-09 84 8.9999999999999995e-09 
@@ -64164,8 +64213,9 @@ createNode skinCluster -n "skinCluster1";
 		7 75 0.039241014999999997 82 2.3769999999999999e-06 83 3.0189999999999998e-06 
 		85 0.13065110999999999 86 0.00024708400000000001 87 2.4999999999999999e-08 
 		88 0.82985536999999998
-		7 75 0.12739378500000001 82 7.452e-06 83 1.451e-06 85 0.094857544000000002 
-		86 0.000210881 87 3.8999999999999998e-08 88 0.77752884799999999
+		7 75 0.12739378500000001 82 7.452e-06 83 1.4510000000000002e-06 
+		85 0.094857544000000002 86 0.000210881 87 3.8999999999999998e-08 88 
+		0.77752884799999999
 		6 75 0.129201912 82 9.4858999999999994e-05 83 2.3737999999999999e-05 
 		85 0.25446280500000001 86 1.8226000000000001e-05 88 0.61619846
 		8 3 2.0000000000000001e-09 75 0.034937711000000003 82 1.3300000000000001e-07 
@@ -64216,21 +64266,21 @@ createNode skinCluster -n "skinCluster1";
 		88 1.1778e-05
 		8 3 1.9000000000000001e-08 75 0.117990309 82 1.7e-08 83 2.7e-08 
 		84 0.11761940999999999 86 0.0075473229999999999 87 0.75682865300000002 
-		88 1.4242e-05
+		88 1.4241999999999998e-05
 		8 3 3e-09 75 0.036762617999999997 82 1.08e-07 83 4.8299999999999997e-07 
 		84 0.35859791899999999 86 0.001169479 87 0.6034688760000001 88 5.1399999999999997e-07
 		8 3 6e-09 75 0.11685545 82 4.3300000000000003e-07 83 5.9500000000000002e-07 
 		84 0.29738393699999999 86 0.00094737200000000004 87 0.58481155699999998 
 		88 6.5000000000000002e-07
 		7 3 2e-08 75 0.041377410000000003 82 3.0947e-05 83 0.00012834500000000001 
-		84 0.79908657900000002 86 1.38e-05 87 0.159362899
+		84 0.79908657900000002 86 1.3799999999999998e-05 87 0.159362899
 		7 3 1.6000000000000001e-08 75 0.054358568000000003 82 0.00037928000000000001 
 		83 0.0015157980000000001 84 0.90045652499999995 86 7.7400000000000002e-07 
 		87 0.043289039000000001
 		6 75 0.15352737699999999 82 0.0011324709999999999 83 0.001185015 
 		84 0.79799281500000008 86 5.6300000000000005e-07 87 0.046161758999999997
 		6 75 0.13126959699999999 82 9.6550000000000002e-05 83 0.000108923 
-		84 0.7041892689999999 86 1.0256e-05 87 0.16432540500000001
+		84 0.7041892689999999 86 1.0256000000000001e-05 87 0.16432540500000001
 		8 3 2.0000000000000001e-09 75 0.081757915 82 0.00294714 83 
 		0.012490375 84 0.89435744500000003 85 2.6000000000000001e-08 86 2.9000000000000002e-08 
 		87 0.0084470680000000003
@@ -64286,7 +64336,7 @@ createNode skinCluster -n "skinCluster1";
 		0.055753443 88 2.0000000000000001e-09
 		8 3 5.0000000000000001e-09 74 1.4100000000000001e-07 75 0.93745185700000011 
 		82 1.9000000000000001e-07 84 0.0026304280000000002 86 7.5606999999999996e-05 
-		87 0.059841666000000002 88 1.06e-07
+		87 0.059841666000000002 88 1.0600000000000001e-07
 		7 74 1.6999999999999999e-07 75 0.80937159899999989 82 4.9999999999999998e-08 
 		84 0.011113769000000001 86 0.00051982500000000002 87 0.17899310099999999 
 		88 1.486e-06
@@ -64373,7 +64423,8 @@ createNode skinCluster -n "skinCluster1";
 		7 3 2.0000000000000001e-09 75 0.80883148199999988 82 0.0048754840000000002 
 		83 2.2680000000000001e-06 85 0.113658623 86 3e-09 88 0.072632137999999999
 		7 3 8.9999999999999995e-09 75 0.78607737700000002 82 0.000595576 
-		83 1.14e-07 85 0.059073470000000003 86 2.03e-07 88 0.15425325100000001
+		83 1.1399999999999999e-07 85 0.059073470000000003 86 2.0299999999999998e-07 
+		88 0.15425325100000001
 		7 3 1.0000000000000001e-09 75 0.78140423000000003 82 5.1841000000000001e-05 
 		83 2.0000000000000001e-09 85 0.018051976000000001 86 4.7770000000000002e-06 
 		88 0.20048717299999999
@@ -64383,9 +64434,9 @@ createNode skinCluster -n "skinCluster1";
 		7 3 2.4999999999999999e-08 75 0.23947559400000001 84 0.0027926650000000002 
 		85 3.3299999999999998e-07 86 0.45685146500000001 87 0.27003675100000002 
 		88 0.030843167000000001
-		6 75 0.233168451 84 2.3227e-05 85 0.000115052 86 0.46734806700000003 
-		87 0.023374613999999998 88 0.27597058899999999
-		7 3 2.0000000000000001e-09 75 0.22704540100000001 84 1.471e-06 
+		6 75 0.233168451 84 2.3227000000000003e-05 85 0.000115052 86 
+		0.46734806700000003 87 0.023374613999999998 88 0.27597058899999999
+		7 3 2.0000000000000001e-09 75 0.22704540100000001 84 1.4710000000000002e-06 
 		85 0.0010561500000000001 86 0.27539164700000002 87 0.0050937409999999997 
 		88 0.4914115879999999
 		7 3 1.7e-08 75 0.221761288 84 0.019072390000000002 85 5.0000000000000001e-09 
@@ -64425,12 +64476,13 @@ createNode skinCluster -n "skinCluster1";
 		7 3 8.9999999999999995e-09 75 0.38651656600000001 82 4.437e-06 
 		83 0.0023187870000000001 85 0.26687556899999998 86 3.1559999999999999e-06 
 		88 0.34428147599999998
-		7 75 0.63819686299999989 82 2.9955e-05 83 0.2744856 84 0.086459322000000005 
-		85 0.00082491599999999997 87 3.2179999999999999e-06 88 1.2599999999999999e-07
+		7 75 0.63819686299999989 82 2.9954999999999997e-05 83 0.2744856 
+		84 0.086459322000000005 85 0.00082491599999999997 87 3.2179999999999999e-06 
+		88 1.2599999999999999e-07
 		8 3 4.0000000000000002e-09 75 0.66387993199999984 82 1.8159e-05 
 		83 0.30605600199999999 84 0.024930507000000001 85 0.0051123799999999997 
-		87 1.12e-07 88 2.9040000000000001e-06
-		8 3 1.7999999999999999e-08 75 0.68302113900000005 82 1.0451e-05 
+		87 1.1200000000000001e-07 88 2.9040000000000001e-06
+		8 3 1.7999999999999999e-08 75 0.68302113900000005 82 1.0450999999999999e-05 
 		83 0.29246220299999998 84 0.0060788969999999998 85 0.018395028000000001 
 		87 2.0000000000000001e-09 88 3.2261999999999997e-05
 		6 75 0.66025277900000012 82 1.8031999999999999e-05 83 0.13401803500000001 
@@ -64445,7 +64497,8 @@ createNode skinCluster -n "skinCluster1";
 		83 0.10279519099999999 84 0.32288098700000001 85 6.5230000000000001e-06 
 		86 1.0000000000000001e-09 87 0.00051814500000000002
 		8 3 3e-09 75 0.54772041599999999 82 2.7705999999999999e-05 83 
-		0.019750929 84 2.4e-08 85 0.321888338 86 1.03e-07 88 0.110612481
+		0.019750929 84 2.4e-08 85 0.321888338 86 1.0300000000000001e-07 88 
+		0.110612481
 		7 3 5.0000000000000001e-09 75 0.74119249700000001 84 7.1635000000000001e-05 
 		85 7.5899999999999995e-07 86 0.18771051399999999 87 0.030057815000000002 
 		88 0.040966774999999997
@@ -64455,7 +64508,7 @@ createNode skinCluster -n "skinCluster1";
 		7 3 2.7999999999999999e-08 75 0.75351453899999998 84 2.3799999999999999e-07 
 		85 0.00013297100000000001 86 0.089557011000000006 87 0.0017298490000000001 
 		88 0.15506536400000001
-		6 75 0.74899670299999999 84 5.2769999999999996e-06 85 1.239e-05 
+		6 75 0.74899670299999999 84 5.2769999999999996e-06 85 1.2390000000000002e-05 
 		86 0.153765025 87 0.0083502330000000003 88 0.088870372000000003
 		5 75 0.73529086299999991 84 0.0054267810000000003 86 0.080655050000000006 
 		87 0.176720289 88 0.001907017
@@ -64506,7 +64559,7 @@ createNode skinCluster -n "skinCluster1";
 		6 75 0.7383534530000001 83 4.5299999999999999e-07 84 0.097335116999999999 
 		86 0.001479384 87 0.16282970499999999 88 1.888e-06
 		7 3 5.0000000000000001e-09 75 0.733193765 83 7.1930000000000004e-06 
-		84 0.158240995 86 0.00029257099999999999 87 0.108265362 88 1.09e-07
+		84 0.158240995 86 0.00029257099999999999 87 0.108265362 88 1.0900000000000001e-07
 		7 3 1.7e-08 75 0.72263825300000006 83 7.3518999999999999e-05 
 		84 0.21912688599999999 86 4.2666000000000001e-05 87 0.058118656999999997 
 		88 2.0000000000000001e-09
@@ -64583,7 +64636,7 @@ createNode skinCluster -n "skinCluster1";
 		7 75 0.99797623399999991 83 0.0019190100000000001 84 9.8104999999999997e-05 
 		85 6.562e-06 86 3.5000000000000002e-08 87 1.0000000000000001e-09 88 
 		5.2999999999999998e-08
-		7 3 3e-09 75 0.99858590599999997 83 0.001360394 84 1.0738e-05 
+		7 3 3e-09 75 0.99858590599999997 83 0.001360394 84 1.0738000000000001e-05 
 		85 4.1888999999999998e-05 86 2.1999999999999998e-08 88 1.048e-06
 		7 3 1.4e-08 75 0.9889133309999999 82 8.0000000000000005e-09 83 
 		0.010496994000000001 84 0.00013866200000000001 85 0.00045027000000000001 
@@ -64666,7 +64719,7 @@ createNode skinCluster -n "skinCluster1";
 		4 3 1.9000000000000001e-08 75 0.99822804200000004 79 0.001771573 
 		80 3.6600000000000002e-07
 		3 3 1.7e-08 75 0.99991005100000008 79 8.9932000000000006e-05
-		2 75 0.99999834799999998 79 1.652e-06
+		2 75 0.99999834799999998 79 1.6519999999999998e-06
 		2 3 2e-08 75 0.99999998000000001
 		2 3 8.9999999999999995e-09 75 0.99999999100000003
 		2 3 3e-09 75 0.99999999699999997
@@ -64729,7 +64782,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 1.7999999999999999e-08 74 1.1680000000000001e-06 75 0.99958810200000003 
 		79 0.000410059 80 6.5300000000000004e-07
 		5 3 4.0000000000000002e-09 74 1.0377000000000001e-05 75 0.99997616700000003 
-		79 1.3451e-05 80 1.0000000000000001e-09
+		79 1.3450999999999999e-05 80 1.0000000000000001e-09
 		3 74 8.3225000000000004e-05 75 0.99991656600000001 79 2.0900000000000001e-07
 		4 3 1.1540000000000001e-06 74 0.00057492600000000002 75 0.99942391699999999 
 		79 3e-09
@@ -64745,12 +64798,12 @@ createNode skinCluster -n "skinCluster1";
 		7 2 2.0000000000000001e-09 3 0.001011323 4 2.1299999999999999e-07 
 		55 1.4600000000000001e-07 74 0.016019307 75 0.98296891500000005 76 
 		9.3999999999999995e-08
-		5 3 5.8828e-05 4 3e-09 74 0.0034497489999999998 75 0.99648559199999998 
-		76 5.8279999999999999e-06
-		4 3 1.592e-06 74 0.00062334999999999995 75 0.99906702600000008 
+		5 3 5.8827999999999993e-05 4 3e-09 74 0.0034497489999999998 
+		75 0.99648559199999998 76 5.8279999999999999e-06
+		4 3 1.5920000000000002e-06 74 0.00062334999999999995 75 0.99906702600000008 
 		76 0.00030803200000000002
 		5 3 1.4999999999999999e-08 74 9.4217999999999998e-05 75 0.99383580599999999 
-		76 0.0060698499999999999 77 1.11e-07
+		76 0.0060698499999999999 77 1.1100000000000001e-07
 		1 75 1
 		1 75 1
 		2 75 0.99998072500000001 76 1.9275000000000001e-05
@@ -64823,7 +64876,7 @@ createNode skinCluster -n "skinCluster1";
 		79 0.0060952020000000001 80 7.9392000000000002e-05
 		4 74 2.9175000000000001e-05 75 0.99946416299999996 79 0.00050620000000000005 
 		80 4.6199999999999998e-07
-		4 74 0.00014648100000000001 75 0.99982875299999996 79 2.4763e-05 
+		4 74 0.00014648100000000001 75 0.99982875299999996 79 2.4763000000000003e-05 
 		80 3e-09
 		3 74 0.000589165 75 0.99940983700000008 79 9.9800000000000002e-07
 		5 2 1.0000000000000001e-09 3 3.1999999999999999e-06 74 0.0022112059999999998 
@@ -64892,12 +64945,12 @@ createNode skinCluster -n "skinCluster1";
 		2 3 1.2e-08 75 0.99999998800000001
 		2 3 1.6000000000000001e-08 75 0.99999998400000001;
 	setAttr ".wl[6494:6600].w"
-		4 3 3e-09 74 3e-09 75 0.99999676999999998 79 3.224e-06
+		4 3 3e-09 74 3e-09 75 0.99999676999999998 79 3.2240000000000004e-06
 		3 74 3.7e-08 75 0.99996370700000003 79 3.6256e-05
 		4 3 1.0000000000000001e-09 74 3.4799999999999999e-07 75 0.99995224900000002 
 		79 4.7401999999999998e-05
-		5 3 2.0000000000000001e-09 74 2.3448e-05 75 0.99973081699999999 
-		79 0.00024561599999999999 80 1.17e-07
+		5 3 2.0000000000000001e-09 74 2.3448000000000003e-05 75 0.99973081699999999 
+		79 0.00024561599999999999 80 1.1699999999999999e-07
 		5 3 4.0000000000000002e-09 74 3.0170000000000001e-06 75 0.99990308999999999 
 		79 9.3881000000000005e-05 80 8.0000000000000005e-09
 		5 3 4.0000000000000002e-09 74 0.00015016500000000001 75 0.99980999399999992 
@@ -64926,14 +64979,14 @@ createNode skinCluster -n "skinCluster1";
 		1.3799999999999999e-07
 		7 1 0.00038355099999999999 2 0.0013155759999999999 3 0.040249505999999997 
 		4 4.9900000000000001e-07 74 0.14141098499999999 75 0.81663533900000007 
-		90 4.544e-06
+		90 4.5439999999999992e-06
 		8 1 8.5600000000000004e-07 2 0.000454621 3 0.015624258 4 
 		2.8999999999999998e-07 55 2.0000000000000001e-09 74 0.086444033000000003 
 		75 0.89747570499999996 90 2.35e-07
 		7 1 2.3881999999999999e-05 2 0.0039220879999999998 3 0.066031527000000007 
 		4 3.416e-06 74 0.17859513699999999 75 0.75141771200000007 90 6.2380000000000002e-06
 		7 1 5.5206e-05 2 0.00055475499999999998 3 0.019802231 4 
-		1.234e-06 74 0.10027815499999999 75 0.87930830800000004 90 1.11e-07
+		1.234e-06 74 0.10027815499999999 75 0.87930830800000004 90 1.1100000000000001e-07
 		8 1 0.00060453700000000004 2 0.0036009359999999999 3 0.073078498000000006 
 		4 1.1216999999999999e-05 55 1.0000000000000001e-09 74 0.188527993 75 
 		0.7341743260000001 90 2.492e-06
@@ -64941,7 +64994,8 @@ createNode skinCluster -n "skinCluster1";
 		4 3.0888e-05 55 4.0000000000000002e-09 74 0.19011234900000001 75 
 		0.73209915599999997 90 5.8500000000000001e-07
 		7 1 3.4085999999999999e-05 2 0.00047388600000000002 3 0.021097244000000001 
-		4 3.76e-06 74 0.1054224 75 0.87296859900000001 90 2.4999999999999999e-08
+		4 3.7599999999999996e-06 74 0.1054224 75 0.87296859900000001 90 
+		2.4999999999999999e-08
 		7 1 1.6750000000000001e-05 2 0.00030332999999999998 3 0.021932527 
 		4 9.5650000000000007e-06 55 5.0000000000000001e-09 74 0.108602533 75 
 		0.86913529
@@ -64949,8 +65003,8 @@ createNode skinCluster -n "skinCluster1";
 		4 8.0513999999999995e-05 55 1.0000000000000001e-09 74 0.19691023699999999 
 		75 0.72139805499999998 90 1.24e-07
 		7 1 6.8719999999999996e-06 2 0.000161235 3 0.023101410999999999 
-		4 2.018e-05 55 1.4999999999999999e-08 74 0.11197338499999999 75 
-		0.86473690199999997
+		4 2.0179999999999997e-05 55 1.4999999999999999e-08 74 0.11197338499999999 
+		75 0.86473690199999997
 		7 1 8.2206000000000005e-05 2 0.001076196 3 0.087239351000000007 
 		4 0.00018713599999999999 55 2.0000000000000001e-09 74 0.20819522700000001 
 		75 0.70321988199999996
@@ -64964,7 +65018,7 @@ createNode skinCluster -n "skinCluster1";
 		7 1 3.7500000000000001e-07 2 1.8847000000000001e-05 3 0.01983886 
 		4 3.1742000000000002e-05 55 2.4999999999999999e-08 74 0.104980927 75 
 		0.87512922400000004
-		6 1 3.2999999999999998e-08 2 4.27e-07 3 9.8406999999999995e-05 
+		6 1 3.2999999999999998e-08 2 4.2699999999999995e-07 3 9.8406999999999995e-05 
 		74 0.010266163999999999 75 0.98963496100000004 79 8.0000000000000005e-09
 		8 1 6.4499999999999997e-07 2 6.8689999999999998e-06 3 0.00082795000000000004 
 		4 1.0000000000000001e-09 55 7.4999999999999997e-08 74 0.021762949 75 
@@ -64976,7 +65030,7 @@ createNode skinCluster -n "skinCluster1";
 		4 6.2999999999999995e-08 55 1.4999999999999999e-08 74 0.037827048000000002 
 		75 0.95914914399999995
 		6 1 1.4500000000000001e-06 2 3.5947e-05 3 0.0032500340000000002 
-		4 2.05e-07 74 0.040781715000000003 75 0.95593064900000002
+		4 2.0499999999999997e-07 74 0.040781715000000003 75 0.95593064900000002
 		7 1 6.6700000000000003e-07 2 2.2039999999999999e-05 3 0.0032757469999999999 
 		4 5.0500000000000004e-07 55 2.0000000000000001e-09 74 0.041560488 75 
 		0.95514055099999995
@@ -65093,7 +65147,7 @@ createNode skinCluster -n "skinCluster1";
 		7 1 1.3000000000000001e-08 2 1.7060000000000001e-06 3 0.016418581000000002 
 		4 2.4127000000000001e-05 55 1.212e-06 74 0.093848112999999997 75 
 		0.88970624799999998
-		8 1 2.28e-07 2 1.6832000000000001e-05 3 0.081989862999999996 
+		8 1 2.2799999999999998e-07 2 1.6832000000000001e-05 3 0.081989862999999996 
 		4 0.00035453999999999998 55 1.6446000000000001e-05 56 3e-09 74 0.20862708099999999 
 		75 0.70899500700000007
 		7 2 7.7999999999999997e-08 3 0.001724106 4 7.1900000000000002e-07 
@@ -65140,7 +65194,8 @@ createNode skinCluster -n "skinCluster1";
 		4 3 5.0000000000000001e-09 75 0.99984591600000006 79 1.6999999999999999e-07 
 		82 0.00015390900000000001
 		3 75 0.99984221900000003 79 2.418e-06 82 0.000155363
-		4 75 0.99984292899999994 79 1.4873e-05 80 1e-08 82 0.00014218799999999999
+		4 75 0.99984292899999994 79 1.4873000000000001e-05 80 1e-08 82 
+		0.00014218799999999999
 		4 75 0.99987028699999991 79 1.4375e-05 80 3e-09 82 0.00011533500000000001
 		4 3 1.4e-08 75 0.99990632499999998 79 9.1980000000000007e-06 
 		82 8.4462999999999994e-05
@@ -65209,7 +65264,7 @@ createNode skinCluster -n "skinCluster1";
 		2 75 0.991244613 82 0.0087553869999999999
 		3 75 0.99234101799999996 79 6.9999999999999998e-09 82 0.0076589750000000002
 		3 75 0.99170636300000004 79 5.9999999999999995e-08 82 0.0082935769999999999
-		3 75 0.99161921599999991 79 2.34e-07 82 0.0083805500000000005
+		3 75 0.99161921599999991 79 2.3399999999999998e-07 82 0.0083805500000000005
 		3 75 0.992616159 79 2.2399999999999999e-07 82 0.0073836170000000003
 		4 3 3e-09 75 0.99405657699999994 79 1.3199999999999999e-07 82 
 		0.0059432879999999997
@@ -65332,7 +65387,7 @@ createNode skinCluster -n "skinCluster1";
 		3 3 2.9999999999999997e-08 75 0.00071136500000000004 82 0.99928860500000005
 		2 75 4.6819e-05 82 0.99995318099999997
 		2 75 2.2019999999999998e-06 82 0.99999779799999999
-		3 3 6e-09 75 1.37e-07 82 0.99999985700000005
+		3 3 6e-09 75 1.3700000000000002e-07 82 0.99999985700000005
 		3 3 1.0000000000000001e-09 75 1.7770000000000001e-06 82 0.99999822199999999
 		3 3 2e-08 75 0.00068504899999999997 82 0.99931493100000002
 		3 3 5.0000000000000001e-09 75 3.5923999999999997e-05 82 0.99996407099999995
@@ -65376,7 +65431,7 @@ createNode skinCluster -n "skinCluster1";
 		84 0.30400329999999998 87 0.0067554060000000003
 		6 75 0.60627170799999996 82 0.002029126 83 0.000143981 84 
 		0.35829029200000001 86 3.8999999999999998e-08 87 0.033264854000000003
-		6 75 0.56419463900000011 82 0.00020356000000000001 83 1.3701e-05 
+		6 75 0.56419463900000011 82 0.00020356000000000001 83 1.3701000000000001e-05 
 		84 0.32644447100000001 86 1.167e-06 87 0.109142462
 		8 3 2.4999999999999999e-08 75 0.55234436600000014 82 1.4905999999999999e-05 
 		83 8.4499999999999996e-07 84 0.21562039699999999 86 1.995e-05 87 
@@ -65418,7 +65473,7 @@ createNode skinCluster -n "skinCluster1";
 		83 1.2899999999999999e-06 85 0.12442712 86 1.4759999999999999e-06 88 
 		0.31597297400000002
 		7 3 8.0000000000000005e-09 75 0.59150082000000015 82 0.0031447720000000001 
-		83 2.1753e-05 85 0.253255958 86 5.1e-08 88 0.15207663799999999
+		83 2.1753e-05 85 0.253255958 86 5.0999999999999993e-08 88 0.15207663799999999
 		6 3 2.0000000000000001e-09 75 0.65570282499999988 82 0.021046608000000001 
 		83 0.00020483400000000001 85 0.27749876299999998 88 0.045546968
 		5 75 0.72985929799999993 82 0.084258123000000004 83 0.00081635099999999999 
@@ -65490,7 +65545,7 @@ createNode skinCluster -n "skinCluster1";
 		2 75 0.059066786000000003 82 0.94093321399999996
 		2 75 0.0073679740000000002 82 0.992632026
 		2 75 0.00059082399999999999 82 0.99940917600000001
-		2 75 3.0193e-05 82 0.99996980700000004
+		2 75 3.0192999999999997e-05 82 0.99996980700000004
 		2 75 1.302e-06 82 0.99999869799999996
 		2 75 8.9000000000000003e-08 82 0.99999991099999996
 		3 3 1.3000000000000001e-08 75 1.6840000000000001e-06 82 0.99999830300000003
@@ -65580,7 +65635,7 @@ createNode skinCluster -n "skinCluster1";
 		8 3 2.3000000000000001e-08 75 0.99993931699999994 83 3.9026999999999998e-05 
 		84 7.5900000000000002e-06 85 1.1899999999999999e-07 86 1.2823000000000001e-05 
 		87 5.6000000000000004e-07 88 5.4099999999999999e-07
-		8 3 1.7999999999999999e-08 75 0.99980449500000002 83 4.1176e-05 
+		8 3 1.7999999999999999e-08 75 0.99980449500000002 83 4.1176000000000007e-05 
 		84 0.00013202900000000001 85 2.0000000000000001e-09 86 1.1997999999999999e-05 
 		87 1.0265000000000001e-05 88 1.7e-08
 		6 3 3e-09 75 0.99878755199999991 83 5.5539999999999997e-06 84 
@@ -65591,8 +65646,8 @@ createNode skinCluster -n "skinCluster1";
 		84 0.00060597799999999996 85 2.4e-08 86 7.8599999999999997e-07 87 
 		1.266e-06 88 5.0000000000000001e-09
 		8 3 3.5000000000000002e-08 75 0.99965600200000004 83 0.00030745000000000002 
-		84 3.4204e-05 85 1.015e-06 86 9.3200000000000003e-07 87 4.0000000000000001e-08 
-		88 3.22e-07
+		84 3.4204e-05 85 1.0149999999999998e-06 86 9.3200000000000003e-07 87 
+		4.0000000000000001e-08 88 3.22e-07
 		7 3 4.0000000000000002e-09 75 0.99944624199999998 83 0.000104224 
 		84 2.7999999999999999e-08 85 0.00028409900000000001 86 5.8000000000000003e-08 
 		88 0.00016534500000000001
@@ -65607,7 +65662,7 @@ createNode skinCluster -n "skinCluster1";
 		4 3 2.0999999999999999e-08 79 8.7115999999999997e-05 80 8.653e-06 
 		81 0.99990420999999996
 		3 79 2.8365e-05 80 3.8299999999999998e-07 81 0.99997125200000003
-		3 79 0.000123089 80 1.0936e-05 81 0.99986597499999996
+		3 79 0.000123089 80 1.0935999999999998e-05 81 0.99986597499999996
 		4 3 1.0000000000000001e-09 79 3.2020000000000002e-05 80 4.4799999999999999e-07 
 		81 0.99996753100000002
 		4 3 3e-09 79 0.000132414 80 1.1677e-05 81 0.99985590599999996
@@ -65777,7 +65832,7 @@ createNode skinCluster -n "skinCluster1";
 		80 0.031776048000000001 81 0.96284259500000002
 		5 3 8.0000000000000005e-09 75 1.43e-07 79 0.022940513999999999 
 		80 0.189486926 81 0.78757240900000003
-		5 3 2.0000000000000001e-09 75 1.03e-07 79 0.021041830000000001 
+		5 3 2.0000000000000001e-09 75 1.0300000000000001e-07 79 0.021041830000000001 
 		80 0.186059274 81 0.79289879100000005
 		5 3 1.4999999999999999e-08 75 1.6500000000000001e-07 79 0.023998643 
 		80 0.19097810700000001 81 0.78502307000000004
@@ -65789,8 +65844,8 @@ createNode skinCluster -n "skinCluster1";
 		0.189180297 81 0.78557460899999998
 		5 3 2.9000000000000002e-08 75 1.68e-07 79 0.025652441000000002 
 		80 0.18939752900000001 81 0.78494983299999999
-		4 75 1.17e-07 79 0.025794052000000001 80 0.18830401199999999 81 
-		0.785901819
+		4 75 1.1699999999999999e-07 79 0.025794052000000001 80 0.18830401199999999 
+		81 0.785901819
 		5 3 1.4e-08 75 7.9000000000000006e-08 79 0.025482292 80 0.18519454699999999 
 		81 0.78932306800000007
 		4 75 4.1999999999999999e-08 79 0.025347941999999998 80 0.18579698 
@@ -65835,13 +65890,13 @@ createNode skinCluster -n "skinCluster1";
 		0.44275780599999998 81 0.51031025100000005
 		5 3 2e-08 75 4.4999999999999999e-08 79 0.042004404000000002 80 
 		0.447501178 81 0.51049435300000001
-		5 3 2.9999999999999997e-08 75 5.1e-08 79 0.035740609999999999 
+		5 3 2.9999999999999997e-08 75 5.0999999999999993e-08 79 0.035740609999999999 
 		80 0.45421045100000002 81 0.51004885799999999
 		5 3 2.3000000000000001e-08 75 6.7000000000000004e-08 79 0.034549601999999999 
 		80 0.455843954 81 0.50960635399999998
 		5 3 2.0000000000000001e-09 75 2.3099999999999999e-07 79 0.041109987000000001 
 		80 0.45100082000000002 81 0.50788895999999994
-		5 3 8.9999999999999995e-09 75 1.17e-07 79 0.036220403999999998 
+		5 3 8.9999999999999995e-09 75 1.1699999999999999e-07 79 0.036220403999999998 
 		80 0.45460447900000001 81 0.50917499099999997
 		5 3 1.9000000000000001e-08 75 1.5030000000000001e-06 79 0.093622562000000006 
 		80 0.687696219 81 0.21867969700000001
@@ -66021,11 +66076,11 @@ createNode skinCluster -n "skinCluster1";
 		5 3 1.9000000000000001e-08 75 0.000191304 79 0.51490796100000003 
 		80 0.484892082 81 8.6340000000000007e-06
 		5 3 3e-09 75 0.014370677 79 0.48062700699999999 80 0.50495168999999995 
-		81 5.0623e-05
+		81 5.0622999999999993e-05
 		5 3 1.9000000000000001e-08 75 0.001755029 79 0.50616723699999999 
 		80 0.49205946099999998 81 1.8253999999999998e-05
 		4 75 0.25550155400000002 79 0.46422058200000005 80 0.28027612499999999 
-		81 1.739e-06
+		81 1.7390000000000002e-06
 		5 3 1.3000000000000001e-08 75 0.39671939499999997 79 0.34864537499999998 
 		80 0.254633946 81 1.271e-06
 		5 3 1.6000000000000001e-08 75 0.055628245 79 0.58645850300000002 
@@ -66206,7 +66261,8 @@ createNode skinCluster -n "skinCluster1";
 		4 3 1.4e-08 76 1.5460000000000001e-06 77 0.019342338000000001 
 		78 0.98065610199999997
 		3 76 1.195e-06 77 0.016922455999999999 78 0.98307634899999996
-		4 3 6e-09 76 8.54e-07 77 0.015171240000000001 78 0.98482789999999998
+		4 3 6e-09 76 8.5399999999999989e-07 77 0.015171240000000001 78 
+		0.98482789999999998
 		4 3 1.9000000000000001e-08 76 7.6300000000000004e-07 77 0.015111918 
 		78 0.98488730000000002
 		5 3 1.0999999999999999e-08 75 1.0000000000000001e-09 76 1.2759999999999999e-06 
@@ -66440,7 +66496,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 2.0999999999999999e-08 75 0.019264400000000001 76 0.63754944899999988 
 		77 0.34309440699999999 78 9.1723000000000003e-05
 		5 3 2.0999999999999999e-08 75 0.280718144 76 0.6172733279999999 
-		77 0.102007131 78 1.376e-06
+		77 0.102007131 78 1.3759999999999998e-06
 		6 3 1.7999999999999999e-08 74 1e-08 75 0.46701517200000003 76 
 		0.46298361599999999 77 0.070000234999999994 78 9.4900000000000004e-07
 		5 74 2.1999999999999998e-08 75 0.44099061099999998 76 0.48011494600000004 
@@ -66466,7 +66522,7 @@ createNode skinCluster -n "skinCluster1";
 		5 3 2.0000000000000001e-09 75 2.8843000000000002e-05 76 0.87741354800000004 
 		77 0.122556048 78 1.559e-06
 		5 3 1.4e-08 75 8.7429999999999995e-05 76 0.87901560699999992 
-		77 0.120895525 78 1.424e-06
+		77 0.120895525 78 1.4239999999999998e-06
 		5 3 3e-09 75 0.001934638 76 0.88063409700000006 77 0.117430177 
 		78 1.085e-06
 		4 75 0.018929779000000001 76 0.86325473900000005 77 0.117814644 
@@ -66644,8 +66700,9 @@ createNode skinCluster -n "skinCluster1";
 		7.6361999999999998e-05 59 4.0000000000000001e-08 90 0.34393822000000002 91 
 		0.026785168000000002 92 0.00013811800000000001 93 7.1999999999999996e-08
 		10 1 0.37556588500000004 2 0.032389863999999997 3 5.7409999999999998e-06 
-		4 5.5951e-05 52 0.00046612800000000001 53 4.1000000000000003e-08 58 
-		2.8389999999999998e-06 90 0.37463770200000002 91 0.216875242 93 6.0699999999999997e-07
+		4 5.5951000000000007e-05 52 0.00046612800000000001 53 4.1000000000000003e-08 
+		58 2.8389999999999998e-06 90 0.37463770200000002 91 0.216875242 93 
+		6.0699999999999997e-07
 		13 1 0.195087699 2 0.0028732639999999999 3 1.0000000000000001e-09 
 		4 1.1748e-05 52 3.2462000000000002e-05 53 1.0000000000000001e-09 90 
 		0.29843879299999998 91 0.361192866 92 0.13981485699999999 93 4.6589999999999998e-06 
@@ -66664,9 +66721,9 @@ createNode skinCluster -n "skinCluster1";
 		9 1 6.1996999999999996e-05 4 1.2079000000000001e-05 90 0.00042553799999999999 
 		91 0.0039183760000000003 92 0.90359435999999993 93 0.00074934100000000005 
 		94 7.2300000000000002e-06 101 0.091224826999999994 102 6.2519999999999996e-06
-		9 1 1.46e-06 4 3.4246999999999999e-05 90 1.4018e-05 91 0.00020068899999999999 
-		92 0.91993005699999997 93 0.0071854340000000001 94 4.5187e-05 101 
-		0.072573005999999995 102 1.5902000000000001e-05
+		9 1 1.46e-06 4 3.4246999999999999e-05 90 1.4017999999999999e-05 
+		91 0.00020068899999999999 92 0.91993005699999997 93 0.0071854340000000001 
+		94 4.5187e-05 101 0.072573005999999995 102 1.5902000000000001e-05
 		9 1 1.2e-08 4 6.2967999999999997e-05 90 1.8699999999999999e-07 
 		91 4.1339999999999997e-06 92 0.84630546299999998 93 0.12548125399999999 
 		94 0.00046652199999999998 101 0.027667778000000001 102 1.1681999999999999e-05
@@ -66678,14 +66735,14 @@ createNode skinCluster -n "skinCluster1";
 		4 0.00018486500000000001 55 0.0055492060000000001 56 7.2600000000000002e-07 
 		74 0.00024080400000000001 75 1.99e-07 90 0.33893572700000002 91 0.022928429 
 		92 8.4462999999999994e-05 93 5.4e-08
-		14 1 0.37521365200000001 2 0.036528866 3 1.0743e-05 4 4.9792e-05 
+		14 1 0.37521365200000001 2 0.036528866 3 1.0743e-05 4 4.9791999999999994e-05 
 		55 0.00085282999999999995 56 9.2000000000000003e-08 74 1.5044e-05 75 
 		2.0000000000000001e-09 90 0.37986735599999982 91 0.20708885599999999 93 
 		4.9299999999999998e-07 94 2.0000000000000001e-09 104 0.00037192099999999999 
 		105 3.5100000000000001e-07
 		14 1 0.19243093 2 0.0031030400000000001 3 2.0000000000000001e-09 
-		4 1.1523e-05 55 6.5596e-05 56 4.0000000000000002e-09 74 2.84e-07 
-		90 0.30597978799999997 91 0.35334653100000007 92 0.13916330299999999 
+		4 1.1523000000000001e-05 55 6.5596e-05 56 4.0000000000000002e-09 74 
+		2.84e-07 90 0.30597978799999997 91 0.35334653100000007 92 0.13916330299999999 
 		93 4.0729999999999998e-06 94 4.3999999999999997e-08 104 0.005887995 105 
 		6.8870000000000003e-06
 		11 1 0.056307082000000001 2 5.3783000000000003e-05 4 2.5179999999999999e-06 
@@ -66711,19 +66768,19 @@ createNode skinCluster -n "skinCluster1";
 		91 0.00019872299999999999 92 0.60182971100000004 93 0.29393698400000001 
 		94 0.059483724000000002;
 	setAttr ".wl[7506:7557].w"
-		4 95 0.00011626800000000001 101 2.5245e-05 104 0.044319470999999999 
+		4 95 0.00011626800000000001 101 2.5245000000000003e-05 104 0.044319470999999999 
 		105 1.9613e-05
-		11 1 6.0200000000000002e-07 4 1.8199e-05 90 1.239e-05 91 
-		0.00024106299999999999 92 0.75153218000000011 93 0.21950223999999999 94 
-		0.022113609999999999 95 2.2657e-05 101 2.9689999999999999e-06 104 0.0065534970000000001 
-		105 5.9299999999999998e-07
+		11 1 6.0200000000000002e-07 4 1.8199e-05 90 1.2390000000000002e-05 
+		91 0.00024106299999999999 92 0.75153218000000011 93 0.21950223999999999 
+		94 0.022113609999999999 95 2.2656999999999997e-05 101 2.9689999999999999e-06 
+		104 0.0065534970000000001 105 5.9299999999999998e-07
 		11 1 1.7159e-05 4 1.6147999999999999e-05 90 0.00022524099999999999 
 		91 0.0030717399999999999 92 0.94744724999999996 93 0.015314029 94 
 		0.00071163200000000002 95 1.7e-08 101 1.4920000000000001e-06 104 0.033192192000000002 
 		105 3.1e-06
 		10 1 0.00020876600000000001 4 7.1629999999999999e-06 90 0.0018687860000000001 
 		91 0.016677641 92 0.94261211699999992 93 0.00099569999999999997 94 
-		5.6495e-05 101 1.91e-07 104 0.037571469000000003 105 1.672e-06
+		5.6495e-05 101 1.91e-07 104 0.037571469000000003 105 1.6719999999999998e-06
 		10 1 0.0019907919999999999 4 2.6809999999999998e-06 90 0.012553698 
 		91 0.070262161000000004 92 0.87553923199999983 93 0.00072940199999999998 
 		94 3.2756999999999998e-05 101 1.4999999999999999e-08 104 0.038888000999999998 
@@ -66731,7 +66788,7 @@ createNode skinCluster -n "skinCluster1";
 		11 1 0.013299403 2 1.08e-07 4 1.133e-06 55 1.9000000000000001e-08 
 		90 0.061191163 91 0.20436564099999999 92 0.69570000199999982 93 0.00018290299999999999 
 		94 5.4319999999999998e-06 104 0.025252607 105 1.5889999999999999e-06
-		11 1 0.061736923999999999 2 3.7e-05 4 2.6249999999999999e-06 
+		11 1 0.061736923999999999 2 3.7000000000000005e-05 4 2.6249999999999999e-06 
 		55 9.2600000000000001e-07 90 0.205674409 91 0.37096968300000016 92 
 		0.35118694099999997 93 2.9414999999999999e-05 94 5.44e-07 104 0.010359577999999999 
 		105 1.9549999999999999e-06
@@ -66742,11 +66799,12 @@ createNode skinCluster -n "skinCluster1";
 		13 1 0.38272345299999999 2 0.029896134000000001 3 1.6759999999999999e-06 
 		4 6.5834999999999996e-05 55 0.00029563700000000002 56 2.0999999999999999e-08 
 		74 1.5200000000000001e-06 90 0.41539772099999989 91 0.17159547 93 
-		4.7100000000000002e-07 94 2.0000000000000001e-09 104 2.2053e-05 105 6.9999999999999998e-09
+		4.7100000000000002e-07 94 2.0000000000000001e-09 104 2.2052999999999997e-05 
+		105 6.9999999999999998e-09
 		12 1 0.47528564099999993 2 0.15724506899999999 3 0.00061569499999999998 
 		4 0.000244949 55 0.001994146 56 1.6999999999999999e-07 74 3.6025999999999997e-05 
 		75 1.0999999999999999e-08 90 0.35004729600000001 91 0.014512261 92 
-		1.8685000000000002e-05 93 5.1e-08
+		1.8685000000000002e-05 93 5.0999999999999993e-08
 		11 1 0.46578476100000005 2 0.32492008900000002 3 0.019725390999999998 
 		4 0.00077239699999999997 55 0.0057620589999999999 56 5.0900000000000002e-07 
 		74 0.0002053 75 2.1e-07 90 0.18196277799999999 91 0.00086650099999999999 
@@ -66865,7 +66923,7 @@ createNode skinCluster -n "skinCluster1";
 		91 0.156495255 93 3.89e-07
 		10 1 0.18984917700000001 2 0.001055503 4 1.9159000000000001e-05 
 		52 1.35e-06 90 0.40971070099999984 91 0.259353846 92 0.13999589100000001 
-		93 3.3079999999999999e-06 94 4.0000000000000002e-09 101 1.1061e-05
+		93 3.3079999999999999e-06 94 4.0000000000000002e-09 101 1.1061000000000001e-05
 		11 1 0.062089140000000001 2 1.6733999999999999e-05 4 2.6869999999999999e-06 
 		52 4.0000000000000001e-08 90 0.23566337500000001 91 0.37770379000000015 
 		92 0.32407617100000002 93 2.4706999999999999e-05 94 6.1000000000000004e-08 
@@ -67092,7 +67150,7 @@ createNode skinCluster -n "skinCluster1";
 		94 2.0000000000000001e-09
 		8 1 0.046928009 2 3.7459999999999998e-06 4 3.8929999999999998e-06 
 		90 0.23528078099999999 91 0.42406119500000011 92 0.29371176199999999 
-		93 1.0573e-05 94 4.1000000000000003e-08
+		93 1.0572999999999999e-05 94 4.1000000000000003e-08
 		9 1 0.0084488480000000001 2 4.0000000000000002e-09 4 3.6300000000000001e-07 
 		90 0.060903342999999999 91 0.21210031900000001 92 0.7184634700000001 
 		93 8.3096000000000005e-05 94 5.4600000000000005e-07 101 1.0999999999999999e-08
@@ -67107,7 +67165,7 @@ createNode skinCluster -n "skinCluster1";
 		94 1.0610000000000001e-06 101 2.3900000000000001e-07
 		8 1 5.5000000000000003e-08 4 1.0999999999999999e-08 90 2.3309999999999998e-06 
 		91 5.0059999999999998e-05 92 0.98363921999999993 93 0.016307248999999999 
-		94 9.3699999999999999e-07 101 1.37e-07
+		94 9.3699999999999999e-07 101 1.3700000000000002e-07
 		7 1 0.18559114099999999 2 0.23151498700000001 3 0.46586230200000001 
 		4 0.112775442 5 0.00011461200000000001 52 3.5000000000000002e-08 90 
 		0.0041414809999999998
@@ -67125,7 +67183,7 @@ createNode skinCluster -n "skinCluster1";
 		92 2.4509999999999999e-06 93 1.4e-08
 		7 1 0.37909132800000001 2 0.015920607999999999 3 7.6000000000000006e-08 
 		4 0.000280315 90 0.46707077800000002 91 0.13763673400000001 93 1.61e-07
-		8 1 0.17671599700000001 2 0.00068334099999999996 4 4.621e-05 
+		8 1 0.17671599700000001 2 0.00068334099999999996 4 4.6210000000000006e-05 
 		90 0.45246847299999987 91 0.23009107500000001 92 0.13999330700000001 
 		93 1.593e-06 94 4.0000000000000002e-09
 		8 1 0.051849203000000003 2 7.0199999999999997e-06 4 5.8969999999999996e-06 
@@ -67143,9 +67201,9 @@ createNode skinCluster -n "skinCluster1";
 		8 1 4.5689999999999998e-06 4 1.0000000000000001e-09 90 9.8185999999999998e-05 
 		91 0.0013080430000000001 92 0.99778363399999992 93 0.00080367000000000004 
 		94 1.8670000000000001e-06 101 2.9999999999999997e-08
-		8 1 8.7999999999999994e-08 4 2.0000000000000001e-09 90 3.083e-06 
+		8 1 8.7999999999999994e-08 4 2.0000000000000001e-09 90 3.0830000000000004e-06 
 		91 5.9049999999999999e-05 92 0.97783617899999986 93 0.022099865 94 
-		1.719e-06 101 1.4e-08
+		1.7190000000000002e-06 101 1.4e-08
 		8 1 2.1400000000000001e-07 4 2.0000000000000001e-09 90 6.032e-06 
 		91 9.8084000000000005e-05 92 0.96909826099999996 93 0.030791354999999999 
 		94 6.0449999999999997e-06 104 6.9999999999999998e-09
@@ -67196,13 +67254,13 @@ createNode skinCluster -n "skinCluster1";
 		0.035329825000000002 5 1.074e-06 55 1.7910000000000001e-06 90 0.027028924999999999
 		8 1 0.39864419800000012 2 0.37363347600000002 3 0.13470325399999999 
 		4 0.012766243 5 6e-09 55 1.6020000000000001e-06 90 0.080236761000000004 
-		91 1.446e-05
+		91 1.4459999999999999e-05
 		8 1 0.46373923100000009 2 0.31928220000000002 3 0.018661530999999999 
 		4 0.0037680809999999999 55 8.0599999999999999e-07 90 0.19388170099999999 
 		91 0.00066644600000000001 93 4.0000000000000002e-09
 		9 1 0.47674868799999992 2 0.14373238499999999 3 0.00040775499999999999 
-		4 0.00092979100000000002 55 1.14e-07 90 0.367044439 91 0.011128401 
-		92 8.3799999999999994e-06 93 4.6999999999999997e-08
+		4 0.00092979100000000002 55 1.1399999999999999e-07 90 0.367044439 91 
+		0.011128401 92 8.3799999999999994e-06 93 4.6999999999999997e-08
 		9 1 0.37885294000000003 2 0.023592854 3 6.8999999999999996e-07 
 		4 0.000182888 55 6e-09 90 0.445481882 91 0.151888308 93 4.3099999999999998e-07 
 		94 1.0000000000000001e-09
@@ -67221,11 +67279,12 @@ createNode skinCluster -n "skinCluster1";
 		8 1 0.000212024 4 4.0000000000000002e-09 90 0.0022086459999999999 
 		91 0.015313142 92 0.98197495999999995 93 0.00028280800000000001 94 
 		7.622e-06 104 7.9400000000000004e-07
-		8 1 1.166e-05 4 1e-08 90 0.00018614099999999999 91 0.0019790570000000002 
-		92 0.99655997900000004 93 0.0012567489999999999 94 5.9490000000000001e-06 
-		104 4.5499999999999998e-07
+		8 1 1.1659999999999998e-05 4 1e-08 90 0.00018614099999999999 
+		91 0.0019790570000000002 92 0.99655997900000004 93 0.0012567489999999999 
+		94 5.9490000000000001e-06 104 4.5499999999999998e-07
 		8 1 4.5600000000000001e-07 4 1e-08 90 1.1392e-05 91 0.00017089500000000001 
-		92 0.97350738599999997 93 0.026298015000000001 94 1.1768e-05 104 7.7999999999999997e-08
+		92 0.97350738599999997 93 0.026298015000000001 94 1.1768000000000002e-05 
+		104 7.7999999999999997e-08
 		7 1 0.10132077 2 0.177497393 3 0.52042444900000007 4 0.19840349299999999 
 		5 0.0013167039999999999 52 1.3000000000000001e-08 90 0.0010371779999999999
 		7 1 0.107211608 2 0.183654812 3 0.51708407600000006 4 
@@ -67240,7 +67299,7 @@ createNode skinCluster -n "skinCluster1";
 		91 0.0024650829999999999 92 0.99346612600000006 93 0.0018072159999999999 
 		94 1.9103e-05 101 3.2000000000000002e-08 104 0.0020074120000000001 105 
 		2.3000000000000001e-08
-		10 1 0.00023373799999999999 4 1.116e-06 90 0.0023183700000000002 
+		10 1 0.00023373799999999999 4 1.1160000000000002e-06 90 0.0023183700000000002 
 		91 0.017025235999999999 92 0.97725025799999998 93 0.00037481599999999998 
 		94 1.6297999999999999e-05 101 4.0000000000000002e-09 104 0.0027801499999999999 
 		105 1.4e-08
@@ -67286,7 +67345,7 @@ createNode skinCluster -n "skinCluster1";
 		10 1 0.089871354000000001 2 0.115570376 3 0.61630984299999991 
 		4 0.17302014800000001 5 0.00084790799999999997 55 0.00034346099999999998 
 		56 3e-09 74 0.0027280640000000001 75 2.1243e-05 90 0.0012876000000000001
-		9 1 4.4999999999999998e-07 2 2.1815e-05 3 0.73393304900000012 
+		9 1 4.4999999999999998e-07 2 2.1815000000000004e-05 3 0.73393304900000012 
 		4 0.26117024999999999 5 0.0021508040000000001 52 0.0012912609999999999 
 		53 1.9410000000000001e-06 58 0.001424268 59 6.1619999999999996e-06
 		9 1 6.5999999999999995e-08 2 5.1390000000000003e-06 3 0.67635849800000003 
@@ -67306,7 +67365,7 @@ createNode skinCluster -n "skinCluster1";
 		1.623e-06 74 0.003601562 75 2.6242e-05
 		9 1 4.3300000000000003e-07 2 2.5595000000000001e-05 3 0.75463835800000001 
 		4 0.22971092700000001 5 0.002933265 55 0.00059739999999999999 56 
-		1.015e-06 74 0.011867756 75 0.00022525099999999999
+		1.0149999999999998e-06 74 0.011867756 75 0.00022525099999999999
 		9 1 7.7000000000000001e-08 2 7.2989999999999999e-06 3 0.86944147600000021 
 		4 0.122489008 5 0.00022488900000000001 55 0.00056145800000000003 56 
 		1.654e-06 74 0.0071871490000000003 75 8.6990000000000006e-05
@@ -67340,11 +67399,11 @@ createNode skinCluster -n "skinCluster1";
 		5 9.7070000000000004e-06 55 0.0011534640000000001 56 2.6120000000000001e-06 
 		74 7.3289999999999996e-06 75 1.0000000000000001e-09
 		8 1 2.6300000000000001e-07 3 0.92687899499999993 4 0.072750058000000006 
-		5 1.1224e-05 55 0.00027083100000000002 56 8.1299999999999999e-07 74 
-		8.7758999999999998e-05 75 5.7000000000000001e-08
+		5 1.1224000000000001e-05 55 0.00027083100000000002 56 8.1299999999999999e-07 
+		74 8.7758999999999998e-05 75 5.7000000000000001e-08
 		8 1 7.2099999999999996e-07 3 0.9381103489999999 4 0.060949099 
-		5 6.5350000000000001e-06 55 0.000113588 56 4.27e-07 74 0.00081743799999999998 
-		75 1.843e-06
+		5 6.5350000000000001e-06 55 0.000113588 56 4.2699999999999995e-07 74 
+		0.00081743799999999998 75 1.843e-06
 		9 1 1e-08 2 1.6920000000000001e-06 3 0.93698620199999993 4 
 		0.056113898000000002 5 7.8359999999999992e-06 55 0.0033986189999999999 56 
 		1.6747000000000001e-05 74 0.0034511429999999998 75 2.3853e-05
@@ -67420,7 +67479,7 @@ createNode skinCluster -n "skinCluster1";
 		90 1.9020000000000001e-05
 		10 1 0.0048761029999999997 2 0.020331551 3 0.758456303 52 
 		0.13336192899999999 53 0.01130392 54 2.4841000000000002e-05 55 0.065879217000000004 
-		56 0.005484399 57 1.1742e-05 90 0.00026999499999999998
+		56 0.005484399 57 1.1741999999999999e-05 90 0.00026999499999999998
 		10 1 9.7999999999999993e-07 2 4.4079999999999998e-05 3 0.76963428999999994 
 		4 6.61e-07 52 0.12852477100000001 53 0.0094761949999999998 54 1.7625000000000002e-05 
 		55 0.085995848999999999 56 0.0062939720000000001 57 1.1576999999999999e-05;
@@ -67465,7 +67524,7 @@ createNode skinCluster -n "skinCluster1";
 		4 4 1.345e-06 92 6.793e-06 93 0.96043776700000005 94 0.039554094999999997
 		5 92 1.3000000000000001e-08 97 4.5900000000000002e-07 98 6.6142000000000005e-05 
 		99 0.006082685 100 0.99385070099999995
-		4 97 6.0999999999999998e-07 98 8.8236e-05 99 0.0067491360000000002 
+		4 97 6.0999999999999998e-07 98 8.8236000000000014e-05 99 0.0067491360000000002 
 		100 0.99316201800000004
 		6 92 1e-08 93 2.0000000000000001e-09 97 0.00041380399999999998 
 		98 0.077050096999999998 99 0.52493367400000002 100 0.39760241299999999
@@ -67473,13 +67532,13 @@ createNode skinCluster -n "skinCluster1";
 		100 0.640925
 		6 93 4.9660000000000004e-06 95 5.0000000000000001e-09 96 0.00010839 
 		97 0.28566902300000002 98 0.71302339299999995 99 0.0011942229999999999
-		5 93 2.0590000000000001e-06 96 2.0849e-05 97 0.17269420299999999 
+		5 93 2.0590000000000001e-06 96 2.0849000000000003e-05 97 0.17269420299999999 
 		98 0.82099356300000004 99 0.0062893259999999996
 		6 93 8.1500000000000003e-07 96 3.7079999999999999e-06 97 0.093417597000000005 
 		98 0.88148367499999991 99 0.025094111999999998 100 9.2999999999999999e-08
 		6 93 3.2099999999999998e-07 96 6.4799999999999998e-07 97 0.046825534000000002 
-		98 0.876654237 99 0.076505703999999994 100 1.3556e-05
-		6 93 1.2499999999999999e-07 96 1.09e-07 97 0.021690465999999999 
+		98 0.876654237 99 0.076505703999999994 100 1.3555999999999999e-05
+		6 93 1.2499999999999999e-07 96 1.0900000000000001e-07 97 0.021690465999999999 
 		98 0.7882343220000001 99 0.189510608 100 0.00056437000000000002
 		7 4 3.1199999999999999e-07 93 4.6999999999999997e-08 96 1.7e-08 
 		97 0.0092277839999999993 98 0.60801044900000001 99 0.37455466300000001 
@@ -67510,7 +67569,7 @@ createNode skinCluster -n "skinCluster1";
 		97 2.4999999999999999e-08 104 2.4400000000000001e-07
 		8 4 3.7300000000000002e-07 92 6.8329999999999996e-06 93 0.067180368000000004 
 		94 0.38139167200000001 95 0.48125747299999999 96 0.070161156000000002 
-		97 2.119e-06 104 6e-09
+		97 2.1190000000000004e-06 104 6e-09
 		7 4 5.8999999999999999e-08 92 1.5200000000000001e-06 93 0.046714019000000002 
 		94 0.119785479 95 0.629731402 96 0.20367713400000001 97 9.0387e-05
 		7 4 2e-08 92 3.6199999999999999e-07 93 0.031541214999999997 94 
@@ -67559,7 +67618,7 @@ createNode skinCluster -n "skinCluster1";
 		8 4 1.8300000000000001e-07 92 4.9119999999999997e-06 93 0.066702998999999999 
 		94 0.38353965299999998 95 0.48021581699999999 96 0.069534532999999996 
 		97 1.902e-06 104 1.0000000000000001e-09
-		7 4 4.1999999999999999e-08 92 1.11e-06 93 0.046278847999999997 
+		7 4 4.1999999999999999e-08 92 1.1100000000000002e-06 93 0.046278847999999997 
 		94 0.118574373 95 0.63064671399999983 96 0.20441358100000001 97 8.5332000000000002e-05
 		7 4 1.6000000000000001e-08 92 2.67e-07 93 0.031225769 94 
 		0.017581368999999999 95 0.61237374100000008 96 0.33772724599999998 97 
@@ -67577,7 +67636,7 @@ createNode skinCluster -n "skinCluster1";
 		0.54709176800000003 97 0.41336643200000001 98 0.00094738299999999999
 		7 4 8.7390000000000005e-06 92 0.001288583 93 0.281242245 94 
 		0.51088663999999995 95 0.20651678600000001 96 4.1776000000000001e-05 104 
-		1.5231e-05
+		1.5230999999999999e-05
 		7 4 4.1370000000000004e-06 92 0.00054011800000000002 93 0.18521568499999999 
 		94 0.50821575600000002 95 0.305216296 96 0.00080514599999999997 104 
 		2.8619999999999999e-06
@@ -67670,11 +67729,11 @@ createNode skinCluster -n "skinCluster1";
 		96 0.018271519 97 0.81121071299999992 98 0.17040113300000001
 		6 92 3.5699999999999998e-07 93 4.5342000000000001e-05 95 1.8029999999999999e-06 
 		96 0.0054330730000000001 97 0.707018492 98 0.28750093300000001
-		7 92 3e-09 93 2.0384e-05 95 1.79e-07 96 0.001401668 97 
-		0.57015819400000001 98 0.428412291 99 7.2810000000000003e-06
+		7 92 3e-09 93 2.0384000000000003e-05 95 1.79e-07 96 0.001401668 
+		97 0.57015819400000001 98 0.428412291 99 7.2810000000000003e-06
 		7 92 1.0000000000000001e-09 93 8.7560000000000005e-06 95 1.4e-08 
 		96 0.000295278 97 0.41457970399999999 98 0.5850225830000001 99 9.3664000000000003e-05
-		6 93 3.619e-06 95 1.0000000000000001e-09 96 5.2785999999999999e-05 
+		6 93 3.6190000000000004e-06 95 1.0000000000000001e-09 96 5.2785999999999999e-05 
 		97 0.27093611699999998 98 0.72822837900000004 99 0.00077909799999999999
 		5 93 1.486e-06 96 9.0319999999999992e-06 97 0.161137481 98 
 		0.83422498300000003 99 0.0046270180000000001
@@ -67725,7 +67784,7 @@ createNode skinCluster -n "skinCluster1";
 		6 92 3.72e-07 93 4.5135000000000001e-05 95 1.849e-06 96 0.0054893299999999997 
 		97 0.70638909299999997 98 0.28807422100000002
 		7 92 1.9000000000000001e-08 93 2.0182000000000001e-05 95 1.8400000000000001e-07 
-		96 0.001406776 97 0.56886651300000002 98 0.42969880599999999 99 7.52e-06
+		96 0.001406776 97 0.56886651300000002 98 0.42969880599999999 99 7.5199999999999992e-06
 		6 93 8.6440000000000006e-06 95 1.4999999999999999e-08 96 0.00029465200000000001 
 		97 0.413693001 98 0.58590829200000005 99 9.5396000000000006e-05
 		7 92 1.0000000000000001e-09 93 3.5669999999999999e-06 95 1.0000000000000001e-09 
@@ -67779,7 +67838,7 @@ createNode skinCluster -n "skinCluster1";
 		98 0.065922799000000004 99 0.55409118999999996 100 0.37972029299999999
 		4 97 8.0377000000000006e-05 98 0.021692001999999998 99 0.34646332200000002 
 		100 0.63176429899999997
-		5 92 2.0000000000000001e-09 97 2.2867e-05 98 0.0061266999999999997 
+		5 92 2.0000000000000001e-09 97 2.2867000000000003e-05 98 0.0061266999999999997 
 		99 0.16883225600000001 100 0.82501817499999996
 		5 92 1.0999999999999999e-08 97 6.144e-06 98 0.0015314930000000001 
 		99 0.067013905999999998 100 0.93144844599999999
@@ -67861,7 +67920,7 @@ createNode skinCluster -n "skinCluster1";
 		6 92 3.9181000000000003e-05 93 0.066968470000000002 94 0.380721107 
 		95 0.48163436399999998 96 0.070633910999999994 97 2.9670000000000001e-06
 		6 92 3.3479999999999998e-05 93 0.066338959000000003 94 0.38568356799999998 
-		95 0.47870342900000001 96 0.069238657999999995 97 1.906e-06
+		95 0.47870342900000001 96 0.069238657999999995 97 1.9059999999999998e-06
 		6 92 3.2518000000000003e-05 93 0.066113428000000002 94 0.38369813899999999 
 		95 0.4803918909999999 96 0.069762119999999997 97 1.9039999999999999e-06
 		6 92 3.0012999999999999e-05 93 0.066135789 94 0.38039801400000001 
@@ -67890,7 +67949,7 @@ createNode skinCluster -n "skinCluster1";
 		95 0.61229404799999998 96 0.337719771 97 0.0011138039999999999
 		6 92 1.246e-06 93 0.030882713999999999 94 0.017559598999999999 
 		95 0.61241289099999996 96 0.33807315399999999 97 0.0010703959999999999
-		6 92 1.142e-06 93 0.030838353999999998 94 0.018378248999999999 
+		6 92 1.1419999999999998e-06 93 0.030838353999999998 94 0.018378248999999999 
 		95 0.61204181600000007 96 0.33764034799999998 97 0.0011000910000000001
 		6 92 8.5700000000000001e-07 93 0.030877914999999999 94 0.018594701000000002 
 		95 0.61191971299999992 96 0.33745280799999999 97 0.001154006
@@ -67979,8 +68038,8 @@ createNode skinCluster -n "skinCluster1";
 		96 0.048235968999999997 97 0.86165865799999997 98 0.089807190999999995
 		6 92 1.6000000000000001e-08 93 0.000108453 95 2.2070999999999999e-05 
 		96 0.019681121999999999 97 0.8071241910000001 98 0.173064147
-		6 92 1e-08 93 0.00010124999999999999 95 1.4847e-05 96 0.017913028000000001 
-		97 0.810020878 98 0.171949987
+		6 92 1e-08 93 0.00010124999999999999 95 1.4846999999999999e-05 
+		96 0.017913028000000001 97 0.810020878 98 0.171949987
 		6 92 8.9999999999999995e-09 93 9.8175000000000001e-05 95 1.3074999999999999e-05 
 		96 0.017398883 97 0.81026777299999997 98 0.172222085
 		6 92 1e-08 93 9.7318000000000006e-05 95 1.3494e-05 96 0.017507155999999999 
@@ -67991,7 +68050,7 @@ createNode skinCluster -n "skinCluster1";
 		96 0.0056837479999999998 97 0.70755346600000002 98 0.28671279700000002
 		6 92 3.6899999999999998e-07 93 4.5902999999999997e-05 95 1.5510000000000001e-06 
 		96 0.0054136879999999998 97 0.70761713800000003 98 0.28692135099999999
-		6 92 3.8000000000000001e-07 93 4.5215e-05 95 1.5990000000000001e-06 
+		6 92 3.8000000000000001e-07 93 4.5214999999999993e-05 95 1.5990000000000001e-06 
 		96 0.0054061259999999998 97 0.70732523000000003 98 0.28722144999999999
 		7 92 1.0999999999999999e-08 93 2.3455000000000002e-05 95 3.34e-07 
 		96 0.0017600070000000001 97 0.56903755299999992 98 0.42916800700000002 
@@ -68016,7 +68075,7 @@ createNode skinCluster -n "skinCluster1";
 		97 0.27696067400000002 98 0.72217926399999999 99 0.00079035200000000003
 		5 93 3.8419999999999998e-06 96 5.7908999999999997e-05 97 0.27405011299999998 
 		98 0.72512073200000005 99 0.00076740399999999996
-		5 93 1.672e-06 96 1.1464999999999999e-05 97 0.16450680200000001 
+		5 93 1.6719999999999998e-06 96 1.1464999999999999e-05 97 0.16450680200000001 
 		98 0.83087604199999998 99 0.004604019
 		5 93 1.5650000000000001e-06 96 9.8549999999999997e-06 97 0.16252514900000001 
 		98 0.83297154600000001 99 0.0044918850000000001
@@ -68067,7 +68126,7 @@ createNode skinCluster -n "skinCluster1";
 		95 0.02413798 96 3.1e-08
 		5 4 9.95e-07 92 2.5809999999999999e-06 93 0.87506649900000011 
 		94 0.124926837 95 3.0879999999999999e-06
-		4 92 1.2509e-05 93 0.79911155499999986 94 0.20076022700000001 
+		4 92 1.2508999999999998e-05 93 0.79911155499999986 94 0.20076022700000001 
 		95 0.000115709
 		9 4 0.00024413899999999999 90 4.0000000000000002e-09 91 2.7000000000000001e-07 
 		92 0.64365339299999991 93 0.31406017400000003 94 0.019337996999999999 
@@ -68086,7 +68145,7 @@ createNode skinCluster -n "skinCluster1";
 		96 0.048535722000000003 97 0.86066616800000006 98 0.090494844000000005
 		6 92 1e-08 93 9.8107000000000001e-05 95 1.4657e-05 96 0.017886165999999998 
 		97 0.80933395699999999 98 0.17266710299999999
-		6 92 3.7300000000000002e-07 93 4.5102000000000003e-05 95 1.739e-06 
+		6 92 3.7300000000000002e-07 93 4.5102000000000003e-05 95 1.7390000000000002e-06 
 		96 0.0054731140000000003 97 0.70687277000000004 98 0.287606902
 		7 92 6e-09 93 2.0103e-05 95 1.7100000000000001e-07 96 0.0013940549999999999 
 		97 0.56797379599999998 98 0.43060430199999999 99 7.5669999999999997e-06
@@ -68223,7 +68282,7 @@ createNode skinCluster -n "skinCluster1";
 		95 0.35227925700000001 96 0.59285347599999993 97 0.041012883
 		6 92 3.3599999999999999e-07 93 0.0084589049999999992 95 0.187557062 
 		96 0.68684739699999986 97 0.11712606 98 1.024e-05
-		6 92 1.03e-07 93 0.0050479649999999997 95 0.097192242999999998 
+		6 92 1.0300000000000001e-07 93 0.0050479649999999997 95 0.097192242999999998 
 		96 0.65346691000000001 97 0.24411850700000001 98 0.000174272
 		6 92 2.9000000000000002e-08 93 0.0029283109999999998 95 0.041022533 
 		96 0.54048229800000003 97 0.41427277699999998 98 0.001294052
@@ -68246,9 +68305,10 @@ createNode skinCluster -n "skinCluster1";
 		11 1 8.0000000000000005e-09 4 0.000161762 90 1.6e-07 91 6.2260000000000002e-06 
 		92 0.21714488700000001 93 0.6609943100000002 94 0.10720242200000001 95 
 		1.7646999999999999e-05 101 2.0063000000000001e-05 104 0.014433613 105 1.8902e-05
-		11 1 6e-09 4 9.3471e-05 90 1.5900000000000001e-07 91 5.2920000000000003e-06 
-		92 0.113733029 93 0.692119971 94 0.18580182100000001 95 0.00038813699999999999 
-		101 3.0230000000000001e-06 104 0.0078487990000000001 105 6.2920000000000001e-06
+		11 1 6e-09 4 9.3470999999999986e-05 90 1.5900000000000001e-07 
+		91 5.2920000000000003e-06 92 0.113733029 93 0.692119971 94 0.18580182100000001 
+		95 0.00038813699999999999 101 3.0230000000000001e-06 104 0.0078487990000000001 
+		105 6.2920000000000001e-06
 		7 90 2.4e-08 91 9.8899999999999998e-07 92 0.036746765000000001 
 		93 0.69697380200000003 94 0.262870522 95 0.0034077209999999998 101 
 		1.7700000000000001e-07
@@ -68276,7 +68336,7 @@ createNode skinCluster -n "skinCluster1";
 		7 4 3.22e-07 92 1.2800000000000001e-07 93 0.01333316 94 9.6807999999999999e-05 
 		95 0.35287422800000001 96 0.596084591 97 0.037610762999999998
 		6 92 1.9999999999999999e-07 93 0.0082073560000000007 95 0.18538844199999999 
-		96 0.69429964500000008 97 0.11209797000000001 98 6.387e-06
+		96 0.69429964500000008 97 0.11209797000000001 98 6.3869999999999992e-06
 		6 92 3.8000000000000003e-08 93 0.0048861979999999996 95 0.093682431999999996 
 		96 0.66163225000000003 97 0.239670839 98 0.000128243
 		11 1 2.4e-08 4 5.2250999999999998e-05 90 5.7999999999999995e-07 
@@ -68291,23 +68351,24 @@ createNode skinCluster -n "skinCluster1";
 		8 4 2.1886e-05 92 0.0014230250000000001 93 0.27663127700000001 
 		94 0.51101806899999991 95 0.21077574900000001 96 4.8693999999999998e-05 
 		104 8.1289e-05 105 1.0999999999999999e-08
-		8 4 1.0558e-05 92 0.000564892 93 0.18632241799999999 94 0.50798752200000008 
-		95 0.30429588499999999 96 0.00079758300000000004 104 2.1141e-05 105 
-		1.0000000000000001e-09
+		8 4 1.0558000000000001e-05 92 0.000564892 93 0.18632241799999999 
+		94 0.50798752200000008 95 0.30429588499999999 96 0.00079758300000000004 
+		104 2.1141e-05 105 1.0000000000000001e-09
 		7 4 4.0600000000000001e-06 92 0.00016918599999999999 93 0.13085876699999999 
 		94 0.50145425600000004 95 0.35982272799999998 96 0.0076882410000000002 
 		104 2.762e-06
 		6 93 4.4700000000000004e-06 95 2.0000000000000001e-09 96 8.2498999999999997e-05 
 		97 0.280669954 98 0.71831347500000009 99 0.00092960000000000004
-		5 93 1.8390000000000001e-06 96 1.5146e-05 97 0.167930406 98 
-		0.82683180999999994 99 0.0052207989999999999
+		5 93 1.8390000000000001e-06 96 1.5145999999999999e-05 97 0.167930406 
+		98 0.82683180999999994 99 0.0052207989999999999
 		7 92 2.0000000000000001e-09 93 7.3399999999999998e-07 96 2.6520000000000002e-06 
 		97 0.090711508999999996 98 0.88738801 99 0.021897050000000001 100 
 		4.3000000000000001e-08
 		7 92 8.9999999999999995e-09 93 2.8500000000000002e-07 96 4.4299999999999998e-07 
 		97 0.044549604 98 0.884193483 99 0.07124772 100 8.456e-06
-		7 92 3e-09 93 1.09e-07 96 7.1999999999999996e-08 97 0.020087224000000001 
-		98 0.79392612299999998 99 0.18555387200000001 100 0.00043259700000000001
+		7 92 3e-09 93 1.0900000000000001e-07 96 7.1999999999999996e-08 
+		97 0.020087224000000001 98 0.79392612299999998 99 0.18555387200000001 
+		100 0.00043259700000000001
 		7 92 1e-08 93 4.0000000000000001e-08 96 1.0999999999999999e-08 
 		97 0.0082552059999999993 98 0.60787355900000006 99 0.37671471699999998 
 		100 0.0071564569999999997
@@ -68375,7 +68436,7 @@ createNode skinCluster -n "skinCluster1";
 		98 0.88704648400000008 99 0.022645445 100 4.6999999999999997e-08
 		6 93 2.8200000000000001e-07 96 4.2199999999999999e-07 97 0.044401491000000001 
 		98 0.88228267000000005 99 0.073306178999999999 100 8.9560000000000003e-06
-		6 93 1.09e-07 96 6.8999999999999996e-08 97 0.020149146999999999 
+		6 93 1.0900000000000001e-07 96 6.8999999999999996e-08 97 0.020149146999999999 
 		98 0.79107958300000003 99 0.188330898 100 0.00044019399999999998
 		6 93 4.0000000000000001e-08 96 1e-08 97 0.0083417920000000007 
 		98 0.60493322500000002 99 0.379679506 100 0.0070454269999999999
@@ -68396,8 +68457,8 @@ createNode skinCluster -n "skinCluster1";
 		0.019565976999999998 100 0.98011492200000006
 		6 92 1.9000000000000001e-08 93 0.000103924 95 1.6144999999999999e-05 
 		96 0.018361314 97 0.8116834919999999 98 0.16983510600000001
-		6 92 3.65e-07 93 4.7753000000000002e-05 95 1.874e-06 96 0.0056244839999999999 
-		97 0.70947500299999999 98 0.28485052100000002
+		6 92 3.65e-07 93 4.7753000000000002e-05 95 1.8740000000000002e-06 
+		96 0.0056244839999999999 97 0.70947500299999999 98 0.28485052100000002
 		7 92 1e-08 93 2.1579000000000001e-05 95 1.8699999999999999e-07 
 		96 0.0014705059999999999 97 0.57181793800000014 98 0.42668215500000001 
 		99 7.6249999999999998e-06
@@ -68469,10 +68530,11 @@ createNode skinCluster -n "skinCluster1";
 		99 0.0066837880000000004 100 0.99324883900000005
 		4 97 4.6800000000000001e-07 98 8.5562000000000005e-05 99 0.0080821269999999997 
 		100 0.99183184300000005
-		4 97 4.7e-07 98 8.9058e-05 99 0.0083234610000000007 100 0.99158701100000002
+		4 97 4.7e-07 98 8.9057999999999987e-05 99 0.0083234610000000007 
+		100 0.99158701100000002
 		4 97 4.2899999999999999e-07 98 8.0860999999999997e-05 99 0.0076741120000000003 
 		100 0.99224459799999998
-		4 97 2.28e-07 98 3.0710000000000002e-05 99 0.0037083419999999999 
+		4 97 2.2799999999999998e-07 98 3.0710000000000002e-05 99 0.0037083419999999999 
 		100 0.99626071999999999
 		5 92 2e-08 97 4.8500000000000002e-07 98 7.4752999999999994e-05 
 		99 0.0071979410000000002 100 0.99272680099999999
@@ -68482,8 +68544,9 @@ createNode skinCluster -n "skinCluster1";
 		99 0.0066293660000000003 100 0.99329727999999995
 		5 92 2e-08 97 4.5900000000000002e-07 98 8.5216000000000005e-05 
 		99 0.0079246609999999995 100 0.991989644
-		8 4 0.00021711699999999999 90 3e-09 91 1.06e-07 92 0.72587775499999996 
-		93 0.243550193 94 0.0025477519999999999 101 0.027762215 102 4.4858999999999999e-05
+		8 4 0.00021711699999999999 90 3e-09 91 1.0600000000000001e-07 
+		92 0.72587775499999996 93 0.243550193 94 0.0025477519999999999 101 
+		0.027762215 102 4.4858999999999999e-05
 		7 4 0.000265214 91 2.3000000000000001e-08 92 0.74604997700000009 
 		93 0.238216231 94 0.0053539690000000001 101 0.010101838 102 1.2748000000000001e-05
 		7 4 0.00011079299999999999 91 2.0000000000000001e-09 92 0.160818352 
@@ -68495,12 +68558,12 @@ createNode skinCluster -n "skinCluster1";
 		8 4 2.9238e-05 90 2.0000000000000001e-09 91 7.6000000000000006e-08 
 		92 0.13979114200000001 93 0.85887356299999995 94 0.00063463099999999998 
 		101 0.00067126499999999999 102 8.3000000000000002e-08
-		9 1 2.0000000000000001e-09 4 4.2649999999999998e-06 90 1.11e-07 
+		9 1 2.0000000000000001e-09 4 4.2649999999999998e-06 90 1.1100000000000001e-07 
 		91 2.971e-06 92 0.78184844399999998 93 0.217758479 94 9.3959999999999995e-06 
 		101 0.00037632799999999999 102 4.0000000000000002e-09
 		9 1 2.0000000000000001e-09 4 2.8249e-05 90 6.8999999999999996e-08 
-		91 1.874e-06 92 0.7924856520000001 93 0.19980064 94 0.00023147099999999999 
-		101 0.007450969 102 1.074e-06
+		91 1.8740000000000002e-06 92 0.7924856520000001 93 0.19980064 94 
+		0.00023147099999999999 101 0.007450969 102 1.074e-06
 		8 4 1.3529e-05 90 4.0000000000000002e-09 91 1.55e-07 92 0.258809277 
 		93 0.74047764500000002 94 0.000169932 101 0.00052943200000000004 102 
 		2.6000000000000001e-08
@@ -68546,7 +68609,7 @@ createNode skinCluster -n "skinCluster1";
 		91 2.469e-06 92 0.19484398999999999 93 0.77870965700000006 94 0.026430182999999999 
 		101 2.0000000000000001e-09 104 1.2461e-05
 		7 4 6.5e-08 90 2.4999999999999999e-08 91 7.2799999999999995e-07 
-		92 0.122835712 93 0.86642877799999996 94 0.010734575 104 1.17e-07
+		92 0.122835712 93 0.86642877799999996 94 0.010734575 104 1.1699999999999999e-07
 		7 4 1.3000000000000001e-08 90 2.4999999999999999e-08 91 7.4600000000000004e-07 
 		92 0.14095329700000001 93 0.85408741600000004 94 0.0049584900000000003 
 		104 1.3000000000000001e-08
@@ -68557,11 +68620,12 @@ createNode skinCluster -n "skinCluster1";
 		92 0.185213036 93 0.81459845099999995 94 0.00018771599999999999
 		6 4 2.0000000000000001e-09 90 8.0000000000000005e-09 91 2.8999999999999998e-07 
 		92 0.12993560100000001 93 0.86995710999999998 94 0.000106989
-		7 4 1.4e-08 90 5.0000000000000001e-09 91 2.22e-07 92 0.12928978199999999 
-		93 0.87069905800000003 94 1.0907000000000001e-05 101 1.2e-08
+		7 4 1.4e-08 90 5.0000000000000001e-09 91 2.2200000000000003e-07 
+		92 0.12928978199999999 93 0.87069905800000003 94 1.0907000000000001e-05 
+		101 1.2e-08
 		7 4 5.8999999999999999e-08 90 3e-09 91 1.43e-07 92 0.11696765100000001 
 		93 0.88303117800000008 94 8.8899999999999998e-07 101 7.7000000000000001e-08
-		6 4 2.22e-07 90 1.0000000000000001e-09 91 7.1999999999999996e-08 
+		6 4 2.2200000000000003e-07 90 1.0000000000000001e-09 91 7.1999999999999996e-08 
 		92 0.108529663 93 0.891469654 101 3.8799999999999998e-07
 		5 4 8.5499999999999997e-07 91 3.2000000000000002e-08 92 0.097080233000000002 
 		93 0.90291690099999999 101 1.979e-06
@@ -68582,7 +68646,7 @@ createNode skinCluster -n "skinCluster1";
 		5 1 6.9999999999999998e-09 4 1.0000000000000001e-09 92 0.015282907 
 		93 0.98409426999999994 94 0.00062281499999999998
 		6 4 3.0633000000000003e-05 92 0.017448513999999998 93 0.98142330700000002 
-		94 0.001075009 101 2.2535e-05 102 2.0000000000000001e-09
+		94 0.001075009 101 2.2534999999999997e-05 102 2.0000000000000001e-09
 		6 4 3.8909999999999998e-05 92 0.017900877999999999 93 0.974223858 
 		94 0.0078261689999999991 101 4.4150000000000001e-06 104 5.7699999999999998e-06
 		5 4 1.2140000000000001e-05 92 0.001347366 93 0.99243423800000008 
@@ -68593,7 +68657,7 @@ createNode skinCluster -n "skinCluster1";
 		94 3.2163999999999999e-05 101 6.9699999999999995e-07
 		6 1 3e-09 4 7.7899999999999997e-07 92 0.0074925169999999998 
 		93 0.9925052230000001 94 1.387e-06 101 9.0999999999999994e-08
-		5 1 2.0000000000000001e-09 4 2.05e-07 92 0.0083280119999999992 
+		5 1 2.0000000000000001e-09 4 2.0499999999999997e-07 92 0.0083280119999999992 
 		93 0.99167176800000001 101 1.3000000000000001e-08
 		6 1 2.0000000000000001e-09 4 4.9999999999999998e-08 92 0.0096711030000000003 
 		93 0.99031910899999998 94 9.7350000000000008e-06 101 1.0000000000000001e-09
@@ -68614,7 +68678,7 @@ createNode skinCluster -n "skinCluster1";
 		94 0.00098014200000000004
 		4 4 5.8000000000000003e-08 92 0.00085155500000000004 93 0.99471885100000002 
 		94 0.0044295360000000004
-		4 4 5.1e-08 92 0.00081293399999999997 93 0.99865203199999997 
+		4 4 5.0999999999999993e-08 92 0.00081293399999999997 93 0.99865203199999997 
 		94 0.00053498300000000005
 		4 4 5.4e-08 92 0.00058160700000000004 93 0.99937319000000002 
 		94 4.5148999999999998e-05
@@ -70970,2424 +71034,6 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[128].x" 1682.857177734375;
 	setAttr ".tgi[0].ni[128].y" 1121.4285888671875;
 	setAttr ".tgi[0].ni[128].nvs" 18304;
-createNode animCurveTA -n "Spine_2_ctrl_rotateZ";
-	rename -uid "169AFEEA-4F8B-2043-2134-7D95EDAAAF5F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTA -n "Spine_2_ctrl_rotateY";
-	rename -uid "13BBAEF6-432C-E11F-2B3D-3D99FD8E6D02";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 13.421772298323688 40 0;
-createNode animCurveTA -n "Spine_2_ctrl_rotateX";
-	rename -uid "59CB9E5C-46E1-3AE0-622C-56A358F67851";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_2_ctrl_translateZ";
-	rename -uid "0D3E6704-49E3-D318-20FE-2EA33939D455";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_2_ctrl_translateY";
-	rename -uid "0681E31F-49F6-441A-B6FD-6C83481C07E5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_2_ctrl_translateX";
-	rename -uid "6758FCF2-4989-2C1B-EBD8-91A35A9E7C26";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTA -n "Spine_3_upper_ctrl_rotateZ";
-	rename -uid "5A99BF46-407A-EE91-58D3-5F9E20462466";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTA -n "Spine_3_upper_ctrl_rotateY";
-	rename -uid "81FFB772-4616-F357-63D4-E7A7A241713F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 13.421772298323688 40 0;
-createNode animCurveTA -n "Spine_3_upper_ctrl_rotateX";
-	rename -uid "5708A074-4418-5134-601B-B39D0535132C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_3_upper_ctrl_translateZ";
-	rename -uid "3BE87187-4E30-03D4-693A-978925E75FD6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_3_upper_ctrl_translateY";
-	rename -uid "1A3533AF-4A5B-D863-93A3-9B971107381F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_3_upper_ctrl_translateX";
-	rename -uid "7E874007-4996-2AA1-C8EC-688C93DA1D1D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTA -n "Spine_1_ctrl_rotateZ";
-	rename -uid "947044B3-4695-FE69-0AEB-E4B706EE6E07";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTA -n "Spine_1_ctrl_rotateY";
-	rename -uid "0C383089-45F0-2EE4-626B-B196F60DE090";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 13.421772298323688 40 0;
-createNode animCurveTA -n "Spine_1_ctrl_rotateX";
-	rename -uid "D7F85B77-46BE-A056-56CB-A7972F28D28F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_1_ctrl_translateZ";
-	rename -uid "C1CF6D2F-4A24-8C91-EF22-B2B8218AA0CB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_1_ctrl_translateY";
-	rename -uid "089A2F82-43D8-66DC-5787-579F449C0D86";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTL -n "Spine_1_ctrl_translateX";
-	rename -uid "BE7B9D86-42C4-2841-5821-D6B93B5228AC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 20 0 30 0 40 0;
-createNode animCurveTA -n "L_Head_R_Ear_2_ctrl_rotateZ";
-	rename -uid "F9D42903-4DC8-9891-0478-88B12ADC554F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_R_Ear_2_ctrl_rotateY";
-	rename -uid "58F938AE-4DBF-3012-D93B-80979B8E187C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 43.954930293919205;
-createNode animCurveTA -n "L_Head_R_Ear_2_ctrl_rotateX";
-	rename -uid "53E33B2E-4314-A120-8FEA-15B7E9D0ED2B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_R_Ear_2_ctrl_translateZ";
-	rename -uid "7E01D1D6-42B3-925B-FE27-D092B51ED1C9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 4.2950747869419104e-07 10 4.2950747869419104e-07;
-createNode animCurveTL -n "L_Head_R_Ear_2_ctrl_translateY";
-	rename -uid "FF940E7F-4B61-DE1D-660E-4CB47EBD4976";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 4.293193107685056e-07 10 4.293193107685056e-07;
-createNode animCurveTL -n "L_Head_R_Ear_2_ctrl_translateX";
-	rename -uid "11B37D26-48CF-8AC0-E81C-A0B710E65227";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.4155398808668451e-07 10 1.4155398808668451e-07;
-createNode animCurveTA -n "L_Head_L_Ear_2_ctrl_rotateZ1";
-	rename -uid "2E413AE0-4802-DD7E-76C6-C782C473B2EE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_L_Ear_2_ctrl_rotateY1";
-	rename -uid "F6D1CDCB-4054-E2CC-545A-BBBE2FC5412D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 41.90443084908982;
-createNode animCurveTA -n "L_Head_L_Ear_2_ctrl_rotateX1";
-	rename -uid "601E80DB-4930-5A9C-E0BC-7ABF1A3E0543";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_2_ctrl_translateZ1";
-	rename -uid "6FA95BEB-4B42-0C11-63DE-54AC38319D19";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_2_ctrl_translateY1";
-	rename -uid "1CC92C6F-4FF0-C738-AB94-CCAE384107C0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_2_ctrl_translateX1";
-	rename -uid "AF346AB6-4E2A-2595-D7E7-E1A5D4275674";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_L_Ear_1_ctrl_rotateZ";
-	rename -uid "F4535928-4317-5118-7174-429A3AE6F3FA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_L_Ear_1_ctrl_rotateY";
-	rename -uid "964BEC84-4067-5DDD-C6A5-97840D2AE750";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 29.734931568072057;
-createNode animCurveTA -n "L_Head_L_Ear_1_ctrl_rotateX";
-	rename -uid "AA6DEEC3-4BBC-6379-EF50-85AD04E8EDB0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_1_ctrl_translateZ";
-	rename -uid "1DEFDCA8-48C2-F9F7-F396-7E8CD3C38325";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 2.8058510714856766e-07 10 2.8058510714856766e-07;
-createNode animCurveTL -n "L_Head_L_Ear_1_ctrl_translateY";
-	rename -uid "96CE7E69-4983-7018-CCE7-258A41C6E364";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 4.1921498628028075e-07 10 4.1921498628028075e-07;
-createNode animCurveTL -n "L_Head_L_Ear_1_ctrl_translateX";
-	rename -uid "693083E5-4E89-C88B-AE87-F1A507C64F72";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -1.556391500123766e-07 10 -1.556391500123766e-07;
-createNode animCurveTA -n "L_Head_Mouth_Lower_3_ctrl_rotateZ";
-	rename -uid "D56F0583-4218-028C-787D-F7B59CF2BFA1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Lower_3_ctrl_rotateY";
-	rename -uid "DB0FD110-40FE-4130-D426-18A42159D78C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Lower_3_ctrl_rotateX";
-	rename -uid "731936FA-4FDF-2309-4DA5-4DBCFACCADAC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTL -n "L_Head_Mouth_Lower_3_ctrl_translateZ";
-	rename -uid "79AABE38-4ABC-784F-9A2E-8B915126C957";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.31370096988978713 20 -0.4590400991729584;
-createNode animCurveTL -n "L_Head_Mouth_Lower_3_ctrl_translateY";
-	rename -uid "4F265153-44A6-98F3-BF92-9A87B510DDBA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.093045657524355715 20 0.0075589257211561602;
-createNode animCurveTL -n "L_Head_Mouth_Lower_3_ctrl_translateX";
-	rename -uid "3D74ED0C-481E-D68A-68CB-9094E43FEA99";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.11603456595192529 20 0.33741337677900435;
-createNode animCurveTA -n "L_Head_ctrl_rotateZ";
-	rename -uid "CBF291DF-45C8-EC89-E6CC-32B88F720BB8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 -19.714230143598549;
-createNode animCurveTA -n "L_Head_ctrl_rotateY";
-	rename -uid "4E7FECFE-46DE-C0D4-3C74-749B84A14DA8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 -11.089260707037738;
-createNode animCurveTA -n "L_Head_ctrl_rotateX";
-	rename -uid "EB4B22EA-4161-C910-FECB-1A81C164D826";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "L_Head_ctrl_translateZ";
-	rename -uid "C34E6C0D-429A-0BE5-6505-B9BE5FF6390C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "L_Head_ctrl_translateY";
-	rename -uid "2A351BB0-40ED-13DE-05E7-98A60DE483D8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "L_Head_ctrl_translateX";
-	rename -uid "99DD2B93-4EAB-B671-AE20-B18684702F5C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_2_ctrl_rotateZ";
-	rename -uid "44FA75BF-4DE3-1894-1486-5F85337FC18D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_2_ctrl_rotateY";
-	rename -uid "D7D656F7-4929-B396-5774-8D932BD511A1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_2_ctrl_rotateX";
-	rename -uid "BECC9900-42D0-D0EB-B095-008781D13A2D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTL -n "L_Head_Mouth_Upper_2_ctrl_translateZ";
-	rename -uid "D3DB6F8B-4949-AB51-D7D3-D38741840194";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.20258408734656144 20 0.12694711456601607;
-createNode animCurveTL -n "L_Head_Mouth_Upper_2_ctrl_translateY";
-	rename -uid "3380D382-4E5D-9E90-4C9C-73AB9179AD30";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.23124675405948289 20 -0.0094345131287241688;
-createNode animCurveTL -n "L_Head_Mouth_Upper_2_ctrl_translateX";
-	rename -uid "5ECEB893-497A-F341-E278-B5BD41EB911E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.35572098806225544 20 -0.083738576029145709;
-createNode animCurveTA -n "L_Head_Mouth_Lower_1_ctrl_rotateZ";
-	rename -uid "D01DA6FE-4DA5-3995-05D9-EC9E7CEDAACB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Lower_1_ctrl_rotateY";
-	rename -uid "F112ACCE-4BF4-A143-8EEA-A4B0B3D093FC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Lower_1_ctrl_rotateX";
-	rename -uid "05104FEF-4C99-9A24-8F49-D8AC39866CBF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTL -n "L_Head_Mouth_Lower_1_ctrl_translateZ";
-	rename -uid "4E9C6A42-4353-BE10-1CF2-C099608342C9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.30972375706486105 20 -0.4590400991729584;
-createNode animCurveTL -n "L_Head_Mouth_Lower_1_ctrl_translateY";
-	rename -uid "E91AA931-4007-A246-4AF7-778A80C30140";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.01535622256072307 20 0.0075589257211561602;
-createNode animCurveTL -n "L_Head_Mouth_Lower_1_ctrl_translateX";
-	rename -uid "B7054B00-4562-D18E-5239-3D8961DEDAB3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.21429129368850555 20 0.33741337677900435;
-createNode animCurveTA -n "L_Head_Mouth_Lower_2_ctrl_rotateZ";
-	rename -uid "8C8E3273-4186-C2EE-0D15-48B7FFAD46CE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Lower_2_ctrl_rotateY";
-	rename -uid "3927CD75-424E-9212-2CB0-1EA390DB71EE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Lower_2_ctrl_rotateX";
-	rename -uid "31C2EEEF-4843-F398-53BA-4C90C02F3CC6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTL -n "L_Head_Mouth_Lower_2_ctrl_translateZ";
-	rename -uid "BAE09EE4-447A-AC55-4FD3-C2B3CBE64319";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.33866514224422262 20 -0.4590400991729584;
-createNode animCurveTL -n "L_Head_Mouth_Lower_2_ctrl_translateY";
-	rename -uid "3D1415DB-4044-22A4-27C0-53ADFA6BE9E5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.020348803550198857 20 0.0075589257211561602;
-createNode animCurveTL -n "L_Head_Mouth_Lower_2_ctrl_translateX";
-	rename -uid "3EAFA61E-4FA5-19B3-A000-DEA75E8D582A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.22967794141422421 20 0.33741337677900435;
-createNode animCurveTA -n "L_Head_R_Ear_1_ctrl_rotateZ";
-	rename -uid "22A5BBEF-49FD-5983-D06E-4D8B2DEEDA16";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_R_Ear_1_ctrl_rotateY";
-	rename -uid "E13852B6-4E03-13C3-9BCC-E99D3808A033";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 40.979016613636205;
-createNode animCurveTA -n "L_Head_R_Ear_1_ctrl_rotateX";
-	rename -uid "986EF3CA-44AB-3536-BF08-8F9A425C9AE1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_R_Ear_1_ctrl_translateZ";
-	rename -uid "506BDBF8-4D94-315C-C541-CD8A8B1CDE1C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -4.7776339950900137e-07 10 -4.7776339950900137e-07;
-createNode animCurveTL -n "L_Head_R_Ear_1_ctrl_translateY";
-	rename -uid "82BB4CA1-42D0-1754-2CFF-CC9FD7BE63AB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -8.4371642117275769e-08 10 -8.4371642117275769e-08;
-createNode animCurveTL -n "L_Head_R_Ear_1_ctrl_translateX";
-	rename -uid "26E2B955-4F33-2089-08BC-79AAC42BACDF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.0693532992434029e-07 10 1.0693532992434029e-07;
-createNode animCurveTA -n "L_Head_R_Ear_3_ctrl_rotateZ";
-	rename -uid "3714516F-44AE-2968-F05D-2C8722ECA9F4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_R_Ear_3_ctrl_rotateY";
-	rename -uid "E0586C5B-442F-79DF-B465-A5AB998D1A7D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 25.971675094730841;
-createNode animCurveTA -n "L_Head_R_Ear_3_ctrl_rotateX";
-	rename -uid "883C2111-43DD-4FBB-A996-2997A96528AD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_R_Ear_3_ctrl_translateZ";
-	rename -uid "EDCCD6ED-4CDC-B041-F51A-30A37077CC27";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.2598185061829525e-07 10 1.2598185061829525e-07;
-createNode animCurveTL -n "L_Head_R_Ear_3_ctrl_translateY";
-	rename -uid "2AE884FB-4154-25CE-155A-9ABB6DE067AC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -9.7012907929183712e-08 10 -9.7012907929183712e-08;
-createNode animCurveTL -n "L_Head_R_Ear_3_ctrl_translateX";
-	rename -uid "AEE1EB1B-4947-5B77-C616-9593C8E38108";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 2.4786337604609798e-07 10 2.4786337604609798e-07;
-createNode animCurveTA -n "L_Head_Mouth_Upper_1_ctrl_rotateZ";
-	rename -uid "F967FAB2-4FF7-1C49-6F88-A59F12FAB297";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_1_ctrl_rotateY";
-	rename -uid "D1BEB83E-4210-78AC-2D76-49AB898A8B6B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_1_ctrl_rotateX";
-	rename -uid "9D6DDA80-4919-B2D6-234A-978BC506AA4F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTL -n "L_Head_Mouth_Upper_1_ctrl_translateZ";
-	rename -uid "A6D83FBA-48AE-11E9-3A20-01A8EDEB7119";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.26428832411796238 20 0.12694711456601607;
-createNode animCurveTL -n "L_Head_Mouth_Upper_1_ctrl_translateY";
-	rename -uid "1CDB7531-4B3D-CCF6-BE4E-DC9602D72B7B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.30371058785004873 20 -0.0094345131287241688;
-createNode animCurveTL -n "L_Head_Mouth_Upper_1_ctrl_translateX";
-	rename -uid "94642368-4AEB-9C03-0159-CE9053884E39";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.30794644003899435 20 -0.083738576029145709;
-createNode animCurveTA -n "L_Head_Mouth_Upper_3_ctrl_rotateZ";
-	rename -uid "757D44A6-42CB-2CE1-C99A-F0A22EA057FA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_3_ctrl_rotateY";
-	rename -uid "FF86E164-42EB-B81A-949A-A78FA18210F0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTA -n "L_Head_Mouth_Upper_3_ctrl_rotateX";
-	rename -uid "11CA407C-4BD0-ED37-ECEC-28A91D915691";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 20 0;
-createNode animCurveTL -n "L_Head_Mouth_Upper_3_ctrl_translateZ";
-	rename -uid "F6C21742-4BE7-516D-F228-4890221CE1D3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 -0.229185472396257 20 0.12694711456601607;
-createNode animCurveTL -n "L_Head_Mouth_Upper_3_ctrl_translateY";
-	rename -uid "2EB6F01A-47F3-22F0-FC37-3F87EEB0C7C6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.22317888615672768 20 -0.0094345131287241688;
-createNode animCurveTL -n "L_Head_Mouth_Upper_3_ctrl_translateX";
-	rename -uid "8D66BEC0-43F4-2318-F305-CDAF8720CA94";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0.38636126020423217 20 -0.083738576029145709;
-createNode animCurveTA -n "L_Head_L_Ear_3_ctrl_rotateZ";
-	rename -uid "FA84B083-4331-0787-3BA1-D2AEA607CBA8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_L_Ear_3_ctrl_rotateY";
-	rename -uid "D7F5BED4-4ABA-E090-7806-948E358E921D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 31.298196134362097;
-createNode animCurveTA -n "L_Head_L_Ear_3_ctrl_rotateX";
-	rename -uid "346E750F-4AF7-3EF9-81EC-EEACCF2E57CD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_3_ctrl_translateZ";
-	rename -uid "59F22C71-4568-B956-2283-15A3DC3C9DAE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_3_ctrl_translateY";
-	rename -uid "7EECB054-492F-EC7F-AB58-859341D3AE8C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_L_Ear_3_ctrl_translateX";
-	rename -uid "73CFC4E7-4D9A-15B0-6ADD-DCBC02FEE0C1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_Nose_ctrl_rotateZ";
-	rename -uid "28F2EB3D-4FA2-1437-27EB-E5B60B7B1932";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_Nose_ctrl_rotateY";
-	rename -uid "5C8F7266-4793-7204-5B0A-89A9F3A027FC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "L_Head_Nose_ctrl_rotateX";
-	rename -uid "3993128E-4CF0-26D3-C4CE-46AC66C6D9ED";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "L_Head_Nose_ctrl_translateZ";
-	rename -uid "313AC85F-4966-E951-CF68-8799318BF92D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.7213389346704655;
-createNode animCurveTL -n "L_Head_Nose_ctrl_translateY";
-	rename -uid "99F88BDB-4DDA-9DA8-D300-548A0A64F52E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.084405255017502664;
-createNode animCurveTL -n "L_Head_Nose_ctrl_translateX";
-	rename -uid "F6C4AFA2-47C3-6DE2-968D-6EBD187B282E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.4356772336723212;
-createNode animCurveTA -n "L_Neck_ctrl_rotateZ";
-	rename -uid "7A8FEBC7-464F-77DD-61ED-6B89638A6EC1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 -19.714230143598549;
-createNode animCurveTA -n "L_Neck_ctrl_rotateY";
-	rename -uid "880D5571-4CE4-A199-5341-54A298B5EA48";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 -11.089260707037738;
-createNode animCurveTA -n "L_Neck_ctrl_rotateX";
-	rename -uid "29DB8F22-436F-302C-F425-F1A199F42792";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "L_Neck_ctrl_translateZ";
-	rename -uid "462245AF-4AC1-8ED4-51D3-D699AC76E8B5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "L_Neck_ctrl_translateY";
-	rename -uid "3F1B9C68-42C7-5221-35D1-73AF2B513C7F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "L_Neck_ctrl_translateX";
-	rename -uid "296CB25A-409F-1304-1263-6EACDEE599D0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Neck_ctrl_translateX";
-	rename -uid "83178BBC-4E89-DEB8-A356-87BD22210150";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Neck_ctrl_translateY";
-	rename -uid "A7098286-48F0-C1B3-FE0C-4CBFC61B94A8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Neck_ctrl_translateZ";
-	rename -uid "9C0A6818-4325-3CE4-F7D9-78BE70425321";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "Mid_Neck_ctrl_rotateX";
-	rename -uid "6572C462-42EE-7354-3BF9-8D8C66DFFDE9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "Mid_Neck_ctrl_rotateY";
-	rename -uid "475394C3-43D6-7044-6F60-1D9FD1D6F23B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 18.049605227379825;
-createNode animCurveTA -n "Mid_Neck_ctrl_rotateZ";
-	rename -uid "A0CF945A-4872-39F7-9FB9-529C8335C2A7";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Head_ctrl_translateX";
-	rename -uid "B16BB7F9-4DBF-A6FD-9E7A-C48FD6830091";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Head_ctrl_translateY";
-	rename -uid "8496F769-4897-0840-019D-BDA97B4152B1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Head_ctrl_translateZ";
-	rename -uid "F6356F4B-4C08-ACF2-9C75-E480D42E68EA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "Mid_Head_ctrl_rotateX";
-	rename -uid "045411B1-4105-C98E-3B88-719EE72EAFEA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "Mid_Head_ctrl_rotateY";
-	rename -uid "8E5D2AB6-49B0-BA0D-AD78-FF8F6C2F7E27";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 18.049605227379825;
-createNode animCurveTA -n "Mid_Head_ctrl_rotateZ";
-	rename -uid "599D1F12-411F-E5D2-75EF-FC98806766D9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_2_ctrl_translateX";
-	rename -uid "29CD9E13-4D7A-0E7F-5F99-038C9670674B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0.57199066239320651;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_2_ctrl_translateY";
-	rename -uid "394F6D5B-45B4-5C55-6B50-65BB83741D7B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 6.7141160083753617e-15;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_2_ctrl_translateZ";
-	rename -uid "6F544D3B-4A51-C213-9B6E-CEBA7A1F50CC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 3.2744105793069802e-17;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_2_ctrl_rotateX";
-	rename -uid "67C45C09-4CA5-BD34-F4F2-CEB25651D48E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_2_ctrl_rotateY";
-	rename -uid "B31C9BF6-4E4A-2C5B-3348-70A82E7AC6C7";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_2_ctrl_rotateZ";
-	rename -uid "267C299C-45E1-C0AB-CF19-D4A9CF7BA186";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_3_ctrl_translateX";
-	rename -uid "FD97892C-4558-A1AB-9ED5-81B8C04A6336";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0.57199066239320651;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_3_ctrl_translateY";
-	rename -uid "0452DE1D-413B-3489-00F4-FCA0EDF8703A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 6.5871085677234564e-15;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_3_ctrl_translateZ";
-	rename -uid "7C015822-4219-996B-2F2F-DAB1B816761D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 3.2744105793069802e-17;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_3_ctrl_rotateX";
-	rename -uid "5477AF15-4EBA-BD27-B2CB-BF9EA9C648E3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_3_ctrl_rotateY";
-	rename -uid "100A0EB8-41F1-BFB7-65C9-539B7E0D4910";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_3_ctrl_rotateZ";
-	rename -uid "FA651B1B-4FD8-C6C7-A577-E89B6C985742";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_2_ctrl_translateX";
-	rename -uid "A23E2A9B-48AD-0D3E-A925-84BE900367F9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -0.41993018540985672;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_2_ctrl_translateY";
-	rename -uid "2ADD2E29-452B-3D89-FCD7-AFB523366544";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -5.2327585636571455e-15;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_2_ctrl_translateZ";
-	rename -uid "534C6081-4ECA-D254-CF91-9CB193E9061A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -1.8003961101800083e-15;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_2_ctrl_rotateX";
-	rename -uid "7BDFDB19-42E3-BEBF-EC6A-3EAA785FF450";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_2_ctrl_rotateY";
-	rename -uid "F9FF24F6-4F36-226A-35A8-A8871A5F88FD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_2_ctrl_rotateZ";
-	rename -uid "085B7356-4D2F-1854-2BE0-40A1C5D19A8E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_3_ctrl_translateX";
-	rename -uid "56B28781-48B1-6822-8D6E-82B79C90BA09";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -0.41993018540985672;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_3_ctrl_translateY";
-	rename -uid "F2710A7D-4DAB-BD78-ECF6-CAA89700D722";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -5.1395153315417186e-15;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_3_ctrl_translateZ";
-	rename -uid "12C73179-4FF2-27DE-BE16-F99ED72D539C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -1.8003961101800083e-15;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_3_ctrl_rotateX";
-	rename -uid "9D6248EC-4C3D-8B82-6628-DBABB532812E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_3_ctrl_rotateY";
-	rename -uid "8C7B5EDA-4DC6-1892-024D-2692A5E0EE42";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_3_ctrl_rotateZ";
-	rename -uid "B9A9E80D-4CAD-7537-8EEF-718F3E1471CE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Nose_ctrl_translateX";
-	rename -uid "B7891A93-4EA1-174E-3485-DC9E8AB25744";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2 0 10 1.0122567428574214;
-createNode animCurveTL -n "Mid_Head_Nose_ctrl_translateY";
-	rename -uid "AF7CC474-4CCE-F60B-7557-479D1083BDF8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2 0 10 0.0010246136534626542;
-createNode animCurveTL -n "Mid_Head_Nose_ctrl_translateZ";
-	rename -uid "0FB7A188-4E53-0C65-490B-C894829DCCED";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2 0 10 -0.0086913962065747214;
-createNode animCurveTA -n "Mid_Head_Nose_ctrl_rotateX";
-	rename -uid "1D7DE2C2-4BF8-CF5C-14A5-369E99ACE284";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2 0 10 0;
-createNode animCurveTA -n "Mid_Head_Nose_ctrl_rotateY";
-	rename -uid "9099D4EC-4D2B-A046-1BAC-698402381DEB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2 0 10 0;
-createNode animCurveTA -n "Mid_Head_Nose_ctrl_rotateZ";
-	rename -uid "3DBFFC82-482C-E063-88B5-FFA79A1D0C48";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_1_ctrl_translateX";
-	rename -uid "1BDD33A2-4059-D818-54FC-8F9ECDD2A1DA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_1_ctrl_translateY";
-	rename -uid "946D0F6A-4E47-D750-C865-12864F2C464E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_1_ctrl_translateZ";
-	rename -uid "3DFC811E-4CA6-36E6-54A1-468C707414D2";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_2_ctrl_translateX";
-	rename -uid "EA050011-4C68-90AB-85AF-9C9C7F1EEFC5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_2_ctrl_translateY";
-	rename -uid "4BECE7FB-4738-3E7D-80B0-CC8A1EF2C067";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_2_ctrl_translateZ";
-	rename -uid "C46F7359-45D1-B413-770C-81A7A12F4E60";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTA -n "Mid_Head_L_Ear_1_ctrl_rotateX";
-	rename -uid "B10F54F3-4C27-305F-3649-F5816F3ED426";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTA -n "Mid_Head_L_Ear_1_ctrl_rotateY";
-	rename -uid "A272F227-441A-E630-5543-E6A02FFE58B4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 26.049968850119598;
-createNode animCurveTA -n "Mid_Head_L_Ear_1_ctrl_rotateZ";
-	rename -uid "7FD39F34-4278-6646-ABD8-438F3334F851";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTA -n "Mid_Head_L_Ear_2_ctrl_rotateX";
-	rename -uid "76478070-464B-BF34-ED68-2BA2245AD230";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTA -n "Mid_Head_L_Ear_2_ctrl_rotateY";
-	rename -uid "679D656E-4602-26AA-6177-E8947E42A4B9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 47.290185624061657;
-createNode animCurveTA -n "Mid_Head_L_Ear_2_ctrl_rotateZ";
-	rename -uid "1C0B120B-49F3-AEDC-B903-B58ACE271BA9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_3_ctrl_translateX";
-	rename -uid "93DDF259-4783-B099-64A8-2FB69023A902";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_3_ctrl_translateY";
-	rename -uid "D4B73588-4E86-0FB9-C360-11B8F71A12AB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_L_Ear_3_ctrl_translateZ";
-	rename -uid "0DA478FD-4C2B-35D9-3870-5C89F84045A9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTA -n "Mid_Head_L_Ear_3_ctrl_rotateX";
-	rename -uid "D8271958-41A2-C30C-D067-7EB156475BB6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTA -n "Mid_Head_L_Ear_3_ctrl_rotateY";
-	rename -uid "2057E81F-4A30-2FF1-AEE5-5493AB36C5A9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 19.409490180223443;
-createNode animCurveTA -n "Mid_Head_L_Ear_3_ctrl_rotateZ";
-	rename -uid "10AA4B86-4FF8-16C3-2205-89A482620B93";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_1_ctrl_translateX";
-	rename -uid "B9070855-43B6-1F5C-EB5B-DD8A7ABF9EDA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -1 0 0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_2_ctrl_translateY";
-	rename -uid "219A24C6-469A-9EB3-6DA2-0EAE738849E6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_1_ctrl_translateY";
-	rename -uid "E8D3E650-4CF9-A512-EA42-3A81221D5976";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_1_ctrl_translateZ";
-	rename -uid "1D287943-4344-BCC4-FA24-0C89E175233A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTA -n "Mid_Head_R_Ear_1_ctrl_rotateX";
-	rename -uid "27C835CD-432C-5D30-4174-78AB61EB7555";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTA -n "Mid_Head_R_Ear_1_ctrl_rotateY";
-	rename -uid "9BAC97A0-46CB-0C8B-BB0C-83B09CCFEB09";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 26.049968850119598;
-createNode animCurveTA -n "Mid_Head_R_Ear_1_ctrl_rotateZ";
-	rename -uid "C7C2D6D7-47B9-8649-B687-8BA80E8DFECF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_2_ctrl_translateX";
-	rename -uid "B71AC09F-46AC-7E18-7E97-D68EC8AA643C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_2_ctrl_translateZ";
-	rename -uid "8434B4B1-4587-C3C7-C2E3-62907D022BEA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTA -n "Mid_Head_R_Ear_2_ctrl_rotateX";
-	rename -uid "866A4AB1-4726-978B-C8BC-F4B670D56D84";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTA -n "Mid_Head_R_Ear_2_ctrl_rotateY";
-	rename -uid "ECC5878B-4B70-7CD7-9ECF-4293E5285F68";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 47.290185624061657;
-createNode animCurveTA -n "Mid_Head_R_Ear_2_ctrl_rotateZ";
-	rename -uid "38790D79-4DF9-639A-50ED-7CAE72DEA7B1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 1.7006802721088437e-07 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_3_ctrl_translateX";
-	rename -uid "EBD650E2-4389-8D30-4E12-B595F48AE33C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_3_ctrl_translateY";
-	rename -uid "E8CFBE3C-4E68-D65D-D8EF-5ABE0BACE6B5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "Mid_Head_R_Ear_3_ctrl_translateZ";
-	rename -uid "A3858072-4611-42FC-3257-E4AEF4D65144";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "Mid_Head_R_Ear_3_ctrl_rotateX";
-	rename -uid "151E4473-4C1F-CF1E-82EF-F0B1F22A8B01";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "Mid_Head_R_Ear_3_ctrl_rotateY";
-	rename -uid "12938A1F-4C00-05FA-A1EF-08A673ED1820";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 19.409000000000002;
-createNode animCurveTA -n "Mid_Head_R_Ear_3_ctrl_rotateZ";
-	rename -uid "F2226454-4AEF-9899-1B61-D49868C06EC8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_1_ctrl_translateX";
-	rename -uid "2FF6329B-425F-FC99-C4BF-EA97C8DDD9FD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0.572;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_1_ctrl_translateY";
-	rename -uid "EED3D996-4AE4-5513-6CC4-129903FCC1BD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Upper_1_ctrl_translateZ";
-	rename -uid "C82DEF6A-4E11-A5A9-69E6-CB8D6F170BDD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_1_ctrl_rotateX";
-	rename -uid "618BDCB5-48E7-DE46-D650-3EB61969D01B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_1_ctrl_rotateY";
-	rename -uid "02376331-4EF8-60E5-8DBA-5B8BCCCD0351";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Upper_1_ctrl_rotateZ";
-	rename -uid "E2A66D43-4BD9-F494-9F32-A998C53A494F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_1_ctrl_translateX";
-	rename -uid "484D7AE7-4451-4520-6DB0-7EAC9EF4C718";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -0.42;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_1_ctrl_translateY";
-	rename -uid "15F9D9AD-4295-84C0-6E39-DAAC79E39BF3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "Mid_Head_Mouth_Lower_1_ctrl_translateZ";
-	rename -uid "6B557A37-4D5F-E82A-63F2-0093B48347C3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_1_ctrl_rotateX";
-	rename -uid "DB347824-447D-98FE-11A2-C788BD3CD69F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_1_ctrl_rotateY";
-	rename -uid "686A19C1-4306-E2AA-1807-D8906799723B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "Mid_Head_Mouth_Lower_1_ctrl_rotateZ";
-	rename -uid "3FBB73C9-4F7C-B93A-E533-5CB8A6D7175D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Neck_ctrl_rotateX";
-	rename -uid "6408D669-497D-3141-29EE-AE9086655E08";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "R_Neck_ctrl_rotateY";
-	rename -uid "CAA9BF8E-448F-AC29-0F2D-74966BD00F5D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "R_Neck_ctrl_rotateZ";
-	rename -uid "69D614D7-437F-DD49-5F95-2DAFC555CCF0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 -27.086294803981982;
-createNode animCurveTA -n "R_Head_ctrl_rotateX";
-	rename -uid "B31C851C-4080-29CB-CA5B-A89A818373B0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "R_Head_ctrl_rotateY";
-	rename -uid "24AFF558-40CD-1104-1D3E-7E8D106A9688";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTA -n "R_Head_ctrl_rotateZ";
-	rename -uid "EDC307B4-4595-4191-ADFC-B6813660B45B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 -27.086294803981982;
-createNode animCurveTL -n "R_Neck_ctrl_translateX";
-	rename -uid "F3797FE2-43E6-16E5-6C79-AF8D526720E5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "R_Neck_ctrl_translateY";
-	rename -uid "46A61256-4AB4-4A96-C1AF-08B52FAFF570";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "R_Neck_ctrl_translateZ";
-	rename -uid "9C0A3CE5-46C1-EADF-A453-0F92017A27C8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "R_Head_ctrl_translateX";
-	rename -uid "53A6B2AB-4D66-B4D3-5DE5-9D92BBDFA727";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "R_Head_ctrl_translateY";
-	rename -uid "3563BB46-415E-3742-722E-44A3E64EA5C3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "R_Head_ctrl_translateZ";
-	rename -uid "09544F7D-4B06-2A31-DF38-10A666E521FD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  10 0 20 0;
-createNode animCurveTL -n "R_Head_Mouth_Upper_1_ctrl_translateX";
-	rename -uid "3939E001-45E5-9548-874B-32808D7C6133";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.50468946564312567;
-createNode animCurveTL -n "R_Head_Mouth_Upper_1_ctrl_translateY";
-	rename -uid "BD77E84C-421D-ACFA-96AF-458B6A7850FF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.073530697654530852;
-createNode animCurveTL -n "R_Head_Mouth_Upper_1_ctrl_translateZ";
-	rename -uid "1003856A-44FC-FD2B-AC9A-4BB175A65B7F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.37486588596663095;
-createNode animCurveTL -n "R_Head_Mouth_Upper_2_ctrl_translateX";
-	rename -uid "74DD31DD-4CEA-C27B-F129-8FAB0253C3F8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.50468946564312567;
-createNode animCurveTL -n "R_Head_Mouth_Upper_2_ctrl_translateY";
-	rename -uid "8FD0B5F2-4E04-CE24-92DB-DA9BD1B6795B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.073530697654530852;
-createNode animCurveTL -n "R_Head_Mouth_Upper_2_ctrl_translateZ";
-	rename -uid "1D982A20-46B0-B968-4EA3-DC803DE44ED8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.37486588596663095;
-createNode animCurveTL -n "R_Head_Mouth_Upper_3_ctrl_translateX";
-	rename -uid "7EB4F318-4A71-DABC-F401-3780DD26AFEA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.50468946564312567;
-createNode animCurveTL -n "R_Head_Mouth_Upper_3_ctrl_translateY";
-	rename -uid "5EF68B66-4A38-AB92-254A-6A81C78E521C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.073530697654530852;
-createNode animCurveTL -n "R_Head_Mouth_Upper_3_ctrl_translateZ";
-	rename -uid "BD4E7A44-4CF8-AFF2-4861-668B9C48E519";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.37486588596663095;
-createNode animCurveTA -n "R_Head_Mouth_Upper_1_ctrl_rotateX";
-	rename -uid "0A32B512-4AE6-D00D-D020-85AB5AFC87CB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_1_ctrl_rotateY";
-	rename -uid "A87C0FD8-487B-7463-3360-78962BDB8582";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_1_ctrl_rotateZ";
-	rename -uid "EF40D7C6-4051-8A8D-24A5-D2BBB02909DC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_2_ctrl_rotateX";
-	rename -uid "623ECD3D-4DF8-2CC5-621A-5B9DA4B256AA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_2_ctrl_rotateY";
-	rename -uid "B5E88789-4891-74D7-E2F6-C3876F34543D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_2_ctrl_rotateZ";
-	rename -uid "E17BA906-404D-10E7-33AC-01B7FB707184";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_3_ctrl_rotateX";
-	rename -uid "1DC2E1AD-420D-71D4-A3D2-6690774A729F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_3_ctrl_rotateY";
-	rename -uid "EFE7B28E-4405-9E5E-9660-BE8519F62F6D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Upper_3_ctrl_rotateZ";
-	rename -uid "F14FFCF0-4E2A-1299-6E7C-E3B249F43A11";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "R_Head_Mouth_Lower_1_ctrl_translateX";
-	rename -uid "18DA8B22-4DD1-EE36-72ED-029FD5C081B0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.24279432177552049;
-createNode animCurveTL -n "R_Head_Mouth_Lower_1_ctrl_translateY";
-	rename -uid "11CFAA7A-4F36-2E62-4E6B-7796F143B519";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.062074613984212754;
-createNode animCurveTL -n "R_Head_Mouth_Lower_1_ctrl_translateZ";
-	rename -uid "705A6394-464E-0858-5329-E3B2CE11F0CA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.20080942075061917;
-createNode animCurveTL -n "R_Head_Mouth_Lower_2_ctrl_translateX";
-	rename -uid "E9B6FD26-4679-AEFF-49D6-BFB1839F9347";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.24279432177552049;
-createNode animCurveTL -n "R_Head_Mouth_Lower_2_ctrl_translateY";
-	rename -uid "12FFC070-4DE6-1A08-7EE2-E0A5BF27ABD8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.062074613984212754;
-createNode animCurveTL -n "R_Head_Mouth_Lower_2_ctrl_translateZ";
-	rename -uid "C2F5B80A-43C5-5FF6-2E68-24A2E7181DC1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.20080942075061917;
-createNode animCurveTL -n "R_Head_Mouth_Lower_3_ctrl_translateX";
-	rename -uid "490B3098-4A67-77C7-324B-7BB94C80334A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.24279432177552049;
-createNode animCurveTL -n "R_Head_Mouth_Lower_3_ctrl_translateY";
-	rename -uid "D1DB53AF-452D-AE56-EC1F-13979C916452";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0.062074613984212754;
-createNode animCurveTL -n "R_Head_Mouth_Lower_3_ctrl_translateZ";
-	rename -uid "50E1AEEC-4240-3F01-E678-04975A72E767";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 -0.20080942075061917;
-createNode animCurveTA -n "R_Head_Mouth_Lower_1_ctrl_rotateX";
-	rename -uid "808E952B-436B-3716-AEA6-388442075AC8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_1_ctrl_rotateY";
-	rename -uid "205F861F-4265-84D3-E7B6-A49E0CC68269";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_1_ctrl_rotateZ";
-	rename -uid "46FF9699-4332-1968-744B-74AF514C565E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_2_ctrl_rotateX";
-	rename -uid "501BB023-4472-DAF4-D49D-37B9E8649897";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_2_ctrl_rotateY";
-	rename -uid "6486854A-4D47-9411-516F-10882C6B420D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_2_ctrl_rotateZ";
-	rename -uid "2D37817D-47A4-B0EF-D4D5-B9BC38158777";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_3_ctrl_rotateX";
-	rename -uid "7D0195ED-4C87-A040-0E4A-42A6E3CDCE9C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_3_ctrl_rotateY";
-	rename -uid "FDE982E4-479D-028D-765C-2B8BD207E775";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_Mouth_Lower_3_ctrl_rotateZ";
-	rename -uid "7F541766-4886-777D-8311-E4AB7BB13754";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "R_Head_Nose_ctrl_translateX";
-	rename -uid "6D4CFBBF-4779-DAF8-B6A0-2197B839E9DC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -0.48564177328143487;
-createNode animCurveTL -n "R_Head_Nose_ctrl_translateY";
-	rename -uid "9A0F2EDE-42C6-EE15-AB98-3A96016B45CF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -0.033677465254400206;
-createNode animCurveTL -n "R_Head_Nose_ctrl_translateZ";
-	rename -uid "B8EF4207-4E23-A6F9-F836-07A9CCF1C77E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0.5754525538490789;
-createNode animCurveTA -n "R_Head_Nose_ctrl_rotateX";
-	rename -uid "C74AFB0B-453B-8DB5-3551-6D8938CE91EA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_Nose_ctrl_rotateY";
-	rename -uid "0E721D09-46DD-47B8-7D7E-CBA5ECF375C9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_Nose_ctrl_rotateZ";
-	rename -uid "B68881E6-4208-4DCD-421E-8CB6C7D26A06";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_1_ctrl_translateX";
-	rename -uid "3F38C4FA-4732-CB93-F9CA-0593ECEF72FD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_1_ctrl_translateY";
-	rename -uid "C366845D-464E-43E3-B5A5-C09FA1CA17FF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_1_ctrl_translateZ";
-	rename -uid "B137A817-4845-D928-E3C7-0EA0C3467372";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_2_ctrl_translateX";
-	rename -uid "AEC837CE-4841-9999-B8A6-038B21BB9A5F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_2_ctrl_translateY";
-	rename -uid "C06BF405-4737-DF2E-564F-EFB4FCC6A31F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_2_ctrl_translateZ";
-	rename -uid "A5A474ED-4350-12FA-A4C5-4896EA1CD296";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_3_ctrl_translateX";
-	rename -uid "9BDA7504-4262-7D36-AAAE-7F9134158CED";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_3_ctrl_translateY";
-	rename -uid "763CA3E6-4DB6-965D-4437-E9971600D7D9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTL -n "R_Head_L_Ear_3_ctrl_translateZ";
-	rename -uid "9C8502C6-4EFF-B299-12B3-319AE03391E9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_L_Ear_1_ctrl_rotateX";
-	rename -uid "5EEE2D3E-43D5-82DD-1C22-C1AD1453237D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_L_Ear_1_ctrl_rotateY";
-	rename -uid "BB14453C-43C6-80F8-25C1-8E8362E260F2";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 25.895780527899127;
-createNode animCurveTA -n "R_Head_L_Ear_1_ctrl_rotateZ";
-	rename -uid "A85341F7-4624-ACB6-4BD4-F6A40007D72D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_L_Ear_2_ctrl_rotateX";
-	rename -uid "32EF22F5-4315-65F5-3E7F-3EA414D2B655";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_L_Ear_2_ctrl_rotateY";
-	rename -uid "6346B4EB-4E23-D0A6-19FD-C59A0348CD7B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 25.895780527899127;
-createNode animCurveTA -n "R_Head_L_Ear_2_ctrl_rotateZ";
-	rename -uid "42FE6C11-4FF9-140D-852E-099B0ACAC5F3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_L_Ear_3_ctrl_rotateX";
-	rename -uid "75D040AE-4215-F1D4-7E45-9D85480AB6AB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "R_Head_L_Ear_3_ctrl_rotateY";
-	rename -uid "BFC0B77C-4976-5AF4-E794-FF8CDC9F01C3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 25.895780527899127;
-createNode animCurveTA -n "R_Head_L_Ear_3_ctrl_rotateZ";
-	rename -uid "A22E3892-4277-24BA-04DA-38AEDA17F7B4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-createNode animCurveTA -n "L_Hip_FK_ctrl_rotateX";
-	rename -uid "067FEB78-4E7C-77FB-CA84-9E883FE6F39A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Hip_FK_ctrl_rotateY";
-	rename -uid "0F090E1C-4FDC-605D-B737-CCBA9F6371E5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "L_Hip_FK_ctrl_rotateZ";
-	rename -uid "DFF3E1BC-4148-42ED-AB22-86B16D914681";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Knee_FK_ctrl_rotateX";
-	rename -uid "D58F8569-4E96-9813-A616-79BF968A97B8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Knee_FK_ctrl_rotateY";
-	rename -uid "923494B5-436D-678A-6189-BAB1CFA1D934";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "L_Knee_FK_ctrl_rotateZ";
-	rename -uid "3C6804A9-4FEC-3754-82EA-C18E991757D2";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Ankle_FK_ctrl_rotateX";
-	rename -uid "83EE96DB-4ED7-A61B-411A-CF85A9E875C5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Ankle_FK_ctrl_rotateY";
-	rename -uid "946BBC86-4217-F9D7-4589-BA8E149F071A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "L_Ankle_FK_ctrl_rotateZ";
-	rename -uid "5F1686ED-4021-6E4F-C53E-CF88504A40B2";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Hip_FK_ctrl_rotateX";
-	rename -uid "CBC42560-450F-FFB7-0553-A6B71A4555D7";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Hip_FK_ctrl_rotateY";
-	rename -uid "A612D2E7-4D83-FD75-C078-0A830D828B54";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "R_Hip_FK_ctrl_rotateZ";
-	rename -uid "A271DF9D-4951-20AA-D2DA-8185587350FF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Knee_FK_ctrl_rotateX";
-	rename -uid "ACDF3286-492F-7EF5-8660-6F951BD4620B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Knee_FK_ctrl_rotateY";
-	rename -uid "D2664A2D-4C1A-5F83-F2A6-9B82C43E0461";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "R_Knee_FK_ctrl_rotateZ";
-	rename -uid "46346210-4F02-D1D2-C254-9980C76940DA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Ankle_FK_ctrl_rotateX";
-	rename -uid "7B1B8CA5-43B2-C790-A6E4-E5A6DA61C0AA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Ankle_FK_ctrl_rotateY";
-	rename -uid "2FE482F9-4ECB-5330-0F82-118D75A7F2B2";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "R_Ankle_FK_ctrl_rotateZ";
-	rename -uid "8821DD3D-4F7E-046E-6C1B-0485C10341A0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Shoulder_FK_ctrl_rotateX";
-	rename -uid "32DD7813-446D-03C7-7FAF-A9A0AE1DA21E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Shoulder_FK_ctrl_rotateY";
-	rename -uid "E1816C87-4A06-4752-303F-F4BE30C50305";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "L_Shoulder_FK_ctrl_rotateZ";
-	rename -uid "EEBD77D9-4943-3569-96F7-E8BF0CFAA588";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Elbow_FK_ctrl_rotateX";
-	rename -uid "F5096D2B-4479-C6FB-28EA-3698C4B7D2EB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Elbow_FK_ctrl_rotateY";
-	rename -uid "467E5C32-4DAE-ECEA-F7D6-7AB117F7BCAA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "L_Elbow_FK_ctrl_rotateZ";
-	rename -uid "6CBAAB33-443A-20B2-8ECA-13B945B6DD72";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Wrist_FK_ctrl_rotateX";
-	rename -uid "0B603016-4042-D714-DF80-AB8B69208071";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "L_Wrist_FK_ctrl_rotateY";
-	rename -uid "9E308CA9-4F2C-5301-D6C6-90885D121DC0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "L_Wrist_FK_ctrl_rotateZ";
-	rename -uid "7D0BDB4E-4081-6375-A493-DD99FFB2C1C6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Shoulder_FK_ctrl_rotateX";
-	rename -uid "2C8209D4-402D-7D1E-00E5-D7B6B628AAB4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Shoulder_FK_ctrl_rotateY";
-	rename -uid "DA0BA36A-4767-1EA8-AA41-6CB6917BD89D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "R_Shoulder_FK_ctrl_rotateZ";
-	rename -uid "B1443CEA-444F-3FD4-A352-CC901B4FF480";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Elbow_FK_ctrl_rotateX";
-	rename -uid "BBE2D6AE-4BF2-B21D-3C71-CF8D605B49A7";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Elbow_FK_ctrl_rotateY";
-	rename -uid "02C37318-4332-3AA0-E303-6292BF0F7CAE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "R_Elbow_FK_ctrl_rotateZ";
-	rename -uid "A6E8E76A-475B-F371-9400-0B9249AA2640";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Wrist_FK_ctrl_rotateX";
-	rename -uid "D7EB894A-49A6-3101-9986-5BA211056408";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTA -n "R_Wrist_FK_ctrl_rotateY";
-	rename -uid "E6CDAFFB-44C5-E5B5-02B8-21B245067882";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 38.980710928733522;
-createNode animCurveTA -n "R_Wrist_FK_ctrl_rotateZ";
-	rename -uid "A8881158-45F4-055C-7656-7FA6D6404FCB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Shoulder_FK_ctrl_translateX";
-	rename -uid "04BC31D3-4527-4C21-7901-5A9A3E7BA7B9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Shoulder_FK_ctrl_translateY";
-	rename -uid "3406A964-4ED6-4856-588F-559178AD99AA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Shoulder_FK_ctrl_translateZ";
-	rename -uid "638785EB-42EC-B9C0-3D29-06828D6B662E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "L_Shoulder_FK_ctrl_scaleX";
-	rename -uid "93FCF897-4762-04F5-16C0-818B9DE43588";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Shoulder_FK_ctrl_scaleY";
-	rename -uid "02EF6BD2-4171-D57A-C4C5-8AADC3A06C19";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Shoulder_FK_ctrl_scaleZ";
-	rename -uid "DF75E804-4F28-69E2-2EC9-D5857A72EEEF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "L_Elbow_FK_ctrl_translateX";
-	rename -uid "203728D5-43FD-A7CF-6AD4-FE87F993C137";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Elbow_FK_ctrl_translateY";
-	rename -uid "1674F4D3-428E-9286-580A-67B5C1A95F2A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Elbow_FK_ctrl_translateZ";
-	rename -uid "5839B662-4887-A890-093B-1B9F24125D55";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "L_Elbow_FK_ctrl_scaleX";
-	rename -uid "240D4874-4313-46D2-9CAF-7BBFD3AEF107";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Elbow_FK_ctrl_scaleY";
-	rename -uid "00B7E5AE-4484-21E4-2C92-52B1FB2BB1EA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Elbow_FK_ctrl_scaleZ";
-	rename -uid "8E6739DC-4432-DB46-60E9-349F99904003";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "L_Wrist_FK_ctrl_translateX";
-	rename -uid "36795B3C-4444-FFF7-3A77-B58AED9B9347";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Wrist_FK_ctrl_translateY";
-	rename -uid "8D4903C6-4B27-4D75-09A6-60BF29D3069C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Wrist_FK_ctrl_translateZ";
-	rename -uid "25B8C1AA-4B21-69E5-F9B6-F8B26DE4030B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "L_Wrist_FK_ctrl_scaleX";
-	rename -uid "58C33455-47DB-7D6F-8B7E-A2A7CC4FE0D4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Wrist_FK_ctrl_scaleY";
-	rename -uid "A5CBD625-45AB-3DCE-7619-55A54EDEEC54";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Wrist_FK_ctrl_scaleZ";
-	rename -uid "92CE23BA-4D93-0AAB-22F1-E6B9D1D9F277";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "R_Shoulder_FK_ctrl_translateX";
-	rename -uid "3DD7E2D3-467B-A13E-D32E-F49A61BB55DE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Shoulder_FK_ctrl_translateY";
-	rename -uid "B12C192C-4AD5-9496-65D8-8399E3A76BFD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Shoulder_FK_ctrl_translateZ";
-	rename -uid "62C033F3-401A-28FF-5457-3D9ACA53A097";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "R_Shoulder_FK_ctrl_scaleX";
-	rename -uid "A980F585-4611-84BC-68BF-F98A79EE5A15";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Shoulder_FK_ctrl_scaleY";
-	rename -uid "67A33196-4ECE-20AB-4497-A899B3FAF6E7";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Shoulder_FK_ctrl_scaleZ";
-	rename -uid "C846D763-4BED-3979-FCAD-F799B7CB7563";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "R_Elbow_FK_ctrl_translateX";
-	rename -uid "A1B773BF-4491-C135-22E2-C88A70EBFFB8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Elbow_FK_ctrl_translateY";
-	rename -uid "0A60B221-4E02-DBAA-704F-58B9CF1DBA79";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Elbow_FK_ctrl_translateZ";
-	rename -uid "43E435F4-452D-9695-7D1F-BFB63FE1AB40";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "R_Elbow_FK_ctrl_scaleX";
-	rename -uid "D0076DA9-452B-0B2C-EBFF-1DAACCDFD890";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Elbow_FK_ctrl_scaleY";
-	rename -uid "73E0D34D-4026-8978-9566-A182985A1C64";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Elbow_FK_ctrl_scaleZ";
-	rename -uid "8983062C-4421-2419-5035-85BF4143A0DB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "R_Wrist_FK_ctrl_translateX";
-	rename -uid "CFD2725A-4BAF-BD0E-1C75-B599087F7084";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Wrist_FK_ctrl_translateY";
-	rename -uid "7193ED36-4C0A-4827-9467-2F9C340F174D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Wrist_FK_ctrl_translateZ";
-	rename -uid "B319272B-4CB6-C0A9-98C5-9DBC55AEC4D9";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "R_Wrist_FK_ctrl_scaleX";
-	rename -uid "58620771-4C11-DB49-F484-F4BA091E74E6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Wrist_FK_ctrl_scaleY";
-	rename -uid "F4455F32-483C-A9D9-E580-0AAB54FD2B65";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Wrist_FK_ctrl_scaleZ";
-	rename -uid "7DD79537-4964-C729-2C1D-F6B172777855";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "L_Hip_FK_ctrl_translateX";
-	rename -uid "3342C20F-4BE8-9B31-80A3-1D8DCF10E23A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Hip_FK_ctrl_translateY";
-	rename -uid "32ED9713-4CBD-0A58-A546-5AB496A43C1B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Hip_FK_ctrl_translateZ";
-	rename -uid "F5FEB1EF-412F-EDB3-FA6A-69A043726FF3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "L_Hip_FK_ctrl_scaleX";
-	rename -uid "DEB117CC-4359-1DC2-0FF5-4DB10B311BD1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Hip_FK_ctrl_scaleY";
-	rename -uid "39B9D731-4E45-E7E1-390F-21A581D980C8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Hip_FK_ctrl_scaleZ";
-	rename -uid "0BEBBB79-4A2E-777E-A898-2CAE868E9D70";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "L_Knee_FK_ctrl_translateX";
-	rename -uid "8C4CE0E2-4B9B-D320-6D23-39BC87331688";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Knee_FK_ctrl_translateY";
-	rename -uid "4AE5B1F2-499A-E00B-9919-C5B73E8AE62D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Knee_FK_ctrl_translateZ";
-	rename -uid "60257824-4011-F67B-620A-24B98F476EBB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "L_Knee_FK_ctrl_scaleX";
-	rename -uid "DAAA3FA7-4073-A937-2A47-0E9218B4BA26";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Knee_FK_ctrl_scaleY";
-	rename -uid "079A226E-4869-99C2-8C7A-EF9419E3AFFE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Knee_FK_ctrl_scaleZ";
-	rename -uid "10DF5EDF-4105-E912-B1FE-B29453BE1BF6";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "L_Ankle_FK_ctrl_translateX";
-	rename -uid "6409ADA7-463F-19B1-0A67-9F8F07249A6D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Ankle_FK_ctrl_translateY";
-	rename -uid "F9DAA2FD-4A85-8872-A82C-308164172F02";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "L_Ankle_FK_ctrl_translateZ";
-	rename -uid "84C8A2C6-4212-9246-3C18-399A65565E72";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "L_Ankle_FK_ctrl_scaleX";
-	rename -uid "6C54ABE3-4AD2-5E94-8189-70935901972D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Ankle_FK_ctrl_scaleY";
-	rename -uid "F747D0D0-4B22-3373-5B44-5590C6763929";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "L_Ankle_FK_ctrl_scaleZ";
-	rename -uid "150B08B0-45EB-F1DE-F710-A29B689DA14B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "R_Hip_FK_ctrl_translateX";
-	rename -uid "84672B1C-4BC2-03C3-480A-8E981A1A6F84";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Hip_FK_ctrl_translateY";
-	rename -uid "0814A655-4242-7B13-AC1A-E1B8E36A3D8B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Hip_FK_ctrl_translateZ";
-	rename -uid "9C182383-4BF7-B573-01BC-99B9B4200624";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "R_Hip_FK_ctrl_scaleX";
-	rename -uid "73856D25-41D7-5FF4-02EF-3B8BDFC1658C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Hip_FK_ctrl_scaleY";
-	rename -uid "642B425A-4F3D-B339-8DAD-46A6649E86F8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Hip_FK_ctrl_scaleZ";
-	rename -uid "79823B0C-4F36-E53C-5743-F7A5771C0511";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "R_Knee_FK_ctrl_translateX";
-	rename -uid "2B7E7CEF-42AB-5516-37F6-029FC8830261";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Knee_FK_ctrl_translateY";
-	rename -uid "9B7652A3-42A9-B0AB-5612-8A91A0E1F74C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Knee_FK_ctrl_translateZ";
-	rename -uid "239A142E-4312-4767-2F40-0984F17568C4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "R_Knee_FK_ctrl_scaleX";
-	rename -uid "590E493F-4B33-A248-615D-E99FDAA2C784";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Knee_FK_ctrl_scaleY";
-	rename -uid "F3D1DE95-4414-DD8A-8947-C6BF690808F3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Knee_FK_ctrl_scaleZ";
-	rename -uid "3B482113-49E3-F9C9-886C-87AEC3F2EBA4";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTL -n "R_Ankle_FK_ctrl_translateX";
-	rename -uid "7C97B3D6-40B6-9002-0B0A-5C8188CA3C6C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Ankle_FK_ctrl_translateY";
-	rename -uid "83D3E248-444D-79FD-4244-70A1CC886511";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTL -n "R_Ankle_FK_ctrl_translateZ";
-	rename -uid "F4E66273-4D23-A7D2-83C4-1AAAE1CF270B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 20 0;
-createNode animCurveTU -n "R_Ankle_FK_ctrl_scaleX";
-	rename -uid "F19B514E-4953-3F72-F118-3193529B3AA1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Ankle_FK_ctrl_scaleY";
-	rename -uid "E28A803B-4BD4-C2CC-8BBD-429E4F0D6ACC";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTU -n "R_Ankle_FK_ctrl_scaleZ";
-	rename -uid "A72A2D20-44ED-E317-47B4-0AAA2F417A69";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 20 1;
-createNode animCurveTA -n "Spine_3_lower_ctrl_rotateX";
-	rename -uid "F078F0CA-4123-0AC3-DD6E-EF88E1D78277";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTA -n "Spine_3_lower_ctrl_rotateY";
-	rename -uid "7C3E9268-4662-86C2-B64F-199B46D8EA87";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 -15.771546004342603 50 0;
-createNode animCurveTA -n "Spine_3_lower_ctrl_rotateZ";
-	rename -uid "8EF8A808-40BE-E3EF-9CDF-5EAEB280F370";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTA -n "Spine_4_ctrl_rotateX";
-	rename -uid "938F70FF-4A3A-19A0-B281-C7A1A54192CF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTA -n "Spine_4_ctrl_rotateY";
-	rename -uid "CA11A355-41A5-0EAE-242E-87B139CED100";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 -15.771546004342603 50 0;
-createNode animCurveTA -n "Spine_4_ctrl_rotateZ";
-	rename -uid "F156C680-42DD-AD02-9B48-EA93D948F1E0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTA -n "Pelvis_ctrl_rotateX";
-	rename -uid "B173A94D-4F34-F0BD-F56C-65AE5914D2ED";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTA -n "Pelvis_ctrl_rotateY";
-	rename -uid "AF1573C4-4076-77CD-5D5C-448D075A0466";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 -15.771546004342603 50 0;
-createNode animCurveTA -n "Pelvis_ctrl_rotateZ";
-	rename -uid "EE194BBA-4B56-6BF0-88F9-6CA4231BA57A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Spine_3_lower_ctrl_translateX";
-	rename -uid "FCCB2983-4FD9-38A4-6EF5-4B8F6FB55F8F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Spine_3_lower_ctrl_translateY";
-	rename -uid "3F10DBBF-44E9-5051-8395-69BAED8B8866";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Spine_3_lower_ctrl_translateZ";
-	rename -uid "B1903901-4370-4F01-8B99-5B9F37AF3E84";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Spine_4_ctrl_translateX";
-	rename -uid "C368096A-45A5-A669-0DA7-A49A9B90268D";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Spine_4_ctrl_translateY";
-	rename -uid "656952A8-4D68-8941-2789-61BFB83876F2";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Spine_4_ctrl_translateZ";
-	rename -uid "666F170E-4E35-5FB5-8952-EFBDB507D57B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Pelvis_ctrl_translateX";
-	rename -uid "D551CA7F-4687-4389-BB0E-B09BD4C10267";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Pelvis_ctrl_translateY";
-	rename -uid "2917649D-4BC3-AC26-E5C8-A5B2E562BD00";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTL -n "Pelvis_ctrl_translateZ";
-	rename -uid "D406B4DA-4532-544C-970B-B081A3AF04D5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  30 0 40 0 50 0;
-createNode animCurveTA -n "Tail_1_ctrl_rotateX";
-	rename -uid "53AFAC2F-4CAE-04FB-B874-FEA215684526";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_1_ctrl_rotateY";
-	rename -uid "3E622EE8-4389-E718-D4E6-E2BD6B7D1346";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_1_ctrl_rotateZ";
-	rename -uid "1A107158-47CC-5CCF-E198-33BC6357F217";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_2_ctrl_rotateX";
-	rename -uid "34BD7765-4C61-C6E0-A13C-DF8B01F3FB33";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_2_ctrl_rotateY";
-	rename -uid "8F826DA1-4B69-1B22-380C-96918107C4DD";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_2_ctrl_rotateZ";
-	rename -uid "069E0973-4C88-B216-B66F-1B869973DE13";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_3_ctrl_rotateX";
-	rename -uid "1802810A-4E1C-8231-0349-A99C79073F47";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_3_ctrl_rotateY";
-	rename -uid "1A85E2A0-418D-41F1-6495-D8BF441DD827";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_3_ctrl_rotateZ";
-	rename -uid "3EDD6C1A-45F9-F507-667A-3A8CE97CD487";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_4_ctrl_rotateX";
-	rename -uid "42EF4CB4-4A40-4822-EC33-4AAC06567530";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_4_ctrl_rotateY";
-	rename -uid "45C299EE-4B35-6BB2-E6EB-89A15FBAA4F5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_4_ctrl_rotateZ";
-	rename -uid "221B8EEE-47B7-3593-F786-3C852C4CBD81";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_5_ctrl_rotateX";
-	rename -uid "677612EE-4453-AF7A-2ECA-1293C2D19068";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_5_ctrl_rotateY";
-	rename -uid "BF7B46A3-4034-494C-7195-9DA1878E760F";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_5_ctrl_rotateZ";
-	rename -uid "FC85582E-4D15-68EF-9E0A-F0BEF48F5A5E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_6_ctrl_rotateX";
-	rename -uid "60A00A84-456D-F20E-2A62-D5B0D819C70B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_6_ctrl_rotateY";
-	rename -uid "2F525B90-4E2C-4119-2F32-EBAD3CB470CA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_6_ctrl_rotateZ";
-	rename -uid "53B22C19-434F-B1CC-41B3-7495BBE11338";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_7_ctrl_rotateX";
-	rename -uid "F6DF3490-4601-FF94-DE6B-868021B688B5";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_7_ctrl_rotateY";
-	rename -uid "3C895462-420C-ED1A-B8BE-87BADB457D40";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_7_ctrl_rotateZ";
-	rename -uid "0FCC82F3-4D5B-1DB7-DD67-8D80C0EEA545";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTA -n "Tail_8_ctrl_rotateX";
-	rename -uid "DF12D3CF-40F3-1A00-35DA-40BEC71DF8BE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 47.674754602085365;
-createNode animCurveTA -n "Tail_8_ctrl_rotateY";
-	rename -uid "0210DF99-45E8-AEB9-9FC3-B5AAF8C4707B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTA -n "Tail_8_ctrl_rotateZ";
-	rename -uid "B35395C9-47AA-186D-283F-2FB9875F59BF";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 39.943785589745083 20 0;
-createNode animCurveTL -n "Tail_1_ctrl_translateX";
-	rename -uid "B7A6B911-4FAB-25DB-DB4F-D7928A120519";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_1_ctrl_translateY";
-	rename -uid "A2E3C59F-4E34-9396-B540-2F8EF93FF5EB";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_1_ctrl_translateZ";
-	rename -uid "6D46415D-483D-7D60-6446-E9B76FCCDCF3";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_2_ctrl_translateX";
-	rename -uid "3BE0FD12-42BF-20C5-B8CB-AEAFD4BA731B";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_2_ctrl_translateY";
-	rename -uid "56334CA9-4821-2EEA-D7B9-2FAF921A524A";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_2_ctrl_translateZ";
-	rename -uid "121F20F6-41DE-0408-E628-E0A42FBBCD5C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_3_ctrl_translateX";
-	rename -uid "CEF8810D-4027-AC9C-7237-D8870F965B16";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_3_ctrl_translateY";
-	rename -uid "04C2B258-41CB-7A8C-B7E8-1D9D1CBAE601";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_3_ctrl_translateZ";
-	rename -uid "6CCE13B5-42FF-BB30-8A3E-6A9A04868149";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_4_ctrl_translateX";
-	rename -uid "6C287402-4358-9889-841F-BAAAC8052BE0";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_4_ctrl_translateY";
-	rename -uid "9C7B05DB-47DE-0606-4F96-1695AB811082";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_4_ctrl_translateZ";
-	rename -uid "09D1AF64-4330-F542-C50D-98B2964F3430";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_5_ctrl_translateX";
-	rename -uid "624AC538-42A5-A1A0-5FCF-09B7F3CDCFA8";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_5_ctrl_translateY";
-	rename -uid "EC5CE8E7-4F47-09F4-E105-368918E3E06E";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_5_ctrl_translateZ";
-	rename -uid "5D72F8D8-4155-9155-061E-B49ED69C1BCE";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_6_ctrl_translateX";
-	rename -uid "E8AC682F-4FF2-DBC9-4C40-23B3F44D2D43";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_6_ctrl_translateY";
-	rename -uid "B44BABBE-4536-C05C-2ACE-3BB81241B884";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_6_ctrl_translateZ";
-	rename -uid "3F12567B-432D-A9EF-2173-A88C76EE4612";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_7_ctrl_translateX";
-	rename -uid "476566DA-4A6C-234A-DA0E-85A87AF9A725";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_7_ctrl_translateY";
-	rename -uid "3533FDE9-47F6-0596-216E-A99ACAFFAF1C";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_7_ctrl_translateZ";
-	rename -uid "B3D8646D-40DA-72D8-5F63-AF94364FC507";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_8_ctrl_translateX";
-	rename -uid "EE8624B0-4E58-514F-1ACD-50A3D7CB5497";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_8_ctrl_translateY";
-	rename -uid "95B1EB21-4CC8-4EB1-9E3B-91B0ACB3BAB1";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "Tail_8_ctrl_translateZ";
-	rename -uid "63A685D1-4791-C80E-284A-118A3828A1BA";
-	setAttr ".tan" 10;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10 0 20 0;
-createNode animCurveTL -n "R_Head_R_Ear_1_ctrl_translateX";
-	rename -uid "380556AA-42AF-72A6-FB2C-7C9DAEDE5F58";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_1_ctrl_translateY";
-	rename -uid "D3740E5E-4C52-FB0D-38CE-DABE74050D5A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_1_ctrl_translateZ";
-	rename -uid "B6A5B0B5-4DF9-9624-B6A1-5C9AD64FD5D2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_2_ctrl_translateX";
-	rename -uid "D4F78676-48BE-D5C7-1855-39B5F825442C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_2_ctrl_translateY";
-	rename -uid "A2497C29-4404-700D-0499-44A761772885";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_2_ctrl_translateZ";
-	rename -uid "8B3CC25A-4361-5855-B2E6-11BD9B46EB72";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_3_ctrl_translateX";
-	rename -uid "01FE06A0-4F7D-5D10-8918-278C490242C9";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_3_ctrl_translateY";
-	rename -uid "334B4307-47B1-C9C6-E591-54B8D4D8E9EB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTL -n "R_Head_R_Ear_3_ctrl_translateZ";
-	rename -uid "B9FA1AEB-42CF-2EC9-441A-00A213C91638";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTA -n "R_Head_R_Ear_1_ctrl_rotateX";
-	rename -uid "384C0E43-4F0E-FCA1-F8A2-9DB93164272D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTA -n "R_Head_R_Ear_1_ctrl_rotateY";
-	rename -uid "4CAD095E-45D6-7EE6-D45B-C7B66520B14D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 25.895780527899127;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  0.677811544644362;
-	setAttr -s 2 ".kiy[1]"  0.73523568326545741;
-	setAttr -s 2 ".kox[1]"  0.677811544644362;
-	setAttr -s 2 ".koy[1]"  0.73523568326545741;
-createNode animCurveTA -n "R_Head_R_Ear_1_ctrl_rotateZ";
-	rename -uid "633E776E-4032-00D9-7248-4A830A1D736F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTA -n "R_Head_R_Ear_2_ctrl_rotateX";
-	rename -uid "BA9EFE0D-4D9E-B359-5279-BB811AA940F8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTA -n "R_Head_R_Ear_2_ctrl_rotateY";
-	rename -uid "7BD53173-4256-7F53-47C1-5BB79E911C76";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 25.895780527899127;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  0.677811544644362;
-	setAttr -s 2 ".kiy[1]"  0.73523568326545741;
-	setAttr -s 2 ".kox[1]"  0.677811544644362;
-	setAttr -s 2 ".koy[1]"  0.73523568326545741;
-createNode animCurveTA -n "R_Head_R_Ear_2_ctrl_rotateZ";
-	rename -uid "5988D27E-422A-71B3-CE3C-BAAB10A17BB1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTA -n "R_Head_R_Ear_3_ctrl_rotateX";
-	rename -uid "5B417CD6-4543-EBAF-4A1F-E681B9686E23";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
-createNode animCurveTA -n "R_Head_R_Ear_3_ctrl_rotateY";
-	rename -uid "DAF73877-4B72-C4A6-53CA-4F873506B480";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 25.895780527899127;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  0.677811544644362;
-	setAttr -s 2 ".kiy[1]"  0.73523568326545741;
-	setAttr -s 2 ".kox[1]"  0.677811544644362;
-	setAttr -s 2 ".koy[1]"  0.73523568326545741;
-createNode animCurveTA -n "R_Head_R_Ear_3_ctrl_rotateZ";
-	rename -uid "3F785BEC-4589-4685-D29E-1683FAB202A3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 0;
-	setAttr -s 2 ".kit[1]"  1;
-	setAttr -s 2 ".kot[1]"  1;
-	setAttr -s 2 ".kix[1]"  1;
-	setAttr -s 2 ".kiy[1]"  0;
-	setAttr -s 2 ".kox[1]"  1;
-	setAttr -s 2 ".koy[1]"  0;
 createNode skinCluster -n "skinCluster2";
 	rename -uid "ADEE8B1C-4E62-8703-74FA-D78BC20A7B7C";
 	setAttr -s 382 ".wl";
@@ -73775,11 +71421,11 @@ createNode skinCluster -n "skinCluster2";
 		1 1 1
 		1 1 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.4622844637367961 -0.045626743733652421 -0.88555704211747144 -0
-		 0.65665546047113466 0.68874302857256675 0.30730546175772788 -0 0.59589989161018053 -0.72356840785716425 0.34835625203234599 -0
+	setAttr ".pm[0]" -type "matrix" 0.4622844637367961 -0.045626743733652421 -0.88555704211747144 0
+		 0.65665546047113466 0.68874302857256675 0.30730546175772788 0 0.59589989161018053 -0.72356840785716425 0.34835625203234599 0
 		 -9.8248855203126553 5.2823032182535901 6.2928146986130065 1;
-	setAttr ".pm[1]" -type "matrix" 0.99796816697080692 -0.034401014236860379 0.053629357001569254 -0
-		 0.026343824185940057 0.98918352136599907 0.14429817734545811 -0 -0.058013279860620756 -0.14259218519062059 0.98807991988622879 -0
+	setAttr ".pm[1]" -type "matrix" 0.99796816697080692 -0.034401014236860379 0.053629357001569254 0
+		 0.026343824185940057 0.98918352136599907 0.14429817734545811 0 -0.058013279860620756 -0.14259218519062059 0.98807991988622879 0
 		 -9.5948185121035063 -2.3684392621325574 -15.936104383309669 1;
 	setAttr ".gm" -type "matrix" 0.99796816697080748 0.0263438241859404 -0.05801327986062127 0
 		 -0.034401014236860594 0.98918352136599919 -0.14259218519062236 0 0.05362935700156974 0.14429817734545955 0.98807991988622879 0
@@ -74180,11 +71826,11 @@ createNode skinCluster -n "skinCluster3";
 		1 1 1
 		1 1 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.4622844637367961 -0.045626743733652421 -0.88555704211747144 -0
-		 0.65665546047113466 0.68874302857256675 0.30730546175772788 -0 0.59589989161018053 -0.72356840785716425 0.34835625203234599 -0
+	setAttr ".pm[0]" -type "matrix" 0.4622844637367961 -0.045626743733652421 -0.88555704211747144 0
+		 0.65665546047113466 0.68874302857256675 0.30730546175772788 0 0.59589989161018053 -0.72356840785716425 0.34835625203234599 0
 		 -9.8248855203126553 5.2823032182535901 6.2928146986130065 1;
-	setAttr ".pm[1]" -type "matrix" 0.9903493427270017 0.028809320287891644 0.13556622892425554 -0
-		 -0.04849366453788153 0.98835622523927791 0.14422321772326269 0 -0.12983275341716144 -0.14940547210632471 0.98021500755946578 -0
+	setAttr ".pm[1]" -type "matrix" 0.9903493427270017 0.028809320287891644 0.13556622892425554 0
+		 -0.04849366453788153 0.98835622523927791 0.14422321772326269 0 -0.12983275341716144 -0.14940547210632471 0.98021500755946578 0
 		 -13.531779922581396 -1.8448722484549458 -16.085839231407512 1;
 	setAttr ".gm" -type "matrix" 0.99034934272700248 -0.048493664537881287 -0.12983275341716216 0
 		 0.028809320287891304 0.98835622523927835 -0.14940547210632624 0 0.13556622892425638 0.14422321772326382 0.980215007559466 0
@@ -74585,11 +72231,11 @@ createNode skinCluster -n "skinCluster6";
 		1 1 1
 		1 1 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.46228446373679594 -0.045626770125308996 -0.8855570407576886 -0
-		 -0.6566554604711341 -0.68874303773098355 -0.3073054412315856 0 -0.59589989161018064 0.72356839747533808 -0.34835627359636484 -0
+	setAttr ".pm[0]" -type "matrix" 0.46228446373679594 -0.045626770125308996 -0.8855570407576886 0
+		 -0.6566554604711341 -0.68874303773098355 -0.3073054412315856 0 -0.59589989161018064 0.72356839747533808 -0.34835627359636484 0
 		 9.8242113400965838 -5.2822337167372204 -6.2915297479852326 1;
-	setAttr ".pm[1]" -type "matrix" 0.99999999999929856 -5.3569862634741052e-08 -1.182495760302701e-06 -0
-		 5.356952078592154e-08 0.99999999999995626 -2.8925056654798771e-07 0 1.1824957753611246e-06 2.8925050336087727e-07 0.99999999999925826 -0
+	setAttr ".pm[1]" -type "matrix" 0.99999999999929856 -5.3569862634741052e-08 -1.1824957603027012e-06 0
+		 5.356952078592154e-08 0.99999999999995626 -2.8925056654798771e-07 0 1.1824957753611246e-06 2.8925050336087727e-07 0.99999999999925826 0
 		 10.681499773067843 -4.5171633636404538 -14.833585393858002 1;
 	setAttr ".gm" -type "matrix" 0.99999999999929967 5.3569520372365691e-08 1.1824957764628512e-06 0
 		 -5.3569862409898657e-08 0.99999999999995692 2.8925050267772868e-07 0 -1.1824957609677893e-06 -2.8925056602366199e-07 0.99999999999925904 0
@@ -74990,11 +72636,11 @@ createNode skinCluster -n "skinCluster7";
 		1 1 1
 		1 1 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.46228446373679594 -0.045626770125308996 -0.8855570407576886 -0
-		 -0.6566554604711341 -0.68874303773098355 -0.3073054412315856 0 -0.59589989161018064 0.72356839747533808 -0.34835627359636484 -0
+	setAttr ".pm[0]" -type "matrix" 0.46228446373679594 -0.045626770125308996 -0.8855570407576886 0
+		 -0.6566554604711341 -0.68874303773098355 -0.3073054412315856 0 -0.59589989161018064 0.72356839747533808 -0.34835627359636484 0
 		 9.8242113400965838 -5.2822337167372204 -6.2915297479852326 1;
-	setAttr ".pm[1]" -type "matrix" 0.9379834750740319 -0.036697501877893904 -0.34473220598598542 -0
-		 -1.9428902930940205e-16 0.99438167015981083 -0.10585411683153506 0 0.34667996839742798 0.09928941235653628 0.93271357452641956 -0
+	setAttr ".pm[1]" -type "matrix" 0.9379834750740319 -0.036697501877893904 -0.34473220598598542 0
+		 -1.9428902930940205e-16 0.99438167015981083 -0.10585411683153506 0 0.34667996839742798 0.09928941235653628 0.93271357452641956 0
 		 10.018145765414614 -4.6179067087092767 -17.749391983585245 1;
 	setAttr ".gm" -type "matrix" 0.93798347507403246 3.469446951953615e-18 0.34667996839742915 0
 		 -0.036697501877893425 0.99438167015981183 0.099289412356533407 0 -0.3447322059859862 -0.10585411683153242 0.93271357452642012 0
@@ -75218,8 +72864,8 @@ createNode skinCluster -n "skinCluster8";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.0010963237602937574 -0.99995135346596187 0.0098024882455455802 -0
-		 0.99996262875967312 0.0010121694615612467 -0.0085858370019678502 0 0.0085754975515063749 0.0098115347715088206 0.9999150937090463 -0
+	setAttr ".pm[0]" -type "matrix" 0.0010963237602937574 -0.99995135346596187 0.0098024882455455802 0
+		 0.99996262875967312 0.0010121694615612467 -0.0085858370019678502 0 0.0085754975515063749 0.0098115347715088206 0.9999150937090463 0
 		 -6.2933454773065289 -0.040593141516604085 -7.2671445926377318 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -75431,8 +73077,8 @@ createNode skinCluster -n "skinCluster9";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.4622844637367961 -0.045626743733652421 -0.88555704211747144 -0
-		 0.65665546047113466 0.68874302857256675 0.30730546175772788 -0 0.59589989161018053 -0.72356840785716425 0.34835625203234599 -0
+	setAttr ".pm[0]" -type "matrix" 0.4622844637367961 -0.045626743733652421 -0.88555704211747144 0
+		 0.65665546047113466 0.68874302857256675 0.30730546175772788 0 0.59589989161018053 -0.72356840785716425 0.34835625203234599 0
 		 -9.8248855203126553 5.2823032182535909 6.2928146986130029 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -75644,8 +73290,8 @@ createNode skinCluster -n "skinCluster10";
 		1 0 1.0000000000000002
 		1 0 1
 		1 0 0.99999999999999967;
-	setAttr ".pm[0]" -type "matrix" 0.46228446373679594 -0.045626770125308996 -0.8855570407576886 -0
-		 -0.6566554604711341 -0.68874303773098355 -0.3073054412315856 0 -0.59589989161018064 0.72356839747533808 -0.34835627359636484 -0
+	setAttr ".pm[0]" -type "matrix" 0.46228446373679594 -0.045626770125308996 -0.8855570407576886 0
+		 -0.6566554604711341 -0.68874303773098355 -0.3073054412315856 0 -0.59589989161018064 0.72356839747533808 -0.34835627359636484 0
 		 9.8242113400965838 -5.2822337167372204 -6.2915297479852326 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -76056,8 +73702,8 @@ createNode skinCluster -n "skinCluster11";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.82109293530064364 -0.045626743733652442 -0.5689680060035317 -0
-		 0.43840287017503504 0.68874302857256653 0.57743914312677058 -0 0.36552607981054197 -0.72356840785716403 0.5855249304080784 -0
+	setAttr ".pm[0]" -type "matrix" 0.82109293530064364 -0.045626743733652442 -0.5689680060035317 0
+		 0.43840287017503504 0.68874302857256653 0.57743914312677058 0 0.36552607981054197 -0.72356840785716403 0.5855249304080784 0
 		 -8.6440474106527692 5.2823032182535883 1.0016348446847199 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -76468,8 +74114,8 @@ createNode skinCluster -n "skinCluster12";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.82109293530064364 -0.045626743733652442 -0.5689680060035317 -0
-		 0.43840287017503504 0.68874302857256653 0.57743914312677058 -0 0.36552607981054197 -0.72356840785716403 0.5855249304080784 -0
+	setAttr ".pm[0]" -type "matrix" 0.82109293530064364 -0.045626743733652442 -0.5689680060035317 0
+		 0.43840287017503504 0.68874302857256653 0.57743914312677058 0 0.36552607981054197 -0.72356840785716403 0.5855249304080784 0
 		 -8.6440474106527692 5.2823032182535883 1.0016348446847199 1;
 	setAttr ".gm" -type "matrix" 0.99645220426755976 -0.080231406040234807 0.025415076138560852 0
 		 0.077601713342950795 0.99277677813444853 0.091499961110488887 0 -0.032572667937403495 -0.089203084485848835 0.995480703490354 0
@@ -76882,8 +74528,8 @@ createNode skinCluster -n "skinCluster13";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.0055812476288619002 -0.99995135346596131 0.0081326733917431691 -0
-		 0.87822268691305938 0.0010121694615612461 -0.47825086273229706 0 0.47821936584177621 0.0098115347715088154 0.87818561359163483 -0
+	setAttr ".pm[0]" -type "matrix" 0.0055812476288619002 -0.99995135346596131 0.0081326733917431691 0
+		 0.87822268691305938 0.0010121694615612461 -0.47825086273229706 0 0.47821936584177621 0.0098115347715088154 0.87818561359163483 0
 		 -5.7394603159312245 -0.040593141516604071 -3.4495446502471472 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -77294,8 +74940,8 @@ createNode skinCluster -n "skinCluster14";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.0055812476288619002 -0.99995135346596131 0.0081326733917431691 -0
-		 0.87822268691305938 0.0010121694615612461 -0.47825086273229706 0 0.47821936584177621 0.0098115347715088154 0.87818561359163483 -0
+	setAttr ".pm[0]" -type "matrix" 0.0055812476288619002 -0.99995135346596131 0.0081326733917431691 0
+		 0.87822268691305938 0.0010121694615612461 -0.47825086273229706 0 0.47821936584177621 0.0098115347715088154 0.87818561359163483 0
 		 -5.7394603159312245 -0.040593141516604071 -3.4495446502471472 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -77706,8 +75352,8 @@ createNode skinCluster -n "skinCluster15";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.82109293530064409 -0.045626743733652712 -0.5689680060035317 -0
-		 -0.43840287017503471 -0.68874302857256742 -0.57743914312677025 0 -0.36552607981054208 0.72356840785716348 -0.58552493040807907 -0
+	setAttr ".pm[0]" -type "matrix" 0.82109293530064409 -0.045626743733652712 -0.5689680060035317 0
+		 -0.43840287017503471 -0.68874302857256742 -0.57743914312677025 0 -0.36552607981054208 0.72356840785716348 -0.58552493040807907 0
 		 8.642825116159889 -5.2822347240333407 -1.0007877068295716 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -78118,8 +75764,8 @@ createNode skinCluster -n "skinCluster16";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.82109293530064409 -0.045626743733652712 -0.5689680060035317 -0
-		 -0.43840287017503471 -0.68874302857256742 -0.57743914312677025 0 -0.36552607981054208 0.72356840785716348 -0.58552493040807907 -0
+	setAttr ".pm[0]" -type "matrix" 0.82109293530064409 -0.045626743733652712 -0.5689680060035317 0
+		 -0.43840287017503471 -0.68874302857256742 -0.57743914312677025 0 -0.36552607981054208 0.72356840785716348 -0.58552493040807907 0
 		 8.642825116159889 -5.2822347240333407 -1.0007877068295716 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".dpf[0]"  4;
@@ -78172,7 +75818,7 @@ createNode skinCluster -n "skinCluster17";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" -0.35563136141862822 -0.77093223648690012 -0.52838416092918516 -0
+	setAttr ".pm[0]" -type "matrix" -0.35563136141862822 -0.77093223648690012 -0.52838416092918516 0
 		 0.9295828114198651 -0.350414296932688 -0.11439238269180874 0 -0.096964588836707388 -0.53185835261888736 0.84126366928642038 0
 		 0.8694319163311951 -3.189104423874086 -13.47664374458925 1;
 	setAttr ".gm" -type "matrix" 1.0000000000000002 0 0 0 0 0.99999999999999956 0 0 0 0 1 0
@@ -78227,8 +75873,8 @@ createNode skinCluster -n "skinCluster18";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" -6.9388939039072284e-18 -1.0000000000000002 -1.1555579666323415e-33 -0
-		 0.99999999999999978 -1.3010426069826072e-18 1.6653345369377343e-16 0 -2.2204460492503126e-16 -1.1275702593849249e-17 1 -0
+	setAttr ".pm[0]" -type "matrix" -6.9388939039072284e-18 -1.0000000000000002 -1.1555579666323415e-33 0
+		 0.99999999999999978 -1.3010426069826072e-18 1.6653345369377343e-16 0 -2.2204460492503126e-16 -1.1275702593849249e-17 1 0
 		 -1.4307098388671837 -5.5591831394107773e-13 -10.12884521484375 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.8886872620661766e-17 -4.4408920985006262e-16 -1.7763568394002505e-15 1;
 	setAttr ".dpf[0]"  4;
@@ -78281,8 +75927,8 @@ createNode skinCluster -n "skinCluster19";
 		1 0 1
 		1 0 1
 		1 0 1;
-	setAttr ".pm[0]" -type "matrix" 0.5923543592231223 -0.71612361208738606 0.36916566107952026 -0
-		 0.7328590454811168 0.28856593841317735 -0.61615527153813143 0 0.33471470324123814 0.63552865505706224 0.69575095834320744 -0
+	setAttr ".pm[0]" -type "matrix" 0.5923543592231223 -0.71612361208738606 0.36916566107952026 0
+		 0.7328590454811168 0.28856593841317735 -0.61615527153813143 0 0.33471470324123814 0.63552865505706224 0.69575095834320744 0
 		 -6.3599561635831758 1.7510058613900699 -12.529756104028177 1;
 	setAttr ".gm" -type "matrix" 0.99645220426755976 -0.080231406040234765 0.025415076138560838 0
 		 0.077601713342950782 0.99277677813444887 0.0914999611104889 0 -0.03257266793740346 -0.089203084485848808 0.99548070349035389 0
@@ -78291,109 +75937,6 @@ createNode skinCluster -n "skinCluster19";
 	setAttr ".mmi" yes;
 	setAttr ".mi" 5;
 	setAttr ".ucm" yes;
-createNode animCurveTA -n "Mid_Head_collar_tag_ctrl_rotateX";
-	rename -uid "DA7F969F-4317-E574-4BFF-F1B89A7BD4EC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "Mid_Head_collar_tag_ctrl_rotateY";
-	rename -uid "3E792A8A-438B-2749-84B2-98A8D0C594A8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 59.223296273835615;
-createNode animCurveTA -n "Mid_Head_collar_tag_ctrl_rotateZ";
-	rename -uid "D4797407-44F0-5B1B-4FB7-189D28D80225";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_collar_tag_ctrl_rotateX";
-	rename -uid "7E4C2849-47E4-C57B-7213-47AEB52BAC23";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTA -n "R_Head_collar_tag_ctrl_rotateY";
-	rename -uid "00490399-4C1A-1480-840B-2C9750C69BCA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 59.223296273835615;
-createNode animCurveTA -n "R_Head_collar_tag_ctrl_rotateZ";
-	rename -uid "AA1213DC-4927-7230-861A-80A62B90191D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode pairBlend -n "pairBlend3";
-	rename -uid "8B4EF345-49D3-DD3B-0894-7ABB863E81E0";
-createNode animCurveTA -n "pairBlend3_inRotateX1";
-	rename -uid "511C7DD6-4A4D-6558-1223-989F8B223E59";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 3.0801411278754379e-14 10 3.0801411278754379e-14;
-createNode animCurveTA -n "pairBlend3_inRotateY1";
-	rename -uid "DE11A80F-4094-A3B2-BA8F-50B909C2C957";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 59.223296273835615;
-createNode animCurveTA -n "pairBlend3_inRotateZ1";
-	rename -uid "729F447C-46BE-FBCD-74CA-B0BE8B6A26E2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 2.5342840236820568e-14 10 2.5342840236820568e-14;
-createNode animCurveTU -n "L_Head_collar_tag_jnt_visibility";
-	rename -uid "839BBABF-40A7-6C07-409F-ACA24417D99C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode animCurveTL -n "pairBlend3_inTranslateX1";
-	rename -uid "0FC4B3F1-47B6-893F-06CD-F5804655DBAA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.2720369927798103 10 1.2720369927798103;
-createNode animCurveTL -n "pairBlend3_inTranslateY1";
-	rename -uid "2ED852CD-401F-2376-1FB1-CB8733B79290";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -4.6558337639372276 10 -4.6558337639372276;
-createNode animCurveTL -n "pairBlend3_inTranslateZ1";
-	rename -uid "EAE01AAD-4648-62EE-2EE2-52899BC32180";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -0.84621671400860499 10 -0.84621671400860499;
-createNode animCurveTU -n "L_Head_collar_tag_jnt_blendParent3";
-	rename -uid "2F83E09F-413F-0306-CAB3-2582DC2846A2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "Mid_Head_collar_tag_ctrl_translateX";
-	rename -uid "CE226BDF-4485-D0CF-2B45-48951B754301";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "Mid_Head_collar_tag_ctrl_translateY";
-	rename -uid "C4F938B3-4FE2-D449-E167-80BD84B9778F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "Mid_Head_collar_tag_ctrl_translateZ";
-	rename -uid "EC0C9374-4597-0EF4-D964-C0ABD56C923B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "R_Head_collar_tag_ctrl_translateX";
-	rename -uid "437FB206-401C-5CFF-B5BF-FBA57065A5C8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "R_Head_collar_tag_ctrl_translateY";
-	rename -uid "1EFF1513-42C4-29B9-7BED-1E89DCCC06EC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
-createNode animCurveTL -n "R_Head_collar_tag_ctrl_translateZ";
-	rename -uid "B8ECDA6C-4015-8DAC-2AA5-97B28FE20ED7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
 createNode skinCluster -n "skinCluster4";
 	rename -uid "5D61139E-4600-9621-10A9-43AD13E2EB5E";
 	setAttr -s 382 ".wl";
@@ -78781,11 +76324,11 @@ createNode skinCluster -n "skinCluster4";
 		1 1 1
 		1 1 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.0010963237602937574 -0.99995135346596187 0.0098024882455455802 -0
-		 0.99996262875967312 0.0010121694615612467 -0.0085858370019678502 0 0.0085754975515063749 0.0098115347715088206 0.9999150937090463 -0
+	setAttr ".pm[0]" -type "matrix" 0.0010963237602937574 -0.99995135346596187 0.0098024882455455802 0
+		 0.99996262875967312 0.0010121694615612467 -0.0085858370019678502 0 0.0085754975515063749 0.0098115347715088206 0.9999150937090463 0
 		 -6.2933454773065289 -0.040593141516604085 -7.2671445926377318 1;
-	setAttr ".pm[1]" -type "matrix" 0.98508946552154231 3.7174839985242179e-16 -0.17204285779561249 -0
-		 -2.7756242496725954e-16 0.99999999999999911 3.6369096163079482e-16 0 0.17204285779561249 -3.489057306901796e-16 0.98508946552154197 -0
+	setAttr ".pm[1]" -type "matrix" 0.98508946552154231 3.7174839985242179e-16 -0.17204285779561249 0
+		 -2.7756242496725954e-16 0.99999999999999911 3.6369096163079482e-16 0 0.17204285779561249 -3.489057306901796e-16 0.98508946552154197 0
 		 0.33699241961283533 -10.212257862091052 -13.773455486644771 1;
 	setAttr ".gm" -type "matrix" 0.98508946552154253 0 0.17204285779561257 0 4.213834702311205e-17 1 -2.4127733216494685e-16 0
 		 -0.1720428577956126 2.4492935982947069e-16 0.98508946552154264 0 2.347315267651656 -3.3991106822464826e-15 0.30390313669400548 1;
@@ -79185,11 +76728,11 @@ createNode skinCluster -n "skinCluster5";
 		1 1 1
 		1 1 1;
 	setAttr -s 2 ".pm";
-	setAttr ".pm[0]" -type "matrix" 0.0010963237602937574 -0.99995135346596187 0.0098024882455455802 -0
-		 0.99996262875967312 0.0010121694615612467 -0.0085858370019678502 0 0.0085754975515063749 0.0098115347715088206 0.9999150937090463 -0
+	setAttr ".pm[0]" -type "matrix" 0.0010963237602937574 -0.99995135346596187 0.0098024882455455802 0
+		 0.99996262875967312 0.0010121694615612467 -0.0085858370019678502 0 0.0085754975515063749 0.0098115347715088206 0.9999150937090463 0
 		 -6.2933454773065289 -0.040593141516604085 -7.2671445926377318 1;
-	setAttr ".pm[1]" -type "matrix" 0.99999999999999956 -1.3562013925078039e-16 -6.9388939039072176e-18 -0
-		 1.0488300766081637e-16 0.99999999999999933 -2.0816681711721657e-17 0 1.5612511283791242e-17 -3.8163916471489707e-17 0.99999999999999933 -0
+	setAttr ".pm[1]" -type "matrix" 0.99999999999999956 -1.3562013925078039e-16 -6.9388939039072176e-18 0
+		 1.0488300766081637e-16 0.99999999999999933 -2.0816681711721657e-17 0 1.5612511283791242e-17 -3.8163916471489707e-17 0.99999999999999933 0
 		 -2.5315511226654053 -10.191016197204586 -13.575554664761381 1;
 	setAttr ".gm" -type "matrix" 0.99999999999999989 0 0 0 0 1 0 0 0 0 1 0 4.4408920985006262e-16 0 -0.36781377014461469 1;
 	setAttr -s 2 ".ma";
@@ -79201,205 +76744,6 @@ createNode skinCluster -n "skinCluster5";
 	setAttr ".ucm" yes;
 	setAttr -s 2 ".ifcl";
 	setAttr -s 2 ".ifcl";
-createNode animCurveTL -n "L_Head_eye_target_ctrl_translateX";
-	rename -uid "7F093BE2-4DD2-318F-D903-01AE70E5AAFB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.68406768330076462 10 -12.670694817475598
-		 20 -12.670694817475598 30 48.757179133078928 50 -20.000335104890336;
-createNode animCurveTL -n "L_Head_eye_target_ctrl_translateY";
-	rename -uid "B8EC72B2-4FE0-04FB-13F0-2BB5BC836344";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -1.6267838007228239 10 8.2482088909815126
-		 20 8.2482088909815126 30 -18.963425663870574 50 3.2329515089714302;
-createNode animCurveTL -n "L_Head_eye_target_ctrl_translateZ";
-	rename -uid "7594C0E2-412E-60F7-8308-29B1B940943C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -2.8334518542842044 10 -10.219593496884446
-		 20 -10.219593496884446 30 43.10689975088269 50 23.884118620365452;
-createNode animCurveTL -n "Mid_Head_eye_target_ctrl_translateX";
-	rename -uid "79015A23-48A1-4414-B336-028384CE596A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 -16.404191745467063 20 -16.404191745467063
-		 30 32.332231940894985 50 -25.137389380752957;
-createNode animCurveTL -n "Mid_Head_eye_target_ctrl_translateY";
-	rename -uid "A38BF54D-4586-1BB9-880D-D1896E87EB8D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 4.2457520753221054 20 4.2457520753221054
-		 30 -53.052263569314434 50 -18.429629473960677;
-createNode animCurveTL -n "Mid_Head_eye_target_ctrl_translateZ";
-	rename -uid "77AF41A3-40F8-8289-FEB0-18BFCA45CD9E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 -2.9369851161271043 20 -2.9369851161271043
-		 30 -44.159188414672371 50 -3.0621748173291761;
-createNode animCurveTL -n "R_Head_eye_target_ctrl_translateX";
-	rename -uid "7799F341-4F80-341B-7ADF-CA853C08EFD3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 -11.881989534041471 20 -11.881989534041471
-		 30 38.872813582878941 50 -21.518828870914639;
-createNode animCurveTL -n "R_Head_eye_target_ctrl_translateY";
-	rename -uid "43BD9FF8-41E9-2442-5D7E-C1A8632C8CBA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 12.138639550923708 20 12.138639550923708
-		 30 52.472144903080689 50 -4.9238330920900237;
-createNode animCurveTL -n "R_Head_eye_target_ctrl_translateZ";
-	rename -uid "26F4201F-41BB-7D47-F42F-398DD662A492";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 2.6872948563906114 20 2.6872948563906114
-		 30 -53.479687810531821 50 -22.217388994760114;
-createNode animCurveTA -n "R_Head_eye_target_ctrl_rotateX";
-	rename -uid "4D63350F-4ADA-A330-1BA7-ECADCDDB4425";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTA -n "R_Head_eye_target_ctrl_rotateY";
-	rename -uid "1B7103E3-41D8-C7F7-667D-B68CABF8C57B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTA -n "R_Head_eye_target_ctrl_rotateZ";
-	rename -uid "55621A10-4C56-13D3-1EC6-1FBD86ECEBFC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTU -n "R_Head_eye_target_ctrl_scaleX";
-	rename -uid "9868F853-4C23-CEEB-D8E9-8FAD28CC0B68";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTU -n "R_Head_eye_target_ctrl_scaleY";
-	rename -uid "17DCF0FC-476A-EB42-C3FC-7F9F269291AC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTU -n "R_Head_eye_target_ctrl_scaleZ";
-	rename -uid "5983FC27-4E06-9988-ABC7-BB875833F4FD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTA -n "Mid_Head_eye_target_ctrl_rotateX";
-	rename -uid "139AFB0C-43B5-32FF-817B-8EBA8435D77B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTA -n "Mid_Head_eye_target_ctrl_rotateY";
-	rename -uid "FF005152-4045-0C94-D6CF-BE8C088A6F17";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTA -n "Mid_Head_eye_target_ctrl_rotateZ";
-	rename -uid "A2BB3FB4-4624-9222-0EF1-CFA3B316D26C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTU -n "Mid_Head_eye_target_ctrl_scaleX";
-	rename -uid "F43AE94E-407F-703B-A60E-3FAF1582F4F0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTU -n "Mid_Head_eye_target_ctrl_scaleY";
-	rename -uid "B4B4A71D-41B3-2F5D-43FC-70B08368652B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTU -n "Mid_Head_eye_target_ctrl_scaleZ";
-	rename -uid "E3D6BD9E-4127-6F5D-2718-65BCD1B51077";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTA -n "L_Head_eye_target_ctrl_rotateX";
-	rename -uid "9241B661-4648-CC10-E83D-8FB50E5F28A2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTA -n "L_Head_eye_target_ctrl_rotateY";
-	rename -uid "A3442702-43C5-92B7-3633-02B5D22FEF52";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTA -n "L_Head_eye_target_ctrl_rotateZ";
-	rename -uid "730799EB-4221-59BD-7CD5-6FA1281F90C7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 20 0 30 0 50 0;
-createNode animCurveTU -n "L_Head_eye_target_ctrl_scaleX";
-	rename -uid "4EC8AFE5-472E-12CA-D6F1-E8807AC91B2B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTU -n "L_Head_eye_target_ctrl_scaleY";
-	rename -uid "58A7926F-4741-DD0A-14B0-A681BEDC69ED";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTU -n "L_Head_eye_target_ctrl_scaleZ";
-	rename -uid "2EBB6CE0-4D4B-1A43-49F9-D7AFD5A4F3A2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 20 1 30 1 50 1;
-createNode animCurveTL -n "Transform_ctrl_translateX";
-	rename -uid "1EDD284F-4896-4EA3-55B1-F9B269ACD2C5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 0 60 0;
-createNode animCurveTL -n "Transform_ctrl_translateY";
-	rename -uid "74F67BF4-406C-6437-A52D-119EE9981B73";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 0 60 0;
-createNode animCurveTL -n "Transform_ctrl_translateZ";
-	rename -uid "87CF7EB0-4FDE-4B3E-7750-A1BC68108335";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 0 60 0;
-createNode animCurveTA -n "Transform_ctrl_rotateX";
-	rename -uid "010A4D70-4254-4B0B-7B9F-8298EACB8855";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 0 60 0;
-createNode animCurveTA -n "Transform_ctrl_rotateY";
-	rename -uid "7373FBB7-4BF4-E9A6-021F-B28AE186020E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 0 60 0;
-createNode animCurveTA -n "Transform_ctrl_rotateZ";
-	rename -uid "D0D4586B-4117-EFC7-5566-34BFE8CD5415";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 0 60 0;
-createNode animCurveTU -n "Transform_ctrl_LArmIKFKSwitch";
-	rename -uid "72FEB954-4E34-A0FC-8D92-3D83CAB1D613";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 1 60 0;
-createNode animCurveTU -n "Transform_ctrl_RArmIKFKSwitch";
-	rename -uid "39D3CF59-435C-24F5-BB58-BCA0E417520B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 1 60 0;
-createNode animCurveTU -n "Transform_ctrl_LLegIKFKSwitch";
-	rename -uid "49A97A0C-4549-761F-EEF8-2AAB77FC552C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 1 60 0;
-createNode animCurveTU -n "Transform_ctrl_RLegIKFKSwitch";
-	rename -uid "0AAEC8DA-452D-82E0-C561-F1AF3E31C373";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 1 60 0;
-createNode animCurveTU -n "Transform_ctrl_MasterScale";
-	rename -uid "BB9DC4C4-4DE0-70F5-8E10-70A9CB0228F4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  50 1 60 1;
 createNode animCurveTL -n "L_Ankle_IK_ctrl_translateX";
 	rename -uid "D1E52589-4DA6-B1CA-A3D5-B69F8D969CDA";
 	setAttr ".tan" 18;
@@ -79577,7 +76921,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "JointLayer.di" "COG_jnt.do";
 connectAttr "COG_jnt_scaleConstraint1.csx" "COG_jnt.sx";
 connectAttr "COG_jnt_scaleConstraint1.csy" "COG_jnt.sy";
@@ -81821,12 +79164,18 @@ connectAttr "L_Head_eye_target_ctrl.pm" "L_head_R_eye_jnt_aimConstraint1.tg[0].t
 		;
 connectAttr "L_head_R_eye_jnt_aimConstraint1.w0" "L_head_R_eye_jnt_aimConstraint1.tg[0].tw"
 		;
-connectAttr "pairBlend3.otx" "L_Head_collar_tag_jnt.tx";
-connectAttr "pairBlend3.oty" "L_Head_collar_tag_jnt.ty";
-connectAttr "pairBlend3.otz" "L_Head_collar_tag_jnt.tz";
-connectAttr "pairBlend3.orx" "L_Head_collar_tag_jnt.rx";
-connectAttr "pairBlend3.ory" "L_Head_collar_tag_jnt.ry";
-connectAttr "pairBlend3.orz" "L_Head_collar_tag_jnt.rz";
+connectAttr "L_Head_collar_tag_jnt_parentConstraint3.ctx" "L_Head_collar_tag_jnt.tx"
+		;
+connectAttr "L_Head_collar_tag_jnt_parentConstraint3.cty" "L_Head_collar_tag_jnt.ty"
+		;
+connectAttr "L_Head_collar_tag_jnt_parentConstraint3.ctz" "L_Head_collar_tag_jnt.tz"
+		;
+connectAttr "L_Head_collar_tag_jnt_parentConstraint3.crx" "L_Head_collar_tag_jnt.rx"
+		;
+connectAttr "L_Head_collar_tag_jnt_parentConstraint3.cry" "L_Head_collar_tag_jnt.ry"
+		;
+connectAttr "L_Head_collar_tag_jnt_parentConstraint3.crz" "L_Head_collar_tag_jnt.rz"
+		;
 connectAttr "L_Head_collar_tag_jnt_scaleConstraint3.csx" "L_Head_collar_tag_jnt.sx"
 		;
 connectAttr "L_Head_collar_tag_jnt_scaleConstraint3.csy" "L_Head_collar_tag_jnt.sy"
@@ -81834,9 +79183,6 @@ connectAttr "L_Head_collar_tag_jnt_scaleConstraint3.csy" "L_Head_collar_tag_jnt.
 connectAttr "L_Head_collar_tag_jnt_scaleConstraint3.csz" "L_Head_collar_tag_jnt.sz"
 		;
 connectAttr "L_Neck_jnt.s" "L_Head_collar_tag_jnt.is";
-connectAttr "L_Head_collar_tag_jnt_blendParent3.o" "L_Head_collar_tag_jnt.blendParent3"
-		;
-connectAttr "L_Head_collar_tag_jnt_visibility.o" "L_Head_collar_tag_jnt.v";
 connectAttr "L_Head_collar_tag_jnt.ro" "L_Head_collar_tag_jnt_parentConstraint2.cro"
 		;
 connectAttr "L_Head_collar_tag_jnt.pim" "L_Head_collar_tag_jnt_parentConstraint2.cpim"
@@ -83711,71 +81057,15 @@ connectAttr "COG_jnt_scaleConstraint1.w0" "COG_jnt_scaleConstraint1.tg[0].tw";
 connectAttr "Transform_ctrl.MasterScale" "Transform_ctrl.sx" -l on;
 connectAttr "Transform_ctrl.MasterScale" "Transform_ctrl.sy" -l on;
 connectAttr "Transform_ctrl.MasterScale" "Transform_ctrl.sz" -l on;
-connectAttr "Transform_ctrl_LArmIKFKSwitch.o" "Transform_ctrl.LArmIKFKSwitch";
-connectAttr "Transform_ctrl_RArmIKFKSwitch.o" "Transform_ctrl.RArmIKFKSwitch";
-connectAttr "Transform_ctrl_LLegIKFKSwitch.o" "Transform_ctrl.LLegIKFKSwitch";
-connectAttr "Transform_ctrl_RLegIKFKSwitch.o" "Transform_ctrl.RLegIKFKSwitch";
-connectAttr "Transform_ctrl_MasterScale.o" "Transform_ctrl.MasterScale";
 connectAttr "ControlLayer.di" "Transform_ctrl.do";
-connectAttr "Transform_ctrl_translateX.o" "Transform_ctrl.tx";
-connectAttr "Transform_ctrl_translateY.o" "Transform_ctrl.ty";
-connectAttr "Transform_ctrl_translateZ.o" "Transform_ctrl.tz";
-connectAttr "Transform_ctrl_rotateX.o" "Transform_ctrl.rx";
-connectAttr "Transform_ctrl_rotateY.o" "Transform_ctrl.ry";
-connectAttr "Transform_ctrl_rotateZ.o" "Transform_ctrl.rz";
 connectAttr "ControlLayer.di" "COG_ctrl.do";
-connectAttr "Spine_3_upper_ctrl_translateX.o" "Spine_3_upper_ctrl.tx";
-connectAttr "Spine_3_upper_ctrl_translateY.o" "Spine_3_upper_ctrl.ty";
-connectAttr "Spine_3_upper_ctrl_translateZ.o" "Spine_3_upper_ctrl.tz";
-connectAttr "Spine_3_upper_ctrl_rotateX.o" "Spine_3_upper_ctrl.rx";
-connectAttr "Spine_3_upper_ctrl_rotateY.o" "Spine_3_upper_ctrl.ry";
-connectAttr "Spine_3_upper_ctrl_rotateZ.o" "Spine_3_upper_ctrl.rz";
 connectAttr "ControlLayer.di" "Spine_3_upper_ctrl.do";
-connectAttr "Spine_2_ctrl_translateX.o" "Spine_2_ctrl.tx";
-connectAttr "Spine_2_ctrl_translateY.o" "Spine_2_ctrl.ty";
-connectAttr "Spine_2_ctrl_translateZ.o" "Spine_2_ctrl.tz";
-connectAttr "Spine_2_ctrl_rotateX.o" "Spine_2_ctrl.rx";
-connectAttr "Spine_2_ctrl_rotateY.o" "Spine_2_ctrl.ry";
-connectAttr "Spine_2_ctrl_rotateZ.o" "Spine_2_ctrl.rz";
 connectAttr "ControlLayer.di" "Spine_2_ctrl.do";
-connectAttr "Spine_1_ctrl_translateX.o" "Spine_1_ctrl.tx";
-connectAttr "Spine_1_ctrl_translateY.o" "Spine_1_ctrl.ty";
-connectAttr "Spine_1_ctrl_translateZ.o" "Spine_1_ctrl.tz";
-connectAttr "Spine_1_ctrl_rotateX.o" "Spine_1_ctrl.rx";
-connectAttr "Spine_1_ctrl_rotateY.o" "Spine_1_ctrl.ry";
-connectAttr "Spine_1_ctrl_rotateZ.o" "Spine_1_ctrl.rz";
 connectAttr "ControlLayer.di" "Spine_1_ctrl.do";
-connectAttr "L_Shoulder_FK_ctrl_translateX.o" "L_Shoulder_FK_ctrl.tx";
-connectAttr "L_Shoulder_FK_ctrl_translateY.o" "L_Shoulder_FK_ctrl.ty";
-connectAttr "L_Shoulder_FK_ctrl_translateZ.o" "L_Shoulder_FK_ctrl.tz";
-connectAttr "L_Shoulder_FK_ctrl_rotateX.o" "L_Shoulder_FK_ctrl.rx";
-connectAttr "L_Shoulder_FK_ctrl_rotateY.o" "L_Shoulder_FK_ctrl.ry";
-connectAttr "L_Shoulder_FK_ctrl_rotateZ.o" "L_Shoulder_FK_ctrl.rz";
-connectAttr "L_Shoulder_FK_ctrl_scaleX.o" "L_Shoulder_FK_ctrl.sx";
-connectAttr "L_Shoulder_FK_ctrl_scaleY.o" "L_Shoulder_FK_ctrl.sy";
-connectAttr "L_Shoulder_FK_ctrl_scaleZ.o" "L_Shoulder_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "L_Shoulder_FK_ctrl.do";
 connectAttr "Transform_ctrl.LArmIKFKSwitch" "L_Shoulder_FK_ctrl.v";
-connectAttr "L_Elbow_FK_ctrl_translateX.o" "L_Elbow_FK_ctrl.tx";
-connectAttr "L_Elbow_FK_ctrl_translateY.o" "L_Elbow_FK_ctrl.ty";
-connectAttr "L_Elbow_FK_ctrl_translateZ.o" "L_Elbow_FK_ctrl.tz";
-connectAttr "L_Elbow_FK_ctrl_rotateX.o" "L_Elbow_FK_ctrl.rx";
-connectAttr "L_Elbow_FK_ctrl_rotateY.o" "L_Elbow_FK_ctrl.ry";
-connectAttr "L_Elbow_FK_ctrl_rotateZ.o" "L_Elbow_FK_ctrl.rz";
-connectAttr "L_Elbow_FK_ctrl_scaleX.o" "L_Elbow_FK_ctrl.sx";
-connectAttr "L_Elbow_FK_ctrl_scaleY.o" "L_Elbow_FK_ctrl.sy";
-connectAttr "L_Elbow_FK_ctrl_scaleZ.o" "L_Elbow_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "L_Elbow_FK_ctrl.do";
 connectAttr "Transform_ctrl.LArmIKFKSwitch" "L_Elbow_FK_ctrl.v";
-connectAttr "L_Wrist_FK_ctrl_translateX.o" "L_Wrist_FK_ctrl.tx";
-connectAttr "L_Wrist_FK_ctrl_translateY.o" "L_Wrist_FK_ctrl.ty";
-connectAttr "L_Wrist_FK_ctrl_translateZ.o" "L_Wrist_FK_ctrl.tz";
-connectAttr "L_Wrist_FK_ctrl_rotateX.o" "L_Wrist_FK_ctrl.rx";
-connectAttr "L_Wrist_FK_ctrl_rotateY.o" "L_Wrist_FK_ctrl.ry";
-connectAttr "L_Wrist_FK_ctrl_rotateZ.o" "L_Wrist_FK_ctrl.rz";
-connectAttr "L_Wrist_FK_ctrl_scaleX.o" "L_Wrist_FK_ctrl.sx";
-connectAttr "L_Wrist_FK_ctrl_scaleY.o" "L_Wrist_FK_ctrl.sy";
-connectAttr "L_Wrist_FK_ctrl_scaleZ.o" "L_Wrist_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "L_Wrist_FK_ctrl.do";
 connectAttr "Transform_ctrl.LArmIKFKSwitch" "L_Wrist_FK_ctrl.v";
 connectAttr "L_Arm_reverse.ox" "L_Shoulder_IK_ctrl.v" -l on;
@@ -83809,511 +81099,61 @@ connectAttr "L_Elbow_PV_IK_ctrl.pm" "L_Arm_IK_handle_poleVectorConstraint1.tg[0]
 		;
 connectAttr "L_Arm_IK_handle_poleVectorConstraint1.w0" "L_Arm_IK_handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "L_Neck_ctrl_translateX.o" "L_Neck_ctrl.tx";
-connectAttr "L_Neck_ctrl_translateY.o" "L_Neck_ctrl.ty";
-connectAttr "L_Neck_ctrl_translateZ.o" "L_Neck_ctrl.tz";
-connectAttr "L_Neck_ctrl_rotateX.o" "L_Neck_ctrl.rx";
-connectAttr "L_Neck_ctrl_rotateY.o" "L_Neck_ctrl.ry";
-connectAttr "L_Neck_ctrl_rotateZ.o" "L_Neck_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Neck_ctrl.do";
-connectAttr "L_Head_ctrl_translateX.o" "L_Head_ctrl.tx";
-connectAttr "L_Head_ctrl_translateY.o" "L_Head_ctrl.ty";
-connectAttr "L_Head_ctrl_translateZ.o" "L_Head_ctrl.tz";
-connectAttr "L_Head_ctrl_rotateX.o" "L_Head_ctrl.rx";
-connectAttr "L_Head_ctrl_rotateY.o" "L_Head_ctrl.ry";
-connectAttr "L_Head_ctrl_rotateZ.o" "L_Head_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_ctrl.do";
-connectAttr "L_Head_L_Ear_1_ctrl_translateX.o" "L_Head_L_Ear_1_ctrl.tx";
-connectAttr "L_Head_L_Ear_1_ctrl_translateY.o" "L_Head_L_Ear_1_ctrl.ty";
-connectAttr "L_Head_L_Ear_1_ctrl_translateZ.o" "L_Head_L_Ear_1_ctrl.tz";
-connectAttr "L_Head_L_Ear_1_ctrl_rotateX.o" "L_Head_L_Ear_1_ctrl.rx";
-connectAttr "L_Head_L_Ear_1_ctrl_rotateY.o" "L_Head_L_Ear_1_ctrl.ry";
-connectAttr "L_Head_L_Ear_1_ctrl_rotateZ.o" "L_Head_L_Ear_1_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_L_Ear_1_ctrl.do";
-connectAttr "L_Head_L_Ear_2_ctrl_translateX1.o" "L_Head_L_Ear_2_ctrl.tx";
-connectAttr "L_Head_L_Ear_2_ctrl_translateY1.o" "L_Head_L_Ear_2_ctrl.ty";
-connectAttr "L_Head_L_Ear_2_ctrl_translateZ1.o" "L_Head_L_Ear_2_ctrl.tz";
-connectAttr "L_Head_L_Ear_2_ctrl_rotateX1.o" "L_Head_L_Ear_2_ctrl.rx";
-connectAttr "L_Head_L_Ear_2_ctrl_rotateY1.o" "L_Head_L_Ear_2_ctrl.ry";
-connectAttr "L_Head_L_Ear_2_ctrl_rotateZ1.o" "L_Head_L_Ear_2_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_L_Ear_2_ctrl.do";
-connectAttr "L_Head_L_Ear_3_ctrl_translateX.o" "L_Head_L_Ear_3_ctrl.tx";
-connectAttr "L_Head_L_Ear_3_ctrl_translateY.o" "L_Head_L_Ear_3_ctrl.ty";
-connectAttr "L_Head_L_Ear_3_ctrl_translateZ.o" "L_Head_L_Ear_3_ctrl.tz";
-connectAttr "L_Head_L_Ear_3_ctrl_rotateX.o" "L_Head_L_Ear_3_ctrl.rx";
-connectAttr "L_Head_L_Ear_3_ctrl_rotateY.o" "L_Head_L_Ear_3_ctrl.ry";
-connectAttr "L_Head_L_Ear_3_ctrl_rotateZ.o" "L_Head_L_Ear_3_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_L_Ear_3_ctrl.do";
-connectAttr "L_Head_Nose_ctrl_translateX.o" "L_Head_Nose_ctrl.tx";
-connectAttr "L_Head_Nose_ctrl_translateY.o" "L_Head_Nose_ctrl.ty";
-connectAttr "L_Head_Nose_ctrl_translateZ.o" "L_Head_Nose_ctrl.tz";
-connectAttr "L_Head_Nose_ctrl_rotateX.o" "L_Head_Nose_ctrl.rx";
-connectAttr "L_Head_Nose_ctrl_rotateY.o" "L_Head_Nose_ctrl.ry";
-connectAttr "L_Head_Nose_ctrl_rotateZ.o" "L_Head_Nose_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_Nose_ctrl.do";
-connectAttr "L_Head_Mouth_Upper_1_ctrl_translateX.o" "L_Head_Mouth_Upper_1_ctrl.tx"
-		;
-connectAttr "L_Head_Mouth_Upper_1_ctrl_translateY.o" "L_Head_Mouth_Upper_1_ctrl.ty"
-		;
-connectAttr "L_Head_Mouth_Upper_1_ctrl_translateZ.o" "L_Head_Mouth_Upper_1_ctrl.tz"
-		;
-connectAttr "L_Head_Mouth_Upper_1_ctrl_rotateX.o" "L_Head_Mouth_Upper_1_ctrl.rx"
-		;
-connectAttr "L_Head_Mouth_Upper_1_ctrl_rotateY.o" "L_Head_Mouth_Upper_1_ctrl.ry"
-		;
-connectAttr "L_Head_Mouth_Upper_1_ctrl_rotateZ.o" "L_Head_Mouth_Upper_1_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "L_Head_Mouth_Upper_1_ctrl.do";
-connectAttr "L_Head_Mouth_Upper_2_ctrl_translateX.o" "L_Head_Mouth_Upper_2_ctrl.tx"
-		;
-connectAttr "L_Head_Mouth_Upper_2_ctrl_translateY.o" "L_Head_Mouth_Upper_2_ctrl.ty"
-		;
-connectAttr "L_Head_Mouth_Upper_2_ctrl_translateZ.o" "L_Head_Mouth_Upper_2_ctrl.tz"
-		;
-connectAttr "L_Head_Mouth_Upper_2_ctrl_rotateX.o" "L_Head_Mouth_Upper_2_ctrl.rx"
-		;
-connectAttr "L_Head_Mouth_Upper_2_ctrl_rotateY.o" "L_Head_Mouth_Upper_2_ctrl.ry"
-		;
-connectAttr "L_Head_Mouth_Upper_2_ctrl_rotateZ.o" "L_Head_Mouth_Upper_2_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "L_Head_Mouth_Upper_2_ctrl.do";
-connectAttr "L_Head_Mouth_Upper_3_ctrl_translateX.o" "L_Head_Mouth_Upper_3_ctrl.tx"
-		;
-connectAttr "L_Head_Mouth_Upper_3_ctrl_translateY.o" "L_Head_Mouth_Upper_3_ctrl.ty"
-		;
-connectAttr "L_Head_Mouth_Upper_3_ctrl_translateZ.o" "L_Head_Mouth_Upper_3_ctrl.tz"
-		;
-connectAttr "L_Head_Mouth_Upper_3_ctrl_rotateX.o" "L_Head_Mouth_Upper_3_ctrl.rx"
-		;
-connectAttr "L_Head_Mouth_Upper_3_ctrl_rotateY.o" "L_Head_Mouth_Upper_3_ctrl.ry"
-		;
-connectAttr "L_Head_Mouth_Upper_3_ctrl_rotateZ.o" "L_Head_Mouth_Upper_3_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "L_Head_Mouth_Upper_3_ctrl.do";
-connectAttr "L_Head_Mouth_Lower_1_ctrl_translateX.o" "L_Head_Mouth_Lower_1_ctrl.tx"
-		;
-connectAttr "L_Head_Mouth_Lower_1_ctrl_translateY.o" "L_Head_Mouth_Lower_1_ctrl.ty"
-		;
-connectAttr "L_Head_Mouth_Lower_1_ctrl_translateZ.o" "L_Head_Mouth_Lower_1_ctrl.tz"
-		;
-connectAttr "L_Head_Mouth_Lower_1_ctrl_rotateX.o" "L_Head_Mouth_Lower_1_ctrl.rx"
-		;
-connectAttr "L_Head_Mouth_Lower_1_ctrl_rotateY.o" "L_Head_Mouth_Lower_1_ctrl.ry"
-		;
-connectAttr "L_Head_Mouth_Lower_1_ctrl_rotateZ.o" "L_Head_Mouth_Lower_1_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "L_Head_Mouth_Lower_1_ctrl.do";
-connectAttr "L_Head_Mouth_Lower_2_ctrl_translateX.o" "L_Head_Mouth_Lower_2_ctrl.tx"
-		;
-connectAttr "L_Head_Mouth_Lower_2_ctrl_translateY.o" "L_Head_Mouth_Lower_2_ctrl.ty"
-		;
-connectAttr "L_Head_Mouth_Lower_2_ctrl_translateZ.o" "L_Head_Mouth_Lower_2_ctrl.tz"
-		;
-connectAttr "L_Head_Mouth_Lower_2_ctrl_rotateX.o" "L_Head_Mouth_Lower_2_ctrl.rx"
-		;
-connectAttr "L_Head_Mouth_Lower_2_ctrl_rotateY.o" "L_Head_Mouth_Lower_2_ctrl.ry"
-		;
-connectAttr "L_Head_Mouth_Lower_2_ctrl_rotateZ.o" "L_Head_Mouth_Lower_2_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "L_Head_Mouth_Lower_2_ctrl.do";
-connectAttr "L_Head_Mouth_Lower_3_ctrl_translateX.o" "L_Head_Mouth_Lower_3_ctrl.tx"
-		;
-connectAttr "L_Head_Mouth_Lower_3_ctrl_translateY.o" "L_Head_Mouth_Lower_3_ctrl.ty"
-		;
-connectAttr "L_Head_Mouth_Lower_3_ctrl_translateZ.o" "L_Head_Mouth_Lower_3_ctrl.tz"
-		;
-connectAttr "L_Head_Mouth_Lower_3_ctrl_rotateX.o" "L_Head_Mouth_Lower_3_ctrl.rx"
-		;
-connectAttr "L_Head_Mouth_Lower_3_ctrl_rotateY.o" "L_Head_Mouth_Lower_3_ctrl.ry"
-		;
-connectAttr "L_Head_Mouth_Lower_3_ctrl_rotateZ.o" "L_Head_Mouth_Lower_3_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "L_Head_Mouth_Lower_3_ctrl.do";
 connectAttr "ControlLayer.di" "L_Head_eye_target_ctrl.do";
-connectAttr "L_Head_eye_target_ctrl_translateX.o" "L_Head_eye_target_ctrl.tx";
-connectAttr "L_Head_eye_target_ctrl_translateY.o" "L_Head_eye_target_ctrl.ty";
-connectAttr "L_Head_eye_target_ctrl_translateZ.o" "L_Head_eye_target_ctrl.tz";
-connectAttr "L_Head_eye_target_ctrl_scaleX.o" "L_Head_eye_target_ctrl.sx";
-connectAttr "L_Head_eye_target_ctrl_scaleY.o" "L_Head_eye_target_ctrl.sy";
-connectAttr "L_Head_eye_target_ctrl_scaleZ.o" "L_Head_eye_target_ctrl.sz";
-connectAttr "L_Head_eye_target_ctrl_rotateX.o" "L_Head_eye_target_ctrl.rx";
-connectAttr "L_Head_eye_target_ctrl_rotateY.o" "L_Head_eye_target_ctrl.ry";
-connectAttr "L_Head_eye_target_ctrl_rotateZ.o" "L_Head_eye_target_ctrl.rz";
-connectAttr "L_Head_R_Ear_1_ctrl_translateX.o" "L_Head_R_Ear_1_ctrl.tx";
-connectAttr "L_Head_R_Ear_1_ctrl_translateY.o" "L_Head_R_Ear_1_ctrl.ty";
-connectAttr "L_Head_R_Ear_1_ctrl_translateZ.o" "L_Head_R_Ear_1_ctrl.tz";
-connectAttr "L_Head_R_Ear_1_ctrl_rotateX.o" "L_Head_R_Ear_1_ctrl.rx";
-connectAttr "L_Head_R_Ear_1_ctrl_rotateY.o" "L_Head_R_Ear_1_ctrl.ry";
-connectAttr "L_Head_R_Ear_1_ctrl_rotateZ.o" "L_Head_R_Ear_1_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_R_Ear_1_ctrl.do";
-connectAttr "L_Head_R_Ear_2_ctrl_translateX.o" "L_Head_R_Ear_2_ctrl.tx";
-connectAttr "L_Head_R_Ear_2_ctrl_translateY.o" "L_Head_R_Ear_2_ctrl.ty";
-connectAttr "L_Head_R_Ear_2_ctrl_translateZ.o" "L_Head_R_Ear_2_ctrl.tz";
-connectAttr "L_Head_R_Ear_2_ctrl_rotateX.o" "L_Head_R_Ear_2_ctrl.rx";
-connectAttr "L_Head_R_Ear_2_ctrl_rotateY.o" "L_Head_R_Ear_2_ctrl.ry";
-connectAttr "L_Head_R_Ear_2_ctrl_rotateZ.o" "L_Head_R_Ear_2_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_R_Ear_2_ctrl.do";
-connectAttr "L_Head_R_Ear_3_ctrl_translateX.o" "L_Head_R_Ear_3_ctrl.tx";
-connectAttr "L_Head_R_Ear_3_ctrl_translateY.o" "L_Head_R_Ear_3_ctrl.ty";
-connectAttr "L_Head_R_Ear_3_ctrl_translateZ.o" "L_Head_R_Ear_3_ctrl.tz";
-connectAttr "L_Head_R_Ear_3_ctrl_rotateX.o" "L_Head_R_Ear_3_ctrl.rx";
-connectAttr "L_Head_R_Ear_3_ctrl_rotateY.o" "L_Head_R_Ear_3_ctrl.ry";
-connectAttr "L_Head_R_Ear_3_ctrl_rotateZ.o" "L_Head_R_Ear_3_ctrl.rz";
 connectAttr "ControlLayer.di" "L_Head_R_Ear_3_ctrl.do";
 connectAttr "ControlLayer.di" "L_Head_collar_tag_ctrl.do";
-connectAttr "Mid_Neck_ctrl_translateX.o" "Mid_Neck_ctrl.tx";
-connectAttr "Mid_Neck_ctrl_translateY.o" "Mid_Neck_ctrl.ty";
-connectAttr "Mid_Neck_ctrl_translateZ.o" "Mid_Neck_ctrl.tz";
-connectAttr "Mid_Neck_ctrl_rotateY.o" "Mid_Neck_ctrl.ry";
-connectAttr "Mid_Neck_ctrl_rotateX.o" "Mid_Neck_ctrl.rx";
-connectAttr "Mid_Neck_ctrl_rotateZ.o" "Mid_Neck_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Neck_ctrl.do";
-connectAttr "Mid_Head_ctrl_translateX.o" "Mid_Head_ctrl.tx";
-connectAttr "Mid_Head_ctrl_translateY.o" "Mid_Head_ctrl.ty";
-connectAttr "Mid_Head_ctrl_translateZ.o" "Mid_Head_ctrl.tz";
-connectAttr "Mid_Head_ctrl_rotateX.o" "Mid_Head_ctrl.rx";
-connectAttr "Mid_Head_ctrl_rotateY.o" "Mid_Head_ctrl.ry";
-connectAttr "Mid_Head_ctrl_rotateZ.o" "Mid_Head_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_ctrl.do";
-connectAttr "Mid_Head_L_Ear_1_ctrl_translateX.o" "Mid_Head_L_Ear_1_ctrl.tx";
-connectAttr "Mid_Head_L_Ear_1_ctrl_translateY.o" "Mid_Head_L_Ear_1_ctrl.ty";
-connectAttr "Mid_Head_L_Ear_1_ctrl_translateZ.o" "Mid_Head_L_Ear_1_ctrl.tz";
-connectAttr "Mid_Head_L_Ear_1_ctrl_rotateY.o" "Mid_Head_L_Ear_1_ctrl.ry";
-connectAttr "Mid_Head_L_Ear_1_ctrl_rotateX.o" "Mid_Head_L_Ear_1_ctrl.rx";
-connectAttr "Mid_Head_L_Ear_1_ctrl_rotateZ.o" "Mid_Head_L_Ear_1_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_L_Ear_1_ctrl.do";
-connectAttr "Mid_Head_L_Ear_2_ctrl_translateX.o" "Mid_Head_L_Ear_2_ctrl.tx";
-connectAttr "Mid_Head_L_Ear_2_ctrl_translateY.o" "Mid_Head_L_Ear_2_ctrl.ty";
-connectAttr "Mid_Head_L_Ear_2_ctrl_translateZ.o" "Mid_Head_L_Ear_2_ctrl.tz";
-connectAttr "Mid_Head_L_Ear_2_ctrl_rotateY.o" "Mid_Head_L_Ear_2_ctrl.ry";
-connectAttr "Mid_Head_L_Ear_2_ctrl_rotateX.o" "Mid_Head_L_Ear_2_ctrl.rx";
-connectAttr "Mid_Head_L_Ear_2_ctrl_rotateZ.o" "Mid_Head_L_Ear_2_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_L_Ear_2_ctrl.do";
-connectAttr "Mid_Head_L_Ear_3_ctrl_translateY.o" "Mid_Head_L_Ear_3_ctrl.ty";
-connectAttr "Mid_Head_L_Ear_3_ctrl_translateX.o" "Mid_Head_L_Ear_3_ctrl.tx";
-connectAttr "Mid_Head_L_Ear_3_ctrl_translateZ.o" "Mid_Head_L_Ear_3_ctrl.tz";
-connectAttr "Mid_Head_L_Ear_3_ctrl_rotateX.o" "Mid_Head_L_Ear_3_ctrl.rx";
-connectAttr "Mid_Head_L_Ear_3_ctrl_rotateY.o" "Mid_Head_L_Ear_3_ctrl.ry";
-connectAttr "Mid_Head_L_Ear_3_ctrl_rotateZ.o" "Mid_Head_L_Ear_3_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_L_Ear_3_ctrl.do";
-connectAttr "Mid_Head_R_Ear_1_ctrl_translateZ.o" "Mid_Head_R_Ear_1_ctrl.tz";
-connectAttr "Mid_Head_R_Ear_1_ctrl_translateX.o" "Mid_Head_R_Ear_1_ctrl.tx";
-connectAttr "Mid_Head_R_Ear_1_ctrl_translateY.o" "Mid_Head_R_Ear_1_ctrl.ty";
-connectAttr "Mid_Head_R_Ear_1_ctrl_rotateX.o" "Mid_Head_R_Ear_1_ctrl.rx";
-connectAttr "Mid_Head_R_Ear_1_ctrl_rotateY.o" "Mid_Head_R_Ear_1_ctrl.ry";
-connectAttr "Mid_Head_R_Ear_1_ctrl_rotateZ.o" "Mid_Head_R_Ear_1_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_R_Ear_1_ctrl.do";
-connectAttr "Mid_Head_R_Ear_2_ctrl_translateY.o" "Mid_Head_R_Ear_2_ctrl.ty";
-connectAttr "Mid_Head_R_Ear_2_ctrl_translateX.o" "Mid_Head_R_Ear_2_ctrl.tx";
-connectAttr "Mid_Head_R_Ear_2_ctrl_translateZ.o" "Mid_Head_R_Ear_2_ctrl.tz";
-connectAttr "Mid_Head_R_Ear_2_ctrl_rotateX.o" "Mid_Head_R_Ear_2_ctrl.rx";
-connectAttr "Mid_Head_R_Ear_2_ctrl_rotateY.o" "Mid_Head_R_Ear_2_ctrl.ry";
-connectAttr "Mid_Head_R_Ear_2_ctrl_rotateZ.o" "Mid_Head_R_Ear_2_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_R_Ear_2_ctrl.do";
-connectAttr "Mid_Head_R_Ear_3_ctrl_translateX.o" "Mid_Head_R_Ear_3_ctrl.tx";
-connectAttr "Mid_Head_R_Ear_3_ctrl_translateY.o" "Mid_Head_R_Ear_3_ctrl.ty";
-connectAttr "Mid_Head_R_Ear_3_ctrl_translateZ.o" "Mid_Head_R_Ear_3_ctrl.tz";
-connectAttr "Mid_Head_R_Ear_3_ctrl_rotateZ.o" "Mid_Head_R_Ear_3_ctrl.rz";
-connectAttr "Mid_Head_R_Ear_3_ctrl_rotateX.o" "Mid_Head_R_Ear_3_ctrl.rx";
-connectAttr "Mid_Head_R_Ear_3_ctrl_rotateY.o" "Mid_Head_R_Ear_3_ctrl.ry";
 connectAttr "ControlLayer.di" "Mid_Head_R_Ear_3_ctrl.do";
-connectAttr "Mid_Head_Nose_ctrl_translateX.o" "Mid_Head_Nose_ctrl.tx";
-connectAttr "Mid_Head_Nose_ctrl_translateY.o" "Mid_Head_Nose_ctrl.ty";
-connectAttr "Mid_Head_Nose_ctrl_translateZ.o" "Mid_Head_Nose_ctrl.tz";
-connectAttr "Mid_Head_Nose_ctrl_rotateX.o" "Mid_Head_Nose_ctrl.rx";
-connectAttr "Mid_Head_Nose_ctrl_rotateY.o" "Mid_Head_Nose_ctrl.ry";
-connectAttr "Mid_Head_Nose_ctrl_rotateZ.o" "Mid_Head_Nose_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_Nose_ctrl.do";
-connectAttr "Mid_Head_Mouth_Upper_1_ctrl_translateZ.o" "Mid_Head_Mouth_Upper_1_ctrl.tz"
-		;
-connectAttr "Mid_Head_Mouth_Upper_1_ctrl_translateX.o" "Mid_Head_Mouth_Upper_1_ctrl.tx"
-		;
-connectAttr "Mid_Head_Mouth_Upper_1_ctrl_translateY.o" "Mid_Head_Mouth_Upper_1_ctrl.ty"
-		;
-connectAttr "Mid_Head_Mouth_Upper_1_ctrl_rotateX.o" "Mid_Head_Mouth_Upper_1_ctrl.rx"
-		;
-connectAttr "Mid_Head_Mouth_Upper_1_ctrl_rotateY.o" "Mid_Head_Mouth_Upper_1_ctrl.ry"
-		;
-connectAttr "Mid_Head_Mouth_Upper_1_ctrl_rotateZ.o" "Mid_Head_Mouth_Upper_1_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "Mid_Head_Mouth_Upper_1_ctrl.do";
-connectAttr "Mid_Head_Mouth_Upper_2_ctrl_translateZ.o" "Mid_Head_Mouth_Upper_2_ctrl.tz"
-		;
-connectAttr "Mid_Head_Mouth_Upper_2_ctrl_translateX.o" "Mid_Head_Mouth_Upper_2_ctrl.tx"
-		;
-connectAttr "Mid_Head_Mouth_Upper_2_ctrl_translateY.o" "Mid_Head_Mouth_Upper_2_ctrl.ty"
-		;
-connectAttr "Mid_Head_Mouth_Upper_2_ctrl_rotateX.o" "Mid_Head_Mouth_Upper_2_ctrl.rx"
-		;
-connectAttr "Mid_Head_Mouth_Upper_2_ctrl_rotateY.o" "Mid_Head_Mouth_Upper_2_ctrl.ry"
-		;
-connectAttr "Mid_Head_Mouth_Upper_2_ctrl_rotateZ.o" "Mid_Head_Mouth_Upper_2_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "Mid_Head_Mouth_Upper_2_ctrl.do";
-connectAttr "Mid_Head_Mouth_Upper_3_ctrl_translateX.o" "Mid_Head_Mouth_Upper_3_ctrl.tx"
-		;
-connectAttr "Mid_Head_Mouth_Upper_3_ctrl_translateY.o" "Mid_Head_Mouth_Upper_3_ctrl.ty"
-		;
-connectAttr "Mid_Head_Mouth_Upper_3_ctrl_translateZ.o" "Mid_Head_Mouth_Upper_3_ctrl.tz"
-		;
-connectAttr "Mid_Head_Mouth_Upper_3_ctrl_rotateX.o" "Mid_Head_Mouth_Upper_3_ctrl.rx"
-		;
-connectAttr "Mid_Head_Mouth_Upper_3_ctrl_rotateY.o" "Mid_Head_Mouth_Upper_3_ctrl.ry"
-		;
-connectAttr "Mid_Head_Mouth_Upper_3_ctrl_rotateZ.o" "Mid_Head_Mouth_Upper_3_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "Mid_Head_Mouth_Upper_3_ctrl.do";
-connectAttr "Mid_Head_Mouth_Lower_1_ctrl_translateX.o" "Mid_Head_Mouth_Lower_1_ctrl.tx"
-		;
-connectAttr "Mid_Head_Mouth_Lower_1_ctrl_translateY.o" "Mid_Head_Mouth_Lower_1_ctrl.ty"
-		;
-connectAttr "Mid_Head_Mouth_Lower_1_ctrl_translateZ.o" "Mid_Head_Mouth_Lower_1_ctrl.tz"
-		;
-connectAttr "Mid_Head_Mouth_Lower_1_ctrl_rotateX.o" "Mid_Head_Mouth_Lower_1_ctrl.rx"
-		;
-connectAttr "Mid_Head_Mouth_Lower_1_ctrl_rotateY.o" "Mid_Head_Mouth_Lower_1_ctrl.ry"
-		;
-connectAttr "Mid_Head_Mouth_Lower_1_ctrl_rotateZ.o" "Mid_Head_Mouth_Lower_1_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "Mid_Head_Mouth_Lower_1_ctrl.do";
-connectAttr "Mid_Head_Mouth_Lower_2_ctrl_translateY.o" "Mid_Head_Mouth_Lower_2_ctrl.ty"
-		;
-connectAttr "Mid_Head_Mouth_Lower_2_ctrl_translateX.o" "Mid_Head_Mouth_Lower_2_ctrl.tx"
-		;
-connectAttr "Mid_Head_Mouth_Lower_2_ctrl_translateZ.o" "Mid_Head_Mouth_Lower_2_ctrl.tz"
-		;
-connectAttr "Mid_Head_Mouth_Lower_2_ctrl_rotateX.o" "Mid_Head_Mouth_Lower_2_ctrl.rx"
-		;
-connectAttr "Mid_Head_Mouth_Lower_2_ctrl_rotateY.o" "Mid_Head_Mouth_Lower_2_ctrl.ry"
-		;
-connectAttr "Mid_Head_Mouth_Lower_2_ctrl_rotateZ.o" "Mid_Head_Mouth_Lower_2_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "Mid_Head_Mouth_Lower_2_ctrl.do";
-connectAttr "Mid_Head_Mouth_Lower_3_ctrl_translateX.o" "Mid_Head_Mouth_Lower_3_ctrl.tx"
-		;
-connectAttr "Mid_Head_Mouth_Lower_3_ctrl_translateY.o" "Mid_Head_Mouth_Lower_3_ctrl.ty"
-		;
-connectAttr "Mid_Head_Mouth_Lower_3_ctrl_translateZ.o" "Mid_Head_Mouth_Lower_3_ctrl.tz"
-		;
-connectAttr "Mid_Head_Mouth_Lower_3_ctrl_rotateY.o" "Mid_Head_Mouth_Lower_3_ctrl.ry"
-		;
-connectAttr "Mid_Head_Mouth_Lower_3_ctrl_rotateX.o" "Mid_Head_Mouth_Lower_3_ctrl.rx"
-		;
-connectAttr "Mid_Head_Mouth_Lower_3_ctrl_rotateZ.o" "Mid_Head_Mouth_Lower_3_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "Mid_Head_Mouth_Lower_3_ctrl.do";
 connectAttr "ControlLayer.di" "Mid_Head_eye_target_ctrl.do";
-connectAttr "Mid_Head_eye_target_ctrl_translateX.o" "Mid_Head_eye_target_ctrl.tx"
-		;
-connectAttr "Mid_Head_eye_target_ctrl_translateY.o" "Mid_Head_eye_target_ctrl.ty"
-		;
-connectAttr "Mid_Head_eye_target_ctrl_translateZ.o" "Mid_Head_eye_target_ctrl.tz"
-		;
-connectAttr "Mid_Head_eye_target_ctrl_scaleX.o" "Mid_Head_eye_target_ctrl.sx";
-connectAttr "Mid_Head_eye_target_ctrl_scaleY.o" "Mid_Head_eye_target_ctrl.sy";
-connectAttr "Mid_Head_eye_target_ctrl_scaleZ.o" "Mid_Head_eye_target_ctrl.sz";
-connectAttr "Mid_Head_eye_target_ctrl_rotateX.o" "Mid_Head_eye_target_ctrl.rx";
-connectAttr "Mid_Head_eye_target_ctrl_rotateY.o" "Mid_Head_eye_target_ctrl.ry";
-connectAttr "Mid_Head_eye_target_ctrl_rotateZ.o" "Mid_Head_eye_target_ctrl.rz";
-connectAttr "Mid_Head_collar_tag_ctrl_translateX.o" "Mid_Head_collar_tag_ctrl.tx"
-		;
-connectAttr "Mid_Head_collar_tag_ctrl_translateY.o" "Mid_Head_collar_tag_ctrl.ty"
-		;
-connectAttr "Mid_Head_collar_tag_ctrl_translateZ.o" "Mid_Head_collar_tag_ctrl.tz"
-		;
-connectAttr "Mid_Head_collar_tag_ctrl_rotateX.o" "Mid_Head_collar_tag_ctrl.rx";
-connectAttr "Mid_Head_collar_tag_ctrl_rotateY.o" "Mid_Head_collar_tag_ctrl.ry";
-connectAttr "Mid_Head_collar_tag_ctrl_rotateZ.o" "Mid_Head_collar_tag_ctrl.rz";
 connectAttr "ControlLayer.di" "Mid_Head_collar_tag_ctrl.do";
-connectAttr "R_Neck_ctrl_translateX.o" "R_Neck_ctrl.tx";
-connectAttr "R_Neck_ctrl_translateY.o" "R_Neck_ctrl.ty";
-connectAttr "R_Neck_ctrl_translateZ.o" "R_Neck_ctrl.tz";
-connectAttr "R_Neck_ctrl_rotateX.o" "R_Neck_ctrl.rx";
-connectAttr "R_Neck_ctrl_rotateY.o" "R_Neck_ctrl.ry";
-connectAttr "R_Neck_ctrl_rotateZ.o" "R_Neck_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Neck_ctrl.do";
-connectAttr "R_Head_ctrl_translateX.o" "R_Head_ctrl.tx";
-connectAttr "R_Head_ctrl_translateY.o" "R_Head_ctrl.ty";
-connectAttr "R_Head_ctrl_translateZ.o" "R_Head_ctrl.tz";
-connectAttr "R_Head_ctrl_rotateX.o" "R_Head_ctrl.rx";
-connectAttr "R_Head_ctrl_rotateY.o" "R_Head_ctrl.ry";
-connectAttr "R_Head_ctrl_rotateZ.o" "R_Head_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_ctrl.do";
-connectAttr "R_Head_Nose_ctrl_translateX.o" "R_Head_Nose_ctrl.tx";
-connectAttr "R_Head_Nose_ctrl_translateY.o" "R_Head_Nose_ctrl.ty";
-connectAttr "R_Head_Nose_ctrl_translateZ.o" "R_Head_Nose_ctrl.tz";
-connectAttr "R_Head_Nose_ctrl_rotateX.o" "R_Head_Nose_ctrl.rx";
-connectAttr "R_Head_Nose_ctrl_rotateY.o" "R_Head_Nose_ctrl.ry";
-connectAttr "R_Head_Nose_ctrl_rotateZ.o" "R_Head_Nose_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_Nose_ctrl.do";
-connectAttr "R_Head_Mouth_Lower_3_ctrl_translateX.o" "R_Head_Mouth_Lower_3_ctrl.tx"
-		;
-connectAttr "R_Head_Mouth_Lower_3_ctrl_translateY.o" "R_Head_Mouth_Lower_3_ctrl.ty"
-		;
-connectAttr "R_Head_Mouth_Lower_3_ctrl_translateZ.o" "R_Head_Mouth_Lower_3_ctrl.tz"
-		;
-connectAttr "R_Head_Mouth_Lower_3_ctrl_rotateX.o" "R_Head_Mouth_Lower_3_ctrl.rx"
-		;
-connectAttr "R_Head_Mouth_Lower_3_ctrl_rotateY.o" "R_Head_Mouth_Lower_3_ctrl.ry"
-		;
-connectAttr "R_Head_Mouth_Lower_3_ctrl_rotateZ.o" "R_Head_Mouth_Lower_3_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "R_Head_Mouth_Lower_3_ctrl.do";
-connectAttr "R_Head_Mouth_Upper_1_ctrl_translateX.o" "R_Head_Mouth_Upper_1_ctrl.tx"
-		;
-connectAttr "R_Head_Mouth_Upper_1_ctrl_translateY.o" "R_Head_Mouth_Upper_1_ctrl.ty"
-		;
-connectAttr "R_Head_Mouth_Upper_1_ctrl_translateZ.o" "R_Head_Mouth_Upper_1_ctrl.tz"
-		;
-connectAttr "R_Head_Mouth_Upper_1_ctrl_rotateX.o" "R_Head_Mouth_Upper_1_ctrl.rx"
-		;
-connectAttr "R_Head_Mouth_Upper_1_ctrl_rotateY.o" "R_Head_Mouth_Upper_1_ctrl.ry"
-		;
-connectAttr "R_Head_Mouth_Upper_1_ctrl_rotateZ.o" "R_Head_Mouth_Upper_1_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "R_Head_Mouth_Upper_1_ctrl.do";
-connectAttr "R_Head_Mouth_Upper_2_ctrl_translateX.o" "R_Head_Mouth_Upper_2_ctrl.tx"
-		;
-connectAttr "R_Head_Mouth_Upper_2_ctrl_translateY.o" "R_Head_Mouth_Upper_2_ctrl.ty"
-		;
-connectAttr "R_Head_Mouth_Upper_2_ctrl_translateZ.o" "R_Head_Mouth_Upper_2_ctrl.tz"
-		;
-connectAttr "R_Head_Mouth_Upper_2_ctrl_rotateX.o" "R_Head_Mouth_Upper_2_ctrl.rx"
-		;
-connectAttr "R_Head_Mouth_Upper_2_ctrl_rotateY.o" "R_Head_Mouth_Upper_2_ctrl.ry"
-		;
-connectAttr "R_Head_Mouth_Upper_2_ctrl_rotateZ.o" "R_Head_Mouth_Upper_2_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "R_Head_Mouth_Upper_2_ctrl.do";
-connectAttr "R_Head_Mouth_Upper_3_ctrl_translateX.o" "R_Head_Mouth_Upper_3_ctrl.tx"
-		;
-connectAttr "R_Head_Mouth_Upper_3_ctrl_translateY.o" "R_Head_Mouth_Upper_3_ctrl.ty"
-		;
-connectAttr "R_Head_Mouth_Upper_3_ctrl_translateZ.o" "R_Head_Mouth_Upper_3_ctrl.tz"
-		;
-connectAttr "R_Head_Mouth_Upper_3_ctrl_rotateX.o" "R_Head_Mouth_Upper_3_ctrl.rx"
-		;
-connectAttr "R_Head_Mouth_Upper_3_ctrl_rotateY.o" "R_Head_Mouth_Upper_3_ctrl.ry"
-		;
-connectAttr "R_Head_Mouth_Upper_3_ctrl_rotateZ.o" "R_Head_Mouth_Upper_3_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "R_Head_Mouth_Upper_3_ctrl.do";
-connectAttr "R_Head_Mouth_Lower_1_ctrl_translateX.o" "R_Head_Mouth_Lower_1_ctrl.tx"
-		;
-connectAttr "R_Head_Mouth_Lower_1_ctrl_translateY.o" "R_Head_Mouth_Lower_1_ctrl.ty"
-		;
-connectAttr "R_Head_Mouth_Lower_1_ctrl_translateZ.o" "R_Head_Mouth_Lower_1_ctrl.tz"
-		;
-connectAttr "R_Head_Mouth_Lower_1_ctrl_rotateX.o" "R_Head_Mouth_Lower_1_ctrl.rx"
-		;
-connectAttr "R_Head_Mouth_Lower_1_ctrl_rotateY.o" "R_Head_Mouth_Lower_1_ctrl.ry"
-		;
-connectAttr "R_Head_Mouth_Lower_1_ctrl_rotateZ.o" "R_Head_Mouth_Lower_1_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "R_Head_Mouth_Lower_1_ctrl.do";
-connectAttr "R_Head_Mouth_Lower_2_ctrl_translateX.o" "R_Head_Mouth_Lower_2_ctrl.tx"
-		;
-connectAttr "R_Head_Mouth_Lower_2_ctrl_translateY.o" "R_Head_Mouth_Lower_2_ctrl.ty"
-		;
-connectAttr "R_Head_Mouth_Lower_2_ctrl_translateZ.o" "R_Head_Mouth_Lower_2_ctrl.tz"
-		;
-connectAttr "R_Head_Mouth_Lower_2_ctrl_rotateX.o" "R_Head_Mouth_Lower_2_ctrl.rx"
-		;
-connectAttr "R_Head_Mouth_Lower_2_ctrl_rotateY.o" "R_Head_Mouth_Lower_2_ctrl.ry"
-		;
-connectAttr "R_Head_Mouth_Lower_2_ctrl_rotateZ.o" "R_Head_Mouth_Lower_2_ctrl.rz"
-		;
 connectAttr "ControlLayer.di" "R_Head_Mouth_Lower_2_ctrl.do";
 connectAttr "ControlLayer.di" "R_Head_eye_target_ctrl.do";
-connectAttr "R_Head_eye_target_ctrl_translateX.o" "R_Head_eye_target_ctrl.tx";
-connectAttr "R_Head_eye_target_ctrl_translateY.o" "R_Head_eye_target_ctrl.ty";
-connectAttr "R_Head_eye_target_ctrl_translateZ.o" "R_Head_eye_target_ctrl.tz";
-connectAttr "R_Head_eye_target_ctrl_scaleX.o" "R_Head_eye_target_ctrl.sx";
-connectAttr "R_Head_eye_target_ctrl_scaleY.o" "R_Head_eye_target_ctrl.sy";
-connectAttr "R_Head_eye_target_ctrl_scaleZ.o" "R_Head_eye_target_ctrl.sz";
-connectAttr "R_Head_eye_target_ctrl_rotateX.o" "R_Head_eye_target_ctrl.rx";
-connectAttr "R_Head_eye_target_ctrl_rotateY.o" "R_Head_eye_target_ctrl.ry";
-connectAttr "R_Head_eye_target_ctrl_rotateZ.o" "R_Head_eye_target_ctrl.rz";
-connectAttr "R_Head_L_Ear_1_ctrl_translateX.o" "R_Head_L_Ear_1_ctrl.tx";
-connectAttr "R_Head_L_Ear_1_ctrl_translateY.o" "R_Head_L_Ear_1_ctrl.ty";
-connectAttr "R_Head_L_Ear_1_ctrl_translateZ.o" "R_Head_L_Ear_1_ctrl.tz";
-connectAttr "R_Head_L_Ear_1_ctrl_rotateX.o" "R_Head_L_Ear_1_ctrl.rx";
-connectAttr "R_Head_L_Ear_1_ctrl_rotateY.o" "R_Head_L_Ear_1_ctrl.ry";
-connectAttr "R_Head_L_Ear_1_ctrl_rotateZ.o" "R_Head_L_Ear_1_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_L_Ear_1_ctrl.do";
-connectAttr "R_Head_L_Ear_2_ctrl_translateX.o" "R_Head_L_Ear_2_ctrl.tx";
-connectAttr "R_Head_L_Ear_2_ctrl_translateY.o" "R_Head_L_Ear_2_ctrl.ty";
-connectAttr "R_Head_L_Ear_2_ctrl_translateZ.o" "R_Head_L_Ear_2_ctrl.tz";
-connectAttr "R_Head_L_Ear_2_ctrl_rotateX.o" "R_Head_L_Ear_2_ctrl.rx";
-connectAttr "R_Head_L_Ear_2_ctrl_rotateY.o" "R_Head_L_Ear_2_ctrl.ry";
-connectAttr "R_Head_L_Ear_2_ctrl_rotateZ.o" "R_Head_L_Ear_2_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_L_Ear_2_ctrl.do";
-connectAttr "R_Head_L_Ear_3_ctrl_translateX.o" "R_Head_L_Ear_3_ctrl.tx";
-connectAttr "R_Head_L_Ear_3_ctrl_translateY.o" "R_Head_L_Ear_3_ctrl.ty";
-connectAttr "R_Head_L_Ear_3_ctrl_translateZ.o" "R_Head_L_Ear_3_ctrl.tz";
-connectAttr "R_Head_L_Ear_3_ctrl_rotateX.o" "R_Head_L_Ear_3_ctrl.rx";
-connectAttr "R_Head_L_Ear_3_ctrl_rotateY.o" "R_Head_L_Ear_3_ctrl.ry";
-connectAttr "R_Head_L_Ear_3_ctrl_rotateZ.o" "R_Head_L_Ear_3_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_L_Ear_3_ctrl.do";
-connectAttr "R_Head_R_Ear_1_ctrl_translateX.o" "R_Head_R_Ear_1_ctrl.tx";
-connectAttr "R_Head_R_Ear_1_ctrl_translateY.o" "R_Head_R_Ear_1_ctrl.ty";
-connectAttr "R_Head_R_Ear_1_ctrl_translateZ.o" "R_Head_R_Ear_1_ctrl.tz";
-connectAttr "R_Head_R_Ear_1_ctrl_rotateX.o" "R_Head_R_Ear_1_ctrl.rx";
-connectAttr "R_Head_R_Ear_1_ctrl_rotateY.o" "R_Head_R_Ear_1_ctrl.ry";
-connectAttr "R_Head_R_Ear_1_ctrl_rotateZ.o" "R_Head_R_Ear_1_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_R_Ear_1_ctrl.do";
-connectAttr "R_Head_R_Ear_2_ctrl_translateX.o" "R_Head_R_Ear_2_ctrl.tx";
-connectAttr "R_Head_R_Ear_2_ctrl_translateY.o" "R_Head_R_Ear_2_ctrl.ty";
-connectAttr "R_Head_R_Ear_2_ctrl_translateZ.o" "R_Head_R_Ear_2_ctrl.tz";
-connectAttr "R_Head_R_Ear_2_ctrl_rotateX.o" "R_Head_R_Ear_2_ctrl.rx";
-connectAttr "R_Head_R_Ear_2_ctrl_rotateY.o" "R_Head_R_Ear_2_ctrl.ry";
-connectAttr "R_Head_R_Ear_2_ctrl_rotateZ.o" "R_Head_R_Ear_2_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_R_Ear_2_ctrl.do";
-connectAttr "R_Head_R_Ear_3_ctrl_translateX.o" "R_Head_R_Ear_3_ctrl.tx";
-connectAttr "R_Head_R_Ear_3_ctrl_translateY.o" "R_Head_R_Ear_3_ctrl.ty";
-connectAttr "R_Head_R_Ear_3_ctrl_translateZ.o" "R_Head_R_Ear_3_ctrl.tz";
-connectAttr "R_Head_R_Ear_3_ctrl_rotateX.o" "R_Head_R_Ear_3_ctrl.rx";
-connectAttr "R_Head_R_Ear_3_ctrl_rotateY.o" "R_Head_R_Ear_3_ctrl.ry";
-connectAttr "R_Head_R_Ear_3_ctrl_rotateZ.o" "R_Head_R_Ear_3_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_R_Ear_3_ctrl.do";
-connectAttr "R_Head_collar_tag_ctrl_translateX.o" "R_Head_collar_tag_ctrl.tx";
-connectAttr "R_Head_collar_tag_ctrl_translateY.o" "R_Head_collar_tag_ctrl.ty";
-connectAttr "R_Head_collar_tag_ctrl_translateZ.o" "R_Head_collar_tag_ctrl.tz";
-connectAttr "R_Head_collar_tag_ctrl_rotateX.o" "R_Head_collar_tag_ctrl.rx";
-connectAttr "R_Head_collar_tag_ctrl_rotateY.o" "R_Head_collar_tag_ctrl.ry";
-connectAttr "R_Head_collar_tag_ctrl_rotateZ.o" "R_Head_collar_tag_ctrl.rz";
 connectAttr "ControlLayer.di" "R_Head_collar_tag_ctrl.do";
-connectAttr "R_Shoulder_FK_ctrl_translateX.o" "R_Shoulder_FK_ctrl.tx";
-connectAttr "R_Shoulder_FK_ctrl_translateY.o" "R_Shoulder_FK_ctrl.ty";
-connectAttr "R_Shoulder_FK_ctrl_translateZ.o" "R_Shoulder_FK_ctrl.tz";
-connectAttr "R_Shoulder_FK_ctrl_rotateX.o" "R_Shoulder_FK_ctrl.rx";
-connectAttr "R_Shoulder_FK_ctrl_rotateY.o" "R_Shoulder_FK_ctrl.ry";
-connectAttr "R_Shoulder_FK_ctrl_rotateZ.o" "R_Shoulder_FK_ctrl.rz";
-connectAttr "R_Shoulder_FK_ctrl_scaleX.o" "R_Shoulder_FK_ctrl.sx";
-connectAttr "R_Shoulder_FK_ctrl_scaleY.o" "R_Shoulder_FK_ctrl.sy";
-connectAttr "R_Shoulder_FK_ctrl_scaleZ.o" "R_Shoulder_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "R_Shoulder_FK_ctrl.do";
 connectAttr "Transform_ctrl.RArmIKFKSwitch" "R_Shoulder_FK_ctrl.v";
-connectAttr "R_Elbow_FK_ctrl_translateX.o" "R_Elbow_FK_ctrl.tx";
-connectAttr "R_Elbow_FK_ctrl_translateY.o" "R_Elbow_FK_ctrl.ty";
-connectAttr "R_Elbow_FK_ctrl_translateZ.o" "R_Elbow_FK_ctrl.tz";
-connectAttr "R_Elbow_FK_ctrl_rotateX.o" "R_Elbow_FK_ctrl.rx";
-connectAttr "R_Elbow_FK_ctrl_rotateY.o" "R_Elbow_FK_ctrl.ry";
-connectAttr "R_Elbow_FK_ctrl_rotateZ.o" "R_Elbow_FK_ctrl.rz";
-connectAttr "R_Elbow_FK_ctrl_scaleX.o" "R_Elbow_FK_ctrl.sx";
-connectAttr "R_Elbow_FK_ctrl_scaleY.o" "R_Elbow_FK_ctrl.sy";
-connectAttr "R_Elbow_FK_ctrl_scaleZ.o" "R_Elbow_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "R_Elbow_FK_ctrl.do";
 connectAttr "Transform_ctrl.RArmIKFKSwitch" "R_Elbow_FK_ctrl.v";
-connectAttr "R_Wrist_FK_ctrl_translateX.o" "R_Wrist_FK_ctrl.tx";
-connectAttr "R_Wrist_FK_ctrl_translateY.o" "R_Wrist_FK_ctrl.ty";
-connectAttr "R_Wrist_FK_ctrl_translateZ.o" "R_Wrist_FK_ctrl.tz";
-connectAttr "R_Wrist_FK_ctrl_rotateX.o" "R_Wrist_FK_ctrl.rx";
-connectAttr "R_Wrist_FK_ctrl_rotateY.o" "R_Wrist_FK_ctrl.ry";
-connectAttr "R_Wrist_FK_ctrl_rotateZ.o" "R_Wrist_FK_ctrl.rz";
-connectAttr "R_Wrist_FK_ctrl_scaleX.o" "R_Wrist_FK_ctrl.sx";
-connectAttr "R_Wrist_FK_ctrl_scaleY.o" "R_Wrist_FK_ctrl.sy";
-connectAttr "R_Wrist_FK_ctrl_scaleZ.o" "R_Wrist_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "R_Wrist_FK_ctrl.do";
 connectAttr "Transform_ctrl.RArmIKFKSwitch" "R_Wrist_FK_ctrl.v";
 connectAttr "R_Arm_Reverse.ox" "R_Shoulder_IK_ctrl.v" -l on;
@@ -84347,58 +81187,13 @@ connectAttr "R_Elbow_PV_IK_ctrl.pm" "R_Arm_IK_handle_poleVectorConstraint1.tg[0]
 		;
 connectAttr "R_Arm_IK_handle_poleVectorConstraint1.w0" "R_Arm_IK_handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "Spine_3_lower_ctrl_translateX.o" "Spine_3_lower_ctrl.tx";
-connectAttr "Spine_3_lower_ctrl_translateY.o" "Spine_3_lower_ctrl.ty";
-connectAttr "Spine_3_lower_ctrl_translateZ.o" "Spine_3_lower_ctrl.tz";
-connectAttr "Spine_3_lower_ctrl_rotateX.o" "Spine_3_lower_ctrl.rx";
-connectAttr "Spine_3_lower_ctrl_rotateY.o" "Spine_3_lower_ctrl.ry";
-connectAttr "Spine_3_lower_ctrl_rotateZ.o" "Spine_3_lower_ctrl.rz";
 connectAttr "ControlLayer.di" "Spine_3_lower_ctrl.do";
-connectAttr "Spine_4_ctrl_translateX.o" "Spine_4_ctrl.tx";
-connectAttr "Spine_4_ctrl_translateY.o" "Spine_4_ctrl.ty";
-connectAttr "Spine_4_ctrl_translateZ.o" "Spine_4_ctrl.tz";
-connectAttr "Spine_4_ctrl_rotateX.o" "Spine_4_ctrl.rx";
-connectAttr "Spine_4_ctrl_rotateY.o" "Spine_4_ctrl.ry";
-connectAttr "Spine_4_ctrl_rotateZ.o" "Spine_4_ctrl.rz";
 connectAttr "ControlLayer.di" "Spine_4_ctrl.do";
-connectAttr "Pelvis_ctrl_translateX.o" "Pelvis_ctrl.tx";
-connectAttr "Pelvis_ctrl_translateY.o" "Pelvis_ctrl.ty";
-connectAttr "Pelvis_ctrl_translateZ.o" "Pelvis_ctrl.tz";
-connectAttr "Pelvis_ctrl_rotateX.o" "Pelvis_ctrl.rx";
-connectAttr "Pelvis_ctrl_rotateY.o" "Pelvis_ctrl.ry";
-connectAttr "Pelvis_ctrl_rotateZ.o" "Pelvis_ctrl.rz";
 connectAttr "ControlLayer.di" "Pelvis_ctrl.do";
-connectAttr "L_Hip_FK_ctrl_translateX.o" "L_Hip_FK_ctrl.tx";
-connectAttr "L_Hip_FK_ctrl_translateY.o" "L_Hip_FK_ctrl.ty";
-connectAttr "L_Hip_FK_ctrl_translateZ.o" "L_Hip_FK_ctrl.tz";
-connectAttr "L_Hip_FK_ctrl_rotateX.o" "L_Hip_FK_ctrl.rx";
-connectAttr "L_Hip_FK_ctrl_rotateY.o" "L_Hip_FK_ctrl.ry";
-connectAttr "L_Hip_FK_ctrl_rotateZ.o" "L_Hip_FK_ctrl.rz";
-connectAttr "L_Hip_FK_ctrl_scaleX.o" "L_Hip_FK_ctrl.sx";
-connectAttr "L_Hip_FK_ctrl_scaleY.o" "L_Hip_FK_ctrl.sy";
-connectAttr "L_Hip_FK_ctrl_scaleZ.o" "L_Hip_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "L_Hip_FK_ctrl.do";
 connectAttr "Transform_ctrl.LLegIKFKSwitch" "L_Hip_FK_ctrl.v";
-connectAttr "L_Knee_FK_ctrl_translateX.o" "L_Knee_FK_ctrl.tx";
-connectAttr "L_Knee_FK_ctrl_translateY.o" "L_Knee_FK_ctrl.ty";
-connectAttr "L_Knee_FK_ctrl_translateZ.o" "L_Knee_FK_ctrl.tz";
-connectAttr "L_Knee_FK_ctrl_rotateX.o" "L_Knee_FK_ctrl.rx";
-connectAttr "L_Knee_FK_ctrl_rotateY.o" "L_Knee_FK_ctrl.ry";
-connectAttr "L_Knee_FK_ctrl_rotateZ.o" "L_Knee_FK_ctrl.rz";
-connectAttr "L_Knee_FK_ctrl_scaleX.o" "L_Knee_FK_ctrl.sx";
-connectAttr "L_Knee_FK_ctrl_scaleY.o" "L_Knee_FK_ctrl.sy";
-connectAttr "L_Knee_FK_ctrl_scaleZ.o" "L_Knee_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "L_Knee_FK_ctrl.do";
 connectAttr "Transform_ctrl.LLegIKFKSwitch" "L_Knee_FK_ctrl.v";
-connectAttr "L_Ankle_FK_ctrl_translateX.o" "L_Ankle_FK_ctrl.tx";
-connectAttr "L_Ankle_FK_ctrl_translateY.o" "L_Ankle_FK_ctrl.ty";
-connectAttr "L_Ankle_FK_ctrl_translateZ.o" "L_Ankle_FK_ctrl.tz";
-connectAttr "L_Ankle_FK_ctrl_rotateX.o" "L_Ankle_FK_ctrl.rx";
-connectAttr "L_Ankle_FK_ctrl_rotateY.o" "L_Ankle_FK_ctrl.ry";
-connectAttr "L_Ankle_FK_ctrl_rotateZ.o" "L_Ankle_FK_ctrl.rz";
-connectAttr "L_Ankle_FK_ctrl_scaleX.o" "L_Ankle_FK_ctrl.sx";
-connectAttr "L_Ankle_FK_ctrl_scaleY.o" "L_Ankle_FK_ctrl.sy";
-connectAttr "L_Ankle_FK_ctrl_scaleZ.o" "L_Ankle_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "L_Ankle_FK_ctrl.do";
 connectAttr "Transform_ctrl.LLegIKFKSwitch" "L_Ankle_FK_ctrl.v";
 connectAttr "L_leg_reverse.ox" "L_Hip_IK_ctrl.v" -l on;
@@ -84432,37 +81227,10 @@ connectAttr "L_Knee_PV_IK_ctrl.pm" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].
 		;
 connectAttr "L_Leg_IK_handle_poleVectorConstraint1.w0" "L_Leg_IK_handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "R_Hip_FK_ctrl_translateX.o" "R_Hip_FK_ctrl.tx";
-connectAttr "R_Hip_FK_ctrl_translateY.o" "R_Hip_FK_ctrl.ty";
-connectAttr "R_Hip_FK_ctrl_translateZ.o" "R_Hip_FK_ctrl.tz";
-connectAttr "R_Hip_FK_ctrl_rotateX.o" "R_Hip_FK_ctrl.rx";
-connectAttr "R_Hip_FK_ctrl_rotateY.o" "R_Hip_FK_ctrl.ry";
-connectAttr "R_Hip_FK_ctrl_rotateZ.o" "R_Hip_FK_ctrl.rz";
-connectAttr "R_Hip_FK_ctrl_scaleX.o" "R_Hip_FK_ctrl.sx";
-connectAttr "R_Hip_FK_ctrl_scaleY.o" "R_Hip_FK_ctrl.sy";
-connectAttr "R_Hip_FK_ctrl_scaleZ.o" "R_Hip_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "R_Hip_FK_ctrl.do";
 connectAttr "Transform_ctrl.RLegIKFKSwitch" "R_Hip_FK_ctrl.v";
-connectAttr "R_Knee_FK_ctrl_translateX.o" "R_Knee_FK_ctrl.tx";
-connectAttr "R_Knee_FK_ctrl_translateY.o" "R_Knee_FK_ctrl.ty";
-connectAttr "R_Knee_FK_ctrl_translateZ.o" "R_Knee_FK_ctrl.tz";
-connectAttr "R_Knee_FK_ctrl_rotateX.o" "R_Knee_FK_ctrl.rx";
-connectAttr "R_Knee_FK_ctrl_rotateY.o" "R_Knee_FK_ctrl.ry";
-connectAttr "R_Knee_FK_ctrl_rotateZ.o" "R_Knee_FK_ctrl.rz";
-connectAttr "R_Knee_FK_ctrl_scaleX.o" "R_Knee_FK_ctrl.sx";
-connectAttr "R_Knee_FK_ctrl_scaleY.o" "R_Knee_FK_ctrl.sy";
-connectAttr "R_Knee_FK_ctrl_scaleZ.o" "R_Knee_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "R_Knee_FK_ctrl.do";
 connectAttr "Transform_ctrl.RLegIKFKSwitch" "R_Knee_FK_ctrl.v";
-connectAttr "R_Ankle_FK_ctrl_translateX.o" "R_Ankle_FK_ctrl.tx";
-connectAttr "R_Ankle_FK_ctrl_translateY.o" "R_Ankle_FK_ctrl.ty";
-connectAttr "R_Ankle_FK_ctrl_translateZ.o" "R_Ankle_FK_ctrl.tz";
-connectAttr "R_Ankle_FK_ctrl_rotateX.o" "R_Ankle_FK_ctrl.rx";
-connectAttr "R_Ankle_FK_ctrl_rotateY.o" "R_Ankle_FK_ctrl.ry";
-connectAttr "R_Ankle_FK_ctrl_rotateZ.o" "R_Ankle_FK_ctrl.rz";
-connectAttr "R_Ankle_FK_ctrl_scaleX.o" "R_Ankle_FK_ctrl.sx";
-connectAttr "R_Ankle_FK_ctrl_scaleY.o" "R_Ankle_FK_ctrl.sy";
-connectAttr "R_Ankle_FK_ctrl_scaleZ.o" "R_Ankle_FK_ctrl.sz";
 connectAttr "ControlLayer.di" "R_Ankle_FK_ctrl.do";
 connectAttr "Transform_ctrl.RLegIKFKSwitch" "R_Ankle_FK_ctrl.v";
 connectAttr "R_leg_reverse.ox" "R_Hip_IK_ctrl.v" -l on;
@@ -84496,61 +81264,13 @@ connectAttr "R_Knee_PV_IK_ctrl.pm" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].
 		;
 connectAttr "R_Leg_IK_handle_poleVectorConstraint1.w0" "R_Leg_IK_handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "Tail_1_ctrl_translateX.o" "Tail_1_ctrl.tx";
-connectAttr "Tail_1_ctrl_translateY.o" "Tail_1_ctrl.ty";
-connectAttr "Tail_1_ctrl_translateZ.o" "Tail_1_ctrl.tz";
-connectAttr "Tail_1_ctrl_rotateX.o" "Tail_1_ctrl.rx";
-connectAttr "Tail_1_ctrl_rotateY.o" "Tail_1_ctrl.ry";
-connectAttr "Tail_1_ctrl_rotateZ.o" "Tail_1_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_1_ctrl.do";
-connectAttr "Tail_2_ctrl_translateX.o" "Tail_2_ctrl.tx";
-connectAttr "Tail_2_ctrl_translateY.o" "Tail_2_ctrl.ty";
-connectAttr "Tail_2_ctrl_translateZ.o" "Tail_2_ctrl.tz";
-connectAttr "Tail_2_ctrl_rotateX.o" "Tail_2_ctrl.rx";
-connectAttr "Tail_2_ctrl_rotateY.o" "Tail_2_ctrl.ry";
-connectAttr "Tail_2_ctrl_rotateZ.o" "Tail_2_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_2_ctrl.do";
-connectAttr "Tail_3_ctrl_translateX.o" "Tail_3_ctrl.tx";
-connectAttr "Tail_3_ctrl_translateY.o" "Tail_3_ctrl.ty";
-connectAttr "Tail_3_ctrl_translateZ.o" "Tail_3_ctrl.tz";
-connectAttr "Tail_3_ctrl_rotateX.o" "Tail_3_ctrl.rx";
-connectAttr "Tail_3_ctrl_rotateY.o" "Tail_3_ctrl.ry";
-connectAttr "Tail_3_ctrl_rotateZ.o" "Tail_3_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_3_ctrl.do";
-connectAttr "Tail_4_ctrl_translateX.o" "Tail_4_ctrl.tx";
-connectAttr "Tail_4_ctrl_translateY.o" "Tail_4_ctrl.ty";
-connectAttr "Tail_4_ctrl_translateZ.o" "Tail_4_ctrl.tz";
-connectAttr "Tail_4_ctrl_rotateX.o" "Tail_4_ctrl.rx";
-connectAttr "Tail_4_ctrl_rotateY.o" "Tail_4_ctrl.ry";
-connectAttr "Tail_4_ctrl_rotateZ.o" "Tail_4_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_4_ctrl.do";
-connectAttr "Tail_5_ctrl_translateX.o" "Tail_5_ctrl.tx";
-connectAttr "Tail_5_ctrl_translateY.o" "Tail_5_ctrl.ty";
-connectAttr "Tail_5_ctrl_translateZ.o" "Tail_5_ctrl.tz";
-connectAttr "Tail_5_ctrl_rotateX.o" "Tail_5_ctrl.rx";
-connectAttr "Tail_5_ctrl_rotateY.o" "Tail_5_ctrl.ry";
-connectAttr "Tail_5_ctrl_rotateZ.o" "Tail_5_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_5_ctrl.do";
-connectAttr "Tail_6_ctrl_translateX.o" "Tail_6_ctrl.tx";
-connectAttr "Tail_6_ctrl_translateY.o" "Tail_6_ctrl.ty";
-connectAttr "Tail_6_ctrl_translateZ.o" "Tail_6_ctrl.tz";
-connectAttr "Tail_6_ctrl_rotateX.o" "Tail_6_ctrl.rx";
-connectAttr "Tail_6_ctrl_rotateY.o" "Tail_6_ctrl.ry";
-connectAttr "Tail_6_ctrl_rotateZ.o" "Tail_6_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_6_ctrl.do";
-connectAttr "Tail_7_ctrl_translateX.o" "Tail_7_ctrl.tx";
-connectAttr "Tail_7_ctrl_translateY.o" "Tail_7_ctrl.ty";
-connectAttr "Tail_7_ctrl_translateZ.o" "Tail_7_ctrl.tz";
-connectAttr "Tail_7_ctrl_rotateX.o" "Tail_7_ctrl.rx";
-connectAttr "Tail_7_ctrl_rotateY.o" "Tail_7_ctrl.ry";
-connectAttr "Tail_7_ctrl_rotateZ.o" "Tail_7_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_7_ctrl.do";
-connectAttr "Tail_8_ctrl_translateX.o" "Tail_8_ctrl.tx";
-connectAttr "Tail_8_ctrl_translateY.o" "Tail_8_ctrl.ty";
-connectAttr "Tail_8_ctrl_translateZ.o" "Tail_8_ctrl.tz";
-connectAttr "Tail_8_ctrl_rotateX.o" "Tail_8_ctrl.rx";
-connectAttr "Tail_8_ctrl_rotateY.o" "Tail_8_ctrl.ry";
-connectAttr "Tail_8_ctrl_rotateZ.o" "Tail_8_ctrl.rz";
 connectAttr "ControlLayer.di" "Tail_8_ctrl.do";
 connectAttr "GeoLayer.di" "Doggo.do";
 connectAttr "groupParts1.og" "DoggoShape.i";
@@ -86110,19 +82830,6 @@ connectAttr "L_Head_collar_tag_jnt.wm" "skinCluster19.ma[0]";
 connectAttr "L_Head_collar_tag_jnt.liw" "skinCluster19.lw[0]";
 connectAttr "L_Head_collar_tag_jnt.obcc" "skinCluster19.ifcl[0]";
 connectAttr "bindPose1.msg" "skinCluster19.bp";
-connectAttr "L_Head_collar_tag_jnt_parentConstraint3.ctx" "pairBlend3.itx2";
-connectAttr "L_Head_collar_tag_jnt_parentConstraint3.cty" "pairBlend3.ity2";
-connectAttr "L_Head_collar_tag_jnt_parentConstraint3.ctz" "pairBlend3.itz2";
-connectAttr "L_Head_collar_tag_jnt_parentConstraint3.crx" "pairBlend3.irx2";
-connectAttr "L_Head_collar_tag_jnt_parentConstraint3.cry" "pairBlend3.iry2";
-connectAttr "L_Head_collar_tag_jnt_parentConstraint3.crz" "pairBlend3.irz2";
-connectAttr "L_Head_collar_tag_jnt.blendParent3" "pairBlend3.w";
-connectAttr "pairBlend3_inRotateX1.o" "pairBlend3.irx1";
-connectAttr "pairBlend3_inRotateY1.o" "pairBlend3.iry1";
-connectAttr "pairBlend3_inRotateZ1.o" "pairBlend3.irz1";
-connectAttr "pairBlend3_inTranslateX1.o" "pairBlend3.itx1";
-connectAttr "pairBlend3_inTranslateY1.o" "pairBlend3.ity1";
-connectAttr "pairBlend3_inTranslateZ1.o" "pairBlend3.itz1";
 connectAttr "Mid_head_R_eyeShape24Orig.w" "skinCluster4.ip[0].ig";
 connectAttr "Mid_head_R_eyeShape24Orig.o" "skinCluster4.orggeom[0]";
 connectAttr "Mid_Head_jnt.wm" "skinCluster4.ma[0]";
